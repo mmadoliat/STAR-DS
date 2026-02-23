@@ -1,0 +1,15 @@
+---
+title: "Course overview"
+---
+
+This is the homepage for Short Course on R Tools (SCoRT) by [Dr. Mehdi Maadooliat](http://www.mssc.mu.edu/~mehdi) and [Dr. Hossein Haghbin](http://research.pgu.ac.ir/~hhaghbin/en/). All course materials will be posted on this site.
+
+You can find the course syllabus [here](/course-syllabus.html) and the course schedule [here](/).
+
+## Class meetings
+
+| Meeting | Location/Address | Time |
+|--|--|---|
+| Online Lecture | [PGU BigBlueButton](https://meet.pgu.ac.ir/b/dat-ifq-ect-fjg) | Mon & Tue & Wed 5:00 pm - 7:00 pm IRT. |
+
+![](images/twitter-card.png)

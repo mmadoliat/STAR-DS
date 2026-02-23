@@ -1,0 +1,21 @@
+institute: "Marquette University <br> SCoRT - Summer 2025"
+author: "Mehdi Maadooliat and Hossein Haghbin"
+footer: "[🔗 http://bit.ly/SCoRT](http://bit.ly/SCoRT)"
+logo: "logo.png"
+format:
+  revealjs:
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+    chalkboard: true
+    highlight-style: a11y-dark
+editor: visual
+execute:
+  freeze: auto
+  echo: true
+  warning: false
+engine: knitr
+knitr:
+  opts_chunk: 
+    R.options:
+      width: 80

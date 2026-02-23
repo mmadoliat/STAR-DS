@@ -1,0 +1,89 @@
+# Homework Assignment 2
+
+Please complete the following tasks within **one week** and share your work as a **GitHub repository** linke.\
+
+------------------------------------------------------------------------
+
+
+## Build & Share Your Package
+
+### Goal
+- Build a simple **R package** that achieves a specific task.  
+- Examples of goals:  
+  - Data cleaning helper functions  
+  - A small visualization wrapper  
+  - Statistical functions (e.g., custom summary stats)  
+  - Importing/transforming a public dataset  
+
+------------------------------------------------------------------------
+
+## Step 1: Choose a Task (Goal of Your Package)
+
+Your package should solve a **simple but useful problem** for statistics. Possible ideas:  
+
+- **Descriptive Statistics Toolkit**: Functions to compute mean, variance, quantiles, skewness, kurtosis.  
+- **Visualization Helper**: Custom plotting functions for common statistical distributions.  
+- **Probability Distribution Tools**: Simulate and analyze distributions (Normal, Poisson, Binomial, etc.).  
+- **Regression Helpers**: Easy-to-use wrappers for linear/logistic regression summaries.  
+- **Time Series Mini Toolkit**: Simple functions for moving averages, decomposition, and plotting.  
+- **Resampling Methods**: Implement bootstrap and permutation tests.  
+
+------------------------------------------------------------------------
+
+## Step 2: Name and Documentation
+- Pick a **clear, unique package name**.  
+  - Example: `statHelper`, `bootResampleR`, `easyViz`, `probSimR`.  
+- Provide documentation:  
+  - **DESCRIPTION file** with title, description, author.  
+  - **Function-level help** with `#'` Roxygen comments.  
+  - **README.md** explaining package goal, installation, usage.  
+- Add at least one **vignette/tutorial** showing examples.  
+
+------------------------------------------------------------------------
+
+
+## Step 3: Include a Dataset
+Embed at least one dataset inside your package. Suggestions:  
+
+- **Built-in datasets** (`iris`, `mtcars`, `airquality`).  
+- Public datasets (but keep them small):  
+  - Daily stock prices (few days).  
+  - Students’ grades (simulated).  
+  - COVID-19 sample (subset).  
+  - Randomly generated survey data.  
+
+------------------------------------------------------------------------
+
+
+## Step 4: Publish on GitHub
+- Create a GitHub repository.  
+- Push your package code.  
+- Add a **LICENSE** file.  
+- Share the repository link with your instructor.  
+
+------------------------------------------------------------------------
+
+## Grading Rubric (Total = 100 points)
+
+| Part | Description | Points |
+|------|-------------|--------|
+| Task Design | Clear, meaningful statistical goal | 15 |
+| Package Structure | Correct folder & file setup | 15 |
+| Functions | At least 3 well-written functions | 20 |
+| Documentation | DESCRIPTION, README, Roxygen comments | 15 |
+| Dataset | Correctly embedded with documentation | 10 |
+| Vignette | Example usage in Rmarkdown | 10 |
+| GitHub Repository | Proper setup, LICENSE, clean commits | 10 |
+| Presentation | Clear, creative, user-friendly | 5 |
+
+------------------------------------------------------------------------
+
+## Submission
+- Deadline: **[set your date here]**  
+- Submit: **GitHub repository link** shared via email or LMS.  
+- Bonus: +5 points if package installs directly with `devtools::install_github("username/package")`.  
+
+
+------------------------------------------------------------------------
+
+**Good luck, and remember to commit and push often!**

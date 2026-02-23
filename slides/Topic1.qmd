@@ -1,0 +1,791 @@
+---
+title: "Short Course on R Tools"
+subtitle: "Object-Oriented Programming in R"
+title-slide-attributes:
+  data-background-image: mu-bg.png
+  data-background-size: stretch
+  data-slide-number: none
+webr:
+  show-startup-message: false
+filters: 
+  - webr
+format: 
+  revealjs:
+    transition: fade
+    scrollable: true
+    fig-asp: 1
+---
+
+# Outline
+
+::: {.fragment .fade-up}
+-   OOP Paradigms in R
+-   Base Types & Functional OOP
+-   S3 Classes & Methods
+-   S4 Classes & Methods
+-   R6 Classes & Reference Semantics
+-   S7 Classes - The New OOP System
+-   Trade-offs & Best Practices
+-   Hands-on Exercises
+:::
+
+# OOP Paradigms in R {auto-animate="true"}
+
+[<img src="images/oop/oop-vs-fp.jpg" style="opacity: 0.25;" width="400"/>]{.absolute top="0" right="0" width="400"}
+
+-   **Functional OOP**: functions return objects, operate on data
+
+::: panel-tabset
+## Code
+
+```{r}
+#| label: basic
+#| fig-show: hide
+#| message: false
+
+par(mfrow=c(1,3))
+plot(iris$Sepal.Length)
+plot(iris$Species)
+# plot(iris[,1:3])
+# plot(lm(Sepal.Length ~ Sepal.Width, data=iris))
+```
+
+## Plots
+
+```{r}
+#| ref.label: basic
+#| echo: false
+#| fig-asp: 0.3
+```
+:::
+
+# OOP Paradigms in R {auto-animate="true"}
+
+<img src="images/oop/oop-vs-fp.jpg" style="opacity: .05;" width="1500">
+
+::: {style="margin-top: -600px;"}
+:::
+
+-   **Encapsulated OOP**: objects carry data + methods
+
+``` {.r code-line-numbers="1|3-5|7-9"}
+library(mlr3)
+
+# Create a classification task (encapsulates data + metadata)
+task    <- TaskClassif$new(id = "iris_task", backend = iris, target = "Species")
+learner <- lrn("classif.rpart", predict_type = "prob")
+
+# Real use of object$method(args)
+learner$train(task)
+prediction <- learner$predict(task)
+```
+
+. . .
+
+-   **When to use**: design, extensibility, code organization
+
+# OOP in R {auto-animate="true"}
+
+<img src="images/oop/oop-vs-fp.jpg" style="opacity: .05;" width="1500">
+
+::: {style="margin-top: -600px;"}
+:::
+
+::: incremental
+-   **S3** is R’s first OOP system, which is an informal implementation of functional OOP.
+
+-   **S4** is a formal and rigorous rewrite of S3. S4 is implemented in the base *methods* package, which is always installed with R.
+
+-   **RC** implements encapsulated OO.
+
+-   **R6** implements encapsulated OOP like RC, but resolves some important issues.
+
+-   **S7** is a modern, formal OOP system designed to unify and improve upon S3 and S4. It supports multiple dispatch, better type safety, and cleaner syntax, while maintaining compatibility with existing R code.
+:::
+
+# OOP in R {auto-animate="true"}
+
+``` {.r code-line-numbers="1|4-5|8-9|12-14"}
+library(sloop)
+
+
+otype(1:10)
+#> [1] "base"
+
+
+otype(mtcars)
+#> [1] "S3"
+
+
+mle_obj <- stats4::mle(function(x = 1) (x - 2) ^ 2)
+otype(mle_obj)
+#> [1] "S4"
+```
+
+. . .
+
+![](images/oop/oo-venn.png){.absolute top="0" right="0"}
+
+# Base versus OO objects
+
+``` {.r code-line-numbers="1-3|5-7"}
+# A base object:
+is.object(1:10)
+#> [1] FALSE
+
+# An OO object
+is.object(mtcars)
+#> [1] TRUE
+```
+
+. . .
+
+-   Technically, the difference between base and OO objects is that OO objects have a “class” attribute:
+
+``` {.r code-line-numbers="1-2|4-5"}
+attr(1:10, "class")
+#> NULL
+
+attr(mtcars, "class")
+#> [1] "data.frame"
+```
+
+# Base Types
+
+::: {style="margin-top: -15px;"}
+:::
+
+-   Every object has a **base type**. In total, there are 25 different base types. Here are some examples:
+
+::: {style="margin-top: -20px;"}
+:::
+
+::: shrink-code
+``` {.r code-line-numbers="1-2|3-4|5-6|7-8|9-10|11-12|13-14|15-17"}
+typeof(NULL)
+#> [1] "NULL"
+typeof(1L)
+#> [1] "integer"
+typeof(1i)
+#> [1] "complex"
+typeof(mean)
+#> [1] "closure"
+typeof(`[`)
+#> [1] "special"
+typeof(sum)    
+#> [1] "builtin"
+typeof(globalenv())
+#> [1] "environment"
+mle_obj <- stats4::mle(function(x = 1) (x - 2) ^ 2)
+typeof(mle_obj)
+#> [1] "S4"
+```
+:::
+
+# Informal approach to OOP in R
+
+::: shrink-code
+``` {.r code-line-numbers="1-17|19-20|22-38|40-50"}
+# A 'weather_report' object: just a list
+weather <- list(
+  location = list(
+    city = "Seattle",
+    country = "USA",
+    coordinates = c(lat = 47.6062, lon = -122.3321)
+  ),
+  date = as.Date("2025-05-30"),
+  summary = "Cloudy with light rain",
+  temperature = list(
+    morning = 57,
+    afternoon = 63,
+    evening = 60,
+    units = "F"
+  ),
+  alerts = c("Flood watch", "Wind advisory")
+)
+
+# Assign a class
+class(weather) <- "weather_report"
+
+print.weather_report <- function(x) {
+  cat("🌤️  Weather Report\n")
+  cat("-------------------------\n")
+  cat("📍 Location: ", x$location$city, ", ", x$location$country, "\n", sep = "")
+  cat("🗓️  Date: ", format(x$date, "%B %d, %Y"), "\n")
+  cat("📋 Summary: ", x$summary, "\n")
+  cat("🌡 Temperature (", x$temperature$units, "):\n", sep = "")
+  cat("    Morning: ", x$temperature$morning, "\n")
+  cat("    Afternoon: ", x$temperature$afternoon, "\n")
+  cat("    Evening: ", x$temperature$evening, "\n")
+  
+  if (length(x$alerts) > 0) {
+    cat("⚠️ Alerts: ", paste(x$alerts, collapse = "; "), "\n")
+  } else {
+    cat("✅ No active alerts.\n")
+  }
+}
+
+> print(weather)
+🌤️  Weather Report
+-------------------------
+📍 Location: Seattle, USA
+🗓️  Date:  May 30, 2025 
+📋 Summary:  Cloudy with light rain 
+🌡 Temperature (F):
+    Morning:  57 
+    Afternoon:  63 
+    Evening:  60 
+⚠️ Alerts:  Flood watch; Wind advisory 
+```
+:::
+
+# S3: Informal Classes
+
+```{webr-r}
+x <- structure(c(1,2,3), class = "myclass")
+mean.myclass <- function(x, ...) {
+  print("custom mean")
+}
+mean(x)
+```
+
+-   **Lightweight**: no formal schema
+
+. . .
+
+-   **Define**: set `class` attribute
+
+```{r}
+x <- structure(c(1,2,3), class = "myclass")
+mean(x)
+```
+
+## Basics
+
+-   An S3 object is a base type with at least a `class` attribute
+
+::: shrink-code
+``` {.r code-line-numbers="1-4|5-10|11-14|16-18|20|21-35"}
+f <- factor(c("a", "b", "b"))
+f
+#> [1] a b b
+#> Levels: a b
+attributes(f)
+#> $levels
+#> [1] "a" "b"
+#> 
+#> $class
+#> [1] "factor"
+unclass(f)
+#> [1] 1 2 2
+#> attr(,"levels")
+#> [1] "a" "b"
+
+time <- strptime(c("2017-01-01", "2020-05-04 03:21"), "%Y-%m-%d")
+str(time)
+#>  POSIXlt[1:2], format: "2017-01-01" "2020-05-04"
+
+class(time) <- NULL
+str(time)
+#> List of 11
+#>  $ sec   : num [1:2] 0 0
+#>  $ min   : int [1:2] 0 0
+#>  $ hour  : int [1:2] 0 0
+#>  $ mday  : int [1:2] 1 4
+#>  $ mon   : int [1:2] 0 4
+#>  $ year  : int [1:2] 117 120
+#>  $ wday  : int [1:2] 0 1
+#>  $ yday  : int [1:2] 0 124
+#>  $ isdst : int [1:2] 0 0
+#>  $ zone  : chr [1:2] "UTC" "UTC"
+#>  $ gmtoff: int [1:2] 0 0
+#>  - attr(*, "tzone")= chr "UTC"
+#>  - attr(*, "balanced")= logi TRUE
+```
+:::
+
+## Classes
+
+``` {.r code-line-numbers="1-2|4-6|8-9|10-11|12-13"}
+# Create and assign class in one step
+x <- structure(list(), class = "my_class")
+
+# Create, then set class
+x <- list()
+class(x) <- "my_class"
+
+class(x)
+#> [1] "my_class"
+inherits(x, "my_class")
+#> [1] TRUE
+inherits(x, "your_class")
+#> [1] FALSE
+```
+
+. . .
+
+-   R doesn’t stop you from shooting yourself in the foot, but as long as you don’t aim the gun at your toes and pull the trigger, you won’t have a problem.
+
+## Classes - Common Practice
+
+To avoid foot-bullet intersections when creating your own class, you may:
+
+::: incremental
+-   A low-level constructor, `new_myclass()`, that efficiently creates new objects with the correct structure.
+-   A validator, `validate_myclass()`, that performs more computationally expensive checks to ensure that the object has correct values.
+-   A user-friendly helper, `myclass()`, that provides a convenient way for others to create objects of your class.
+:::
+
+## Classes - Example
+
+::: shrink-code
+``` {.r code-line-numbers="1-9|11-26|28-33|35-49|51-58"}
+## 1. Low‐level constructor: assume inputs are ok
+new_myclass <- function(values = numeric(), unit = character(1)) {
+  # no checks here beyond base‐R stopifnot
+  stopifnot(is.numeric(values), is.character(unit), length(unit) == 1)
+  structure(
+    list(values = values, unit = unit),
+    class = "myclass"
+  )
+}
+
+## 2. Validator: more thorough checks
+validate_myclass <- function(x) {
+  if (!inherits(x, "myclass")) {
+    stop("`x` must be a 'myclass' object.", call. = FALSE)
+  }
+  if (!is.numeric(x$values)) {
+    stop("`values` must be numeric.", call. = FALSE)
+  }
+  if (any(is.na(x$values))) {
+    stop("`values` must not contain NA.", call. = FALSE)
+  }
+  if (!is.character(x$unit) || length(x$unit) != 1) {
+    stop("`unit` must be a single character string.", call. = FALSE)
+  }
+  TRUE
+}
+
+## (Optional) a simple print method
+print.myclass <- function(x, ...) {
+  cat("<myclass>  ", length(x$values), "values [unit = ", x$unit, "]\n", sep = "")
+  print(x$values)
+  invisible(x)
+}
+
+## 3. User‐facing helper: coerce/check inputs, then build + validate
+myclass <- function(values, unit = "unitless") {
+  # quick checks / coercions:
+  if (!is.numeric(values)) {
+    values <- as.numeric(values)
+    if (any(is.na(values))) stop("`values` could not be coerced to numeric.", call. = FALSE)
+  }
+  if (!is.character(unit) || length(unit) != 1) {
+    stop("`unit` must be a single character string.", call. = FALSE)
+  }
+  # build & validate
+  obj <- new_myclass(values = values, unit = unit)
+  validate_myclass(obj)
+  obj
+}
+
+## --- Example usage ---
+x <- myclass(c(1.1, 2.2, 3.3), unit = "kg")
+print(x)
+#> <myclass> 3 values [unit = kg]
+#> [1] 1.1 2.2 3.3
+
+# This will error because of an NA:
+# myclass(c(1, NA, 3))
+```
+:::
+
+## Generics and Methods - Method Dispatch
+
+``` {.r code-line-numbers="1-3|5-6|7-8|10-12|13-16"}
+View(print)
+#> function (x, ...) 
+#> UseMethod("print")
+
+ftype(print)
+#> [1] "S3"      "generic"
+ftype(print.factor)
+#> [1] "S3"     "method"
+
+s3_dispatch(print(f))
+#> => print.factor
+#>  * print.default
+s3_dispatch(print(unclass(f)))
+#>    print.integer
+#>    print.numeric
+#> => print.default
+```
+
+## Finding methods
+
+``` {.r code-line-numbers="1-11|13-23"}
+s3_methods_generic("mean")
+#> # A tibble: 7 × 4
+#>   generic class      visible source             
+#>   <chr>   <chr>      <lgl>   <chr>              
+#> 1 mean    Date       TRUE    base               
+#> 2 mean    default    TRUE    base               
+#> 3 mean    difftime   TRUE    base               
+#> 4 mean    POSIXct    TRUE    base               
+#> 5 mean    POSIXlt    TRUE    base               
+#> 6 mean    quosure    FALSE   registered S3method
+#> 7 mean    vctrs_vctr FALSE   registered S3method
+
+s3_methods_class("funts")
+#> # A tibble: 7 × 4
+#>   generic class visible source             
+#>   <chr>   <chr> <lgl>   <chr>              
+#> 1 -       funts FALSE   registered S3method
+#> 2 *       funts FALSE   registered S3method
+#> 3 [       funts FALSE   registered S3method
+#> 4 +       funts FALSE   registered S3method
+#> 5 length  funts FALSE   registered S3method
+#> 6 plot    funts FALSE   registered S3method
+#> 7 print   funts FALSE   registered S3method
+```
+
+## Creating methods
+
+::: {style="margin-top: 20px;"}
+```{r}
+mean.myclass <- function(x, ...) {
+  print("custom mean")
+}
+
+mean(x)
+```
+:::
+
+. . .
+
+::: {style="margin-top: 20px;"}
+-   A method must have the same arguments as its generic. This is enforced in packages by `R CMD check`.
+:::
+
+. . .
+
+-   There is one exception to this rule: if the generic has `...`, the method can contain a superset of the arguments. This allows methods to take arbitrary additional arguments.
+
+## Inheritance
+
+``` {.r code-line-numbers="1-3|5-6|8-11|13-17"}
+x <- factor("a","b","b")
+class(x)
+#> "factor"
+
+class(ordered(x))
+#> "ordered" "factor"
+
+s3_dispatch(print(ordered(x)))
+#>    print.ordered
+#> => print.factor
+#>  * print.default
+
+s3_dispatch(ordered(x)[1])
+#>    [.ordered
+#> => [.factor
+#>    [.default
+#> -> [ (internal)
+```
+
+. . .
+
+-   We’ll say that `ordered` is a **subclass** of `factor` and `factor` is a **superclass** of `ordered`.
+
+## Inheritance Cont. {auto-animate="true"}
+
+::: shrink-code
+``` {.r code-line-numbers="1-4|6-9|11-13|15-18|20-21"}
+new_secret <- function(x = double()) {
+  stopifnot(is.double(x))
+  structure(x, class = "secret")
+}
+
+print.secret <- function(x, ...) {
+  print(strrep("x", nchar(x)))
+  invisible(x)
+}
+
+x <- new_secret(c(15, 1, 456))
+x
+#> [1] "xx"  "x"   "xxx"
+
+s3_dispatch(x[1])
+#>    [.secret
+#>    [.default
+#> => [ (internal)
+
+x[1]
+#> [1] 15
+```
+:::
+
+. . .
+
+-   To fix this, we need to provide a `[.secret` method.
+
+## Inheritance Cont. - `NextMethod()` {auto-animate="true"}
+
+::: shrink-code
+``` {.r code-line-numbers="1-4|6-7"}
+`[.secret` <- function(x, i) {
+  x <- unclass(x)
+  new_secret(x[i])
+}
+
+x[1]
+#> [1] "xx"
+```
+:::
+
+. . .
+
+-   A better solution using `NextMethod()`
+
+::: shrink-code
+``` {.r code-line-numbers="1-3|5-6|8-11"}
+`[.secret` <- function(x, i) {
+  new_secret(NextMethod())
+}
+
+x[1]
+#> [1] "xx"
+
+s3_dispatch(x[1])
+#> => [.secret
+#>    [.default
+#> -> [ (internal)
+```
+:::
+
+# S4: Formal Classes
+
+``` {.r code-line-numbers="1-7|8-17|19-23"}
+# Definition: `setClass()` with slots
+setClass("Person",
+  slots = list(
+    name = "character",
+    age  = "numeric"
+  )
+)
+
+# Create instance
+subj1 <- new("Person", name = "Adam", age = 30)
+subj1
+#> An object of class "Person"
+#> Slot "name":
+#> [1] "Adam"
+#> 
+#> Slot "age":
+#> [1] 30
+
+# slot access via `@` and `slot()
+obj1@name
+#> [1] "Adam"
+slot(obj1, "age")
+#> [1] 30
+```
+
+## Generics & Methods
+
+::: incremental
+-   **Define generic**:
+
+    ``` {.r}
+    setGeneric("greet", function(x) standardGeneric("greet"))
+    ```
+-   **Define method**:
+
+    ``` {.r}
+    setMethod("greet", "Person", function(x) {
+      paste("Hello, my name is", x@name)
+    })
+    ```
+-   **Example**:
+
+    ``` {.r}
+    greet(subj1)
+    #> [1] "Hello, my name is Adam"
+    ```
+:::
+
+## Inheritance & Virtual Classes
+
+::: incremental
+-   **Inheritance**:
+
+    ``` {.r}
+    setClass("Employee", contains = "Person",
+      slots = list(salary = "numeric"))
+    ```
+
+-   **Example**:
+
+    ``` {.r code-line-numbers="1|2-11"}
+    emp1 <- new("Employee", subj1, salary = 75000)
+    emp1
+    #> An object of class "Employee"
+    #> Slot "salary":
+    #> [1] 75000
+    #> 
+    #> Slot "name":
+    #> [1] "Adam"
+    #> 
+    #> Slot "age":
+    #> [1] 30
+    ```
+:::
+
+# R6: Reference Classes
+
+::: incremental
+-   **Encapsulated OOP**: mutable fields + methods
+
+-   **Define**:
+
+    ::: shrink-code
+    ``` {.r}
+    library(R6)
+    PersonR6 <- R6Class("PersonR6",
+      public = list(
+        name = NULL,
+        initialize = function(name) self$name <- name,
+        greet = function() cat("Hi, I'm", self$name, "\n")
+      )
+    )
+    ```
+    :::
+
+-   **Instantiate & use**:
+
+    ::: shrink-code
+    ``` {.r code-line-numbers="1|2-3"}
+    p <- PersonR6$new("Bob")
+    p$greet()
+    #> Hi, I'm Bob 
+    ```
+    :::
+:::
+
+## Advanced Features
+
+-   **Active bindings**
+-   **Inheritance & extension**
+-   **Private vs public**
+-   **Use cases**: GUI, stateful objects, iterative algorithms
+
+. . .
+
+![](images/oop/R6_Features.png){.absolute bottom="0" left="200" height="370"}
+
+
+# S7: The New OOP System {auto-animate="true"}
+
+::: {style="margin-top: -15px;"}
+:::
+
+-   Designed by the R Consortium to unify S3+S4 and fix issues.
+
+::: {style="margin-top: -30px;"}
+:::
+
+. . .
+
+::: {.medium}
+-   **Key features**:
+
+    - Multiple dispatch
+    - Formal class definitions
+    - Compatibility with S3/S4
+    - Faster than S4, simpler than R6
+:::
+
+. . .
+
+::: shrink-code
+```{.r code-line-numbers="1-3|4-5|6-8"}
+library(S7)
+Circle <- new_class("Circle", properties = list(radius = class_double))
+circle1 <- Circle(radius = 5)
+typeof(circle1)
+#> [1] "object"
+circle1
+#> <Circle>
+#>  @ radius: num 5
+```
+:::
+
+# Trade-offs & Best Practices
+
+::: {.medium}
+| Paradigm | Pros               | Cons                           |
+|----------|--------------------|--------------------------------|
+| S3       | Simple, flexible   | No schema, fragile dispatch    |
+| S4       | Formal, robust     | Verbose, steep learning curve  |
+| R6       | Encapsulated, fast | Manual memory, low abstraction |
+| S7       | Unified, type-safe	| Newer, evolving ecosystem      |
+:::
+
+. . .
+
+-   Choose based on complexity & team skill
+
+-   Document constructors & methods clearly
+
+-   Write unit tests for OO code
+
+# Hands-on Exercises (30 min) {auto-animate="true"}
+
+![](images/oop/knn1.png){width=1000}
+
+. . . 
+
+::: {style="margin-top: -476px;"}
+![](images/oop/knn2.png){width=1000}
+:::
+
+. . .
+
+
+::: {style="margin-top: -24px;"}
+:::
+
+-   [An S3 implementation of KNN Regression](https://github.com/mmadoliat/WSoRT/blob/main/R/knn_s3.R){target="_blank"}
+-   [A formula based implementation of KNN Regression](https://github.com/mmadoliat/WSoRT/blob/main/R/knn_s3_formula.R){target="_blank"}
+
+# Resources & References {auto-animate="true"}
+
+<img src="images/oop/oop-vs-fp.jpg" style="opacity: .05;" width="1500">
+
+::: {style="margin-top: -600px;"}
+:::
+
+-   **Advanced R**: [OO chapters by Hadley Wickham](https://adv-r.hadley.nz/oo.html)
+    -   [S3](https://adv-r.hadley.nz/s3.html)
+    -   [S4](https://adv-r.hadley.nz/s4.html)
+    -   [R6](https://adv-r.hadley.nz/r6.html)
+-   R Consortium Object-Oriented Programming Working Group    
+    -   [S7 GitHub page](https://rconsortium.github.io/S7/)
+
+# Q&A {auto-animate="true"}
+
+<img src="images/oop/oop-vs-fp.jpg" style="opacity: .05;" width="1500">
+
+::: {style="margin-top: -500px;"}
+:::
+
+<div style="text-align: center;">
+
+::: {.large}
+**Thank You**
+:::
+
+</div>
+
+-   Feedback welcome!

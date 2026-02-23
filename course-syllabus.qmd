@@ -1,0 +1,63 @@
+---
+title: "Syllabus – Short Course on R Tools (SCoRT)"
+format:
+  html: default
+  pdf: default
+---
+
+## Course Information
+
+**Course Title:** Short Course on R Tools (SCoRT)\
+**Meeting Time:** Mon–Wed, Aug 11–13 & Aug 18–20, 5:00–7:00 pm IRT\
+**Location:** [PGU BigBlueButton](https://meet.pgu.ac.ir/b/dat-ifq-ect-fjg)\
+**Website:** <https://bit.ly/SCoRT>
+
+## Instructor Details
+
+-   **Instructors:** Mehdi Maadooliat & Hossein Haghbin\
+-   **Office Hours:** Right after class
+
+## Course Description
+
+This short, intensive course equips participants with practical, modern **R** skills to extend, optimize, and share their work. Over six sessions you’ll learn OOP in R, build Shiny apps, speed up code with Rcpp, call Python from R with `reticulate`, build professional R packages, and collaborate on GitHub—including an overview of the CRAN release process.
+
+## Learning Outcomes
+
+By the end of the course, participants will be able to:
+
+-   Apply R’s OOP systems (S3/S4/R6) to structure code.
+-   Build interactive Shiny web applications.
+-   Improve performance by interfacing with C++ via **Rcpp**.
+-   Integrate Python into R workflows using **reticulate**.
+-   Develop, document, test, and share professional R packages.
+-   Use Git/GitHub for version control, releases, and prepare for CRAN submission.
+
+## Prerequisites
+
+-   Working knowledge of R and basic data analysis concepts.\
+-   Some familiarity with the command line and version control is helpful (not required).
+
+## Materials
+
+-   **Primary Resource:** Course website — <https://bit.ly/SCoRT>\
+-   Supplemental tutorials, templates, and datasets will be provided in class.
+
+## Assignments & Assessment
+
+-   **Homework (2):** Short, hands-on tasks reinforcing each block (due Aug 15 & Aug 22).\
+-   **Optional Mini-Project:** Create a small R package or Shiny app integrating course concepts.
+
+*No exams. Due to the short format, late submissions are not accepted except for documented emergencies.*
+
+## Attendance
+
+Active participation is expected; sessions build on each other.
+
+## Academic Honesty
+
+Discuss concepts with peers but submit your own work.\
+Use of AI coding tools (e.g., ChatGPT, Copilot) is allowed **for code** if you cite usage; do not submit AI-generated narrative as your own. You are responsible for understanding any code you turn in.
+
+## Important Note
+
+This syllabus may be updated; any changes will be announced in class and on the course website.

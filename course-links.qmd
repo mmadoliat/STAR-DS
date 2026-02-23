@@ -1,0 +1,45 @@
+---
+title: "Useful links"
+---
+
++----------------------------+--------------------------------------------------------------------------------------+
+| Motivating Talk            | 🔗 [IrStat Webinar](slides/overview.html)                                            |
+|                            |                                                                                      |
+| Stat Calculator            | 🔗 [StatCalc(JAMM)](http://dna.mscsnet.mu.edu:3838/mlab/JAMM/)                       |
+|                            |                                                                                      |
+| Distribution Calculator    | 🔗 [DistCalc](http://dna.mscsnet.mu.edu:3838/mlab/DistCalc/)                         |
+|                            |                                                                                      |
+| RStudio                    | 🔗 on [dna](https://bit.ly/RS-dna)                                                   |
++----------------------------+--------------------------------------------------------------------------------------+
+| Advanced Texbooks          | 🔗 [Advanced R by Hadley Wickham](https://adv-r.hadley.nz/)                          |
+|                            |                                                                                      |
+|                            | 🔗 [R Package](https://r-pkgs.org/)                                                  |
+|                            |                                                                                      |
+|                            | 🔗 [Quarto](https://quarto.org/)                                                     |
+|                            |                                                                                      |
+|                            | 🔗 [R Markdown](https://bookdown.org/yihui/rmarkdown/)                               |
+|                            |                                                                                      |
+|                            | 🔗 [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/)          |
+|                            |                                                                                      |
+|                            | 🔗 [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)             |
+|                            |                                                                                      |
+|                            | 🔗 [Data Visualization: A Practical Introduction](https://socviz.co/)                |
+|                            |                                                                                      |
+|                            | 🔗 [R for Data Science](https://r4ds.hadley.nz/)                                     |
++----------------------------+--------------------------------------------------------------------------------------+
+| Some Package documentation | 🔗 OOP-R6: [r6.r-lib.org](https://r6.r-lib.org/)                                     |
+|                            |                                                                                      |
+|                            | 🔗 shiny: [shiny.posit.co](https://shiny.posit.co/)                                  |
+|                            |                                                                                      |
+|                            | 🔗 Rcpp: [www.rcpp.org](https://www.rcpp.org/)                                       |
+|                            |                                                                                      |
+|                            | 🔗 reticulate: [rstudio.github.io/reticulate](https://rstudio.github.io/reticulate/) |
+|                            |                                                                                      |
+|                            | 🔗 devtools: [devtools.r-lib.org](https://devtools.r-lib.org/)                       |
+|                            |                                                                                      |
+|                            | 🔗 GitHub: [happygitwithr.com](https://happygitwithr.com/)                           |
+|                            |                                                                                      |
+|                            | 🔗 CRAN: [cran.r-project.org](https://cran.r-project.org/submit.html)                |
+|                            |                                                                                      |
+|                            | 🔗 keras: [keras3.posit.co](https://keras3.posit.co/)                                |
++----------------------------+--------------------------------------------------------------------------------------+
