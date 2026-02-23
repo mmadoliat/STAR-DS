@@ -1,5 +1,5 @@
 ---
-title: "Syllabus – Short Course on R Tools (SCoRT)"
+title: "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)"
 format:
   html: default
   pdf: default
@@ -7,7 +7,7 @@ format:
 
 ## Course Information
 
-**Course Title:** Short Course on R Tools (SCoRT)\
+**Course Title:** Statistician’s Toolkit in R for Data Science (STaR-DS)\
 **Meeting Time:** Mon–Wed, Aug 11–13 & Aug 18–20, 5:00–7:00 pm IRT\
 **Location:** [PGU BigBlueButton](https://meet.pgu.ac.ir/b/dat-ifq-ect-fjg)\
 **Website:** <https://bit.ly/SCoRT>
@@ -39,7 +39,7 @@ By the end of the course, participants will be able to:
 
 ## Materials
 
--   **Primary Resource:** Course website — <https://bit.ly/SCoRT>\
+-   **Primary Resource:** Course website — <https://tinyurl.com/STAR-DS>\
 -   Supplemental tutorials, templates, and datasets will be provided in class.
 
 ## Assignments & Assessment

@@ -2,14 +2,14 @@
 title: "Course overview"
 ---
 
-This is the homepage for Short Course on R Tools (SCoRT) by [Dr. Mehdi Maadooliat](http://www.mssc.mu.edu/~mehdi) and [Dr. Hossein Haghbin](http://research.pgu.ac.ir/~hhaghbin/en/). All course materials will be posted on this site.
+This is the homepage for STatisticians Advancing in R for Data Science (STAR-DS) by [Dr. Mehdi Maadooliat](http://www.mssc.mu.edu/~mehdi), [Dr. Jaihee Choi](https://www.marquette.edu/mathematical-and-statistical-sciences/directory/jaihee-choi.php) and [Dr. Daniel Circovic](https://cirkovd.github.io/). All course materials will be posted on this site.
 
 You can find the course syllabus [here](/course-syllabus.html) and the course schedule [here](/).
 
 ## Class meetings
 
-| Meeting | Location/Address | Time |
-|--|--|---|
-| Online Lecture | [PGU BigBlueButton](https://meet.pgu.ac.ir/b/dat-ifq-ect-fjg) | Mon & Tue & Wed 5:00 pm - 7:00 pm IRT. |
+| Meeting | Location/Address | Time                               |
+|---------|------------------|------------------------------------|
+| Lecture | SDSS 2026        | Tue, Apr 28, 1:30 p.m. – 5:30 p.m. |
 
 ![](images/twitter-card.png)

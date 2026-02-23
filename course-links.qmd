@@ -3,8 +3,6 @@ title: "Useful links"
 ---
 
 +----------------------------+--------------------------------------------------------------------------------------+
-| Motivating Talk            | 🔗 [IrStat Webinar](slides/overview.html)                                            |
-|                            |                                                                                      |
 | Stat Calculator            | 🔗 [StatCalc(JAMM)](http://dna.mscsnet.mu.edu:3838/mlab/JAMM/)                       |
 |                            |                                                                                      |
 | Distribution Calculator    | 🔗 [DistCalc](http://dna.mscsnet.mu.edu:3838/mlab/DistCalc/)                         |
