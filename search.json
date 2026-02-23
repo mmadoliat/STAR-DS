@@ -4,7 +4,7 @@
     "href": "course-overview.html",
     "title": "Course overview",
     "section": "",
-    "text": "This is the homepage for Short Course on R Tools (SCoRT) by Dr. Mehdi Maadooliat and Dr. Hossein Haghbin. All course materials will be posted on this site.\nYou can find the course syllabus here and the course schedule here.",
+    "text": "This is the homepage for STatisticians Advancing in R for Data Science (STAR-DS) by Dr. Mehdi Maadooliat, Dr. Jaihee Choi and Dr. Daniel Circovic. All course materials will be posted on this site.\nYou can find the course syllabus here and the course schedule here.",
     "crumbs": [
       "Course information",
       "Overview"
@@ -15,7 +15,7 @@
     "href": "course-overview.html#class-meetings",
     "title": "Course overview",
     "section": "Class meetings",
-    "text": "Class meetings\n\n\n\nMeeting\nLocation/Address\nTime\n\n\n\n\nOnline Lecture\nPGU BigBlueButton\nMon & Tue & Wed 5:00 pm - 7:00 pm IRT.",
+    "text": "Class meetings\n\n\n\nMeeting\nLocation/Address\nTime\n\n\n\n\nLecture\nSDSS 2026\nTue, Apr 28, 1:30 p.m. – 5:30 p.m.",
     "crumbs": [
       "Course information",
       "Overview"
@@ -1015,9 +1015,9 @@
   {
     "objectID": "course-syllabus.html",
     "href": "course-syllabus.html",
-    "title": "Syllabus – Short Course on R Tools (SCoRT)",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
     "section": "",
-    "text": "Course Title: Short Course on R Tools (SCoRT)\nMeeting Time: Mon–Wed, Aug 11–13 & Aug 18–20, 5:00–7:00 pm IRT\nLocation: PGU BigBlueButton\nWebsite: https://bit.ly/SCoRT",
+    "text": "Course Title: Statistician’s Toolkit in R for Data Science (STaR-DS)\nMeeting Time: Mon–Wed, Aug 11–13 & Aug 18–20, 5:00–7:00 pm IRT\nLocation: PGU BigBlueButton\nWebsite: https://bit.ly/SCoRT",
     "crumbs": [
       "Course information",
       "Syllabus"
@@ -1026,9 +1026,9 @@
   {
     "objectID": "course-syllabus.html#course-information",
     "href": "course-syllabus.html#course-information",
-    "title": "Syllabus – Short Course on R Tools (SCoRT)",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
     "section": "",
-    "text": "Course Title: Short Course on R Tools (SCoRT)\nMeeting Time: Mon–Wed, Aug 11–13 & Aug 18–20, 5:00–7:00 pm IRT\nLocation: PGU BigBlueButton\nWebsite: https://bit.ly/SCoRT",
+    "text": "Course Title: Statistician’s Toolkit in R for Data Science (STaR-DS)\nMeeting Time: Mon–Wed, Aug 11–13 & Aug 18–20, 5:00–7:00 pm IRT\nLocation: PGU BigBlueButton\nWebsite: https://bit.ly/SCoRT",
     "crumbs": [
       "Course information",
       "Syllabus"
@@ -1037,7 +1037,7 @@
   {
     "objectID": "course-syllabus.html#instructor-details",
     "href": "course-syllabus.html#instructor-details",
-    "title": "Syllabus – Short Course on R Tools (SCoRT)",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
     "section": "Instructor Details",
     "text": "Instructor Details\n\nInstructors: Mehdi Maadooliat & Hossein Haghbin\n\nOffice Hours: Right after class",
     "crumbs": [
@@ -1048,7 +1048,7 @@
   {
     "objectID": "course-syllabus.html#course-description",
     "href": "course-syllabus.html#course-description",
-    "title": "Syllabus – Short Course on R Tools (SCoRT)",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
     "section": "Course Description",
     "text": "Course Description\nThis short, intensive course equips participants with practical, modern R skills to extend, optimize, and share their work. Over six sessions you’ll learn OOP in R, build Shiny apps, speed up code with Rcpp, call Python from R with reticulate, build professional R packages, and collaborate on GitHub—including an overview of the CRAN release process.",
     "crumbs": [
@@ -1059,7 +1059,7 @@
   {
     "objectID": "course-syllabus.html#learning-outcomes",
     "href": "course-syllabus.html#learning-outcomes",
-    "title": "Syllabus – Short Course on R Tools (SCoRT)",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
     "section": "Learning Outcomes",
     "text": "Learning Outcomes\nBy the end of the course, participants will be able to:\n\nApply R’s OOP systems (S3/S4/R6) to structure code.\nBuild interactive Shiny web applications.\nImprove performance by interfacing with C++ via Rcpp.\nIntegrate Python into R workflows using reticulate.\nDevelop, document, test, and share professional R packages.\nUse Git/GitHub for version control, releases, and prepare for CRAN submission.",
     "crumbs": [
@@ -1070,7 +1070,7 @@
   {
     "objectID": "course-syllabus.html#prerequisites",
     "href": "course-syllabus.html#prerequisites",
-    "title": "Syllabus – Short Course on R Tools (SCoRT)",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
     "section": "Prerequisites",
     "text": "Prerequisites\n\nWorking knowledge of R and basic data analysis concepts.\n\nSome familiarity with the command line and version control is helpful (not required).",
     "crumbs": [
@@ -1081,9 +1081,9 @@
   {
     "objectID": "course-syllabus.html#materials",
     "href": "course-syllabus.html#materials",
-    "title": "Syllabus – Short Course on R Tools (SCoRT)",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
     "section": "Materials",
-    "text": "Materials\n\nPrimary Resource: Course website — https://bit.ly/SCoRT\n\nSupplemental tutorials, templates, and datasets will be provided in class.",
+    "text": "Materials\n\nPrimary Resource: Course website — https://tinyurl.com/STAR-DS\n\nSupplemental tutorials, templates, and datasets will be provided in class.",
     "crumbs": [
       "Course information",
       "Syllabus"
@@ -1092,7 +1092,7 @@
   {
     "objectID": "course-syllabus.html#assignments-assessment",
     "href": "course-syllabus.html#assignments-assessment",
-    "title": "Syllabus – Short Course on R Tools (SCoRT)",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
     "section": "Assignments & Assessment",
     "text": "Assignments & Assessment\n\nHomework (2): Short, hands-on tasks reinforcing each block (due Aug 15 & Aug 22).\n\nOptional Mini-Project: Create a small R package or Shiny app integrating course concepts.\n\nNo exams. Due to the short format, late submissions are not accepted except for documented emergencies.",
     "crumbs": [
@@ -1103,7 +1103,7 @@
   {
     "objectID": "course-syllabus.html#attendance",
     "href": "course-syllabus.html#attendance",
-    "title": "Syllabus – Short Course on R Tools (SCoRT)",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
     "section": "Attendance",
     "text": "Attendance\nActive participation is expected; sessions build on each other.",
     "crumbs": [
@@ -1114,7 +1114,7 @@
   {
     "objectID": "course-syllabus.html#academic-honesty",
     "href": "course-syllabus.html#academic-honesty",
-    "title": "Syllabus – Short Course on R Tools (SCoRT)",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
     "section": "Academic Honesty",
     "text": "Academic Honesty\nDiscuss concepts with peers but submit your own work.\nUse of AI coding tools (e.g., ChatGPT, Copilot) is allowed for code if you cite usage; do not submit AI-generated narrative as your own. You are responsible for understanding any code you turn in.",
     "crumbs": [
@@ -1125,7 +1125,7 @@
   {
     "objectID": "course-syllabus.html#important-note",
     "href": "course-syllabus.html#important-note",
-    "title": "Syllabus – Short Course on R Tools (SCoRT)",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
     "section": "Important Note",
     "text": "Important Note\nThis syllabus may be updated; any changes will be announced in class and on the course website.",
     "crumbs": [
@@ -1138,7 +1138,7 @@
     "href": "course-links.html",
     "title": "Useful links",
     "section": "",
-    "text": "Motivating Talk\nStat Calculator\nDistribution Calculator\nRStudio\n🔗 IrStat Webinar\n🔗 StatCalc(JAMM)\n🔗 DistCalc\n🔗 on dna\n\n\nAdvanced Texbooks\n🔗 Advanced R by Hadley Wickham\n🔗 R Package\n🔗 Quarto\n🔗 R Markdown\n🔗 ggplot2: Elegant Graphics for Data Analysis\n🔗 Fundamentals of Data Visualization\n🔗 Data Visualization: A Practical Introduction\n🔗 R for Data Science\n\n\nSome Package documentation\n🔗 OOP-R6: r6.r-lib.org\n🔗 shiny: shiny.posit.co\n🔗 Rcpp: www.rcpp.org\n🔗 reticulate: rstudio.github.io/reticulate\n🔗 devtools: devtools.r-lib.org\n🔗 GitHub: happygitwithr.com\n🔗 CRAN: cran.r-project.org\n🔗 keras: keras3.posit.co",
+    "text": "Stat Calculator\nDistribution Calculator\nRStudio\n🔗 StatCalc(JAMM)\n🔗 DistCalc\n🔗 on dna\n\n\nAdvanced Texbooks\n🔗 Advanced R by Hadley Wickham\n🔗 R Package\n🔗 Quarto\n🔗 R Markdown\n🔗 ggplot2: Elegant Graphics for Data Analysis\n🔗 Fundamentals of Data Visualization\n🔗 Data Visualization: A Practical Introduction\n🔗 R for Data Science\n\n\nSome Package documentation\n🔗 OOP-R6: r6.r-lib.org\n🔗 shiny: shiny.posit.co\n🔗 Rcpp: www.rcpp.org\n🔗 reticulate: rstudio.github.io/reticulate\n🔗 devtools: devtools.r-lib.org\n🔗 GitHub: happygitwithr.com\n🔗 CRAN: cran.r-project.org\n🔗 keras: keras3.posit.co",
     "crumbs": [
       "Miscellaneous",
       "Useful links"
