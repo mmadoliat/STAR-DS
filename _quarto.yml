@@ -3,11 +3,11 @@ project:
 
 website:
   page-navigation: true
-  title: "SCoRT"
-  description: "Homepage for 'Short Course on R Tools', Summer 2025."
-  site-url: "http://bit.ly/SCoRT"
+  title: "STAR-DS"
+  description: "Homepage for 'STatisticians Advancing in R for Data Science (STAR-DS) ', SDSS 2026."
+  site-url: "http://tinyurl.com/STAR-DS"
 
-  repo-url: http://github.com/mmadoliat/SCoRT/
+  repo-url: http://github.com/mmadoliat/STAR-DS/
   repo-actions: [edit, issue]
 
   open-graph: true
@@ -22,10 +22,10 @@ website:
     align: center
     tools:
       - icon: github
-        href: http://github.com/mmadoliat/SCoRT/
+        href: http://github.com/mmadoliat/STAR-DS/
         text: "GitHub organization"
       - icon: code-square
-        href: http://bit.ly/SCoRT
+        href: http://tinyurl.com/STAR-DS
         text: "Bitly"
       - icon: person-fill
         href: http://bit.ly/RS-dna
@@ -45,8 +45,6 @@ website:
             text: Schedule
       - section: "Slides"
         contents:
-          - href: slides/Topic1.qmd
-            text: OOP in R
           - href: slides/Topic2.qmd
             text: Shiny
           - href: slides/Topic3.qmd
@@ -57,12 +55,8 @@ website:
             text: R package
           - href: slides/Topic6.qmd
             text: GitHub / CRAN submission
-          - href: slides/Topic7.qmd
-            text: Deep Learning in R
       - section: "Hands-on / HW"
         contents:
-          - href: hands-on/HO1.qmd
-            text: OOP in R
           - href: hands-on/HO2.qmd
             text: Shiny
           - href: hands-on/HO3.qmd
@@ -84,7 +78,7 @@ website:
 
   page-footer:
     right: "This page is built with [Quarto](http://quarto.org/)."
-    left: "&copy; Copyright 2025, Mehdi Maadooliat and Hossein Haghbin"
+    left: "&copy; Copyright 2025, Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic"
     background: "#FFCC00" # Arylide Yellow
     
 format:

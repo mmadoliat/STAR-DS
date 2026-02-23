@@ -8,24 +8,22 @@ format:
 ## Course Information
 
 **Course Title:** Statistician’s Toolkit in R for Data Science (STaR-DS)\
-**Meeting Time:** Mon–Wed, Aug 11–13 & Aug 18–20, 5:00–7:00 pm IRT\
-**Location:** [PGU BigBlueButton](https://meet.pgu.ac.ir/b/dat-ifq-ect-fjg)\
-**Website:** <https://bit.ly/SCoRT>
+**Meeting Time:** Tue, Apr 28, 12:30–5:30 pm\
+**Location:** Hyatt Regency Milwaukee\
+**Website:** <http://tinyurl.com/STAR-DS>
 
 ## Instructor Details
 
--   **Instructors:** Mehdi Maadooliat & Hossein Haghbin\
--   **Office Hours:** Right after class
+-   **Instructors:** Mehdi Maadooliat & Jaihee Choi & Daniel Cirkovic\
 
 ## Course Description
 
-This short, intensive course equips participants with practical, modern **R** skills to extend, optimize, and share their work. Over six sessions you’ll learn OOP in R, build Shiny apps, speed up code with Rcpp, call Python from R with `reticulate`, build professional R packages, and collaborate on GitHub—including an overview of the CRAN release process.
+This short, intensive course equips participants with practical, modern **R** skills to extend, optimize, and share their work. Over three sessions you’ll learn how to build Shiny apps, speed up code with Rcpp, call Python from R with `reticulate`, build professional R packages, and collaborate on GitHub—including an overview of the CRAN release process.
 
 ## Learning Outcomes
 
 By the end of the course, participants will be able to:
 
--   Apply R’s OOP systems (S3/S4/R6) to structure code.
 -   Build interactive Shiny web applications.
 -   Improve performance by interfacing with C++ via **Rcpp**.
 -   Integrate Python into R workflows using **reticulate**.
@@ -44,19 +42,11 @@ By the end of the course, participants will be able to:
 
 ## Assignments & Assessment
 
--   **Homework (2):** Short, hands-on tasks reinforcing each block (due Aug 15 & Aug 22).\
 -   **Optional Mini-Project:** Create a small R package or Shiny app integrating course concepts.
-
-*No exams. Due to the short format, late submissions are not accepted except for documented emergencies.*
 
 ## Attendance
 
 Active participation is expected; sessions build on each other.
-
-## Academic Honesty
-
-Discuss concepts with peers but submit your own work.\
-Use of AI coding tools (e.g., ChatGPT, Copilot) is allowed **for code** if you cite usage; do not submit AI-generated narrative as your own. You are responsible for understanding any code you turn in.
 
 ## Important Note
 

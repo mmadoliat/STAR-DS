@@ -1,5 +1,5 @@
 ---
-title: "Short Course on R Tools - (SCoRT)"
+title: "STatisticians Advancing in R for Data Science (STAR-DS)"
 execute: 
   freeze: false
 ---
@@ -14,7 +14,7 @@ library(googlesheets4)
 library(gt)
 library(tidyverse)
 gs4_deauth()
-d <- read_sheet("https://docs.google.com/spreadsheets/d/1FokubeE-f4Q71plkCsY84ZF_-2noo6TywXoGo2LItsM/edit?usp=sharing")
+d <- read_sheet("https://docs.google.com/spreadsheets/d/1oUI7v_Ij8L_cCbcG4QqlE2a_PIcRp74KOovtx3ijl90/edit?usp=sharing")
 ```
 
 ```{r}

@@ -1,3 +1,3 @@
-# SCoRT
+# STAR-DS
 
-Course webpage for SCoRT - Summer 2025
+Course webpage for STAR-DS - SDSS 2026
