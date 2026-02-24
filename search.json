@@ -290,462 +290,294 @@
     "href": "slides/Topic7.html#classical-programming-vs-machine-learning",
     "title": "Short Course on R Tools",
     "section": "Classical Programming vs Machine Learning",
-    "text": "Classical Programming vs Machine Learning\n\nDeep learning is often presented as algorithms that “work like the brain”, that “think” or “understand”.\n\n\n\n\nReality is however quite far from this dream\n\n\n\n\n\nAI: the effort to automate intellectual tasks normally performed by humans.\n\n\n\n\n\n\n\n\nML: Could a computer surprise us? Rather than programmers crafting data-processing rules by hand, could a computer automatically learn these rules by looking at data? \n\n\n\n\n\n\n\n\nArtificial Intelligence\n\n\nMachine learning\n\n\nDeep learning",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Classical Programming vs Machine Learning\n\nDeep learning is often presented as algorithms that “work like the brain”, that “think” or “understand”.\n\n\n\n\nReality is however quite far from this dream\n\n\n\n\n\nAI: the effort to automate intellectual tasks normally performed by humans.\n\n\n\n\n\n\n\n\nML: Could a computer surprise us? Rather than programmers crafting data-processing rules by hand, could a computer automatically learn these rules by looking at data? \n\n\n\n\n\n\n\n\nArtificial Intelligence\n\n\nMachine learning\n\n\nDeep learning"
   },
   {
     "objectID": "slides/Topic7.html#classical-programming-vs-machine-learning-1",
     "href": "slides/Topic7.html#classical-programming-vs-machine-learning-1",
     "title": "Short Course on R Tools",
     "section": "Classical Programming vs Machine Learning",
-    "text": "Classical Programming vs Machine Learning\n\nDeep learning is often presented as algorithms that “work like the brain”, that “think” or “understand”.\n\n\n \n\n\n\nAI: the effort to automate intellectual tasks normally performed by humans.\n\n\n\n\n\n\nML: Could a computer surprise us? Rather than programmers crafting data-processing rules by hand, could a computer automatically learn these rules by looking at data? \n\n\n\n\n\n\n\nArtificial Intelligence\n\n\nMachine learning\n\n\nDeep learning",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Classical Programming vs Machine Learning\n\nDeep learning is often presented as algorithms that “work like the brain”, that “think” or “understand”.\n\n\n \n\n\n\nAI: the effort to automate intellectual tasks normally performed by humans.\n\n\n\n\n\n\nML: Could a computer surprise us? Rather than programmers crafting data-processing rules by hand, could a computer automatically learn these rules by looking at data? \n\n\n\n\n\n\n\nArtificial Intelligence\n\n\nMachine learning\n\n\nDeep learning"
   },
   {
     "objectID": "slides/Topic7.html#recipes-of-a-machine-learning-algorithm",
     "href": "slides/Topic7.html#recipes-of-a-machine-learning-algorithm",
     "title": "Short Course on R Tools",
     "section": "Recipes of a Machine Learning Algorithm",
-    "text": "Recipes of a Machine Learning Algorithm\n\n\nInput data points, e.g. \n\nIf the task is speech recognition, these data points could be sound files\nIf the task is image tagging, they could be picture files\n\nExamples of the expected output \n\nIn a speech-recognition task, these could be transcripts of sound files\nIn an image task, expected outputs could tags such as “dog”, “cat”, and so on\n\nA way to measure whether the algorithm is doing a good job \n\nThis is needed to determine the distance between the output and its expected output.\nThe measurement is used as a feedback signal to adjust the way the algorithm works.",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Recipes of a Machine Learning Algorithm\n\n\nInput data points, e.g. \n\nIf the task is speech recognition, these data points could be sound files\nIf the task is image tagging, they could be picture files\n\nExamples of the expected output \n\nIn a speech-recognition task, these could be transcripts of sound files\nIn an image task, expected outputs could tags such as “dog”, “cat”, and so on\n\nA way to measure whether the algorithm is doing a good job \n\nThis is needed to determine the distance between the output and its expected output.\nThe measurement is used as a feedback signal to adjust the way the algorithm works."
   },
   {
     "objectID": "slides/Topic7.html#anatomy-of-a-neural-network",
     "href": "slides/Topic7.html#anatomy-of-a-neural-network",
     "title": "Short Course on R Tools",
     "section": "Anatomy of a Neural Network",
-    "text": "Anatomy of a Neural Network\n\n\n\n\n\nThe input data and corresponding targets \nLayers, which are combined into a network (or model) \nThe loss function, which provides feedback for learning \nThe optimizer, which determines how learning proceeds",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Anatomy of a Neural Network\n\n\n\n\n\nThe input data and corresponding targets \nLayers, which are combined into a network (or model) \nThe loss function, which provides feedback for learning \nThe optimizer, which determines how learning proceeds"
   },
   {
     "objectID": "slides/Topic7.html#lenet-5-a-pioneering-7-level-cnn",
     "href": "slides/Topic7.html#lenet-5-a-pioneering-7-level-cnn",
     "title": "Short Course on R Tools",
     "section": "LeNet-5: a pioneering 7-level CNN",
-    "text": "LeNet-5: a pioneering 7-level CNN\n\n\n\nThe first successful practical application of neural nets came in 1989 from Bell Labs, when Yann LeCun combined the earlier ideas of convolutional neural networks and backpropagation, and applied them to the problem of classifying handwritten digits.\nThe resulting network, dubbed LeNet, was used by the USPS in the 1990s to automate the reading of ZIP codes on mail envelopes.\nLeNet-5 was applied by several banks to recognize hand-written numbers on checks digitized in 32x32 pixel images.",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "LeNet-5: a pioneering 7-level CNN\n\n\n\nThe first successful practical application of neural nets came in 1989 from Bell Labs, when Yann LeCun combined the earlier ideas of convolutional neural networks and backpropagation, and applied them to the problem of classifying handwritten digits.\nThe resulting network, dubbed LeNet, was used by the USPS in the 1990s to automate the reading of ZIP codes on mail envelopes.\nLeNet-5 was applied by several banks to recognize hand-written numbers on checks digitized in 32x32 pixel images."
   },
   {
     "objectID": "slides/Topic7.html#why-30-years-gap",
     "href": "slides/Topic7.html#why-30-years-gap",
     "title": "Short Course on R Tools",
     "section": "Why 30+ Years gap?",
-    "text": "Why 30+ Years gap?\n\n\n\nIn 2011, Dan Ciresan from IDSIA (Switzerland) began to win academic image-classification competitions with GPU-trained deep neural networks\nin 2012, a team led by Alex Krizhevsky and advised by Geoffrey Hinton was able to achieve a top-five accuracy of 83.6%–a significant breakthrough (in 2011 it was only 74.3%). \nThree forces are driving advances in ML:\n\nHardware\nDatasets and benchmarks\nAlgorithmic advances",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Why 30+ Years gap?\n\n\n\nIn 2011, Dan Ciresan from IDSIA (Switzerland) began to win academic image-classification competitions with GPU-trained deep neural networks\nin 2012, a team led by Alex Krizhevsky and advised by Geoffrey Hinton was able to achieve a top-five accuracy of 83.6%–a significant breakthrough (in 2011 it was only 74.3%). \nThree forces are driving advances in ML:\n\nHardware\nDatasets and benchmarks\nAlgorithmic advances"
   },
   {
     "objectID": "slides/Topic7.html#vgg16cnn-for-classification-and-detection",
     "href": "slides/Topic7.html#vgg16cnn-for-classification-and-detection",
     "title": "Short Course on R Tools",
     "section": "VGG16–CNN for Classification and Detection",
-    "text": "VGG16–CNN for Classification and Detection\n\n\n\nVGG16 is a convolutional neural network model proposed by K. Simonyan and A. Zisserman from the University of Oxford.\nThe model achieves 92.7% top-5 test accuracy in ImageNet. It was one of the famous model submitted to ILSVRC-2014.\nIt makes the improvement over AlexNet by replacing large kernel-sized filters (11 and 5 in the first and second convolutional layer, respectively) with multiple 3×3 kernel-sized filters one after another.\nVGG16 was trained for weeks using NVIDIA Titan Black GPU’s.",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "VGG16–CNN for Classification and Detection\n\n\n\nVGG16 is a convolutional neural network model proposed by K. Simonyan and A. Zisserman from the University of Oxford.\nThe model achieves 92.7% top-5 test accuracy in ImageNet. It was one of the famous model submitted to ILSVRC-2014.\nIt makes the improvement over AlexNet by replacing large kernel-sized filters (11 and 5 in the first and second convolutional layer, respectively) with multiple 3×3 kernel-sized filters one after another.\nVGG16 was trained for weeks using NVIDIA Titan Black GPU’s."
   },
   {
     "objectID": "slides/Topic7.html#neural-network-parameters---activation-func.",
     "href": "slides/Topic7.html#neural-network-parameters---activation-func.",
     "title": "Short Course on R Tools",
     "section": "Neural Network – Parameters - Activation Func.",
-    "text": "Neural Network – Parameters - Activation Func.\n\n\n\n\n\nA Neural Network\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nActivation Function",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Neural Network – Parameters - Activation Func.\n\n\n\n\n\nA Neural Network\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nActivation Function"
   },
   {
     "objectID": "slides/Topic7.html#linear-activation-function",
     "href": "slides/Topic7.html#linear-activation-function",
     "title": "Short Course on R Tools",
     "section": "Linear Activation function",
-    "text": "Linear Activation function\n\n\n\n\n\\(Z=\\color{green}{W_1}X+\\color{lightblue}{b_1}\\)\n\n\n\n\n\n\n\n\n\\(Y=\\color{red}{W_2}Z+\\color{blue}{b_2}\\)\n\n\n\n\n\\(Y=\\color{red}{W_2}\\{\\color{green}{W_1}X+\\color{lightblue}{b_1}\\}+\\color{blue}{b_2}\\)\n\n\n\n\n\\(Y=\\{\\color{red}{W_2}\\color{green}{W_1}\\}X+\\{\\color{red}{W_2}\\color{lightblue}{b_1}+\\color{blue}{b_2}\\}\\)\n\n\n\n\n\n\n\n\n\\(Y=\\color{red}{\\mathbf{W}^*}X+\\color{blue}{\\mathbf{b}^*}\\)\n\n\n\nHidden Layers Disappears",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Linear Activation function\n\n\n\n\n\\(Z=\\color{green}{W_1}X+\\color{lightblue}{b_1}\\)\n\n\n\n\n\n\n\n\n\\(Y=\\color{red}{W_2}Z+\\color{blue}{b_2}\\)\n\n\n\n\n\\(Y=\\color{red}{W_2}\\{\\color{green}{W_1}X+\\color{lightblue}{b_1}\\}+\\color{blue}{b_2}\\)\n\n\n\n\n\\(Y=\\{\\color{red}{W_2}\\color{green}{W_1}\\}X+\\{\\color{red}{W_2}\\color{lightblue}{b_1}+\\color{blue}{b_2}\\}\\)\n\n\n\n\n\n\n\n\n\\(Y=\\color{red}{\\mathbf{W}^*}X+\\color{blue}{\\mathbf{b}^*}\\)\n\n\n\nHidden Layers Disappears"
   },
   {
     "objectID": "slides/Topic7.html#deep-learning-software",
     "href": "slides/Topic7.html#deep-learning-software",
     "title": "Short Course on R Tools",
     "section": "Deep learning software",
-    "text": "Deep learning software\n\n\n\n\n🔗 Wikipedia: Deep learning software",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Deep learning software\n\n\n\n\n🔗 Wikipedia: Deep learning software"
   },
   {
     "objectID": "slides/Topic7.html#what-is-tensorflow",
     "href": "slides/Topic7.html#what-is-tensorflow",
     "title": "Short Course on R Tools",
     "section": "What is TensorFlow?",
-    "text": "What is TensorFlow?\n\n\nYou define the graph in R\nGraph is compiled and optimized\nGraph is executed on devices\nNodes represent computations\nData (tensors) flows between them",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "What is TensorFlow?\n\n\nYou define the graph in R\nGraph is compiled and optimized\nGraph is executed on devices\nNodes represent computations\nData (tensors) flows between them"
   },
   {
     "objectID": "slides/Topic7.html#why-tensorflow-in-r",
     "href": "slides/Topic7.html#why-tensorflow-in-r",
     "title": "Short Course on R Tools",
     "section": "Why TensorFlow in R?",
-    "text": "Why TensorFlow in R?\n\n\nHardware independent\n\nCPU (via Eigen and BLAS)\nGPU (via CUDA and cuDNN)\nTPU (Tensor Processing Unit)\n\nSupports automatic differentiation\nDistributed execution and large datasets\nVery general built-in optimization algorithms (SGD, Adam) that don’t require that all data is in RAM\nIt can be deployed with a low-latency C++ runtime\nR has a lot to offer as an interface language for TensorFlow",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Why TensorFlow in R?\n\n\nHardware independent\n\nCPU (via Eigen and BLAS)\nGPU (via CUDA and cuDNN)\nTPU (Tensor Processing Unit)\n\nSupports automatic differentiation\nDistributed execution and large datasets\nVery general built-in optimization algorithms (SGD, Adam) that don’t require that all data is in RAM\nIt can be deployed with a low-latency C++ runtime\nR has a lot to offer as an interface language for TensorFlow"
   },
   {
     "objectID": "slides/Topic7.html#real-world-examples-of-data-tensors",
     "href": "slides/Topic7.html#real-world-examples-of-data-tensors",
     "title": "Short Course on R Tools",
     "section": "Real-world examples of data tensors",
-    "text": "Real-world examples of data tensors\n\n\n2D tensors\n\nVector data—(samples, features)  \n\n\n\n\n3D tensors\n\nGrayscale Images—(samples, height, width)\nTime-series data or sequence data—(samples, timesteps, features)\n\n\n\n\n \n\n\n\n\n\n\n4D tensors\n\nColor Images—(samples, height, width, channels)\n\n\n\n\n \n\n\n\n\n\n\n5D tensors\n\nVideo—(samples, frames, height, width, channels)",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Real-world examples of data tensors\n\n\n2D tensors\n\nVector data—(samples, features)  \n\n\n\n\n3D tensors\n\nGrayscale Images—(samples, height, width)\nTime-series data or sequence data—(samples, timesteps, features)\n\n\n\n\n \n\n\n\n\n\n\n4D tensors\n\nColor Images—(samples, height, width, channels)\n\n\n\n\n \n\n\n\n\n\n\n5D tensors\n\nVideo—(samples, frames, height, width, channels)"
   },
   {
     "objectID": "slides/Topic7.html#why-keras",
     "href": "slides/Topic7.html#why-keras",
     "title": "Short Course on R Tools",
     "section": "Why Keras?",
-    "text": "Why Keras?\n\n\nIt allows the same code to run seamlessly on CPU or GPU.\nIt has a user-friendly API that makes it easy to quickly prototype deep-learning models.",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Why Keras?\n\n\nIt allows the same code to run seamlessly on CPU or GPU.\nIt has a user-friendly API that makes it easy to quickly prototype deep-learning models."
   },
   {
     "objectID": "slides/Topic7.html#installing-keras",
     "href": "slides/Topic7.html#installing-keras",
     "title": "Short Course on R Tools",
     "section": "Installing Keras",
-    "text": "Installing Keras\n  \n\n\n\n\nFirst, install the keras R package:\n\nremotes::install_github(\"rstudio/keras3\");    # OR\nInstall.packages(\"keras3\")\n\n\nTo install both the core Keras library as well as the TensorFlow backend\n\nlibrary(keras3)\nkeras3::install_keras(backend = \"tensorflow\")\n\n\n\nYou need Python installed before installing TensorFlow\n\nAnaconda (Python distribution), a free and open-source software\n\n\n\n\n\n\n\n\nYou can install TensorFlow with GPU support\n\nNVIDIA® drivers,\nCUDA Toolkit v9.0, and\ncuDNN v7.0\n\n\n\n\n\nare needed: https://tensorflow.rstudio.com/tools/local_gpu.html",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Installing Keras\n  \n\n\n\n\nFirst, install the keras R package:\n\nremotes::install_github(\"rstudio/keras3\");    # OR\nInstall.packages(\"keras3\")\n\n\nTo install both the core Keras library as well as the TensorFlow backend\n\nlibrary(keras3)\nkeras3::install_keras(backend = \"tensorflow\")\n\n\n\nYou need Python installed before installing TensorFlow\n\nAnaconda (Python distribution), a free and open-source software\n\n\n\n\n\n\n\n\nYou can install TensorFlow with GPU support\n\nNVIDIA® drivers,\nCUDA Toolkit v9.0, and\ncuDNN v7.0\n\n\n\n\n\nare needed: https://tensorflow.rstudio.com/tools/local_gpu.html"
   },
   {
     "objectID": "slides/Topic7.html#developing-a-deep-nn-with-keras",
     "href": "slides/Topic7.html#developing-a-deep-nn-with-keras",
     "title": "Short Course on R Tools",
     "section": "Developing a Deep NN with Keras",
-    "text": "Developing a Deep NN with Keras\n  \n\n\n\n\nStep 1 - Define your training data:\n\ninput tensors and target tensors.\n\n\n\n\nStep 2 - Define a network of layers (or model)\n\nthat maps your inputs to your targets.\n\n\n\n\n\nStep 3 - Configure the learning process by choosing\n\na loss function,\nan optimizer,\nand some metrics to monitor.\n\n\n\n\n\nStep 4 - Iterate on your training data by calling the\n\nfit() method of your model.",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Developing a Deep NN with Keras\n  \n\n\n\n\nStep 1 - Define your training data:\n\ninput tensors and target tensors.\n\n\n\n\nStep 2 - Define a network of layers (or model)\n\nthat maps your inputs to your targets.\n\n\n\n\n\nStep 3 - Configure the learning process by choosing\n\na loss function,\nan optimizer,\nand some metrics to monitor.\n\n\n\n\n\nStep 4 - Iterate on your training data by calling the\n\nfit() method of your model."
   },
   {
     "objectID": "slides/Topic7.html#keras-step-1-data-preprocessing",
     "href": "slides/Topic7.html#keras-step-1-data-preprocessing",
     "title": "Short Course on R Tools",
     "section": "Keras: Step 1 – Data preprocessing",
-    "text": "Keras: Step 1 – Data preprocessing\n  \n\n\n\n\nlibrary(keras3)\n\n# Load MNIST (Modified National Institute of Standards and Technology) images datasets\nc(c(x_train, y_train), c(x_test, y_test)) %&lt;-% dataset_mnist()\n\n# Flatten images and transform RGB values into [0,1] range \nx_train &lt;- array_reshape(x_train, c(nrow(x_train), 784))\nx_test &lt;- array_reshape(x_test, c(nrow(x_test), 784))\nx_train &lt;- x_train / 255\nx_test &lt;- x_test / 255\n\n# Convert class vectors to binary class matrices\ny_train &lt;- to_categorical(y_train, 10)\ny_test &lt;- to_categorical(y_test, 10)",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Keras: Step 1 – Data preprocessing\n  \n\n\n\n\nlibrary(keras3)\n\n# Load MNIST (Modified National Institute of Standards and Technology) images datasets\nc(c(x_train, y_train), c(x_test, y_test)) %&lt;-% dataset_mnist()\n\n# Flatten images and transform RGB values into [0,1] range \nx_train &lt;- array_reshape(x_train, c(nrow(x_train), 784))\nx_test &lt;- array_reshape(x_test, c(nrow(x_test), 784))\nx_train &lt;- x_train / 255\nx_test &lt;- x_test / 255\n\n# Convert class vectors to binary class matrices\ny_train &lt;- to_categorical(y_train, 10)\ny_test &lt;- to_categorical(y_test, 10)"
   },
   {
     "objectID": "slides/Topic7.html#keras-step-2-model-definition",
     "href": "slides/Topic7.html#keras-step-2-model-definition",
     "title": "Short Course on R Tools",
     "section": "Keras: Step 2 – Model definition",
-    "text": "Keras: Step 2 – Model definition\n  \n\n\n\n\n\nmodel &lt;- keras_model_sequential(input_shape = c(784)) \nmodel %&gt;% \n     layer_dense(units = 256, activation = 'relu') %&gt;% \n     layer_dropout(rate = 0.4) %&gt;% \n     layer_dense(units = 128, activation = 'relu') %&gt;%\n     layer_dropout(rate = 0.3) %&gt;%\n     layer_dense(units = 10, activation = 'softmax')\n     \nsummary(model)\n&gt;# Model: \"sequential\"\n&gt;# │ Layer (type)          │ Output Shape     │ Param # │\n&gt;# ├-----------------------┼------------------┼---------┤\n&gt;# │ dense_11 (Dense)      │ (None, 256)      │ 200,960 │\n&gt;# │ dropout_3 (Dropout)   │ (None, 256)      │       0 │\n&gt;# │ dense_10 (Dense)      │ (None, 128)      │  32,896 │\n&gt;# │ dropout_2 (Dropout)   │ (None, 128)      │       0 │\n&gt;# │ dense_9 (Dense)       │ (None, 10)       │   1,290 │\n&gt;# └-----------------------┴------------------┴---------┘\n&gt;#  Total params: 235,146 (918.54 KB)\n&gt;#  Trainable params: 235,146 (918.54 KB)\n&gt;#  Non-trainable params: 0 (0.00 B)",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Keras: Step 2 – Model definition\n  \n\n\n\n\n\nmodel &lt;- keras_model_sequential(input_shape = c(784)) \nmodel %&gt;% \n     layer_dense(units = 256, activation = 'relu') %&gt;% \n     layer_dropout(rate = 0.4) %&gt;% \n     layer_dense(units = 128, activation = 'relu') %&gt;%\n     layer_dropout(rate = 0.3) %&gt;%\n     layer_dense(units = 10, activation = 'softmax')\n     \nsummary(model)\n&gt;# Model: \"sequential\"\n&gt;# │ Layer (type)          │ Output Shape     │ Param # │\n&gt;# ├-----------------------┼------------------┼---------┤\n&gt;# │ dense_11 (Dense)      │ (None, 256)      │ 200,960 │\n&gt;# │ dropout_3 (Dropout)   │ (None, 256)      │       0 │\n&gt;# │ dense_10 (Dense)      │ (None, 128)      │  32,896 │\n&gt;# │ dropout_2 (Dropout)   │ (None, 128)      │       0 │\n&gt;# │ dense_9 (Dense)       │ (None, 10)       │   1,290 │\n&gt;# └-----------------------┴------------------┴---------┘\n&gt;#  Total params: 235,146 (918.54 KB)\n&gt;#  Trainable params: 235,146 (918.54 KB)\n&gt;#  Non-trainable params: 0 (0.00 B)"
   },
   {
     "objectID": "slides/Topic7.html#multi-class-vs-multi-label-classification",
     "href": "slides/Topic7.html#multi-class-vs-multi-label-classification",
     "title": "Short Course on R Tools",
     "section": "Multi-Class vs Multi-Label Classification",
-    "text": "Multi-Class vs Multi-Label Classification",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Multi-Class vs Multi-Label Classification"
   },
   {
     "objectID": "slides/Topic7.html#multi-class-vs-multi-label-classification-cont.",
     "href": "slides/Topic7.html#multi-class-vs-multi-label-classification-cont.",
     "title": "Short Course on R Tools",
     "section": "Multi-Class vs Multi-Label Classification (Cont.)",
-    "text": "Multi-Class vs Multi-Label Classification (Cont.)",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Multi-Class vs Multi-Label Classification (Cont.)"
   },
   {
     "objectID": "slides/Topic7.html#multi-class-vs-multi-label-classification-cont.-1",
     "href": "slides/Topic7.html#multi-class-vs-multi-label-classification-cont.-1",
     "title": "Short Course on R Tools",
     "section": "Multi-Class vs Multi-Label Classification (Cont.)",
-    "text": "Multi-Class vs Multi-Label Classification (Cont.)",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Multi-Class vs Multi-Label Classification (Cont.)"
   },
   {
     "objectID": "slides/Topic7.html#keras-step-3-compile-model",
     "href": "slides/Topic7.html#keras-step-3-compile-model",
     "title": "Short Course on R Tools",
     "section": "Keras: Step 3 – Compile Model",
-    "text": "Keras: Step 3 – Compile Model\n  \n\n\n\n\nModel compilation prepares the model for training by:\n\nConverting the layers into a TensorFlow graph\nApplying the specified loss function and optimizer\nArranging for the collection of metrics during training\n\n\n\nmodel %&gt;% compile(\n  loss = 'categorical_crossentropy',\n  optimizer = optimizer_rmsprop(),\n  metrics = c('accuracy')\n)",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Keras: Step 3 – Compile Model\n  \n\n\n\n\nModel compilation prepares the model for training by:\n\nConverting the layers into a TensorFlow graph\nApplying the specified loss function and optimizer\nArranging for the collection of metrics during training\n\n\n\nmodel %&gt;% compile(\n  loss = 'categorical_crossentropy',\n  optimizer = optimizer_rmsprop(),\n  metrics = c('accuracy')\n)"
   },
   {
     "objectID": "slides/Topic7.html#keras-step-4-model-training",
     "href": "slides/Topic7.html#keras-step-4-model-training",
     "title": "Short Course on R Tools",
     "section": "Keras: Step 4 – Model Training",
-    "text": "Keras: Step 4 – Model Training\n  \n\n\n\n\nUse the fit() to train the model for 10 epochs using batches of 128 images:\n\nFeed 128 samples at a time to the model (batch_size = 128)\nTraverse the input dataset 10 times (epochs = 10)\nHold out 20% of the data for validation (validation_split = 0.2)\n\n\n\nhistory &lt;- model %&gt;% fit(\n  x_train, y_train, \n  batch_size = 128, \n  epochs = 10,\n  validation_split = 0.2\n)\n\n\n\n\nEpoch 1/10\n375/375 ━━━━━ 3s 5ms/step - accuracy: 0.7831 - loss: 0.6970 - val_accuracy: 0.9513 - val_loss: 0.1640\nEpoch 2/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9371 - loss: 0.2123 - val_accuracy: 0.9628 - val_loss: 0.1249\nEpoch 3/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9539 - loss: 0.1540 - val_accuracy: 0.9666 - val_loss: 0.1098\nEpoch 4/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9612 - loss: 0.1301 - val_accuracy: 0.9743 - val_loss: 0.0865\nEpoch 5/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9663 - loss: 0.1145 - val_accuracy: 0.9730 - val_loss: 0.0921\nEpoch 6/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9688 - loss: 0.1020 - val_accuracy: 0.9736 - val_loss: 0.0923\nEpoch 7/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9726 - loss: 0.0940 - val_accuracy: 0.9770 - val_loss: 0.0822\nEpoch 8/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9742 - loss: 0.0875 - val_accuracy: 0.9770 - val_loss: 0.0815\nEpoch 9/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9750 - loss: 0.0791 - val_accuracy: 0.9785 - val_loss: 0.0810\nEpoch 10/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9769 - loss: 0.0744 - val_accuracy: 0.9777 - val_loss: 0.0835\n\n\n\n\n\nmodel %&gt;% evaluate(x_test, y_test)\n&gt;# 313/313 ━━━━━ 0s 771us/step - accuracy: 0.9747 - loss: 0.0930\n&gt;# $accuracy\n&gt;# [1] 0.9791\n&gt;# \n&gt;# $loss\n&gt;# [1] 0.0784568",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Keras: Step 4 – Model Training\n  \n\n\n\n\nUse the fit() to train the model for 10 epochs using batches of 128 images:\n\nFeed 128 samples at a time to the model (batch_size = 128)\nTraverse the input dataset 10 times (epochs = 10)\nHold out 20% of the data for validation (validation_split = 0.2)\n\n\n\nhistory &lt;- model %&gt;% fit(\n  x_train, y_train, \n  batch_size = 128, \n  epochs = 10,\n  validation_split = 0.2\n)\n\n\n\n\nEpoch 1/10\n375/375 ━━━━━ 3s 5ms/step - accuracy: 0.7831 - loss: 0.6970 - val_accuracy: 0.9513 - val_loss: 0.1640\nEpoch 2/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9371 - loss: 0.2123 - val_accuracy: 0.9628 - val_loss: 0.1249\nEpoch 3/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9539 - loss: 0.1540 - val_accuracy: 0.9666 - val_loss: 0.1098\nEpoch 4/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9612 - loss: 0.1301 - val_accuracy: 0.9743 - val_loss: 0.0865\nEpoch 5/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9663 - loss: 0.1145 - val_accuracy: 0.9730 - val_loss: 0.0921\nEpoch 6/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9688 - loss: 0.1020 - val_accuracy: 0.9736 - val_loss: 0.0923\nEpoch 7/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9726 - loss: 0.0940 - val_accuracy: 0.9770 - val_loss: 0.0822\nEpoch 8/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9742 - loss: 0.0875 - val_accuracy: 0.9770 - val_loss: 0.0815\nEpoch 9/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9750 - loss: 0.0791 - val_accuracy: 0.9785 - val_loss: 0.0810\nEpoch 10/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9769 - loss: 0.0744 - val_accuracy: 0.9777 - val_loss: 0.0835\n\n\n\n\n\nmodel %&gt;% evaluate(x_test, y_test)\n&gt;# 313/313 ━━━━━ 0s 771us/step - accuracy: 0.9747 - loss: 0.0930\n&gt;# $accuracy\n&gt;# [1] 0.9791\n&gt;# \n&gt;# $loss\n&gt;# [1] 0.0784568"
   },
   {
     "objectID": "slides/Topic7.html#keras-evaluation-and-prediction",
     "href": "slides/Topic7.html#keras-evaluation-and-prediction",
     "title": "Short Course on R Tools",
     "section": "Keras: Evaluation and prediction",
-    "text": "Keras: Evaluation and prediction\n  \n\nplot(history)\n\n\nmodel %&gt;% predict(x_test[1:100,]) %&gt;% apply(1, which.max)-1\n&gt;# 4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 957us/step\n&gt;#   [1] 7 2 1 0 4 1 4 9 6 9 0 6 9 0 1 5 9 7\n&gt;#  [19] 3 4 9 6 6 5 4 0 7 4 0 1 3 1 3 4 7 2\n&gt;#  [37] 7 1 2 1 1 7 4 2 3 5 1 2 4 4 6 3 5 5\n&gt;#  [55] 6 0 4 1 9 5 7 8 9 3 7 4 6 4 3 0 7 0\n&gt;#  [73] 2 9 1 7 3 2 9 7 7 6 2 7 8 4 7 3 6 1\n&gt;#  [91] 3 6 9 3 1 4 1 7 6 9\n\nround(model %&gt;% predict(x_test[1:9,]),5)\n&gt;# 1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 16ms/step\n&gt;#          [,1]    [,2]  [,3]  [,4]    [,5]    [,6]    [,7]    [,8]  [,9]   [,10]\n&gt;#  [1,] 0.00000 0.00000 0e+00 0.000 0.00000 0.00000 0.00000 1.00000 0e+00 0.00000\n&gt;#  [2,] 0.00000 0.00000 1e+00 0.000 0.00000 0.00000 0.00000 0.00000 0e+00 0.00000\n&gt;#  [3,] 0.00000 0.99983 1e-05 0.000 0.00001 0.00000 0.00000 0.00014 1e-05 0.00000\n&gt;#  [4,] 0.99986 0.00000 6e-05 0.000 0.00000 0.00000 0.00007 0.00000 0e+00 0.00000\n&gt;#  [5,] 0.00000 0.00000 0e+00 0.000 0.99995 0.00000 0.00000 0.00000 0e+00 0.00005\n&gt;#  [6,] 0.00000 0.99998 0e+00 0.000 0.00000 0.00000 0.00000 0.00002 0e+00 0.00000\n&gt;#  [7,] 0.00000 0.00000 0e+00 0.000 0.99984 0.00000 0.00000 0.00000 3e-05 0.00013\n&gt;#  [8,] 0.00000 0.00001 1e-05 0.002 0.00007 0.00007 0.00000 0.00044 4e-05 0.99737\n&gt;#  [9,] 0.00000 0.00000 0e+00 0.000 0.00000 0.30770 0.69230 0.00000 0e+00 0.00000",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Keras: Evaluation and prediction\n  \n\nplot(history)\n\n\nmodel %&gt;% predict(x_test[1:100,]) %&gt;% apply(1, which.max)-1\n&gt;# 4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 957us/step\n&gt;#   [1] 7 2 1 0 4 1 4 9 6 9 0 6 9 0 1 5 9 7\n&gt;#  [19] 3 4 9 6 6 5 4 0 7 4 0 1 3 1 3 4 7 2\n&gt;#  [37] 7 1 2 1 1 7 4 2 3 5 1 2 4 4 6 3 5 5\n&gt;#  [55] 6 0 4 1 9 5 7 8 9 3 7 4 6 4 3 0 7 0\n&gt;#  [73] 2 9 1 7 3 2 9 7 7 6 2 7 8 4 7 3 6 1\n&gt;#  [91] 3 6 9 3 1 4 1 7 6 9\n\nround(model %&gt;% predict(x_test[1:9,]),5)\n&gt;# 1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 16ms/step\n&gt;#          [,1]    [,2]  [,3]  [,4]    [,5]    [,6]    [,7]    [,8]  [,9]   [,10]\n&gt;#  [1,] 0.00000 0.00000 0e+00 0.000 0.00000 0.00000 0.00000 1.00000 0e+00 0.00000\n&gt;#  [2,] 0.00000 0.00000 1e+00 0.000 0.00000 0.00000 0.00000 0.00000 0e+00 0.00000\n&gt;#  [3,] 0.00000 0.99983 1e-05 0.000 0.00001 0.00000 0.00000 0.00014 1e-05 0.00000\n&gt;#  [4,] 0.99986 0.00000 6e-05 0.000 0.00000 0.00000 0.00007 0.00000 0e+00 0.00000\n&gt;#  [5,] 0.00000 0.00000 0e+00 0.000 0.99995 0.00000 0.00000 0.00000 0e+00 0.00005\n&gt;#  [6,] 0.00000 0.99998 0e+00 0.000 0.00000 0.00000 0.00000 0.00002 0e+00 0.00000\n&gt;#  [7,] 0.00000 0.00000 0e+00 0.000 0.99984 0.00000 0.00000 0.00000 3e-05 0.00013\n&gt;#  [8,] 0.00000 0.00001 1e-05 0.002 0.00007 0.00007 0.00000 0.00044 4e-05 0.99737\n&gt;#  [9,] 0.00000 0.00000 0e+00 0.000 0.00000 0.30770 0.69230 0.00000 0e+00 0.00000"
   },
   {
     "objectID": "slides/Topic7.html#keras-demo",
     "href": "slides/Topic7.html#keras-demo",
     "title": "Short Course on R Tools",
     "section": "Keras Demo",
-    "text": "Keras Demo\n\nkeras3.posit.co\n🔗 Launch R",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Keras Demo\n\nkeras3.posit.co\n🔗 Launch R"
   },
   {
     "objectID": "slides/Topic7.html#keras-api-layers",
     "href": "slides/Topic7.html#keras-api-layers",
     "title": "Short Course on R Tools",
     "section": "Keras API: Layers",
-    "text": "Keras API: Layers\n\n90+ layers available (you can also create your own)\n\n\n\n\n\n\n\nlayer_dense(units = 64, kernel_regularizer = regularizer_l1(0.01))\nlayer_dense(units = 64, bias_regularizer = regularizer_l2(0.01))",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Keras API: Layers\n\n90+ layers available (you can also create your own)\n\n\n\n\n\n\n\nlayer_dense(units = 64, kernel_regularizer = regularizer_l1(0.01))\nlayer_dense(units = 64, bias_regularizer = regularizer_l2(0.01))"
   },
   {
     "objectID": "slides/Topic7.html#embedding-layers",
     "href": "slides/Topic7.html#embedding-layers",
     "title": "Short Course on R Tools",
     "section": "Embedding Layers",
-    "text": "Embedding Layers\n\nVectorization of text that reflects semantic relationships between words\n\n \n\n\n\n\n\nmodel &lt;- keras_model_sequential() %&gt;%\n  layer_embedding(input_dim = 10000, output_dim = 8) %&gt;%\n  layer_flatten() %&gt;%\n  layer_dense(units = 1, activation = \"sigmoid\")\n\n\n\n\nHow to use?\n\nLearn the embeddings jointly with the main task (e.g. classification); or\nLoad pre-trained word embeddings (e.g. Word2vec, GloVe)",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Embedding Layers\n\nVectorization of text that reflects semantic relationships between words\n\n \n\n\n\n\n\nmodel &lt;- keras_model_sequential() %&gt;%\n  layer_embedding(input_dim = 10000, output_dim = 8) %&gt;%\n  layer_flatten() %&gt;%\n  layer_dense(units = 1, activation = \"sigmoid\")\n\n\n\n\nHow to use?\n\nLearn the embeddings jointly with the main task (e.g. classification); or\nLoad pre-trained word embeddings (e.g. Word2vec, GloVe)"
   },
   {
     "objectID": "slides/Topic7.html#hands-on-exercises",
     "href": "slides/Topic7.html#hands-on-exercises",
     "title": "Short Course on R Tools",
     "section": "Hands-on Exercises",
-    "text": "Hands-on Exercises\n\nBuild and train a CNN on Fashion MNIST\n\nMNIST CNN in keras3\n\n\n\n\n\n\n\nImplement an LSTM for\n\nText Classification in keras3\n\n\n\n\n\n\n\n\n\nCreate an autoencoder for dimensionality reduction and visualize embeddings",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Hands-on Exercises\n\nBuild and train a CNN on Fashion MNIST\n\nMNIST CNN in keras3\n\n\n\n\n\n\n\nImplement an LSTM for\n\nText Classification in keras3\n\n\n\n\n\n\n\n\n\nCreate an autoencoder for dimensionality reduction and visualize embeddings"
   },
   {
     "objectID": "slides/Topic7.html#keras-for-r-cheatsheet",
     "href": "slides/Topic7.html#keras-for-r-cheatsheet",
     "title": "Short Course on R Tools",
     "section": "Keras for R cheatsheet",
-    "text": "Keras for R cheatsheet\n\n\n\n\n\n\n\n\n\n\n🔗 Rstudio: Keras cheatsheet",
-    "crumbs": [
-      "Slides",
-      "Deep Learning in R"
-    ]
+    "text": "Keras for R cheatsheet\n\n\n\n\n\n\n\n\n\n\n🔗 Rstudio: Keras cheatsheet"
   },
   {
     "objectID": "slides/Topic1.html#basics",
     "href": "slides/Topic1.html#basics",
     "title": "Short Course on R Tools",
     "section": "Basics",
-    "text": "Basics\n\nAn S3 object is a base type with at least a class attribute\n\n\nf &lt;- factor(c(\"a\", \"b\", \"b\"))\nf\n#&gt; [1] a b b\n#&gt; Levels: a b\nattributes(f)\n#&gt; $levels\n#&gt; [1] \"a\" \"b\"\n#&gt; \n#&gt; $class\n#&gt; [1] \"factor\"\nunclass(f)\n#&gt; [1] 1 2 2\n#&gt; attr(,\"levels\")\n#&gt; [1] \"a\" \"b\"\n\ntime &lt;- strptime(c(\"2017-01-01\", \"2020-05-04 03:21\"), \"%Y-%m-%d\")\nstr(time)\n#&gt;  POSIXlt[1:2], format: \"2017-01-01\" \"2020-05-04\"\n\nclass(time) &lt;- NULL\nstr(time)\n#&gt; List of 11\n#&gt;  $ sec   : num [1:2] 0 0\n#&gt;  $ min   : int [1:2] 0 0\n#&gt;  $ hour  : int [1:2] 0 0\n#&gt;  $ mday  : int [1:2] 1 4\n#&gt;  $ mon   : int [1:2] 0 4\n#&gt;  $ year  : int [1:2] 117 120\n#&gt;  $ wday  : int [1:2] 0 1\n#&gt;  $ yday  : int [1:2] 0 124\n#&gt;  $ isdst : int [1:2] 0 0\n#&gt;  $ zone  : chr [1:2] \"UTC\" \"UTC\"\n#&gt;  $ gmtoff: int [1:2] 0 0\n#&gt;  - attr(*, \"tzone\")= chr \"UTC\"\n#&gt;  - attr(*, \"balanced\")= logi TRUE",
-    "crumbs": [
-      "Slides",
-      "OOP in R"
-    ]
+    "text": "Basics\n\nAn S3 object is a base type with at least a class attribute\n\n\nf &lt;- factor(c(\"a\", \"b\", \"b\"))\nf\n#&gt; [1] a b b\n#&gt; Levels: a b\nattributes(f)\n#&gt; $levels\n#&gt; [1] \"a\" \"b\"\n#&gt; \n#&gt; $class\n#&gt; [1] \"factor\"\nunclass(f)\n#&gt; [1] 1 2 2\n#&gt; attr(,\"levels\")\n#&gt; [1] \"a\" \"b\"\n\ntime &lt;- strptime(c(\"2017-01-01\", \"2020-05-04 03:21\"), \"%Y-%m-%d\")\nstr(time)\n#&gt;  POSIXlt[1:2], format: \"2017-01-01\" \"2020-05-04\"\n\nclass(time) &lt;- NULL\nstr(time)\n#&gt; List of 11\n#&gt;  $ sec   : num [1:2] 0 0\n#&gt;  $ min   : int [1:2] 0 0\n#&gt;  $ hour  : int [1:2] 0 0\n#&gt;  $ mday  : int [1:2] 1 4\n#&gt;  $ mon   : int [1:2] 0 4\n#&gt;  $ year  : int [1:2] 117 120\n#&gt;  $ wday  : int [1:2] 0 1\n#&gt;  $ yday  : int [1:2] 0 124\n#&gt;  $ isdst : int [1:2] 0 0\n#&gt;  $ zone  : chr [1:2] \"UTC\" \"UTC\"\n#&gt;  $ gmtoff: int [1:2] 0 0\n#&gt;  - attr(*, \"tzone\")= chr \"UTC\"\n#&gt;  - attr(*, \"balanced\")= logi TRUE"
   },
   {
     "objectID": "slides/Topic1.html#classes",
     "href": "slides/Topic1.html#classes",
     "title": "Short Course on R Tools",
     "section": "Classes",
-    "text": "Classes\n# Create and assign class in one step\nx &lt;- structure(list(), class = \"my_class\")\n\n# Create, then set class\nx &lt;- list()\nclass(x) &lt;- \"my_class\"\n\nclass(x)\n#&gt; [1] \"my_class\"\ninherits(x, \"my_class\")\n#&gt; [1] TRUE\ninherits(x, \"your_class\")\n#&gt; [1] FALSE\n\n\nR doesn’t stop you from shooting yourself in the foot, but as long as you don’t aim the gun at your toes and pull the trigger, you won’t have a problem.",
-    "crumbs": [
-      "Slides",
-      "OOP in R"
-    ]
+    "text": "Classes\n# Create and assign class in one step\nx &lt;- structure(list(), class = \"my_class\")\n\n# Create, then set class\nx &lt;- list()\nclass(x) &lt;- \"my_class\"\n\nclass(x)\n#&gt; [1] \"my_class\"\ninherits(x, \"my_class\")\n#&gt; [1] TRUE\ninherits(x, \"your_class\")\n#&gt; [1] FALSE\n\n\nR doesn’t stop you from shooting yourself in the foot, but as long as you don’t aim the gun at your toes and pull the trigger, you won’t have a problem."
   },
   {
     "objectID": "slides/Topic1.html#classes---common-practice",
     "href": "slides/Topic1.html#classes---common-practice",
     "title": "Short Course on R Tools",
     "section": "Classes - Common Practice",
-    "text": "Classes - Common Practice\nTo avoid foot-bullet intersections when creating your own class, you may:\n\n\nA low-level constructor, new_myclass(), that efficiently creates new objects with the correct structure.\nA validator, validate_myclass(), that performs more computationally expensive checks to ensure that the object has correct values.\nA user-friendly helper, myclass(), that provides a convenient way for others to create objects of your class.",
-    "crumbs": [
-      "Slides",
-      "OOP in R"
-    ]
+    "text": "Classes - Common Practice\nTo avoid foot-bullet intersections when creating your own class, you may:\n\n\nA low-level constructor, new_myclass(), that efficiently creates new objects with the correct structure.\nA validator, validate_myclass(), that performs more computationally expensive checks to ensure that the object has correct values.\nA user-friendly helper, myclass(), that provides a convenient way for others to create objects of your class."
   },
   {
     "objectID": "slides/Topic1.html#classes---example",
     "href": "slides/Topic1.html#classes---example",
     "title": "Short Course on R Tools",
     "section": "Classes - Example",
-    "text": "Classes - Example\n\n## 1. Low‐level constructor: assume inputs are ok\nnew_myclass &lt;- function(values = numeric(), unit = character(1)) {\n  # no checks here beyond base‐R stopifnot\n  stopifnot(is.numeric(values), is.character(unit), length(unit) == 1)\n  structure(\n    list(values = values, unit = unit),\n    class = \"myclass\"\n  )\n}\n\n## 2. Validator: more thorough checks\nvalidate_myclass &lt;- function(x) {\n  if (!inherits(x, \"myclass\")) {\n    stop(\"`x` must be a 'myclass' object.\", call. = FALSE)\n  }\n  if (!is.numeric(x$values)) {\n    stop(\"`values` must be numeric.\", call. = FALSE)\n  }\n  if (any(is.na(x$values))) {\n    stop(\"`values` must not contain NA.\", call. = FALSE)\n  }\n  if (!is.character(x$unit) || length(x$unit) != 1) {\n    stop(\"`unit` must be a single character string.\", call. = FALSE)\n  }\n  TRUE\n}\n\n## (Optional) a simple print method\nprint.myclass &lt;- function(x, ...) {\n  cat(\"&lt;myclass&gt;  \", length(x$values), \"values [unit = \", x$unit, \"]\\n\", sep = \"\")\n  print(x$values)\n  invisible(x)\n}\n\n## 3. User‐facing helper: coerce/check inputs, then build + validate\nmyclass &lt;- function(values, unit = \"unitless\") {\n  # quick checks / coercions:\n  if (!is.numeric(values)) {\n    values &lt;- as.numeric(values)\n    if (any(is.na(values))) stop(\"`values` could not be coerced to numeric.\", call. = FALSE)\n  }\n  if (!is.character(unit) || length(unit) != 1) {\n    stop(\"`unit` must be a single character string.\", call. = FALSE)\n  }\n  # build & validate\n  obj &lt;- new_myclass(values = values, unit = unit)\n  validate_myclass(obj)\n  obj\n}\n\n## --- Example usage ---\nx &lt;- myclass(c(1.1, 2.2, 3.3), unit = \"kg\")\nprint(x)\n#&gt; &lt;myclass&gt; 3 values [unit = kg]\n#&gt; [1] 1.1 2.2 3.3\n\n# This will error because of an NA:\n# myclass(c(1, NA, 3))",
-    "crumbs": [
-      "Slides",
-      "OOP in R"
-    ]
+    "text": "Classes - Example\n\n## 1. Low‐level constructor: assume inputs are ok\nnew_myclass &lt;- function(values = numeric(), unit = character(1)) {\n  # no checks here beyond base‐R stopifnot\n  stopifnot(is.numeric(values), is.character(unit), length(unit) == 1)\n  structure(\n    list(values = values, unit = unit),\n    class = \"myclass\"\n  )\n}\n\n## 2. Validator: more thorough checks\nvalidate_myclass &lt;- function(x) {\n  if (!inherits(x, \"myclass\")) {\n    stop(\"`x` must be a 'myclass' object.\", call. = FALSE)\n  }\n  if (!is.numeric(x$values)) {\n    stop(\"`values` must be numeric.\", call. = FALSE)\n  }\n  if (any(is.na(x$values))) {\n    stop(\"`values` must not contain NA.\", call. = FALSE)\n  }\n  if (!is.character(x$unit) || length(x$unit) != 1) {\n    stop(\"`unit` must be a single character string.\", call. = FALSE)\n  }\n  TRUE\n}\n\n## (Optional) a simple print method\nprint.myclass &lt;- function(x, ...) {\n  cat(\"&lt;myclass&gt;  \", length(x$values), \"values [unit = \", x$unit, \"]\\n\", sep = \"\")\n  print(x$values)\n  invisible(x)\n}\n\n## 3. User‐facing helper: coerce/check inputs, then build + validate\nmyclass &lt;- function(values, unit = \"unitless\") {\n  # quick checks / coercions:\n  if (!is.numeric(values)) {\n    values &lt;- as.numeric(values)\n    if (any(is.na(values))) stop(\"`values` could not be coerced to numeric.\", call. = FALSE)\n  }\n  if (!is.character(unit) || length(unit) != 1) {\n    stop(\"`unit` must be a single character string.\", call. = FALSE)\n  }\n  # build & validate\n  obj &lt;- new_myclass(values = values, unit = unit)\n  validate_myclass(obj)\n  obj\n}\n\n## --- Example usage ---\nx &lt;- myclass(c(1.1, 2.2, 3.3), unit = \"kg\")\nprint(x)\n#&gt; &lt;myclass&gt; 3 values [unit = kg]\n#&gt; [1] 1.1 2.2 3.3\n\n# This will error because of an NA:\n# myclass(c(1, NA, 3))"
   },
   {
     "objectID": "slides/Topic1.html#generics-and-methods---method-dispatch",
     "href": "slides/Topic1.html#generics-and-methods---method-dispatch",
     "title": "Short Course on R Tools",
     "section": "Generics and Methods - Method Dispatch",
-    "text": "Generics and Methods - Method Dispatch\nView(print)\n#&gt; function (x, ...) \n#&gt; UseMethod(\"print\")\n\nftype(print)\n#&gt; [1] \"S3\"      \"generic\"\nftype(print.factor)\n#&gt; [1] \"S3\"     \"method\"\n\ns3_dispatch(print(f))\n#&gt; =&gt; print.factor\n#&gt;  * print.default\ns3_dispatch(print(unclass(f)))\n#&gt;    print.integer\n#&gt;    print.numeric\n#&gt; =&gt; print.default",
-    "crumbs": [
-      "Slides",
-      "OOP in R"
-    ]
+    "text": "Generics and Methods - Method Dispatch\nView(print)\n#&gt; function (x, ...) \n#&gt; UseMethod(\"print\")\n\nftype(print)\n#&gt; [1] \"S3\"      \"generic\"\nftype(print.factor)\n#&gt; [1] \"S3\"     \"method\"\n\ns3_dispatch(print(f))\n#&gt; =&gt; print.factor\n#&gt;  * print.default\ns3_dispatch(print(unclass(f)))\n#&gt;    print.integer\n#&gt;    print.numeric\n#&gt; =&gt; print.default"
   },
   {
     "objectID": "slides/Topic1.html#finding-methods",
     "href": "slides/Topic1.html#finding-methods",
     "title": "Short Course on R Tools",
     "section": "Finding methods",
-    "text": "Finding methods\ns3_methods_generic(\"mean\")\n#&gt; # A tibble: 7 × 4\n#&gt;   generic class      visible source             \n#&gt;   &lt;chr&gt;   &lt;chr&gt;      &lt;lgl&gt;   &lt;chr&gt;              \n#&gt; 1 mean    Date       TRUE    base               \n#&gt; 2 mean    default    TRUE    base               \n#&gt; 3 mean    difftime   TRUE    base               \n#&gt; 4 mean    POSIXct    TRUE    base               \n#&gt; 5 mean    POSIXlt    TRUE    base               \n#&gt; 6 mean    quosure    FALSE   registered S3method\n#&gt; 7 mean    vctrs_vctr FALSE   registered S3method\n\ns3_methods_class(\"funts\")\n#&gt; # A tibble: 7 × 4\n#&gt;   generic class visible source             \n#&gt;   &lt;chr&gt;   &lt;chr&gt; &lt;lgl&gt;   &lt;chr&gt;              \n#&gt; 1 -       funts FALSE   registered S3method\n#&gt; 2 *       funts FALSE   registered S3method\n#&gt; 3 [       funts FALSE   registered S3method\n#&gt; 4 +       funts FALSE   registered S3method\n#&gt; 5 length  funts FALSE   registered S3method\n#&gt; 6 plot    funts FALSE   registered S3method\n#&gt; 7 print   funts FALSE   registered S3method",
-    "crumbs": [
-      "Slides",
-      "OOP in R"
-    ]
+    "text": "Finding methods\ns3_methods_generic(\"mean\")\n#&gt; # A tibble: 7 × 4\n#&gt;   generic class      visible source             \n#&gt;   &lt;chr&gt;   &lt;chr&gt;      &lt;lgl&gt;   &lt;chr&gt;              \n#&gt; 1 mean    Date       TRUE    base               \n#&gt; 2 mean    default    TRUE    base               \n#&gt; 3 mean    difftime   TRUE    base               \n#&gt; 4 mean    POSIXct    TRUE    base               \n#&gt; 5 mean    POSIXlt    TRUE    base               \n#&gt; 6 mean    quosure    FALSE   registered S3method\n#&gt; 7 mean    vctrs_vctr FALSE   registered S3method\n\ns3_methods_class(\"funts\")\n#&gt; # A tibble: 7 × 4\n#&gt;   generic class visible source             \n#&gt;   &lt;chr&gt;   &lt;chr&gt; &lt;lgl&gt;   &lt;chr&gt;              \n#&gt; 1 -       funts FALSE   registered S3method\n#&gt; 2 *       funts FALSE   registered S3method\n#&gt; 3 [       funts FALSE   registered S3method\n#&gt; 4 +       funts FALSE   registered S3method\n#&gt; 5 length  funts FALSE   registered S3method\n#&gt; 6 plot    funts FALSE   registered S3method\n#&gt; 7 print   funts FALSE   registered S3method"
   },
   {
     "objectID": "slides/Topic1.html#creating-methods",
     "href": "slides/Topic1.html#creating-methods",
     "title": "Short Course on R Tools",
     "section": "Creating methods",
-    "text": "Creating methods\n\n\nmean.myclass &lt;- function(x, ...) {\n  print(\"custom mean\")\n}\n\nmean(x)\n\n[1] \"custom mean\"\n\n\n\n\n\n\nA method must have the same arguments as its generic. This is enforced in packages by R CMD check.\n\n\n\n\n\nThere is one exception to this rule: if the generic has ..., the method can contain a superset of the arguments. This allows methods to take arbitrary additional arguments.",
-    "crumbs": [
-      "Slides",
-      "OOP in R"
-    ]
+    "text": "Creating methods\n\n\nmean.myclass &lt;- function(x, ...) {\n  print(\"custom mean\")\n}\n\nmean(x)\n\n[1] \"custom mean\"\n\n\n\n\n\n\nA method must have the same arguments as its generic. This is enforced in packages by R CMD check.\n\n\n\n\n\nThere is one exception to this rule: if the generic has ..., the method can contain a superset of the arguments. This allows methods to take arbitrary additional arguments."
   },
   {
     "objectID": "slides/Topic1.html#inheritance",
     "href": "slides/Topic1.html#inheritance",
     "title": "Short Course on R Tools",
     "section": "Inheritance",
-    "text": "Inheritance\nx &lt;- factor(\"a\",\"b\",\"b\")\nclass(x)\n#&gt; \"factor\"\n\nclass(ordered(x))\n#&gt; \"ordered\" \"factor\"\n\ns3_dispatch(print(ordered(x)))\n#&gt;    print.ordered\n#&gt; =&gt; print.factor\n#&gt;  * print.default\n\ns3_dispatch(ordered(x)[1])\n#&gt;    [.ordered\n#&gt; =&gt; [.factor\n#&gt;    [.default\n#&gt; -&gt; [ (internal)\n\n\nWe’ll say that ordered is a subclass of factor and factor is a superclass of ordered.",
-    "crumbs": [
-      "Slides",
-      "OOP in R"
-    ]
+    "text": "Inheritance\nx &lt;- factor(\"a\",\"b\",\"b\")\nclass(x)\n#&gt; \"factor\"\n\nclass(ordered(x))\n#&gt; \"ordered\" \"factor\"\n\ns3_dispatch(print(ordered(x)))\n#&gt;    print.ordered\n#&gt; =&gt; print.factor\n#&gt;  * print.default\n\ns3_dispatch(ordered(x)[1])\n#&gt;    [.ordered\n#&gt; =&gt; [.factor\n#&gt;    [.default\n#&gt; -&gt; [ (internal)\n\n\nWe’ll say that ordered is a subclass of factor and factor is a superclass of ordered."
   },
   {
     "objectID": "slides/Topic1.html#inheritance-cont.",
     "href": "slides/Topic1.html#inheritance-cont.",
     "title": "Short Course on R Tools",
     "section": "Inheritance Cont.",
-    "text": "Inheritance Cont.\n\nnew_secret &lt;- function(x = double()) {\n  stopifnot(is.double(x))\n  structure(x, class = \"secret\")\n}\n\nprint.secret &lt;- function(x, ...) {\n  print(strrep(\"x\", nchar(x)))\n  invisible(x)\n}\n\nx &lt;- new_secret(c(15, 1, 456))\nx\n#&gt; [1] \"xx\"  \"x\"   \"xxx\"\n\ns3_dispatch(x[1])\n#&gt;    [.secret\n#&gt;    [.default\n#&gt; =&gt; [ (internal)\n\nx[1]\n#&gt; [1] 15\n\n\n\nTo fix this, we need to provide a [.secret method.",
-    "crumbs": [
-      "Slides",
-      "OOP in R"
-    ]
+    "text": "Inheritance Cont.\n\nnew_secret &lt;- function(x = double()) {\n  stopifnot(is.double(x))\n  structure(x, class = \"secret\")\n}\n\nprint.secret &lt;- function(x, ...) {\n  print(strrep(\"x\", nchar(x)))\n  invisible(x)\n}\n\nx &lt;- new_secret(c(15, 1, 456))\nx\n#&gt; [1] \"xx\"  \"x\"   \"xxx\"\n\ns3_dispatch(x[1])\n#&gt;    [.secret\n#&gt;    [.default\n#&gt; =&gt; [ (internal)\n\nx[1]\n#&gt; [1] 15\n\n\n\nTo fix this, we need to provide a [.secret method."
   },
   {
     "objectID": "slides/Topic1.html#inheritance-cont.---nextmethod",
     "href": "slides/Topic1.html#inheritance-cont.---nextmethod",
     "title": "Short Course on R Tools",
     "section": "Inheritance Cont. - NextMethod()",
-    "text": "Inheritance Cont. - NextMethod()\n\n`[.secret` &lt;- function(x, i) {\n  x &lt;- unclass(x)\n  new_secret(x[i])\n}\n\nx[1]\n#&gt; [1] \"xx\"\n\n\n\nA better solution using NextMethod()\n\n\n`[.secret` &lt;- function(x, i) {\n  new_secret(NextMethod())\n}\n\nx[1]\n#&gt; [1] \"xx\"\n\ns3_dispatch(x[1])\n#&gt; =&gt; [.secret\n#&gt;    [.default\n#&gt; -&gt; [ (internal)",
-    "crumbs": [
-      "Slides",
-      "OOP in R"
-    ]
+    "text": "Inheritance Cont. - NextMethod()\n\n`[.secret` &lt;- function(x, i) {\n  x &lt;- unclass(x)\n  new_secret(x[i])\n}\n\nx[1]\n#&gt; [1] \"xx\"\n\n\n\nA better solution using NextMethod()\n\n\n`[.secret` &lt;- function(x, i) {\n  new_secret(NextMethod())\n}\n\nx[1]\n#&gt; [1] \"xx\"\n\ns3_dispatch(x[1])\n#&gt; =&gt; [.secret\n#&gt;    [.default\n#&gt; -&gt; [ (internal)"
   },
   {
     "objectID": "slides/Topic1.html#generics-methods",
     "href": "slides/Topic1.html#generics-methods",
     "title": "Short Course on R Tools",
     "section": "Generics & Methods",
-    "text": "Generics & Methods\n\n\nDefine generic:\nsetGeneric(\"greet\", function(x) standardGeneric(\"greet\"))\nDefine method:\nsetMethod(\"greet\", \"Person\", function(x) {\n  paste(\"Hello, my name is\", x@name)\n})\nExample:\ngreet(subj1)\n#&gt; [1] \"Hello, my name is Adam\"",
-    "crumbs": [
-      "Slides",
-      "OOP in R"
-    ]
+    "text": "Generics & Methods\n\n\nDefine generic:\nsetGeneric(\"greet\", function(x) standardGeneric(\"greet\"))\nDefine method:\nsetMethod(\"greet\", \"Person\", function(x) {\n  paste(\"Hello, my name is\", x@name)\n})\nExample:\ngreet(subj1)\n#&gt; [1] \"Hello, my name is Adam\""
   },
   {
     "objectID": "slides/Topic1.html#inheritance-virtual-classes",
     "href": "slides/Topic1.html#inheritance-virtual-classes",
     "title": "Short Course on R Tools",
     "section": "Inheritance & Virtual Classes",
-    "text": "Inheritance & Virtual Classes\n\n\nInheritance:\nsetClass(\"Employee\", contains = \"Person\",\n  slots = list(salary = \"numeric\"))\nExample:\nemp1 &lt;- new(\"Employee\", subj1, salary = 75000)\nemp1\n#&gt; An object of class \"Employee\"\n#&gt; Slot \"salary\":\n#&gt; [1] 75000\n#&gt; \n#&gt; Slot \"name\":\n#&gt; [1] \"Adam\"\n#&gt; \n#&gt; Slot \"age\":\n#&gt; [1] 30",
-    "crumbs": [
-      "Slides",
-      "OOP in R"
-    ]
+    "text": "Inheritance & Virtual Classes\n\n\nInheritance:\nsetClass(\"Employee\", contains = \"Person\",\n  slots = list(salary = \"numeric\"))\nExample:\nemp1 &lt;- new(\"Employee\", subj1, salary = 75000)\nemp1\n#&gt; An object of class \"Employee\"\n#&gt; Slot \"salary\":\n#&gt; [1] 75000\n#&gt; \n#&gt; Slot \"name\":\n#&gt; [1] \"Adam\"\n#&gt; \n#&gt; Slot \"age\":\n#&gt; [1] 30"
   },
   {
     "objectID": "slides/Topic1.html#advanced-features",
     "href": "slides/Topic1.html#advanced-features",
     "title": "Short Course on R Tools",
     "section": "Advanced Features",
-    "text": "Advanced Features\n\nActive bindings\nInheritance & extension\nPrivate vs public\nUse cases: GUI, stateful objects, iterative algorithms",
-    "crumbs": [
-      "Slides",
-      "OOP in R"
-    ]
+    "text": "Advanced Features\n\nActive bindings\nInheritance & extension\nPrivate vs public\nUse cases: GUI, stateful objects, iterative algorithms"
   },
   {
     "objectID": "misc/cheatsheets.html",
@@ -896,54 +728,166 @@
     "href": "hands-on/HO1.html",
     "title": "Hands-on: k-NN Regression with S3 OOP",
     "section": "",
-    "text": "In this 30 min session you will:\n\nLoad and inspect the knn_s3 and knn_s3_formula scripts\nFit k-NN regression models using S3\nUse print(), summary(), fitted(), predict(), anova()",
-    "crumbs": [
-      "Hands-on / HW",
-      "OOP in R"
-    ]
+    "text": "In this 30 min session you will:\n\nLoad and inspect the knn_s3 and knn_s3_formula scripts\nFit k-NN regression models using S3\nUse print(), summary(), fitted(), predict(), anova()"
   },
   {
     "objectID": "hands-on/HO1.html#overview",
     "href": "hands-on/HO1.html#overview",
     "title": "Hands-on: k-NN Regression with S3 OOP",
     "section": "",
-    "text": "In this 30 min session you will:\n\nLoad and inspect the knn_s3 and knn_s3_formula scripts\nFit k-NN regression models using S3\nUse print(), summary(), fitted(), predict(), anova()",
-    "crumbs": [
-      "Hands-on / HW",
-      "OOP in R"
-    ]
+    "text": "In this 30 min session you will:\n\nLoad and inspect the knn_s3 and knn_s3_formula scripts\nFit k-NN regression models using S3\nUse print(), summary(), fitted(), predict(), anova()"
   },
   {
     "objectID": "hands-on/HO1.html#setup",
     "href": "hands-on/HO1.html#setup",
     "title": "Hands-on: k-NN Regression with S3 OOP",
     "section": "Setup",
-    "text": "Setup\nDownload the scripts:\ncurl -O https://raw.githubusercontent.com/mmadoliat/WSoRT/refs/heads/main/R/knn_s3.R\ncurl -O https://raw.githubusercontent.com/mmadoliat/WSoRT/refs/heads/main/R/knn_s3_formula.R\nSource them in your R console:\nsource(\"R/knn_s3.R\")\nsource(\"R/knn_s3_formula.R\")",
-    "crumbs": [
-      "Hands-on / HW",
-      "OOP in R"
-    ]
+    "text": "Setup\nDownload the scripts:\ncurl -O https://raw.githubusercontent.com/mmadoliat/WSoRT/refs/heads/main/R/knn_s3.R\ncurl -O https://raw.githubusercontent.com/mmadoliat/WSoRT/refs/heads/main/R/knn_s3_formula.R\nSource them in your R console:\nsource(\"R/knn_s3.R\")\nsource(\"R/knn_s3_formula.R\")"
   },
   {
     "objectID": "hands-on/HO1.html#example-code",
     "href": "hands-on/HO1.html#example-code",
     "title": "Hands-on: k-NN Regression with S3 OOP",
     "section": "Example Code",
-    "text": "Example Code\n# Fit two models\nmod5  &lt;- knn_s3(mpg ~ disp + hp + wt, mtcars, k = 5)\nmod10 &lt;- knn_s3(mpg ~ disp + hp + wt, mtcars, k = 10)\n\n# Inspect models\nprint(mod5)\nsummary(mod5)\nfitted(mod5)[1:5]\n\n# Compare models\nanova(mod5, mod10)",
-    "crumbs": [
-      "Hands-on / HW",
-      "OOP in R"
-    ]
+    "text": "Example Code\n# Fit two models\nmod5  &lt;- knn_s3(mpg ~ disp + hp + wt, mtcars, k = 5)\nmod10 &lt;- knn_s3(mpg ~ disp + hp + wt, mtcars, k = 10)\n\n# Inspect models\nprint(mod5)\nsummary(mod5)\nfitted(mod5)[1:5]\n\n# Compare models\nanova(mod5, mod10)"
   },
   {
     "objectID": "hands-on/HO1.html#tasks",
     "href": "hands-on/HO1.html#tasks",
     "title": "Hands-on: k-NN Regression with S3 OOP",
     "section": "Tasks",
-    "text": "Tasks\n\nVary k: change k to 3 and 8, then re-run summary().\nBackend swap: use predict(mod5, head(mtcars), method=\"R\") and compare.\nNew predictor: fit a model with mpg ~ cyl + gear and compare with the first via anova().\n\n\nGood luck!",
+    "text": "Tasks\n\nVary k: change k to 3 and 8, then re-run summary().\nBackend swap: use predict(mod5, head(mtcars), method=\"R\") and compare.\nNew predictor: fit a model with mpg ~ cyl + gear and compare with the first via anova().\n\n\nGood luck!"
+  },
+  {
+    "objectID": "course-links.html",
+    "href": "course-links.html",
+    "title": "Useful links",
+    "section": "",
+    "text": "Stat Calculator\nDistribution Calculator\nRStudio\n🔗 StatCalc(JAMM)\n🔗 DistCalc\n🔗 on dna\n\n\nAdvanced Texbooks\n🔗 Advanced R by Hadley Wickham\n🔗 R Package\n🔗 Quarto\n🔗 R Markdown\n🔗 ggplot2: Elegant Graphics for Data Analysis\n🔗 Fundamentals of Data Visualization\n🔗 Data Visualization: A Practical Introduction\n🔗 R for Data Science\n\n\nSome Package documentation\n🔗 OOP-R6: r6.r-lib.org\n🔗 shiny: shiny.posit.co\n🔗 Rcpp: www.rcpp.org\n🔗 reticulate: rstudio.github.io/reticulate\n🔗 devtools: devtools.r-lib.org\n🔗 GitHub: happygitwithr.com\n🔗 CRAN: cran.r-project.org\n🔗 keras: keras3.posit.co",
     "crumbs": [
-      "Hands-on / HW",
-      "OOP in R"
+      "Miscellaneous",
+      "Useful links"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html",
+    "href": "course-syllabus.html",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
+    "section": "",
+    "text": "Course Title: Statistician’s Toolkit in R for Data Science (STaR-DS)\nMeeting Time: Tue, Apr 28, 12:30–5:30 pm\nLocation: Hyatt Regency Milwaukee\nWebsite: http://tinyurl.com/STAR-DS",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#course-information",
+    "href": "course-syllabus.html#course-information",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
+    "section": "",
+    "text": "Course Title: Statistician’s Toolkit in R for Data Science (STaR-DS)\nMeeting Time: Tue, Apr 28, 12:30–5:30 pm\nLocation: Hyatt Regency Milwaukee\nWebsite: http://tinyurl.com/STAR-DS",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#instructor-details",
+    "href": "course-syllabus.html#instructor-details",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
+    "section": "Instructor Details",
+    "text": "Instructor Details\n\nInstructors: Mehdi Maadooliat & Jaihee Choi & Daniel Cirkovic",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#course-description",
+    "href": "course-syllabus.html#course-description",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
+    "section": "Course Description",
+    "text": "Course Description\nThis short, intensive course equips participants with practical, modern R skills to extend, optimize, and share their work. Over three sessions you’ll learn how to build Shiny apps, speed up code with Rcpp, call Python from R with reticulate, build professional R packages, and collaborate on GitHub—including an overview of the CRAN release process.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#learning-outcomes",
+    "href": "course-syllabus.html#learning-outcomes",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\nBy the end of the course, participants will be able to:\n\nBuild interactive Shiny web applications.\nImprove performance by interfacing with C++ via Rcpp.\nIntegrate Python into R workflows using reticulate.\nDevelop, document, test, and share professional R packages.\nUse Git/GitHub for version control, releases, and prepare for CRAN submission.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#prerequisites",
+    "href": "course-syllabus.html#prerequisites",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nWorking knowledge of R and basic data analysis concepts.\n\nSome familiarity with the command line and version control is helpful (not required).",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#materials",
+    "href": "course-syllabus.html#materials",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
+    "section": "Materials",
+    "text": "Materials\n\nPrimary Resource: Course website — https://tinyurl.com/STAR-DS\n\nSupplemental tutorials, templates, and datasets will be provided in class.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#assignments-assessment",
+    "href": "course-syllabus.html#assignments-assessment",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
+    "section": "Assignments & Assessment",
+    "text": "Assignments & Assessment\n\nOptional Mini-Project: Create a small R package or Shiny app integrating course concepts.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#attendance",
+    "href": "course-syllabus.html#attendance",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
+    "section": "Attendance",
+    "text": "Attendance\nActive participation is expected; sessions build on each other.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#important-note",
+    "href": "course-syllabus.html#important-note",
+    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
+    "section": "Important Note",
+    "text": "Important Note\nThis syllabus may be updated; any changes will be announced in class and on the course website.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STatisticians Advancing in R for Data Science (STAR-DS)",
+    "section": "",
+    "text": "This page contains an outline of the topics, content, and assignments for the short course. Note that this schedule will be updated as we progress, and the timeline of topics and assignments might be updated throughout the course.\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nCODE\nDUE\n\n\n\n1\nTue, Apr 28\n\n Create dynamic Shiny web applications\n📚Topic 2  📖Shiny\n\n\nR👩‍💻 R🛠️\n\n\n\n\n\nTue, Apr 28\n\nEnhance performance with Rcpp (C++)\n📚Topic 3  📖Rcpp for everyone\n\n\nR👩‍💻 R🛠️\n\n\n\n\n\nTue, Apr 28\n\n\n\n📝 HW 1 at 11:50 pm\n\n\n2\nTue, Apr 28\n\n Integrate Python in R using Reticulate\n📚Topic 4  📖Calling Python from R\n\nR👩‍💻 R🛠️\n\n\n\n\n\nTue, Apr 28\n\n Develop your own professional R package\n📚Topic 5  📖R package\n\nR👩‍💻 R🛠️\n\n\n\n\n\nTue, Apr 28\n\n Collaborate via GitHub / CRAN submission process\n📚Topic 6  📖Let’s Git started  📖Release R package\n\nR👩‍💻  R🛠️\n\n\n\n\nThu, Apr 30\n\n\n\n📝 HW 2 at 11:50 pm",
+    "crumbs": [
+      "Course information",
+      "Schedule"
     ]
   },
   {
@@ -1000,226 +944,6 @@
       "Hands-on / HW",
       "First Week HW"
     ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Short Course on R Tools - (SCoRT)",
-    "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the short course. Note that this schedule will be updated as we progress, and the timeline of topics and assignments might be updated throughout the course.\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nCODE\nDUE\n\n\n\n0\nWed, Jul 30\nIrStat Webinar\n📚Overview\n\n\n\n\n\n1\nMon, Aug 11\n\n Object-Oriented Programming (OOP) in R\n📚Topic 1  📖OOP\n\n\nR👩‍💻 R🛠️\n\n\n\n\n\nTue, Aug 12\n\n Create dynamic Shiny web applications\n📚Topic 2  📖Shiny\n\n\nR👩‍💻 R🛠️\n\n\n\n\n\nWed, Aug 13\n\nEnhance performance with Rcpp (C++)\n📚Topic 3  📖Rcpp for everyone\n\n\nR👩‍💻 R🛠️\n\n\n\n\n\nFri, Aug 15\n\n\n\n📝 HW 1 at 11:50 pm\n\n\n2\nMon, Aug 18\n\n Integrate Python in R using Reticulate\n📚Topic 4  📖Calling Python from R\n\nR👩‍💻 R🛠️\n\n\n\n\n\nTue, Aug 19\n\n Develop your own professional R package\n📚Topic 5  📖R package\n\nR👩‍💻 R🛠️\n\n\n\n\n\nWed, Aug 20\n\n Collaborate via GitHub / CRAN submission process\n📚Topic 6  📖Let’s Git started  📖Release R package\n\nR👩‍💻  R🛠️\n\n\n\n\nFri, Aug 22\n\n\n\n📝 HW 2 at 11:50 pm\n\n\n3\nTue, Aug 26\n\n Deep Learning in R\n📚Topic 7 (🖥️part II) 📖Deep Learning with R\n\n\nR👩‍💻 R🛠️",
-    "crumbs": [
-      "Course information",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html",
-    "href": "course-syllabus.html",
-    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
-    "section": "",
-    "text": "Course Title: Statistician’s Toolkit in R for Data Science (STaR-DS)\nMeeting Time: Mon–Wed, Aug 11–13 & Aug 18–20, 5:00–7:00 pm IRT\nLocation: PGU BigBlueButton\nWebsite: https://bit.ly/SCoRT",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#course-information",
-    "href": "course-syllabus.html#course-information",
-    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
-    "section": "",
-    "text": "Course Title: Statistician’s Toolkit in R for Data Science (STaR-DS)\nMeeting Time: Mon–Wed, Aug 11–13 & Aug 18–20, 5:00–7:00 pm IRT\nLocation: PGU BigBlueButton\nWebsite: https://bit.ly/SCoRT",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#instructor-details",
-    "href": "course-syllabus.html#instructor-details",
-    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
-    "section": "Instructor Details",
-    "text": "Instructor Details\n\nInstructors: Mehdi Maadooliat & Hossein Haghbin\n\nOffice Hours: Right after class",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#course-description",
-    "href": "course-syllabus.html#course-description",
-    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
-    "section": "Course Description",
-    "text": "Course Description\nThis short, intensive course equips participants with practical, modern R skills to extend, optimize, and share their work. Over six sessions you’ll learn OOP in R, build Shiny apps, speed up code with Rcpp, call Python from R with reticulate, build professional R packages, and collaborate on GitHub—including an overview of the CRAN release process.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#learning-outcomes",
-    "href": "course-syllabus.html#learning-outcomes",
-    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
-    "section": "Learning Outcomes",
-    "text": "Learning Outcomes\nBy the end of the course, participants will be able to:\n\nApply R’s OOP systems (S3/S4/R6) to structure code.\nBuild interactive Shiny web applications.\nImprove performance by interfacing with C++ via Rcpp.\nIntegrate Python into R workflows using reticulate.\nDevelop, document, test, and share professional R packages.\nUse Git/GitHub for version control, releases, and prepare for CRAN submission.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#prerequisites",
-    "href": "course-syllabus.html#prerequisites",
-    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nWorking knowledge of R and basic data analysis concepts.\n\nSome familiarity with the command line and version control is helpful (not required).",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#materials",
-    "href": "course-syllabus.html#materials",
-    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
-    "section": "Materials",
-    "text": "Materials\n\nPrimary Resource: Course website — https://tinyurl.com/STAR-DS\n\nSupplemental tutorials, templates, and datasets will be provided in class.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#assignments-assessment",
-    "href": "course-syllabus.html#assignments-assessment",
-    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
-    "section": "Assignments & Assessment",
-    "text": "Assignments & Assessment\n\nHomework (2): Short, hands-on tasks reinforcing each block (due Aug 15 & Aug 22).\n\nOptional Mini-Project: Create a small R package or Shiny app integrating course concepts.\n\nNo exams. Due to the short format, late submissions are not accepted except for documented emergencies.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#attendance",
-    "href": "course-syllabus.html#attendance",
-    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
-    "section": "Attendance",
-    "text": "Attendance\nActive participation is expected; sessions build on each other.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#academic-honesty",
-    "href": "course-syllabus.html#academic-honesty",
-    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
-    "section": "Academic Honesty",
-    "text": "Academic Honesty\nDiscuss concepts with peers but submit your own work.\nUse of AI coding tools (e.g., ChatGPT, Copilot) is allowed for code if you cite usage; do not submit AI-generated narrative as your own. You are responsible for understanding any code you turn in.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#important-note",
-    "href": "course-syllabus.html#important-note",
-    "title": "Syllabus – Statistician’s Toolkit in R for Data Science (STaR-DS)",
-    "section": "Important Note",
-    "text": "Important Note\nThis syllabus may be updated; any changes will be announced in class and on the course website.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-links.html",
-    "href": "course-links.html",
-    "title": "Useful links",
-    "section": "",
-    "text": "Stat Calculator\nDistribution Calculator\nRStudio\n🔗 StatCalc(JAMM)\n🔗 DistCalc\n🔗 on dna\n\n\nAdvanced Texbooks\n🔗 Advanced R by Hadley Wickham\n🔗 R Package\n🔗 Quarto\n🔗 R Markdown\n🔗 ggplot2: Elegant Graphics for Data Analysis\n🔗 Fundamentals of Data Visualization\n🔗 Data Visualization: A Practical Introduction\n🔗 R for Data Science\n\n\nSome Package documentation\n🔗 OOP-R6: r6.r-lib.org\n🔗 shiny: shiny.posit.co\n🔗 Rcpp: www.rcpp.org\n🔗 reticulate: rstudio.github.io/reticulate\n🔗 devtools: devtools.r-lib.org\n🔗 GitHub: happygitwithr.com\n🔗 CRAN: cran.r-project.org\n🔗 keras: keras3.posit.co",
-    "crumbs": [
-      "Miscellaneous",
-      "Useful links"
-    ]
-  },
-  {
-    "objectID": "hands-on/QuizFlow.html#challenges-and-goal",
-    "href": "hands-on/QuizFlow.html#challenges-and-goal",
-    "title": "QuizFlow: Automating Mastery-Based Weekly Quizzes",
-    "section": "Challenges and Goal",
-    "text": "Challenges and Goal\n\nLarge lectures (~120 students) make them time-consuming\nManual pipeline doesn’t scale: generate → collect → grade → file\nGoal: An automatic, repeatable pipeline with Shiny"
-  },
-  {
-    "objectID": "hands-on/QuizFlow.html#the-4-step-pipeline",
-    "href": "hands-on/QuizFlow.html#the-4-step-pipeline",
-    "title": "QuizFlow: Automating Mastery-Based Weekly Quizzes",
-    "section": "The 4-step pipeline",
-    "text": "The 4-step pipeline\n\nBuild Quizzes\n\nCollect & OCR\n\nReview & Approve\n\nFinalize & File\n\n\n\n\nPipeline sketch\n\n\n\nWe’ll show how each step is solved in the app."
-  },
-  {
-    "objectID": "hands-on/QuizFlow.html#week-1-one-time-setup",
-    "href": "hands-on/QuizFlow.html#week-1-one-time-setup",
-    "title": "QuizFlow: Automating Mastery-Based Weekly Quizzes",
-    "section": "Week 1 — One-time setup",
-    "text": "Week 1 — One-time setup\n\nCreate OneDrive folders per student (by MUID)\nExport roster from CheckMarq & create a Seating Chart\nStandardize student photos: img/&lt;MUID&gt;.jpg\nVerify app dependencies (R packages, e.g., TinyTeX)"
-  },
-  {
-    "objectID": "hands-on/QuizFlow.html#app-overview-shiny",
-    "href": "hands-on/QuizFlow.html#app-overview-shiny",
-    "title": "QuizFlow: Automating Mastery-Based Weekly Quizzes",
-    "section": "App Overview (Shiny)",
-    "text": "App Overview (Shiny)\n\nTab 1: Generate personalized quizzes ({exams} or PDF)\nTab 2: Upload returned PDF(s), OCR at scale\nTab 3: Edit grades, toggle approval\nTab 4: Split/Copy/Move to per-student folders"
-  },
-  {
-    "objectID": "hands-on/QuizFlow.html#tab-1-build-quizzes",
-    "href": "hands-on/QuizFlow.html#tab-1-build-quizzes",
-    "title": "QuizFlow: Automating Mastery-Based Weekly Quizzes",
-    "section": "Tab 1 — Build Quizzes",
-    "text": "Tab 1 — Build Quizzes\n\nChoose {exams} LaTeX bank or stamp existing PDF template\nPersonalize: Name (left) + ID (right) on page 1\nOptional: Student photo (bottom-left), exact 176×176\nAdds a grade box 176×176 (bottom-right) on every page\nAll student versions are combined into one master PDF. This PDF file will be printed and distributed during the Quiz time."
-  },
-  {
-    "objectID": "hands-on/QuizFlow.html#tab-2-collect-ocr-design",
-    "href": "hands-on/QuizFlow.html#tab-2-collect-ocr-design",
-    "title": "QuizFlow: Automating Mastery-Based Weekly Quizzes",
-    "section": "Tab 2 — Collect & OCR (Design)",
-    "text": "Tab 2 — Collect & OCR (Design)\n\nUpload single multi-page scan PDF\nDraw three boxes once (Name, Student ID, Grade) → app stores template\nOCR modes:\n\nSingle page → quick test\nAll pages of selected file"
-  },
-  {
-    "objectID": "hands-on/QuizFlow.html#tab-3-review-approve",
-    "href": "hands-on/QuizFlow.html#tab-3-review-approve",
-    "title": "QuizFlow: Automating Mastery-Based Weekly Quizzes",
-    "section": "Tab 3 — Review & Approve",
-    "text": "Tab 3 — Review & Approve\n\nEditable grades\nToggle approved for selected rows\nTypical fixes: OCR cleanup, rounding grades\n\n\n\n\nReview table"
-  },
-  {
-    "objectID": "hands-on/QuizFlow.html#tab-4-finalize-file",
-    "href": "hands-on/QuizFlow.html#tab-4-finalize-file",
-    "title": "QuizFlow: Automating Mastery-Based Weekly Quizzes",
-    "section": "Tab 4 — Finalize & File",
-    "text": "Tab 4 — Finalize & File\n\nSplit master combined PDF into per-student PDFs\nCopy/Move into their OneDrive MUID folders\nFilenames: MUID_Quiz#_Attempt#.pdf\n\n\n\n\nFinalize"
-  },
-  {
-    "objectID": "hands-on/QuizFlow.html#weekly-cadence-after-week-1",
-    "href": "hands-on/QuizFlow.html#weekly-cadence-after-week-1",
-    "title": "QuizFlow: Automating Mastery-Based Weekly Quizzes",
-    "section": "Weekly cadence (after Week 1)",
-    "text": "Weekly cadence (after Week 1)\n\nUpload roster (optional)\n\nGenerate quizzes\n\nUpload scans → OCR → approve\n\nFile to student folders ✅"
-  },
-  {
-    "objectID": "hands-on/QuizFlow.html#results",
-    "href": "hands-on/QuizFlow.html#results",
-    "title": "QuizFlow: Automating Mastery-Based Weekly Quizzes",
-    "section": "Results",
-    "text": "Results\n\nRepeatable weekly flow\n120+ students → minutes instead of hours\nCentralized filing per student for compliance & transparency"
-  },
-  {
-    "objectID": "hands-on/QuizFlow.html#what-else-can-be-done",
-    "href": "hands-on/QuizFlow.html#what-else-can-be-done",
-    "title": "QuizFlow: Automating Mastery-Based Weekly Quizzes",
-    "section": "What else can be done?",
-    "text": "What else can be done?\n\nLMS integration (Canvas/D2L) to sync grades\nRubric-based auto grading (e.g., QR zone for points)\nConfidence scoring for OCR → human-in-loop"
   },
   {
     "objectID": "hands-on/HO3.html",
