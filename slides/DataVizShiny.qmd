@@ -1,0 +1,261 @@
+---
+title: "Statisticians Advancing in R for Data Science"
+subtitle: "Data Visualzation and Shiny"
+title-slide-attributes:
+  data-background-image: mu-bg.png
+  data-background-size: stretch
+  data-slide-number: none
+webr:
+  show-startup-message: false
+filters: 
+  - webr
+format: 
+  revealjs:
+    transition: fade
+    scrollable: true
+    fig-asp: 1
+---
+
+```{=html}
+<style>
+.top-aligned {
+  top: 0 !important;
+}
+</style>
+```
+
+# Outline
+
+::: {.fragment .fade-up}
+-   OOP Paradigms in R
+-   Base Types & Functional OOP
+-   S3 Classes & Methods
+-   S4 Classes & Methods
+-   R6 Classes & Reference Semantics
+-   S7 Classes - The New OOP System
+-   Trade-offs & Best Practices
+-   Hands-on Exercises
+:::
+
+# Data visualization in ggplot2 {.top-aligned}
+
+The `ggplot2` package, a part of the `tidyverse`, is the go-to software for data visualization in R.
+
+-   Since its release in June of 2007, it has received over 18 million downloads on CRAN.
+-   It is based on the grammar of graphics, a scheme for data visualization that deconstructs graphs into components such as layers.
+
+# An example {.top-aligned}
+
+<img src="images/dataviz/ggplot2ex.png" width="1000" height="550"/>
+
+Source: [Cedric Scherer](https://r-graph-gallery.com/web-line-chart-with-labels-at-end-of-line.html)
+
+# Dataset {.top-aligned}
+
+We will be working with `mtcars`, a dataset that comes preinstalled with R.
+
+-   In particular, we are interested in how `wt` and `qsec` are related to `mpg`.
+
+:::: my-mtcars
+::: panel-tabset
+## Code
+
+```{r}
+#| label: mtcars
+#| eval: false
+
+head(mtcars)
+```
+
+## Output
+
+```{=html}
+<style>
+.my-mtcars .cell-output pre {
+  font-size: 0.65em;
+  background-color: inherit;
+}
+</style>
+```
+
+```{r}
+#| echo: false
+#| comment: ""
+
+head(mtcars)
+```
+:::
+::::
+
+# ggplot basics {.top-aligned}
+
+Every ggplot starts with a ggplot statement.
+
+-   This just generates a blank canvas for you to work on.
+
+::: panel-tabset
+## Code
+
+```{r}
+#| label: basic
+#| fig-show: hide
+#| message: false
+library(ggplot2)
+
+ggplot()
+```
+
+## Plot
+
+```{r}
+#| ref.label: basic
+#| echo: false
+#| fig-asp: 0.3
+```
+:::
+
+# Layering in ggplot2 {.top-aligned}
+
+You may *layers* to your plot using the `+` symbol.
+
+-   For a scatter plot, we use the `geom_point()` layer.
+
+Every geom requires two arguments:
+
+-   `mapping` - a set of aesthetic mappings created by `aes()`
+    -   The `aes()` function describes how each variable in the data maps to visual elements of the plot.
+    -   For `geom_point()`, set the arguments `x` and `y` in `aes()` to column names in your dataset.
+-   `data` - the data to be displayed in this layer.
+
+# Adding geom_point() {.top-aligned}
+
+::: panel-tabset
+## Code
+
+```{r}
+#| label: geom_point
+#| fig-show: hide
+#| message: false
+
+ggplot() +
+  geom_point(aes(x = wt, y = qsec), data = mtcars)
+```
+
+## Plot
+
+```{r}
+#| ref.label: geom_point
+#| echo: false
+#| fig-asp: 0.5
+```
+:::
+
+# Customizing geoms {.top-aligned}
+
+::: panel-tabset
+## Code
+
+```{r}
+#| label: geom_point2
+#| message: false
+#| fig-show: hide
+
+ggplot() +
+  geom_point(aes(x = wt, y = qsec), 
+             color = "blue", data = mtcars)
+
+```
+
+## Plot
+
+```{r}
+#| ref.label: geom_point2
+#| echo: false
+#| fig-asp: 0.5
+```
+:::
+
+# Adding aesthetics {.top-aligned}
+
+We now represent the third variable, `mpg`, through the color option.
+
+::: panel-tabset
+## Code
+
+```{r}
+#| label: geom_point3
+#| message: false
+#| fig-show: hide
+
+ggplot() +
+  geom_point(aes(x = wt, y = qsec, color = mpg), data = mtcars)
+
+```
+
+## Plot
+
+```{r}
+#| ref.label: geom_point3
+#| echo: false
+#| fig-asp: 0.45
+```
+:::
+
+# Additional customization {.top-aligned}
+
+::: panel-tabset
+## Code
+
+```{r}
+#| label: geom_point4
+#| message: false
+#| fig-show: hide
+
+ggplot() +
+  geom_point(aes(x = wt, y = qsec, color = mpg), 
+             data = mtcars) +
+  scale_color_gradient(low = "#6A00A8FF", high = "#FCA636FF") +
+  theme_classic()
+
+```
+
+## Plot
+
+```{r}
+#| ref.label: geom_point4
+#| echo: false
+#| fig-asp: 0.45
+```
+:::
+
+# Adding geoms {.top-aligned}
+
+We now observe a car with `wt = 2` and `qsec = 20` and `mpg = ?`.
+
+::: panel-tabset
+## Code
+
+```{r}
+#| label: geom_point5
+#| message: false
+#| fig-show: hide
+
+new_car = data.frame(wt = 2, qsec = 20)
+
+ggplot() +
+  geom_point(aes(x = wt, y = qsec, color = mpg), 
+             data = mtcars) +
+  geom_point(aes(x = wt, y = qsec), shape = 13, 
+             data = new_car) +
+  scale_color_gradient(low = "#6A00A8FF", high = "#FCA636FF") +
+  theme_classic()
+```
+
+## Plot
+
+```{r}
+#| ref.label: geom_point5
+#| echo: false
+#| fig-asp: 0.45
+```
+:::
