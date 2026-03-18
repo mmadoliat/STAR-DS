@@ -22,606 +22,648 @@
     ]
   },
   {
+    "objectID": "slides/old/Topic7.html#classical-programming-vs-machine-learning",
+    "href": "slides/old/Topic7.html#classical-programming-vs-machine-learning",
+    "title": "Short Course on R Tools",
+    "section": "Classical Programming vs Machine Learning",
+    "text": "Classical Programming vs Machine Learning\n\nDeep learning is often presented as algorithms that “work like the brain”, that “think” or “understand”.\n\n\n\n\nReality is however quite far from this dream\n\n\n\n\n\nAI: the effort to automate intellectual tasks normally performed by humans.\n\n\n\n\n\n\n\n\nML: Could a computer surprise us? Rather than programmers crafting data-processing rules by hand, could a computer automatically learn these rules by looking at data? \n\n\n\n\n\n\n\n\nArtificial Intelligence\n\n\nMachine learning\n\n\nDeep learning"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#classical-programming-vs-machine-learning-1",
+    "href": "slides/old/Topic7.html#classical-programming-vs-machine-learning-1",
+    "title": "Short Course on R Tools",
+    "section": "Classical Programming vs Machine Learning",
+    "text": "Classical Programming vs Machine Learning\n\nDeep learning is often presented as algorithms that “work like the brain”, that “think” or “understand”.\n\n\n \n\n\n\nAI: the effort to automate intellectual tasks normally performed by humans.\n\n\n\n\n\n\nML: Could a computer surprise us? Rather than programmers crafting data-processing rules by hand, could a computer automatically learn these rules by looking at data? \n\n\n\n\n\n\n\nArtificial Intelligence\n\n\nMachine learning\n\n\nDeep learning"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#recipes-of-a-machine-learning-algorithm",
+    "href": "slides/old/Topic7.html#recipes-of-a-machine-learning-algorithm",
+    "title": "Short Course on R Tools",
+    "section": "Recipes of a Machine Learning Algorithm",
+    "text": "Recipes of a Machine Learning Algorithm\n\n\nInput data points, e.g. \n\nIf the task is speech recognition, these data points could be sound files\nIf the task is image tagging, they could be picture files\n\nExamples of the expected output \n\nIn a speech-recognition task, these could be transcripts of sound files\nIn an image task, expected outputs could tags such as “dog”, “cat”, and so on\n\nA way to measure whether the algorithm is doing a good job \n\nThis is needed to determine the distance between the output and its expected output.\nThe measurement is used as a feedback signal to adjust the way the algorithm works."
+  },
+  {
+    "objectID": "slides/old/Topic7.html#anatomy-of-a-neural-network",
+    "href": "slides/old/Topic7.html#anatomy-of-a-neural-network",
+    "title": "Short Course on R Tools",
+    "section": "Anatomy of a Neural Network",
+    "text": "Anatomy of a Neural Network\n\n\n\n\n\nThe input data and corresponding targets \nLayers, which are combined into a network (or model) \nThe loss function, which provides feedback for learning \nThe optimizer, which determines how learning proceeds"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#lenet-5-a-pioneering-7-level-cnn",
+    "href": "slides/old/Topic7.html#lenet-5-a-pioneering-7-level-cnn",
+    "title": "Short Course on R Tools",
+    "section": "LeNet-5: a pioneering 7-level CNN",
+    "text": "LeNet-5: a pioneering 7-level CNN\n\n\n\nThe first successful practical application of neural nets came in 1989 from Bell Labs, when Yann LeCun combined the earlier ideas of convolutional neural networks and backpropagation, and applied them to the problem of classifying handwritten digits.\nThe resulting network, dubbed LeNet, was used by the USPS in the 1990s to automate the reading of ZIP codes on mail envelopes.\nLeNet-5 was applied by several banks to recognize hand-written numbers on checks digitized in 32x32 pixel images."
+  },
+  {
+    "objectID": "slides/old/Topic7.html#why-30-years-gap",
+    "href": "slides/old/Topic7.html#why-30-years-gap",
+    "title": "Short Course on R Tools",
+    "section": "Why 30+ Years gap?",
+    "text": "Why 30+ Years gap?\n\n\n\nIn 2011, Dan Ciresan from IDSIA (Switzerland) began to win academic image-classification competitions with GPU-trained deep neural networks\nin 2012, a team led by Alex Krizhevsky and advised by Geoffrey Hinton was able to achieve a top-five accuracy of 83.6%–a significant breakthrough (in 2011 it was only 74.3%). \nThree forces are driving advances in ML:\n\nHardware\nDatasets and benchmarks\nAlgorithmic advances"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#vgg16cnn-for-classification-and-detection",
+    "href": "slides/old/Topic7.html#vgg16cnn-for-classification-and-detection",
+    "title": "Short Course on R Tools",
+    "section": "VGG16–CNN for Classification and Detection",
+    "text": "VGG16–CNN for Classification and Detection\n\n\n\nVGG16 is a convolutional neural network model proposed by K. Simonyan and A. Zisserman from the University of Oxford.\nThe model achieves 92.7% top-5 test accuracy in ImageNet. It was one of the famous model submitted to ILSVRC-2014.\nIt makes the improvement over AlexNet by replacing large kernel-sized filters (11 and 5 in the first and second convolutional layer, respectively) with multiple 3×3 kernel-sized filters one after another.\nVGG16 was trained for weeks using NVIDIA Titan Black GPU’s."
+  },
+  {
+    "objectID": "slides/old/Topic7.html#neural-network-parameters---activation-func.",
+    "href": "slides/old/Topic7.html#neural-network-parameters---activation-func.",
+    "title": "Short Course on R Tools",
+    "section": "Neural Network – Parameters - Activation Func.",
+    "text": "Neural Network – Parameters - Activation Func.\n\n\n\n\n\nA Neural Network\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nActivation Function"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#linear-activation-function",
+    "href": "slides/old/Topic7.html#linear-activation-function",
+    "title": "Short Course on R Tools",
+    "section": "Linear Activation function",
+    "text": "Linear Activation function\n\n\n\n\n\\(Z=\\color{green}{W_1}X+\\color{lightblue}{b_1}\\)\n\n\n\n\n\n\n\n\n\\(Y=\\color{red}{W_2}Z+\\color{blue}{b_2}\\)\n\n\n\n\n\\(Y=\\color{red}{W_2}\\{\\color{green}{W_1}X+\\color{lightblue}{b_1}\\}+\\color{blue}{b_2}\\)\n\n\n\n\n\\(Y=\\{\\color{red}{W_2}\\color{green}{W_1}\\}X+\\{\\color{red}{W_2}\\color{lightblue}{b_1}+\\color{blue}{b_2}\\}\\)\n\n\n\n\n\n\n\n\n\\(Y=\\color{red}{\\mathbf{W}^*}X+\\color{blue}{\\mathbf{b}^*}\\)\n\n\n\nHidden Layers Disappears"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#deep-learning-software",
+    "href": "slides/old/Topic7.html#deep-learning-software",
+    "title": "Short Course on R Tools",
+    "section": "Deep learning software",
+    "text": "Deep learning software\n\n\n\n\n🔗 Wikipedia: Deep learning software"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#what-is-tensorflow",
+    "href": "slides/old/Topic7.html#what-is-tensorflow",
+    "title": "Short Course on R Tools",
+    "section": "What is TensorFlow?",
+    "text": "What is TensorFlow?\n\n\nYou define the graph in R\nGraph is compiled and optimized\nGraph is executed on devices\nNodes represent computations\nData (tensors) flows between them"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#why-tensorflow-in-r",
+    "href": "slides/old/Topic7.html#why-tensorflow-in-r",
+    "title": "Short Course on R Tools",
+    "section": "Why TensorFlow in R?",
+    "text": "Why TensorFlow in R?\n\n\nHardware independent\n\nCPU (via Eigen and BLAS)\nGPU (via CUDA and cuDNN)\nTPU (Tensor Processing Unit)\n\nSupports automatic differentiation\nDistributed execution and large datasets\nVery general built-in optimization algorithms (SGD, Adam) that don’t require that all data is in RAM\nIt can be deployed with a low-latency C++ runtime\nR has a lot to offer as an interface language for TensorFlow"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#real-world-examples-of-data-tensors",
+    "href": "slides/old/Topic7.html#real-world-examples-of-data-tensors",
+    "title": "Short Course on R Tools",
+    "section": "Real-world examples of data tensors",
+    "text": "Real-world examples of data tensors\n\n\n2D tensors\n\nVector data—(samples, features)  \n\n\n\n\n3D tensors\n\nGrayscale Images—(samples, height, width)\nTime-series data or sequence data—(samples, timesteps, features)\n\n\n\n\n \n\n\n\n\n\n\n4D tensors\n\nColor Images—(samples, height, width, channels)\n\n\n\n\n \n\n\n\n\n\n\n5D tensors\n\nVideo—(samples, frames, height, width, channels)"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#why-keras",
+    "href": "slides/old/Topic7.html#why-keras",
+    "title": "Short Course on R Tools",
+    "section": "Why Keras?",
+    "text": "Why Keras?\n\n\nIt allows the same code to run seamlessly on CPU or GPU.\nIt has a user-friendly API that makes it easy to quickly prototype deep-learning models."
+  },
+  {
+    "objectID": "slides/old/Topic7.html#installing-keras",
+    "href": "slides/old/Topic7.html#installing-keras",
+    "title": "Short Course on R Tools",
+    "section": "Installing Keras",
+    "text": "Installing Keras\n  \n\n\n\n\nFirst, install the keras R package:\n\nremotes::install_github(\"rstudio/keras3\");    # OR\nInstall.packages(\"keras3\")\n\n\nTo install both the core Keras library as well as the TensorFlow backend\n\nlibrary(keras3)\nkeras3::install_keras(backend = \"tensorflow\")\n\n\n\nYou need Python installed before installing TensorFlow\n\nAnaconda (Python distribution), a free and open-source software\n\n\n\n\n\n\n\n\nYou can install TensorFlow with GPU support\n\nNVIDIA® drivers,\nCUDA Toolkit v9.0, and\ncuDNN v7.0\n\n\n\n\n\nare needed: https://tensorflow.rstudio.com/tools/local_gpu.html"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#developing-a-deep-nn-with-keras",
+    "href": "slides/old/Topic7.html#developing-a-deep-nn-with-keras",
+    "title": "Short Course on R Tools",
+    "section": "Developing a Deep NN with Keras",
+    "text": "Developing a Deep NN with Keras\n  \n\n\n\n\nStep 1 - Define your training data:\n\ninput tensors and target tensors.\n\n\n\n\nStep 2 - Define a network of layers (or model)\n\nthat maps your inputs to your targets.\n\n\n\n\n\nStep 3 - Configure the learning process by choosing\n\na loss function,\nan optimizer,\nand some metrics to monitor.\n\n\n\n\n\nStep 4 - Iterate on your training data by calling the\n\nfit() method of your model."
+  },
+  {
+    "objectID": "slides/old/Topic7.html#keras-step-1-data-preprocessing",
+    "href": "slides/old/Topic7.html#keras-step-1-data-preprocessing",
+    "title": "Short Course on R Tools",
+    "section": "Keras: Step 1 – Data preprocessing",
+    "text": "Keras: Step 1 – Data preprocessing\n  \n\n\n\n\nlibrary(keras3)\n\n# Load MNIST (Modified National Institute of Standards and Technology) images datasets\nc(c(x_train, y_train), c(x_test, y_test)) %&lt;-% dataset_mnist()\n\n# Flatten images and transform RGB values into [0,1] range \nx_train &lt;- array_reshape(x_train, c(nrow(x_train), 784))\nx_test &lt;- array_reshape(x_test, c(nrow(x_test), 784))\nx_train &lt;- x_train / 255\nx_test &lt;- x_test / 255\n\n# Convert class vectors to binary class matrices\ny_train &lt;- to_categorical(y_train, 10)\ny_test &lt;- to_categorical(y_test, 10)"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#keras-step-2-model-definition",
+    "href": "slides/old/Topic7.html#keras-step-2-model-definition",
+    "title": "Short Course on R Tools",
+    "section": "Keras: Step 2 – Model definition",
+    "text": "Keras: Step 2 – Model definition\n  \n\n\n\n\n\nmodel &lt;- keras_model_sequential(input_shape = c(784)) \nmodel %&gt;% \n     layer_dense(units = 256, activation = 'relu') %&gt;% \n     layer_dropout(rate = 0.4) %&gt;% \n     layer_dense(units = 128, activation = 'relu') %&gt;%\n     layer_dropout(rate = 0.3) %&gt;%\n     layer_dense(units = 10, activation = 'softmax')\n     \nsummary(model)\n&gt;# Model: \"sequential\"\n&gt;# │ Layer (type)          │ Output Shape     │ Param # │\n&gt;# ├-----------------------┼------------------┼---------┤\n&gt;# │ dense_11 (Dense)      │ (None, 256)      │ 200,960 │\n&gt;# │ dropout_3 (Dropout)   │ (None, 256)      │       0 │\n&gt;# │ dense_10 (Dense)      │ (None, 128)      │  32,896 │\n&gt;# │ dropout_2 (Dropout)   │ (None, 128)      │       0 │\n&gt;# │ dense_9 (Dense)       │ (None, 10)       │   1,290 │\n&gt;# └-----------------------┴------------------┴---------┘\n&gt;#  Total params: 235,146 (918.54 KB)\n&gt;#  Trainable params: 235,146 (918.54 KB)\n&gt;#  Non-trainable params: 0 (0.00 B)"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#multi-class-vs-multi-label-classification",
+    "href": "slides/old/Topic7.html#multi-class-vs-multi-label-classification",
+    "title": "Short Course on R Tools",
+    "section": "Multi-Class vs Multi-Label Classification",
+    "text": "Multi-Class vs Multi-Label Classification"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#multi-class-vs-multi-label-classification-cont.",
+    "href": "slides/old/Topic7.html#multi-class-vs-multi-label-classification-cont.",
+    "title": "Short Course on R Tools",
+    "section": "Multi-Class vs Multi-Label Classification (Cont.)",
+    "text": "Multi-Class vs Multi-Label Classification (Cont.)"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#multi-class-vs-multi-label-classification-cont.-1",
+    "href": "slides/old/Topic7.html#multi-class-vs-multi-label-classification-cont.-1",
+    "title": "Short Course on R Tools",
+    "section": "Multi-Class vs Multi-Label Classification (Cont.)",
+    "text": "Multi-Class vs Multi-Label Classification (Cont.)"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#keras-step-3-compile-model",
+    "href": "slides/old/Topic7.html#keras-step-3-compile-model",
+    "title": "Short Course on R Tools",
+    "section": "Keras: Step 3 – Compile Model",
+    "text": "Keras: Step 3 – Compile Model\n  \n\n\n\n\nModel compilation prepares the model for training by:\n\nConverting the layers into a TensorFlow graph\nApplying the specified loss function and optimizer\nArranging for the collection of metrics during training\n\n\n\nmodel %&gt;% compile(\n  loss = 'categorical_crossentropy',\n  optimizer = optimizer_rmsprop(),\n  metrics = c('accuracy')\n)"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#keras-step-4-model-training",
+    "href": "slides/old/Topic7.html#keras-step-4-model-training",
+    "title": "Short Course on R Tools",
+    "section": "Keras: Step 4 – Model Training",
+    "text": "Keras: Step 4 – Model Training\n  \n\n\n\n\nUse the fit() to train the model for 10 epochs using batches of 128 images:\n\nFeed 128 samples at a time to the model (batch_size = 128)\nTraverse the input dataset 10 times (epochs = 10)\nHold out 20% of the data for validation (validation_split = 0.2)\n\n\n\nhistory &lt;- model %&gt;% fit(\n  x_train, y_train, \n  batch_size = 128, \n  epochs = 10,\n  validation_split = 0.2\n)\n\n\n\n\nEpoch 1/10\n375/375 ━━━━━ 3s 5ms/step - accuracy: 0.7831 - loss: 0.6970 - val_accuracy: 0.9513 - val_loss: 0.1640\nEpoch 2/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9371 - loss: 0.2123 - val_accuracy: 0.9628 - val_loss: 0.1249\nEpoch 3/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9539 - loss: 0.1540 - val_accuracy: 0.9666 - val_loss: 0.1098\nEpoch 4/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9612 - loss: 0.1301 - val_accuracy: 0.9743 - val_loss: 0.0865\nEpoch 5/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9663 - loss: 0.1145 - val_accuracy: 0.9730 - val_loss: 0.0921\nEpoch 6/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9688 - loss: 0.1020 - val_accuracy: 0.9736 - val_loss: 0.0923\nEpoch 7/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9726 - loss: 0.0940 - val_accuracy: 0.9770 - val_loss: 0.0822\nEpoch 8/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9742 - loss: 0.0875 - val_accuracy: 0.9770 - val_loss: 0.0815\nEpoch 9/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9750 - loss: 0.0791 - val_accuracy: 0.9785 - val_loss: 0.0810\nEpoch 10/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9769 - loss: 0.0744 - val_accuracy: 0.9777 - val_loss: 0.0835\n\n\n\n\n\nmodel %&gt;% evaluate(x_test, y_test)\n&gt;# 313/313 ━━━━━ 0s 771us/step - accuracy: 0.9747 - loss: 0.0930\n&gt;# $accuracy\n&gt;# [1] 0.9791\n&gt;# \n&gt;# $loss\n&gt;# [1] 0.0784568"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#keras-evaluation-and-prediction",
+    "href": "slides/old/Topic7.html#keras-evaluation-and-prediction",
+    "title": "Short Course on R Tools",
+    "section": "Keras: Evaluation and prediction",
+    "text": "Keras: Evaluation and prediction\n  \n\nplot(history)\n\n\nmodel %&gt;% predict(x_test[1:100,]) %&gt;% apply(1, which.max)-1\n&gt;# 4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 957us/step\n&gt;#   [1] 7 2 1 0 4 1 4 9 6 9 0 6 9 0 1 5 9 7\n&gt;#  [19] 3 4 9 6 6 5 4 0 7 4 0 1 3 1 3 4 7 2\n&gt;#  [37] 7 1 2 1 1 7 4 2 3 5 1 2 4 4 6 3 5 5\n&gt;#  [55] 6 0 4 1 9 5 7 8 9 3 7 4 6 4 3 0 7 0\n&gt;#  [73] 2 9 1 7 3 2 9 7 7 6 2 7 8 4 7 3 6 1\n&gt;#  [91] 3 6 9 3 1 4 1 7 6 9\n\nround(model %&gt;% predict(x_test[1:9,]),5)\n&gt;# 1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 16ms/step\n&gt;#          [,1]    [,2]  [,3]  [,4]    [,5]    [,6]    [,7]    [,8]  [,9]   [,10]\n&gt;#  [1,] 0.00000 0.00000 0e+00 0.000 0.00000 0.00000 0.00000 1.00000 0e+00 0.00000\n&gt;#  [2,] 0.00000 0.00000 1e+00 0.000 0.00000 0.00000 0.00000 0.00000 0e+00 0.00000\n&gt;#  [3,] 0.00000 0.99983 1e-05 0.000 0.00001 0.00000 0.00000 0.00014 1e-05 0.00000\n&gt;#  [4,] 0.99986 0.00000 6e-05 0.000 0.00000 0.00000 0.00007 0.00000 0e+00 0.00000\n&gt;#  [5,] 0.00000 0.00000 0e+00 0.000 0.99995 0.00000 0.00000 0.00000 0e+00 0.00005\n&gt;#  [6,] 0.00000 0.99998 0e+00 0.000 0.00000 0.00000 0.00000 0.00002 0e+00 0.00000\n&gt;#  [7,] 0.00000 0.00000 0e+00 0.000 0.99984 0.00000 0.00000 0.00000 3e-05 0.00013\n&gt;#  [8,] 0.00000 0.00001 1e-05 0.002 0.00007 0.00007 0.00000 0.00044 4e-05 0.99737\n&gt;#  [9,] 0.00000 0.00000 0e+00 0.000 0.00000 0.30770 0.69230 0.00000 0e+00 0.00000"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#keras-demo",
+    "href": "slides/old/Topic7.html#keras-demo",
+    "title": "Short Course on R Tools",
+    "section": "Keras Demo",
+    "text": "Keras Demo\n\nkeras3.posit.co\n🔗 Launch R"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#keras-api-layers",
+    "href": "slides/old/Topic7.html#keras-api-layers",
+    "title": "Short Course on R Tools",
+    "section": "Keras API: Layers",
+    "text": "Keras API: Layers\n\n90+ layers available (you can also create your own)\n\n\n\n\n\n\n\nlayer_dense(units = 64, kernel_regularizer = regularizer_l1(0.01))\nlayer_dense(units = 64, bias_regularizer = regularizer_l2(0.01))"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#embedding-layers",
+    "href": "slides/old/Topic7.html#embedding-layers",
+    "title": "Short Course on R Tools",
+    "section": "Embedding Layers",
+    "text": "Embedding Layers\n\nVectorization of text that reflects semantic relationships between words\n\n \n\n\n\n\n\nmodel &lt;- keras_model_sequential() %&gt;%\n  layer_embedding(input_dim = 10000, output_dim = 8) %&gt;%\n  layer_flatten() %&gt;%\n  layer_dense(units = 1, activation = \"sigmoid\")\n\n\n\n\nHow to use?\n\nLearn the embeddings jointly with the main task (e.g. classification); or\nLoad pre-trained word embeddings (e.g. Word2vec, GloVe)"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#hands-on-exercises",
+    "href": "slides/old/Topic7.html#hands-on-exercises",
+    "title": "Short Course on R Tools",
+    "section": "Hands-on Exercises",
+    "text": "Hands-on Exercises\n\nBuild and train a CNN on Fashion MNIST\n\nMNIST CNN in keras3\n\n\n\n\n\n\n\nImplement an LSTM for\n\nText Classification in keras3\n\n\n\n\n\n\n\n\n\nCreate an autoencoder for dimensionality reduction and visualize embeddings"
+  },
+  {
+    "objectID": "slides/old/Topic7.html#keras-for-r-cheatsheet",
+    "href": "slides/old/Topic7.html#keras-for-r-cheatsheet",
+    "title": "Short Course on R Tools",
+    "section": "Keras for R cheatsheet",
+    "text": "Keras for R cheatsheet\n\n\n\n\n\n\n\n\n\n\n🔗 Rstudio: Keras cheatsheet"
+  },
+  {
+    "objectID": "slides/old/overview.html#motivating-example---what-is-data-science",
+    "href": "slides/old/overview.html#motivating-example---what-is-data-science",
+    "title": "Short Course on R Tools",
+    "section": "Motivating Example - What is Data Science?",
+    "text": "Motivating Example - What is Data Science?"
+  },
+  {
+    "objectID": "slides/old/overview.html#r-vs-python",
+    "href": "slides/old/overview.html#r-vs-python",
+    "title": "Short Course on R Tools",
+    "section": "R vs Python",
+    "text": "R vs Python"
+  },
+  {
+    "objectID": "slides/old/overview.html#motivating-example---functional-singular-spectrum-analysis",
+    "href": "slides/old/overview.html#motivating-example---functional-singular-spectrum-analysis",
+    "title": "Short Course on R Tools",
+    "section": "Motivating Example - Functional Singular Spectrum Analysis",
+    "text": "Motivating Example - Functional Singular Spectrum Analysis"
+  },
+  {
+    "objectID": "slides/old/overview.html#motivating-example---oop",
+    "href": "slides/old/overview.html#motivating-example---oop",
+    "title": "Short Course on R Tools",
+    "section": "Motivating Example - OOP",
+    "text": "Motivating Example - OOP"
+  },
+  {
+    "objectID": "slides/old/overview.html#motivating-example---oop-cont.",
+    "href": "slides/old/overview.html#motivating-example---oop-cont.",
+    "title": "Short Course on R Tools",
+    "section": "Motivating Example - OOP (Cont.)",
+    "text": "Motivating Example - OOP (Cont.)"
+  },
+  {
+    "objectID": "slides/old/overview.html#oop-in-r",
+    "href": "slides/old/overview.html#oop-in-r",
+    "title": "Short Course on R Tools",
+    "section": "OOP in R",
+    "text": "OOP in R\n\n🧩 OOP Paradigms in R:\n\nFunctional OOP: plot(lm(...))\nEncapsulated OOP: learner$train()\nModern tools: mlr3, R6, S7\n\n\n\n\n🏗 OOP Systems:\n\nS3: Lightweight & informal — uses UseMethod()\nS4: Formal and type-safe — uses setClass() and @\nR6: Mutable, used in apps like shiny\nS7: Newest and unified — multiple dispatch"
+  },
+  {
+    "objectID": "slides/old/overview.html#oop-in-practice",
+    "href": "slides/old/overview.html#oop-in-practice",
+    "title": "Short Course on R Tools",
+    "section": "🛠️ OOP in Practice",
+    "text": "🛠️ OOP in Practice\n🔁 Comparison of Systems\n\n\n\n\nSys.\n\n\nStyle\n\n\nUsed In\n\n\n✅ Pros\n\n\n⚠️ Cons\n\n\n\n\n\n\nS3\n\n\nFunctional\n\n\nBase R\n\n\nSimple, extensible\n\n\nNo schema, fragile\n\n\n\n\nS4\n\n\nFormal\n\n\nBioconductor\n\n\nType-safe, robust\n\n\nVerbose, complex\n\n\n\n\nR6\n\n\nEncapsulated\n\n\nShiny, Keras\n\n\nFast, mutable\n\n\nWeak type safety\n\n\n\n\nS7\n\n\nUnified OOP\n\n\nModern dev\n\n\nCombines S3 & S4 benefits\n\n\nStill evolving"
+  },
+  {
+    "objectID": "slides/old/overview.html#fssa---shiny",
+    "href": "slides/old/overview.html#fssa---shiny",
+    "title": "Short Course on R Tools",
+    "section": "FSSA - Shiny",
+    "text": "FSSA - Shiny\n\n\n\n🔗 Open in a browser"
+  },
+  {
+    "objectID": "slides/old/overview.html#web-apps-with-shiny",
+    "href": "slides/old/overview.html#web-apps-with-shiny",
+    "title": "Short Course on R Tools",
+    "section": "Web Apps with Shiny",
+    "text": "Web Apps with Shiny\n\n✨ Shiny = Interactive web apps in pure R (no HTML/JS!)\n\n\n\n📦 Components:\n\nui: Layout, inputs/outputs\nserver: Logic, reactivity\n\n\n\n\n\n🔌 Inputs & Outputs:\n\nInputs: sliderInput(), textInput()\nOutputs: renderPlot(), renderText(), renderTable()\n\n\n\n\n\n🧪 Use Cases:\n\nDashboards, simulations, teaching tools"
+  },
+  {
+    "objectID": "slides/old/overview.html#shiny-concepts-deployment-in-workshop",
+    "href": "slides/old/overview.html#shiny-concepts-deployment-in-workshop",
+    "title": "Short Course on R Tools",
+    "section": "Shiny Concepts & Deployment in Workshop",
+    "text": "Shiny Concepts & Deployment in Workshop\n\n🚀 Deployment Options:\n\nshinyapps.io, Posit Connect, university servers\nshinylive: deploy as static site (experimental)\n\n\n\n\n\n⚡Reactivity System:\n\nreactive(): memoized reactive expressions\nisolate(): break reactive chains\nobserveEvent(): trigger actions without outputs\n\n\n\n\n\n\n\n🧠 Hands-on:\n\nExplore shinyapps gallery for inspiration"
+  },
+  {
+    "objectID": "slides/old/overview.html#context-motivation",
+    "href": "slides/old/overview.html#context-motivation",
+    "title": "Short Course on R Tools",
+    "section": "Context & Motivation",
+    "text": "Context & Motivation\n\n\nDiagonal averaging is key in many algorithms (e.g. SSA reconstruction).\n\nGiven any matrix \\(G \\in \\mathbb{R}^{L\\times K}\\), we want \\[\n  \\scriptsize{y_t = \\frac{1}{\\#\\{(i,j):\\,i+j-1 = t\\}}\n        \\sum_{i+j-1 = t} G_{i,j},\n  \\quad t = 1,\\dots, L+K-1.}\n\\]\nPure‑R implementation uses two nested loops over \\(i\\) and \\(j\\)."
+  },
+  {
+    "objectID": "slides/old/overview.html#pure-r-code",
+    "href": "slides/old/overview.html#pure-r-code",
+    "title": "Short Course on R Tools",
+    "section": "Pure R Code",
+    "text": "Pure R Code\n\nhankelize_R &lt;- function(X){\n  L &lt;- nrow(X)\n  K &lt;- ncol(X)\n  N &lt;- L + K - 1\n  result &lt;- numeric(N)\n  count &lt;- numeric(N)\n \n  for(i in 1:L){\n    for(j in 1:K){\n      result[i + j - 1] &lt;- result[i + j - 1] + X[i,j]\n      count[i + j - 1] &lt;- count[i + j - 1] + 1\n    }\n  }\n \n  return(result / count)\n}"
+  },
+  {
+    "objectID": "slides/old/overview.html#rcpp-code",
+    "href": "slides/old/overview.html#rcpp-code",
+    "title": "Short Course on R Tools",
+    "section": "Rcpp Code",
+    "text": "Rcpp Code\n\nlibrary(Rcpp)\n\ncppFunction('\nNumericVector hankelize_rcpp(NumericMatrix X) {\n  int L = X.nrow();\n  int K = X.ncol();\n  int N = L + K - 1;\n \n  NumericVector result(N);\n  NumericVector count(N);\n \n  for(int i = 0; i &lt; L; i++){\n    for(int j = 0; j &lt; K; j++){\n      result[i + j] += X(i,j);\n      count[i + j] += 1;\n    }\n  }\n \n  for(int i = 0; i &lt; N; i++){\n    result[i] /= count[i];\n  }\n \n  return result;\n}')"
+  },
+  {
+    "objectID": "slides/old/overview.html#benchmark",
+    "href": "slides/old/overview.html#benchmark",
+    "title": "Short Course on R Tools",
+    "section": "Benchmark",
+    "text": "Benchmark\n\nlibrary(microbenchmark)\n\n# Large random matrix (e.g., 100 x 1000)\nset.seed(123)\nX_large &lt;- matrix(runif(1e5), nrow = 100, ncol = 1000)\n\nbench &lt;- microbenchmark(\n  R_version = hankelize_R(X_large),\n  Rcpp_version = hankelize_rcpp(X_large),\n  times = 10\n)\n\nprint(bench)\n&gt;# Unit: microseconds\n&gt;#          expr     min      lq     mean   median      uq     max neval\n&gt;#     R_version 21225.1 21550.8 26604.53 25180.35 30969.3 34455.1    10\n&gt;#  Rcpp_version   176.9   177.8   299.87   194.50   253.7  1161.3    10\n\n\n\nDramatic speedup: ~89× faster.\nPattern can be applied to many \\(O(n^2)\\) tasks in time series, spatial stats, and beyond."
+  },
+  {
+    "objectID": "slides/old/overview.html#rcpp-in-action",
+    "href": "slides/old/overview.html#rcpp-in-action",
+    "title": "Short Course on R Tools",
+    "section": "🔬 Rcpp in Action",
+    "text": "🔬 Rcpp in Action\n\n🚀 Rcpp bridges R and C++ for high-performance computing.\n🏁 Use cases:\n\nSpeed up loops, recursion, and matrix operations\nAccess C++ libraries and STL\nIntegrate C++ in R packages"
+  },
+  {
+    "objectID": "slides/old/overview.html#example-use-python-from-r",
+    "href": "slides/old/overview.html#example-use-python-from-r",
+    "title": "Short Course on R Tools",
+    "section": "🔁 Example: Use Python from R",
+    "text": "🔁 Example: Use Python from R\n\n\n🐍 Native Python\nfrom sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neural_network import MLPClassifier\niris = load_iris()\nX, y = iris.data, iris.target\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\nmlp = MLPClassifier(hidden_layer_sizes=(10,))\nmlp.fit(X_train, y_train)\ny_pred = mlp.predict(X_test)\n\n\n📦 R with reticulate\nlibrary(reticulate)\nsklearn &lt;- import(\"sklearn\")\nmodel_selection &lt;- sklearn$model_selection\nneural_network &lt;- sklearn$neural_network\nX &lt;- as.matrix(iris[, 1:4])         \ny &lt;- as.integer(iris$Species) - 1     \ntrain_test &lt;- model_selection$train_test_split(X, y, test_size = 0.2, random_state = 42)\nX_train &lt;- train_test[[1]]\nX_test &lt;- train_test[[2]]\ny_train &lt;- train_test[[3]]\ny_test &lt;- train_test[[4]]\nmlp &lt;- neural_network$MLPClassifier(hidden_layer_sizes = tuple(10L))\nmlp$fit(X_train, y_train)\ny_pred &lt;- mlp$predict(X_test)"
+  },
+  {
+    "objectID": "slides/old/overview.html#why-call-python-in-r",
+    "href": "slides/old/overview.html#why-call-python-in-r",
+    "title": "Short Course on R Tools",
+    "section": "💡 Why Call Python in R?",
+    "text": "💡 Why Call Python in R?\n\n\n🔄 Avoid rewriting code from one language to another\n🔁 Call shared models or preprocessing functions written in Python\n📦 Reuse Python packages or APIs within your R workflow\n📤 Publish reproducible reports that include both R and Python code"
+  },
+  {
+    "objectID": "slides/old/overview.html#what-is-reticulate",
+    "href": "slides/old/overview.html#what-is-reticulate",
+    "title": "Short Course on R Tools",
+    "section": "What is reticulate?",
+    "text": "What is reticulate?\n\n\nR package for interoperability with Python\nMaintains a shared Python session accessible from R\nAutomatic conversion of many R types to Python and vice versa\nSupports inline Python code in R Markdown and R scripts"
+  },
+  {
+    "objectID": "slides/old/overview.html#demo-python-from-r-in-rstudio",
+    "href": "slides/old/overview.html#demo-python-from-r-in-rstudio",
+    "title": "Short Course on R Tools",
+    "section": "🎥 Demo: Python from R in RStudio",
+    "text": "🎥 Demo: Python from R in RStudio"
+  },
+  {
+    "objectID": "slides/old/overview.html#motivations-to-package-your-code",
+    "href": "slides/old/overview.html#motivations-to-package-your-code",
+    "title": "Short Course on R Tools",
+    "section": "💡 Motivations to Package Your Code",
+    "text": "💡 Motivations to Package Your Code\n🧰 Why build a package?\n\n\n♻️ Reuse and organize reusable code chunks\n📖 Provide documentation and examples\n🧪 Add unit tests to ensure reliability\n🌐 Distribute:\n\nvia CRAN for wide access\nvia GitHub for collaborative development\nor keep it private for internal use"
+  },
+  {
+    "objectID": "slides/old/overview.html#package-structure-overview",
+    "href": "slides/old/overview.html#package-structure-overview",
+    "title": "Short Course on R Tools",
+    "section": "🏗 Package Structure Overview",
+    "text": "🏗 Package Structure Overview\nmypkg/\n├── DESCRIPTION         # 📋 Package metadata\n├── NAMESPACE           # 🔁 Exported functions & imports\n├── R/                  # 📂 Your R functions\n└── man/                # 📚 Auto-generated documentation\n\n💡 Other folders you may add:\n\n\n📂 tests/ → Unit tests (testthat)\n📂 vignettes/ → Long-form docs\n📂 data/ → Internal or example datasets"
+  },
+  {
+    "objectID": "slides/old/overview.html#demo-rfssa-package",
+    "href": "slides/old/overview.html#demo-rfssa-package",
+    "title": "Short Course on R Tools",
+    "section": "🎥 Demo: Rfssa Package",
+    "text": "🎥 Demo: Rfssa Package"
+  },
+  {
+    "objectID": "slides/old/overview.html#package-states-in-r",
+    "href": "slides/old/overview.html#package-states-in-r",
+    "title": "Short Course on R Tools",
+    "section": "🛠 Package States in R",
+    "text": "🛠 Package States in R\nR packages transition through five development states:\n\n\n🗂️ Source: your raw package folder\n📦 Bundled: compressed .tar.gz for sharing\n🧱 Binary: platform-specific precompiled version\n📚 Installed: available in your R library\n🧠 In-Memory: actively loaded via library()"
+  },
+  {
+    "objectID": "slides/old/overview.html#transitioning-between-states",
+    "href": "slides/old/overview.html#transitioning-between-states",
+    "title": "Short Course on R Tools",
+    "section": "🔁 Transitioning Between States",
+    "text": "🔁 Transitioning Between States"
+  },
+  {
+    "objectID": "slides/old/overview.html#submitting-to-cran",
+    "href": "slides/old/overview.html#submitting-to-cran",
+    "title": "Short Course on R Tools",
+    "section": "🚀 Submitting to CRAN",
+    "text": "🚀 Submitting to CRAN\n\n\n📦 CRAN = Comprehensive R Archive Network\n\n🎯 Goal: Make your R package public, discoverable, and installable\n✔ Must pass R CMD check with:\n\n❌ No ERRORs\n⚠️ No WARNINGs\n📝 Minimal and justifiable NOTEs\n\n📤 Submit with: devtools::release()"
+  },
+  {
+    "objectID": "slides/old/overview.html#confirmation-email-after-submission",
+    "href": "slides/old/overview.html#confirmation-email-after-submission",
+    "title": "Short Course on R Tools",
+    "section": "📩 Confirmation Email (After Submission)",
+    "text": "📩 Confirmation Email (After Submission)"
+  },
+  {
+    "objectID": "slides/old/overview.html#submission-confirmed-email",
+    "href": "slides/old/overview.html#submission-confirmed-email",
+    "title": "Short Course on R Tools",
+    "section": "📬 Submission Confirmed Email",
+    "text": "📬 Submission Confirmed Email"
+  },
+  {
+    "objectID": "slides/old/overview.html#pending-manual-inspection-email",
+    "href": "slides/old/overview.html#pending-manual-inspection-email",
+    "title": "Short Course on R Tools",
+    "section": "⏳ Pending Manual Inspection Email",
+    "text": "⏳ Pending Manual Inspection Email"
+  },
+  {
+    "objectID": "slides/old/overview.html#package-initially-accepted-email",
+    "href": "slides/old/overview.html#package-initially-accepted-email",
+    "title": "Short Course on R Tools",
+    "section": "✅ Package Initially Accepted Email",
+    "text": "✅ Package Initially Accepted Email\n\n\n\n🎉 Good news!"
+  },
+  {
+    "objectID": "slides/old/overview.html#package-built-on-cran-email",
+    "href": "slides/old/overview.html#package-built-on-cran-email",
+    "title": "Short Course on R Tools",
+    "section": "📦 Package Built on CRAN Email",
+    "text": "📦 Package Built on CRAN Email\n\n\n\n🧱 CRAN has built binaries for major platforms (Windows, …)."
+  },
+  {
+    "objectID": "slides/old/overview.html#cran-page-created",
+    "href": "slides/old/overview.html#cran-page-created",
+    "title": "Short Course on R Tools",
+    "section": "🌐 CRAN Page Created",
+    "text": "🌐 CRAN Page Created\n\n\n🌍 Your package is now live! Searchable and installable via:\n\ninstall.packages(\"Rfssa\")"
+  },
+  {
+    "objectID": "slides/old/overview.html#example-rfssa-package-github",
+    "href": "slides/old/overview.html#example-rfssa-package-github",
+    "title": "Short Course on R Tools",
+    "section": "📬 Example: Rfssa Package Github",
+    "text": "📬 Example: Rfssa Package Github"
+  },
+  {
+    "objectID": "slides/old/overview.html#why-use-git-github",
+    "href": "slides/old/overview.html#why-use-git-github",
+    "title": "Short Course on R Tools",
+    "section": "🌍 Why Use Git & GitHub?",
+    "text": "🌍 Why Use Git & GitHub?\n\n\n🔁 Version Control: Track and manage changes in code\n🤝 Collaboration: Work with others without overwriting files\n🧪 Reproducibility: Restore older versions when bugs occur\n🔄 Open Source: Share your package with the world\n\n\n\n\n🧰 Git = Local tracking tool\n☁️ GitHub = Online hosting and teamwork platform"
+  },
+  {
+    "objectID": "slides/old/overview.html#daily-git-workflow-in-rstudio",
+    "href": "slides/old/overview.html#daily-git-workflow-in-rstudio",
+    "title": "Short Course on R Tools",
+    "section": "🔁 Daily Git Workflow in RStudio",
+    "text": "🔁 Daily Git Workflow in RStudio\n\n🎯 A typical work cycle for package developers:\n\n\n\n\n\nStep\nDescription\n\n\n\n\n✏️ Edit\nMake changes to .R or .Rmd files\n\n\n✅ Stage\nSelect files to track in Git tab\n\n\n💬 Commit\nSave with a message (e.g., “Fix bug”)\n\n\n🚀 Push\nSend to GitHub"
+  },
+  {
+    "objectID": "slides/old/overview.html#demo-rfssa-github-package",
+    "href": "slides/old/overview.html#demo-rfssa-github-package",
+    "title": "Short Course on R Tools",
+    "section": "🎥 Demo: Rfssa Github Package",
+    "text": "🎥 Demo: Rfssa Github Package"
+  },
+  {
+    "objectID": "slides/old/Topic2.html#structure-of-a-shiny-app-1",
+    "href": "slides/old/Topic2.html#structure-of-a-shiny-app-1",
+    "title": "Short Course on R Tools",
+    "section": "Structure of a Shiny App",
+    "text": "Structure of a Shiny App\n\n# app.R single-file app\nlibrary(shiny)\nui &lt;- fluidPage(\n  titlePanel(\"Hello Shiny\"),\n  sidebarLayout(\n    sidebarPanel(sliderInput(\"obs\", \"Observations:\", 1, 100, 50)),\n    mainPanel(plotOutput(\"distPlot\"))\n  )\n)\n\nserver &lt;- function(input, output) {\n  output$distPlot &lt;- renderPlot({\n    hist(rnorm(input$obs))\n  })\n}\n\nshinyApp(ui, server)\n\n\nui defines layout and inputs/outputs\nserver contains R code & reactivity"
+  },
+  {
+    "objectID": "slides/old/Topic2.html#structure-of-a-shiny-app-2",
+    "href": "slides/old/Topic2.html#structure-of-a-shiny-app-2",
+    "title": "Short Course on R Tools",
+    "section": "Structure of a Shiny App",
+    "text": "Structure of a Shiny App\nShiny apps come in two parts:\n\n\n\nUI\n\nDefines the layout and appearance.\nContains elements such as:\n\nlayout structures (sidebars)\ninputs (text boxes, sliders, buttons)\noutputs (plots, tables)\n\n\n\n\nServer\n\nPerforms calculations.\nContains the logic to respond to user inputs, and update outputs.\nCommunicates with the UI to dynamically render outputs."
+  },
+  {
+    "objectID": "slides/old/Topic2.html#exercise",
+    "href": "slides/old/Topic2.html#exercise",
+    "title": "Short Course on R Tools",
+    "section": "Exercise",
+    "text": "Exercise\n\n\n\n\n\n\nOpen up your IDE of choice.\nMake sure you have the {shiny} package installed.\nCreate an app.R file.\nAdd ui and server elements, as well as shiny::shinyApp(ui, server).\nCheck it works."
+  },
+  {
+    "objectID": "slides/old/Topic2.html#shinyapps-gallery-1",
+    "href": "slides/old/Topic2.html#shinyapps-gallery-1",
+    "title": "Short Course on R Tools",
+    "section": "Shinyapps Gallery",
+    "text": "Shinyapps Gallery"
+  },
+  {
+    "objectID": "slides/old/Topic2.html#widgets---input",
+    "href": "slides/old/Topic2.html#widgets---input",
+    "title": "Short Course on R Tools",
+    "section": "Widgets - Input",
+    "text": "Widgets - Input"
+  },
+  {
+    "objectID": "slides/old/Topic2.html#widgets---output-table",
+    "href": "slides/old/Topic2.html#widgets---output-table",
+    "title": "Short Course on R Tools",
+    "section": "Widgets - Output Table",
+    "text": "Widgets - Output Table\n\n\n\n🔗 &lt;/&gt; VIEW CODE"
+  },
+  {
+    "objectID": "slides/old/Topic2.html#reactivity-demo",
+    "href": "slides/old/Topic2.html#reactivity-demo",
+    "title": "Short Course on R Tools",
+    "section": "Reactivity Demo",
+    "text": "Reactivity Demo"
+  },
+  {
+    "objectID": "slides/old/Topic2.html#isolate-demo",
+    "href": "slides/old/Topic2.html#isolate-demo",
+    "title": "Short Course on R Tools",
+    "section": "Isolate Demo",
+    "text": "Isolate Demo"
+  },
+  {
+    "objectID": "slides/old/Topic2.html#observers-demo",
+    "href": "slides/old/Topic2.html#observers-demo",
+    "title": "Short Course on R Tools",
+    "section": "Observers Demo",
+    "text": "Observers Demo"
+  },
+  {
+    "objectID": "slides/old/Topic2.html#shinylive-deployment",
+    "href": "slides/old/Topic2.html#shinylive-deployment",
+    "title": "Short Course on R Tools",
+    "section": "Shinylive deployment",
+    "text": "Shinylive deployment"
+  },
+  {
+    "objectID": "slides/old/Topic2.html#shinylive-deployment-1",
+    "href": "slides/old/Topic2.html#shinylive-deployment-1",
+    "title": "Short Course on R Tools",
+    "section": "Shinylive deployment",
+    "text": "Shinylive deployment\nSee posit-dev.github.io/r-shinylive.\n\nThe {shinylive} package converts a standard shiny app into a shinylive app:\ninstall.packages(\"shinylive\")\nAssuming your app.R file is in a folder called app:\nshinylive::export(\"app\", \"site\")\nYou can then use the files in the site folder to deploy it as a normal website.\n*not all R packages are available for shinylive.\n**initial load time is still quite slow."
+  },
+  {
     "objectID": "slides/DataVizShiny.html#hello-shiny-app",
     "href": "slides/DataVizShiny.html#hello-shiny-app",
-    "title": "Statisticians Advancing in R for Data Science",
+    "title": "Data Visualization and Shiny",
     "section": "Hello Shiny App",
     "text": "Hello Shiny App"
   },
   {
     "objectID": "slides/DataVizShiny.html#structure-of-a-shiny-app-1",
     "href": "slides/DataVizShiny.html#structure-of-a-shiny-app-1",
-    "title": "Statisticians Advancing in R for Data Science",
+    "title": "Data Visualization and Shiny",
     "section": "Structure of a Shiny App",
     "text": "Structure of a Shiny App\n\n# app.R single-file app\nlibrary(shiny)\nui &lt;- fluidPage(\n  titlePanel(\"Hello Shiny\"),\n  sidebarLayout(\n    sidebarPanel(sliderInput(\"obs\", \"Observations:\", 1, 100, 50)),\n    mainPanel(plotOutput(\"distPlot\"))\n  )\n)\n\nserver &lt;- function(input, output) {\n  output$distPlot &lt;- renderPlot({\n    hist(rnorm(input$obs))\n  })\n}\n\nshinyApp(ui, server)\n\n\nui defines layout and inputs/outputs\nserver contains R code & reactivity"
   },
   {
     "objectID": "slides/DataVizShiny.html#structure-of-a-shiny-app-2",
     "href": "slides/DataVizShiny.html#structure-of-a-shiny-app-2",
-    "title": "Statisticians Advancing in R for Data Science",
+    "title": "Data Visualization and Shiny",
     "section": "Structure of a Shiny App",
     "text": "Structure of a Shiny App\nShiny apps come in two parts:\n\n\nUI\n\nDefines the layout and appearance.\nContains elements such as:\n\nlayout structures (sidebars)\ninputs (text boxes, sliders, buttons)\noutputs (plots, tables)\n\n\n\nServer\n\nPerforms calculations.\nContains the logic to respond to user inputs, and update outputs.\nCommunicates with the UI to dynamically render outputs."
   },
   {
     "objectID": "slides/DataVizShiny.html#k-nn-regression-explorer",
     "href": "slides/DataVizShiny.html#k-nn-regression-explorer",
-    "title": "Statisticians Advancing in R for Data Science",
+    "title": "Data Visualization and Shiny",
     "section": "k-NN Regression Explorer",
     "text": "k-NN Regression Explorer"
   },
   {
     "objectID": "slides/DataVizShiny.html#traintest-helper",
     "href": "slides/DataVizShiny.html#traintest-helper",
-    "title": "Statisticians Advancing in R for Data Science",
+    "title": "Data Visualization and Shiny",
     "section": "Train/test helper",
     "text": "Train/test helper\nmake_split &lt;- function(data, prop = 0.7) {\n  n &lt;- nrow(data)\n  train_idx &lt;- sample(n, size = floor(prop * n))\n  list(train = data[train_idx, ], test = data[-train_idx, ])\n}\n\nWe use this function to split the mtcars data into a train and test set."
   },
   {
     "objectID": "slides/DataVizShiny.html#ui-1",
     "href": "slides/DataVizShiny.html#ui-1",
-    "title": "Statisticians Advancing in R for Data Science",
+    "title": "Data Visualization and Shiny",
     "section": "UI",
     "text": "UI\n\nui &lt;- fluidPage(\n  titlePanel(\"k-NN Regression Explorer\"),\n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"k\", \"Number of neighbors (k):\",\n                  min = 1, max = 20, value = 5, step = 1),\n      radioButtons(\"backend\", \"Compute backend:\",\n                   choices = c(\"R\",\"cpp\"), selected = \"cpp\"),\n      actionButton(\"resample\", \"New train/test split\"),\n      hr(),\n      h4(\"Performance\"),\n      verbatimTextOutput(\"trainPerf\"),\n      verbatimTextOutput(\"testPerf\")\n    ),\n    mainPanel(\n      plotOutput(\"predPlot\", height = \"400px\"),\n      tableOutput(\"predTable\")\n    )\n  )\n)"
   },
   {
     "objectID": "slides/DataVizShiny.html#server-part-one",
     "href": "slides/DataVizShiny.html#server-part-one",
-    "title": "Statisticians Advancing in R for Data Science",
+    "title": "Data Visualization and Shiny",
     "section": "Server (part one)",
     "text": "Server (part one)\n\nserver &lt;- function(input, output, session) {\n  # reactive train/test split, re-draw when resample pressed\n  split &lt;- eventReactive(input$resample, {\n    make_split(mtcars, prop = 0.92)\n  }, ignoreNULL = FALSE)\n  \n  # compute fitted (train) and predicted (test)\n  fitted_vals &lt;- reactive({\n    d_train &lt;- split()$train\n    knn_pred(d_train[, c(\"wt\", \"qsec\")], d_train[, c(\"mpg\")], \n             d_train[, c(\"wt\", \"qsec\")], input$k, input$backend)\n  })\n  predicted &lt;- reactive({\n    d_train &lt;- split()$train\n    d_test &lt;- split()$test\n    knn_pred(d_train[, c(\"wt\", \"qsec\")], d_train[, c(\"mpg\")], \n             d_test[, c(\"wt\", \"qsec\")], input$k, input$backend)\n  })\n  \n  # compute metrics\n  mse &lt;- function(obs, pred) mean((obs - pred)^2)\n  r2  &lt;- function(obs, pred) 1 - (sum((obs - pred)^2) / sum((obs - mean(obs))^2))\n  \n  output$trainPerf &lt;- renderPrint({\n    obs &lt;- split()$train$mpg\n    cat(\"Training set:\\n\")\n    cat(\"  MSE =\", round(mse(obs, fitted_vals()$preds), 3),\n        \"  R² =\", round(r2(obs, fitted_vals()$preds), 3), \"\\n\")\n  })\n  output$testPerf &lt;- renderPrint({\n    obs &lt;- split()$test$mpg\n    cat(\"Test set:\\n\")\n    cat(\"  MSE =\", round(mse(obs, predicted()$preds), 3),\n        \"  R² =\", round(r2(obs, predicted()$preds), 3), \"\\n\")\n  })\n  \n  # Plot showing the k nearest neighbors for each test point\n  output$predPlot &lt;- renderPlot({\n    # Store train/test\n    d_train &lt;- split()$train\n    d_test &lt;- split()$test\n    d_test$id = 1:nrow(d_test)\n    \n    # Create df for geom_segment \n    nn &lt;- segment_df(d_train[, c(\"wt\", \"qsec\")], \n                     d_test[, c(\"wt\", \"qsec\")], \n                     predicted()$ids, input$k)\n    \n    # Add predictions for test set\n    d_test$pred &lt;- predicted()$preds\n    \n    # Create the plot\n    ggplot() +\n      geom_segment(aes(x = test_wt, xend = train_wt, \n                       y = test_qsec, yend = train_qsec), \n                   color = \"grey50\", linetype = \"dotted\",\n                   data = nn) +\n      geom_point(aes(x = wt, y = qsec, color = mpg), \n                 size = 2, data = d_train) +\n      geom_text(aes(x = wt, y = qsec, color = pred, label = id), \n                size = 5, fontface = \"bold\", data = d_test) +\n      scale_color_gradient(low = \"#6A00A8FF\", high = \"#FCA636FF\") +\n      theme_classic() +\n      labs(x = \"wt\", y = \"qsec\")\n  })\n  \n  # show first few test observations\n  output$predTable &lt;- renderTable({\n    d_test &lt;- split()$test\n    data.frame(\n      id = 1:nrow(d_test),\n      car = rownames(d_test),\n      actual = round(d_test$mpg,2),\n      predicted = round(predicted()$preds,2)\n    )\n  }, rownames = FALSE)\n}\n\n\neventReactive() updates in response to a specific event (i.e. button push)."
   },
   {
     "objectID": "slides/DataVizShiny.html#server-part-two",
     "href": "slides/DataVizShiny.html#server-part-two",
-    "title": "Statisticians Advancing in R for Data Science",
+    "title": "Data Visualization and Shiny",
     "section": "Server (part two)",
     "text": "Server (part two)\n\nserver &lt;- function(input, output, session) {\n  # reactive train/test split, re-draw when resample pressed\n  split &lt;- eventReactive(input$resample, {\n    make_split(mtcars, prop = 0.92)\n  }, ignoreNULL = FALSE)\n  \n  # compute fitted (train) and predicted (test)\n  fitted_vals &lt;- reactive({\n    d_train &lt;- split()$train\n    knn_pred(d_train[, c(\"wt\", \"qsec\")], d_train[, c(\"mpg\")], \n             d_train[, c(\"wt\", \"qsec\")], input$k, input$backend)\n  })\n  predicted &lt;- reactive({\n    d_train &lt;- split()$train\n    d_test &lt;- split()$test\n    knn_pred(d_train[, c(\"wt\", \"qsec\")], d_train[, c(\"mpg\")], \n             d_test[, c(\"wt\", \"qsec\")], input$k, input$backend)\n  })\n  \n  # compute metrics\n  mse &lt;- function(obs, pred) mean((obs - pred)^2)\n  r2  &lt;- function(obs, pred) 1 - (sum((obs - pred)^2) / sum((obs - mean(obs))^2))\n  \n  output$trainPerf &lt;- renderPrint({\n    obs &lt;- split()$train$mpg\n    cat(\"Training set:\\n\")\n    cat(\"  MSE =\", round(mse(obs, fitted_vals()$preds), 3),\n        \"  R² =\", round(r2(obs, fitted_vals()$preds), 3), \"\\n\")\n  })\n  output$testPerf &lt;- renderPrint({\n    obs &lt;- split()$test$mpg\n    cat(\"Test set:\\n\")\n    cat(\"  MSE =\", round(mse(obs, predicted()$preds), 3),\n        \"  R² =\", round(r2(obs, predicted()$preds), 3), \"\\n\")\n  })\n  \n  # Plot showing the k nearest neighbors for each test point\n  output$predPlot &lt;- renderPlot({\n    # Store train/test\n    d_train &lt;- split()$train\n    d_test &lt;- split()$test\n    d_test$id = 1:nrow(d_test)\n    \n    # Create df for geom_segment \n    nn &lt;- segment_df(d_train[, c(\"wt\", \"qsec\")], \n                     d_test[, c(\"wt\", \"qsec\")], \n                     predicted()$ids, input$k)\n    \n    # Add predictions for test set\n    d_test$pred &lt;- predicted()$preds\n    \n    # Create the plot\n    ggplot() +\n      geom_segment(aes(x = test_wt, xend = train_wt, \n                       y = test_qsec, yend = train_qsec), \n                   color = \"grey50\", linetype = \"dotted\",\n                   data = nn) +\n      geom_point(aes(x = wt, y = qsec, color = mpg), \n                 size = 2, data = d_train) +\n      geom_text(aes(x = wt, y = qsec, color = pred, label = id), \n                size = 5, fontface = \"bold\", data = d_test) +\n      scale_color_gradient(low = \"#6A00A8FF\", high = \"#FCA636FF\") +\n      theme_classic() +\n      labs(x = \"wt\", y = \"qsec\")\n  })\n  \n  # show first few test observations\n  output$predTable &lt;- renderTable({\n    d_test &lt;- split()$test\n    data.frame(\n      id = 1:nrow(d_test),\n      car = rownames(d_test),\n      actual = round(d_test$mpg,2),\n      predicted = round(predicted()$preds,2)\n    )\n  }, rownames = FALSE)\n}\n\n\nreactive() updates in response to any input change."
   },
   {
     "objectID": "slides/DataVizShiny.html#server-part-three",
     "href": "slides/DataVizShiny.html#server-part-three",
-    "title": "Statisticians Advancing in R for Data Science",
+    "title": "Data Visualization and Shiny",
     "section": "Server (part three)",
     "text": "Server (part three)\n\nserver &lt;- function(input, output, session) {\n  # reactive train/test split, re-draw when resample pressed\n  split &lt;- eventReactive(input$resample, {\n    make_split(mtcars, prop = 0.92)\n  }, ignoreNULL = FALSE)\n  \n  # compute fitted (train) and predicted (test)\n  fitted_vals &lt;- reactive({\n    d_train &lt;- split()$train\n    knn_pred(d_train[, c(\"wt\", \"qsec\")], d_train[, c(\"mpg\")], \n             d_train[, c(\"wt\", \"qsec\")], input$k, input$backend)\n  })\n  predicted &lt;- reactive({\n    d_train &lt;- split()$train\n    d_test &lt;- split()$test\n    knn_pred(d_train[, c(\"wt\", \"qsec\")], d_train[, c(\"mpg\")], \n             d_test[, c(\"wt\", \"qsec\")], input$k, input$backend)\n  })\n  \n  # compute metrics\n  mse &lt;- function(obs, pred) mean((obs - pred)^2)\n  r2  &lt;- function(obs, pred) 1 - (sum((obs - pred)^2) / sum((obs - mean(obs))^2))\n  \n  output$trainPerf &lt;- renderPrint({\n    obs &lt;- split()$train$mpg\n    cat(\"Training set:\\n\")\n    cat(\"  MSE =\", round(mse(obs, fitted_vals()$preds), 3),\n        \"  R² =\", round(r2(obs, fitted_vals()$preds), 3), \"\\n\")\n  })\n  output$testPerf &lt;- renderPrint({\n    obs &lt;- split()$test$mpg\n    cat(\"Test set:\\n\")\n    cat(\"  MSE =\", round(mse(obs, predicted()$preds), 3),\n        \"  R² =\", round(r2(obs, predicted()$preds), 3), \"\\n\")\n  })\n  \n  # Plot showing the k nearest neighbors for each test point\n  output$predPlot &lt;- renderPlot({\n    # Store train/test\n    d_train &lt;- split()$train\n    d_test &lt;- split()$test\n    d_test$id = 1:nrow(d_test)\n    \n    # Create df for geom_segment \n    nn &lt;- segment_df(d_train[, c(\"wt\", \"qsec\")], \n                     d_test[, c(\"wt\", \"qsec\")], \n                     predicted()$ids, input$k)\n    \n    # Add predictions for test set\n    d_test$pred &lt;- predicted()$preds\n    \n    # Create the plot\n    ggplot() +\n      geom_segment(aes(x = test_wt, xend = train_wt, \n                       y = test_qsec, yend = train_qsec), \n                   color = \"grey50\", linetype = \"dotted\",\n                   data = nn) +\n      geom_point(aes(x = wt, y = qsec, color = mpg), \n                 size = 2, data = d_train) +\n      geom_text(aes(x = wt, y = qsec, color = pred, label = id), \n                size = 5, fontface = \"bold\", data = d_test) +\n      scale_color_gradient(low = \"#6A00A8FF\", high = \"#FCA636FF\") +\n      theme_classic() +\n      labs(x = \"wt\", y = \"qsec\")\n  })\n  \n  # show first few test observations\n  output$predTable &lt;- renderTable({\n    d_test &lt;- split()$test\n    data.frame(\n      id = 1:nrow(d_test),\n      car = rownames(d_test),\n      actual = round(d_test$mpg,2),\n      predicted = round(predicted()$preds,2)\n    )\n  }, rownames = FALSE)\n}\n\n\nrenderPlot() must be paired with plotOutput() in UI."
   },
   {
-    "objectID": "slides/Topic7.html#classical-programming-vs-machine-learning",
-    "href": "slides/Topic7.html#classical-programming-vs-machine-learning",
-    "title": "Short Course on R Tools",
-    "section": "Classical Programming vs Machine Learning",
-    "text": "Classical Programming vs Machine Learning\n\nDeep learning is often presented as algorithms that “work like the brain”, that “think” or “understand”.\n\n\n\n\nReality is however quite far from this dream\n\n\n\n\n\nAI: the effort to automate intellectual tasks normally performed by humans.\n\n\n\n\n\n\n\n\nML: Could a computer surprise us? Rather than programmers crafting data-processing rules by hand, could a computer automatically learn these rules by looking at data? \n\n\n\n\n\n\n\n\nArtificial Intelligence\n\n\nMachine learning\n\n\nDeep learning"
+    "objectID": "slides/Reticulate.html#using-source_python",
+    "href": "slides/Reticulate.html#using-source_python",
+    "title": "Integrate Python in R",
+    "section": "📥 Using source_python()",
+    "text": "📥 Using source_python()\nVariables become directly available in the R global environment\n\n🔍 Example:\nConsider script.py file, includes following Python script:\ny = 2\ndef square(x):\n    return x **2\n\n\n✅ Works directly in R :\nlibrary(reticulate)\nsource_python(\"script.py\")\nsquare(4)\n\n\n[1] 16\n\n\nprint(y) \n\n\n2"
   },
   {
-    "objectID": "slides/Topic7.html#classical-programming-vs-machine-learning-1",
-    "href": "slides/Topic7.html#classical-programming-vs-machine-learning-1",
-    "title": "Short Course on R Tools",
-    "section": "Classical Programming vs Machine Learning",
-    "text": "Classical Programming vs Machine Learning\n\nDeep learning is often presented as algorithms that “work like the brain”, that “think” or “understand”.\n\n\n \n\n\n\nAI: the effort to automate intellectual tasks normally performed by humans.\n\n\n\n\n\n\nML: Could a computer surprise us? Rather than programmers crafting data-processing rules by hand, could a computer automatically learn these rules by looking at data? \n\n\n\n\n\n\n\nArtificial Intelligence\n\n\nMachine learning\n\n\nDeep learning"
+    "objectID": "slides/Reticulate.html#using-py_run_file",
+    "href": "slides/Reticulate.html#using-py_run_file",
+    "title": "Integrate Python in R",
+    "section": "📥 Using py_run_file()",
+    "text": "📥 Using py_run_file()\nAlso runs the script, but…\n\n\n❌ Does not expose functions/variables directly in R\nVariables and functions are stored in py$\n\n\n\npy_run_file(\"script.py\")\npy$square(4)\n\n\n[1] 16\n\n\nprint(py$y)\n\n\n2"
   },
   {
-    "objectID": "slides/Topic7.html#recipes-of-a-machine-learning-algorithm",
-    "href": "slides/Topic7.html#recipes-of-a-machine-learning-algorithm",
-    "title": "Short Course on R Tools",
-    "section": "Recipes of a Machine Learning Algorithm",
-    "text": "Recipes of a Machine Learning Algorithm\n\n\nInput data points, e.g. \n\nIf the task is speech recognition, these data points could be sound files\nIf the task is image tagging, they could be picture files\n\nExamples of the expected output \n\nIn a speech-recognition task, these could be transcripts of sound files\nIn an image task, expected outputs could tags such as “dog”, “cat”, and so on\n\nA way to measure whether the algorithm is doing a good job \n\nThis is needed to determine the distance between the output and its expected output.\nThe measurement is used as a feedback signal to adjust the way the algorithm works."
+    "objectID": "slides/Reticulate.html#using-py_run_string",
+    "href": "slides/Reticulate.html#using-py_run_string",
+    "title": "Integrate Python in R",
+    "section": "🧩 Using py_run_string()",
+    "text": "🧩 Using py_run_string()\n\n\nExecutes the string in the shared Python session\nVariables created in Python are not added to R environment\nAccess Python variables in R using py$\n\n\n\npy_run_string(\"\ndef square(x):\n    return x ** 2\ny = 5\n\")\npy$y\n\n\n[1] 5\n\n\npy$square(4)\n\n\n[1] 16"
   },
   {
-    "objectID": "slides/Topic7.html#anatomy-of-a-neural-network",
-    "href": "slides/Topic7.html#anatomy-of-a-neural-network",
-    "title": "Short Course on R Tools",
-    "section": "Anatomy of a Neural Network",
-    "text": "Anatomy of a Neural Network\n\n\n\n\n\nThe input data and corresponding targets \nLayers, which are combined into a network (or model) \nThe loss function, which provides feedback for learning \nThe optimizer, which determines how learning proceeds"
+    "objectID": "slides/Reticulate.html#automatic-data-conversion",
+    "href": "slides/Reticulate.html#automatic-data-conversion",
+    "title": "Integrate Python in R",
+    "section": "🔁 Automatic Data Conversion",
+    "text": "🔁 Automatic Data Conversion\n\n\n\n\n\n\n\n\n\nR Object Type\nPython Equivalent\nNotes\n\n\n\n\nnumeric, integer\nfloat, int\nScalars or arrays\n\n\nlogical\nbool\nTRUE → True\n\n\ncharacter\nstr or list[str]\nVectorized strings → list\n\n\nvector, matrix\nnumpy.ndarray\nShape preserved\n\n\ndata.frame\npandas.DataFrame\nColumn types preserved\n\n\nlist (named)\ndict\nKeys from names\n\n\nlist (unnamed)\nlist\nSequential list\n\n\nNULL\nNone\n\n\n\nfunction (closure)\nPython callable\nIf inputs/outputs are convertible\n\n\nfunction (builtin)\n❌ PyCapsule\n⚠️ not callable in Python\n\n\nS3/S4/R6 objects\n❌ PyCapsule\n⚠️ Not convertible"
   },
   {
-    "objectID": "slides/Topic7.html#lenet-5-a-pioneering-7-level-cnn",
-    "href": "slides/Topic7.html#lenet-5-a-pioneering-7-level-cnn",
-    "title": "Short Course on R Tools",
-    "section": "LeNet-5: a pioneering 7-level CNN",
-    "text": "LeNet-5: a pioneering 7-level CNN\n\n\n\nThe first successful practical application of neural nets came in 1989 from Bell Labs, when Yann LeCun combined the earlier ideas of convolutional neural networks and backpropagation, and applied them to the problem of classifying handwritten digits.\nThe resulting network, dubbed LeNet, was used by the USPS in the 1990s to automate the reading of ZIP codes on mail envelopes.\nLeNet-5 was applied by several banks to recognize hand-written numbers on checks digitized in 32x32 pixel images."
+    "objectID": "slides/Reticulate.html#accessing-r-objects-from-python",
+    "href": "slides/Reticulate.html#accessing-r-objects-from-python",
+    "title": "Integrate Python in R",
+    "section": "Accessing R Objects from Python",
+    "text": "Accessing R Objects from Python\n🔍 Example: Let two following objects have been defined in R global environment:\nlibrary(reticulate)\nx &lt;- c(10, 20, 30)\nf &lt;- function(x) x^2\n\nIn Python we can access to these objects trough r object:\nprint(r.x)      \n[10, 20, 30]\nprint(r.f(3))  \n\n\n9"
   },
   {
-    "objectID": "slides/Topic7.html#why-30-years-gap",
-    "href": "slides/Topic7.html#why-30-years-gap",
-    "title": "Short Course on R Tools",
-    "section": "Why 30+ Years gap?",
-    "text": "Why 30+ Years gap?\n\n\n\nIn 2011, Dan Ciresan from IDSIA (Switzerland) began to win academic image-classification competitions with GPU-trained deep neural networks\nin 2012, a team led by Alex Krizhevsky and advised by Geoffrey Hinton was able to achieve a top-five accuracy of 83.6%–a significant breakthrough (in 2011 it was only 74.3%). \nThree forces are driving advances in ML:\n\nHardware\nDatasets and benchmarks\nAlgorithmic advances"
+    "objectID": "slides/Reticulate.html#exporting-r-objects-to-python",
+    "href": "slides/Reticulate.html#exporting-r-objects-to-python",
+    "title": "Integrate Python in R",
+    "section": "Exporting R Objects to Python",
+    "text": "Exporting R Objects to Python\nUse py$ assignment. In R:\nlibrary(reticulate)\nx &lt;- c(1, 2, 3)\npy$x &lt;- x        # Exports `x` to Python namespace\nf &lt;- function(n) n^2\npy$f &lt;- f        # Exports R function to Python\n\nNow usable from Python:\nprint(x) \n\n\n[1, 2, 3]\n\n\nprint(f(5))\n\n\n[1] 25"
   },
   {
-    "objectID": "slides/Topic7.html#vgg16cnn-for-classification-and-detection",
-    "href": "slides/Topic7.html#vgg16cnn-for-classification-and-detection",
-    "title": "Short Course on R Tools",
-    "section": "VGG16–CNN for Classification and Detection",
-    "text": "VGG16–CNN for Classification and Detection\n\n\n\nVGG16 is a convolutional neural network model proposed by K. Simonyan and A. Zisserman from the University of Oxford.\nThe model achieves 92.7% top-5 test accuracy in ImageNet. It was one of the famous model submitted to ILSVRC-2014.\nIt makes the improvement over AlexNet by replacing large kernel-sized filters (11 and 5 in the first and second convolutional layer, respectively) with multiple 3×3 kernel-sized filters one after another.\nVGG16 was trained for weeks using NVIDIA Titan Black GPU’s."
+    "objectID": "slides/Reticulate.html#exporting-r-closure-functions-to-python",
+    "href": "slides/Reticulate.html#exporting-r-closure-functions-to-python",
+    "title": "Integrate Python in R",
+    "section": "Exporting R Closure Functions to Python",
+    "text": "Exporting R Closure Functions to Python\nA closure in R is simply a user-defined function created with the function() keyword. It’s the most common type of function in R.\n✅ A closure fnction Works directly. In R:\npy$m &lt;- mean\ntypeof(mean) \n\n[1] \"closure\"\n\n\nIn Python:\nprint(m([1, 2, 3, 4, 5]))     \n\n\n3"
   },
   {
-    "objectID": "slides/Topic7.html#neural-network-parameters---activation-func.",
-    "href": "slides/Topic7.html#neural-network-parameters---activation-func.",
-    "title": "Short Course on R Tools",
-    "section": "Neural Network – Parameters - Activation Func.",
-    "text": "Neural Network – Parameters - Activation Func.\n\n\n\n\n\nA Neural Network\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nActivation Function"
-  },
-  {
-    "objectID": "slides/Topic7.html#linear-activation-function",
-    "href": "slides/Topic7.html#linear-activation-function",
-    "title": "Short Course on R Tools",
-    "section": "Linear Activation function",
-    "text": "Linear Activation function\n\n\n\n\n\\(Z=\\color{green}{W_1}X+\\color{lightblue}{b_1}\\)\n\n\n\n\n\n\n\n\n\\(Y=\\color{red}{W_2}Z+\\color{blue}{b_2}\\)\n\n\n\n\n\\(Y=\\color{red}{W_2}\\{\\color{green}{W_1}X+\\color{lightblue}{b_1}\\}+\\color{blue}{b_2}\\)\n\n\n\n\n\\(Y=\\{\\color{red}{W_2}\\color{green}{W_1}\\}X+\\{\\color{red}{W_2}\\color{lightblue}{b_1}+\\color{blue}{b_2}\\}\\)\n\n\n\n\n\n\n\n\n\\(Y=\\color{red}{\\mathbf{W}^*}X+\\color{blue}{\\mathbf{b}^*}\\)\n\n\n\nHidden Layers Disappears"
-  },
-  {
-    "objectID": "slides/Topic7.html#deep-learning-software",
-    "href": "slides/Topic7.html#deep-learning-software",
-    "title": "Short Course on R Tools",
-    "section": "Deep learning software",
-    "text": "Deep learning software\n\n\n\n\n🔗 Wikipedia: Deep learning software"
-  },
-  {
-    "objectID": "slides/Topic7.html#what-is-tensorflow",
-    "href": "slides/Topic7.html#what-is-tensorflow",
-    "title": "Short Course on R Tools",
-    "section": "What is TensorFlow?",
-    "text": "What is TensorFlow?\n\n\nYou define the graph in R\nGraph is compiled and optimized\nGraph is executed on devices\nNodes represent computations\nData (tensors) flows between them"
-  },
-  {
-    "objectID": "slides/Topic7.html#why-tensorflow-in-r",
-    "href": "slides/Topic7.html#why-tensorflow-in-r",
-    "title": "Short Course on R Tools",
-    "section": "Why TensorFlow in R?",
-    "text": "Why TensorFlow in R?\n\n\nHardware independent\n\nCPU (via Eigen and BLAS)\nGPU (via CUDA and cuDNN)\nTPU (Tensor Processing Unit)\n\nSupports automatic differentiation\nDistributed execution and large datasets\nVery general built-in optimization algorithms (SGD, Adam) that don’t require that all data is in RAM\nIt can be deployed with a low-latency C++ runtime\nR has a lot to offer as an interface language for TensorFlow"
-  },
-  {
-    "objectID": "slides/Topic7.html#real-world-examples-of-data-tensors",
-    "href": "slides/Topic7.html#real-world-examples-of-data-tensors",
-    "title": "Short Course on R Tools",
-    "section": "Real-world examples of data tensors",
-    "text": "Real-world examples of data tensors\n\n\n2D tensors\n\nVector data—(samples, features)  \n\n\n\n\n3D tensors\n\nGrayscale Images—(samples, height, width)\nTime-series data or sequence data—(samples, timesteps, features)\n\n\n\n\n \n\n\n\n\n\n\n4D tensors\n\nColor Images—(samples, height, width, channels)\n\n\n\n\n \n\n\n\n\n\n\n5D tensors\n\nVideo—(samples, frames, height, width, channels)"
-  },
-  {
-    "objectID": "slides/Topic7.html#why-keras",
-    "href": "slides/Topic7.html#why-keras",
-    "title": "Short Course on R Tools",
-    "section": "Why Keras?",
-    "text": "Why Keras?\n\n\nIt allows the same code to run seamlessly on CPU or GPU.\nIt has a user-friendly API that makes it easy to quickly prototype deep-learning models."
-  },
-  {
-    "objectID": "slides/Topic7.html#installing-keras",
-    "href": "slides/Topic7.html#installing-keras",
-    "title": "Short Course on R Tools",
-    "section": "Installing Keras",
-    "text": "Installing Keras\n  \n\n\n\n\nFirst, install the keras R package:\n\nremotes::install_github(\"rstudio/keras3\");    # OR\nInstall.packages(\"keras3\")\n\n\nTo install both the core Keras library as well as the TensorFlow backend\n\nlibrary(keras3)\nkeras3::install_keras(backend = \"tensorflow\")\n\n\n\nYou need Python installed before installing TensorFlow\n\nAnaconda (Python distribution), a free and open-source software\n\n\n\n\n\n\n\n\nYou can install TensorFlow with GPU support\n\nNVIDIA® drivers,\nCUDA Toolkit v9.0, and\ncuDNN v7.0\n\n\n\n\n\nare needed: https://tensorflow.rstudio.com/tools/local_gpu.html"
-  },
-  {
-    "objectID": "slides/Topic7.html#developing-a-deep-nn-with-keras",
-    "href": "slides/Topic7.html#developing-a-deep-nn-with-keras",
-    "title": "Short Course on R Tools",
-    "section": "Developing a Deep NN with Keras",
-    "text": "Developing a Deep NN with Keras\n  \n\n\n\n\nStep 1 - Define your training data:\n\ninput tensors and target tensors.\n\n\n\n\nStep 2 - Define a network of layers (or model)\n\nthat maps your inputs to your targets.\n\n\n\n\n\nStep 3 - Configure the learning process by choosing\n\na loss function,\nan optimizer,\nand some metrics to monitor.\n\n\n\n\n\nStep 4 - Iterate on your training data by calling the\n\nfit() method of your model."
-  },
-  {
-    "objectID": "slides/Topic7.html#keras-step-1-data-preprocessing",
-    "href": "slides/Topic7.html#keras-step-1-data-preprocessing",
-    "title": "Short Course on R Tools",
-    "section": "Keras: Step 1 – Data preprocessing",
-    "text": "Keras: Step 1 – Data preprocessing\n  \n\n\n\n\nlibrary(keras3)\n\n# Load MNIST (Modified National Institute of Standards and Technology) images datasets\nc(c(x_train, y_train), c(x_test, y_test)) %&lt;-% dataset_mnist()\n\n# Flatten images and transform RGB values into [0,1] range \nx_train &lt;- array_reshape(x_train, c(nrow(x_train), 784))\nx_test &lt;- array_reshape(x_test, c(nrow(x_test), 784))\nx_train &lt;- x_train / 255\nx_test &lt;- x_test / 255\n\n# Convert class vectors to binary class matrices\ny_train &lt;- to_categorical(y_train, 10)\ny_test &lt;- to_categorical(y_test, 10)"
-  },
-  {
-    "objectID": "slides/Topic7.html#keras-step-2-model-definition",
-    "href": "slides/Topic7.html#keras-step-2-model-definition",
-    "title": "Short Course on R Tools",
-    "section": "Keras: Step 2 – Model definition",
-    "text": "Keras: Step 2 – Model definition\n  \n\n\n\n\n\nmodel &lt;- keras_model_sequential(input_shape = c(784)) \nmodel %&gt;% \n     layer_dense(units = 256, activation = 'relu') %&gt;% \n     layer_dropout(rate = 0.4) %&gt;% \n     layer_dense(units = 128, activation = 'relu') %&gt;%\n     layer_dropout(rate = 0.3) %&gt;%\n     layer_dense(units = 10, activation = 'softmax')\n     \nsummary(model)\n&gt;# Model: \"sequential\"\n&gt;# │ Layer (type)          │ Output Shape     │ Param # │\n&gt;# ├-----------------------┼------------------┼---------┤\n&gt;# │ dense_11 (Dense)      │ (None, 256)      │ 200,960 │\n&gt;# │ dropout_3 (Dropout)   │ (None, 256)      │       0 │\n&gt;# │ dense_10 (Dense)      │ (None, 128)      │  32,896 │\n&gt;# │ dropout_2 (Dropout)   │ (None, 128)      │       0 │\n&gt;# │ dense_9 (Dense)       │ (None, 10)       │   1,290 │\n&gt;# └-----------------------┴------------------┴---------┘\n&gt;#  Total params: 235,146 (918.54 KB)\n&gt;#  Trainable params: 235,146 (918.54 KB)\n&gt;#  Non-trainable params: 0 (0.00 B)"
-  },
-  {
-    "objectID": "slides/Topic7.html#multi-class-vs-multi-label-classification",
-    "href": "slides/Topic7.html#multi-class-vs-multi-label-classification",
-    "title": "Short Course on R Tools",
-    "section": "Multi-Class vs Multi-Label Classification",
-    "text": "Multi-Class vs Multi-Label Classification"
-  },
-  {
-    "objectID": "slides/Topic7.html#multi-class-vs-multi-label-classification-cont.",
-    "href": "slides/Topic7.html#multi-class-vs-multi-label-classification-cont.",
-    "title": "Short Course on R Tools",
-    "section": "Multi-Class vs Multi-Label Classification (Cont.)",
-    "text": "Multi-Class vs Multi-Label Classification (Cont.)"
-  },
-  {
-    "objectID": "slides/Topic7.html#multi-class-vs-multi-label-classification-cont.-1",
-    "href": "slides/Topic7.html#multi-class-vs-multi-label-classification-cont.-1",
-    "title": "Short Course on R Tools",
-    "section": "Multi-Class vs Multi-Label Classification (Cont.)",
-    "text": "Multi-Class vs Multi-Label Classification (Cont.)"
-  },
-  {
-    "objectID": "slides/Topic7.html#keras-step-3-compile-model",
-    "href": "slides/Topic7.html#keras-step-3-compile-model",
-    "title": "Short Course on R Tools",
-    "section": "Keras: Step 3 – Compile Model",
-    "text": "Keras: Step 3 – Compile Model\n  \n\n\n\n\nModel compilation prepares the model for training by:\n\nConverting the layers into a TensorFlow graph\nApplying the specified loss function and optimizer\nArranging for the collection of metrics during training\n\n\n\nmodel %&gt;% compile(\n  loss = 'categorical_crossentropy',\n  optimizer = optimizer_rmsprop(),\n  metrics = c('accuracy')\n)"
-  },
-  {
-    "objectID": "slides/Topic7.html#keras-step-4-model-training",
-    "href": "slides/Topic7.html#keras-step-4-model-training",
-    "title": "Short Course on R Tools",
-    "section": "Keras: Step 4 – Model Training",
-    "text": "Keras: Step 4 – Model Training\n  \n\n\n\n\nUse the fit() to train the model for 10 epochs using batches of 128 images:\n\nFeed 128 samples at a time to the model (batch_size = 128)\nTraverse the input dataset 10 times (epochs = 10)\nHold out 20% of the data for validation (validation_split = 0.2)\n\n\n\nhistory &lt;- model %&gt;% fit(\n  x_train, y_train, \n  batch_size = 128, \n  epochs = 10,\n  validation_split = 0.2\n)\n\n\n\n\nEpoch 1/10\n375/375 ━━━━━ 3s 5ms/step - accuracy: 0.7831 - loss: 0.6970 - val_accuracy: 0.9513 - val_loss: 0.1640\nEpoch 2/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9371 - loss: 0.2123 - val_accuracy: 0.9628 - val_loss: 0.1249\nEpoch 3/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9539 - loss: 0.1540 - val_accuracy: 0.9666 - val_loss: 0.1098\nEpoch 4/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9612 - loss: 0.1301 - val_accuracy: 0.9743 - val_loss: 0.0865\nEpoch 5/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9663 - loss: 0.1145 - val_accuracy: 0.9730 - val_loss: 0.0921\nEpoch 6/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9688 - loss: 0.1020 - val_accuracy: 0.9736 - val_loss: 0.0923\nEpoch 7/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9726 - loss: 0.0940 - val_accuracy: 0.9770 - val_loss: 0.0822\nEpoch 8/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9742 - loss: 0.0875 - val_accuracy: 0.9770 - val_loss: 0.0815\nEpoch 9/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9750 - loss: 0.0791 - val_accuracy: 0.9785 - val_loss: 0.0810\nEpoch 10/10\n375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9769 - loss: 0.0744 - val_accuracy: 0.9777 - val_loss: 0.0835\n\n\n\n\n\nmodel %&gt;% evaluate(x_test, y_test)\n&gt;# 313/313 ━━━━━ 0s 771us/step - accuracy: 0.9747 - loss: 0.0930\n&gt;# $accuracy\n&gt;# [1] 0.9791\n&gt;# \n&gt;# $loss\n&gt;# [1] 0.0784568"
-  },
-  {
-    "objectID": "slides/Topic7.html#keras-evaluation-and-prediction",
-    "href": "slides/Topic7.html#keras-evaluation-and-prediction",
-    "title": "Short Course on R Tools",
-    "section": "Keras: Evaluation and prediction",
-    "text": "Keras: Evaluation and prediction\n  \n\nplot(history)\n\n\nmodel %&gt;% predict(x_test[1:100,]) %&gt;% apply(1, which.max)-1\n&gt;# 4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 957us/step\n&gt;#   [1] 7 2 1 0 4 1 4 9 6 9 0 6 9 0 1 5 9 7\n&gt;#  [19] 3 4 9 6 6 5 4 0 7 4 0 1 3 1 3 4 7 2\n&gt;#  [37] 7 1 2 1 1 7 4 2 3 5 1 2 4 4 6 3 5 5\n&gt;#  [55] 6 0 4 1 9 5 7 8 9 3 7 4 6 4 3 0 7 0\n&gt;#  [73] 2 9 1 7 3 2 9 7 7 6 2 7 8 4 7 3 6 1\n&gt;#  [91] 3 6 9 3 1 4 1 7 6 9\n\nround(model %&gt;% predict(x_test[1:9,]),5)\n&gt;# 1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 16ms/step\n&gt;#          [,1]    [,2]  [,3]  [,4]    [,5]    [,6]    [,7]    [,8]  [,9]   [,10]\n&gt;#  [1,] 0.00000 0.00000 0e+00 0.000 0.00000 0.00000 0.00000 1.00000 0e+00 0.00000\n&gt;#  [2,] 0.00000 0.00000 1e+00 0.000 0.00000 0.00000 0.00000 0.00000 0e+00 0.00000\n&gt;#  [3,] 0.00000 0.99983 1e-05 0.000 0.00001 0.00000 0.00000 0.00014 1e-05 0.00000\n&gt;#  [4,] 0.99986 0.00000 6e-05 0.000 0.00000 0.00000 0.00007 0.00000 0e+00 0.00000\n&gt;#  [5,] 0.00000 0.00000 0e+00 0.000 0.99995 0.00000 0.00000 0.00000 0e+00 0.00005\n&gt;#  [6,] 0.00000 0.99998 0e+00 0.000 0.00000 0.00000 0.00000 0.00002 0e+00 0.00000\n&gt;#  [7,] 0.00000 0.00000 0e+00 0.000 0.99984 0.00000 0.00000 0.00000 3e-05 0.00013\n&gt;#  [8,] 0.00000 0.00001 1e-05 0.002 0.00007 0.00007 0.00000 0.00044 4e-05 0.99737\n&gt;#  [9,] 0.00000 0.00000 0e+00 0.000 0.00000 0.30770 0.69230 0.00000 0e+00 0.00000"
-  },
-  {
-    "objectID": "slides/Topic7.html#keras-demo",
-    "href": "slides/Topic7.html#keras-demo",
-    "title": "Short Course on R Tools",
-    "section": "Keras Demo",
-    "text": "Keras Demo\n\nkeras3.posit.co\n🔗 Launch R"
-  },
-  {
-    "objectID": "slides/Topic7.html#keras-api-layers",
-    "href": "slides/Topic7.html#keras-api-layers",
-    "title": "Short Course on R Tools",
-    "section": "Keras API: Layers",
-    "text": "Keras API: Layers\n\n90+ layers available (you can also create your own)\n\n\n\n\n\n\n\nlayer_dense(units = 64, kernel_regularizer = regularizer_l1(0.01))\nlayer_dense(units = 64, bias_regularizer = regularizer_l2(0.01))"
-  },
-  {
-    "objectID": "slides/Topic7.html#embedding-layers",
-    "href": "slides/Topic7.html#embedding-layers",
-    "title": "Short Course on R Tools",
-    "section": "Embedding Layers",
-    "text": "Embedding Layers\n\nVectorization of text that reflects semantic relationships between words\n\n \n\n\n\n\n\nmodel &lt;- keras_model_sequential() %&gt;%\n  layer_embedding(input_dim = 10000, output_dim = 8) %&gt;%\n  layer_flatten() %&gt;%\n  layer_dense(units = 1, activation = \"sigmoid\")\n\n\n\n\nHow to use?\n\nLearn the embeddings jointly with the main task (e.g. classification); or\nLoad pre-trained word embeddings (e.g. Word2vec, GloVe)"
-  },
-  {
-    "objectID": "slides/Topic7.html#hands-on-exercises",
-    "href": "slides/Topic7.html#hands-on-exercises",
-    "title": "Short Course on R Tools",
-    "section": "Hands-on Exercises",
-    "text": "Hands-on Exercises\n\nBuild and train a CNN on Fashion MNIST\n\nMNIST CNN in keras3\n\n\n\n\n\n\n\nImplement an LSTM for\n\nText Classification in keras3\n\n\n\n\n\n\n\n\n\nCreate an autoencoder for dimensionality reduction and visualize embeddings"
-  },
-  {
-    "objectID": "slides/Topic7.html#keras-for-r-cheatsheet",
-    "href": "slides/Topic7.html#keras-for-r-cheatsheet",
-    "title": "Short Course on R Tools",
-    "section": "Keras for R cheatsheet",
-    "text": "Keras for R cheatsheet\n\n\n\n\n\n\n\n\n\n\n🔗 Rstudio: Keras cheatsheet"
-  },
-  {
-    "objectID": "slides/overview.html#motivating-example---what-is-data-science",
-    "href": "slides/overview.html#motivating-example---what-is-data-science",
-    "title": "Short Course on R Tools",
-    "section": "Motivating Example - What is Data Science?",
-    "text": "Motivating Example - What is Data Science?"
-  },
-  {
-    "objectID": "slides/overview.html#r-vs-python",
-    "href": "slides/overview.html#r-vs-python",
-    "title": "Short Course on R Tools",
-    "section": "R vs Python",
-    "text": "R vs Python"
-  },
-  {
-    "objectID": "slides/overview.html#motivating-example---functional-singular-spectrum-analysis",
-    "href": "slides/overview.html#motivating-example---functional-singular-spectrum-analysis",
-    "title": "Short Course on R Tools",
-    "section": "Motivating Example - Functional Singular Spectrum Analysis",
-    "text": "Motivating Example - Functional Singular Spectrum Analysis"
-  },
-  {
-    "objectID": "slides/overview.html#motivating-example---oop",
-    "href": "slides/overview.html#motivating-example---oop",
-    "title": "Short Course on R Tools",
-    "section": "Motivating Example - OOP",
-    "text": "Motivating Example - OOP"
-  },
-  {
-    "objectID": "slides/overview.html#motivating-example---oop-cont.",
-    "href": "slides/overview.html#motivating-example---oop-cont.",
-    "title": "Short Course on R Tools",
-    "section": "Motivating Example - OOP (Cont.)",
-    "text": "Motivating Example - OOP (Cont.)"
-  },
-  {
-    "objectID": "slides/overview.html#oop-in-r",
-    "href": "slides/overview.html#oop-in-r",
-    "title": "Short Course on R Tools",
-    "section": "OOP in R",
-    "text": "OOP in R\n\n🧩 OOP Paradigms in R:\n\nFunctional OOP: plot(lm(...))\nEncapsulated OOP: learner$train()\nModern tools: mlr3, R6, S7\n\n\n\n\n🏗 OOP Systems:\n\nS3: Lightweight & informal — uses UseMethod()\nS4: Formal and type-safe — uses setClass() and @\nR6: Mutable, used in apps like shiny\nS7: Newest and unified — multiple dispatch"
-  },
-  {
-    "objectID": "slides/overview.html#oop-in-practice",
-    "href": "slides/overview.html#oop-in-practice",
-    "title": "Short Course on R Tools",
-    "section": "🛠️ OOP in Practice",
-    "text": "🛠️ OOP in Practice\n🔁 Comparison of Systems\n\n\n\n\nSys.\n\n\nStyle\n\n\nUsed In\n\n\n✅ Pros\n\n\n⚠️ Cons\n\n\n\n\n\n\nS3\n\n\nFunctional\n\n\nBase R\n\n\nSimple, extensible\n\n\nNo schema, fragile\n\n\n\n\nS4\n\n\nFormal\n\n\nBioconductor\n\n\nType-safe, robust\n\n\nVerbose, complex\n\n\n\n\nR6\n\n\nEncapsulated\n\n\nShiny, Keras\n\n\nFast, mutable\n\n\nWeak type safety\n\n\n\n\nS7\n\n\nUnified OOP\n\n\nModern dev\n\n\nCombines S3 & S4 benefits\n\n\nStill evolving"
-  },
-  {
-    "objectID": "slides/overview.html#fssa---shiny",
-    "href": "slides/overview.html#fssa---shiny",
-    "title": "Short Course on R Tools",
-    "section": "FSSA - Shiny",
-    "text": "FSSA - Shiny\n\n\n\n🔗 Open in a browser"
-  },
-  {
-    "objectID": "slides/overview.html#web-apps-with-shiny",
-    "href": "slides/overview.html#web-apps-with-shiny",
-    "title": "Short Course on R Tools",
-    "section": "Web Apps with Shiny",
-    "text": "Web Apps with Shiny\n\n✨ Shiny = Interactive web apps in pure R (no HTML/JS!)\n\n\n\n📦 Components:\n\nui: Layout, inputs/outputs\nserver: Logic, reactivity\n\n\n\n\n\n🔌 Inputs & Outputs:\n\nInputs: sliderInput(), textInput()\nOutputs: renderPlot(), renderText(), renderTable()\n\n\n\n\n\n🧪 Use Cases:\n\nDashboards, simulations, teaching tools"
-  },
-  {
-    "objectID": "slides/overview.html#shiny-concepts-deployment-in-workshop",
-    "href": "slides/overview.html#shiny-concepts-deployment-in-workshop",
-    "title": "Short Course on R Tools",
-    "section": "Shiny Concepts & Deployment in Workshop",
-    "text": "Shiny Concepts & Deployment in Workshop\n\n🚀 Deployment Options:\n\nshinyapps.io, Posit Connect, university servers\nshinylive: deploy as static site (experimental)\n\n\n\n\n\n⚡Reactivity System:\n\nreactive(): memoized reactive expressions\nisolate(): break reactive chains\nobserveEvent(): trigger actions without outputs\n\n\n\n\n\n\n\n🧠 Hands-on:\n\nExplore shinyapps gallery for inspiration"
-  },
-  {
-    "objectID": "slides/overview.html#context-motivation",
-    "href": "slides/overview.html#context-motivation",
-    "title": "Short Course on R Tools",
-    "section": "Context & Motivation",
-    "text": "Context & Motivation\n\n\nDiagonal averaging is key in many algorithms (e.g. SSA reconstruction).\n\nGiven any matrix \\(G \\in \\mathbb{R}^{L\\times K}\\), we want \\[\n  \\scriptsize{y_t = \\frac{1}{\\#\\{(i,j):\\,i+j-1 = t\\}}\n        \\sum_{i+j-1 = t} G_{i,j},\n  \\quad t = 1,\\dots, L+K-1.}\n\\]\nPure‑R implementation uses two nested loops over \\(i\\) and \\(j\\)."
-  },
-  {
-    "objectID": "slides/overview.html#pure-r-code",
-    "href": "slides/overview.html#pure-r-code",
-    "title": "Short Course on R Tools",
-    "section": "Pure R Code",
-    "text": "Pure R Code\n\nhankelize_R &lt;- function(X){\n  L &lt;- nrow(X)\n  K &lt;- ncol(X)\n  N &lt;- L + K - 1\n  result &lt;- numeric(N)\n  count &lt;- numeric(N)\n \n  for(i in 1:L){\n    for(j in 1:K){\n      result[i + j - 1] &lt;- result[i + j - 1] + X[i,j]\n      count[i + j - 1] &lt;- count[i + j - 1] + 1\n    }\n  }\n \n  return(result / count)\n}"
-  },
-  {
-    "objectID": "slides/overview.html#rcpp-code",
-    "href": "slides/overview.html#rcpp-code",
-    "title": "Short Course on R Tools",
-    "section": "Rcpp Code",
-    "text": "Rcpp Code\n\nlibrary(Rcpp)\n\ncppFunction('\nNumericVector hankelize_rcpp(NumericMatrix X) {\n  int L = X.nrow();\n  int K = X.ncol();\n  int N = L + K - 1;\n \n  NumericVector result(N);\n  NumericVector count(N);\n \n  for(int i = 0; i &lt; L; i++){\n    for(int j = 0; j &lt; K; j++){\n      result[i + j] += X(i,j);\n      count[i + j] += 1;\n    }\n  }\n \n  for(int i = 0; i &lt; N; i++){\n    result[i] /= count[i];\n  }\n \n  return result;\n}')"
-  },
-  {
-    "objectID": "slides/overview.html#benchmark",
-    "href": "slides/overview.html#benchmark",
-    "title": "Short Course on R Tools",
-    "section": "Benchmark",
-    "text": "Benchmark\n\nlibrary(microbenchmark)\n\n# Large random matrix (e.g., 100 x 1000)\nset.seed(123)\nX_large &lt;- matrix(runif(1e5), nrow = 100, ncol = 1000)\n\nbench &lt;- microbenchmark(\n  R_version = hankelize_R(X_large),\n  Rcpp_version = hankelize_rcpp(X_large),\n  times = 10\n)\n\nprint(bench)\n&gt;# Unit: microseconds\n&gt;#          expr     min      lq     mean   median      uq     max neval\n&gt;#     R_version 21225.1 21550.8 26604.53 25180.35 30969.3 34455.1    10\n&gt;#  Rcpp_version   176.9   177.8   299.87   194.50   253.7  1161.3    10\n\n\n\nDramatic speedup: ~89× faster.\nPattern can be applied to many \\(O(n^2)\\) tasks in time series, spatial stats, and beyond."
-  },
-  {
-    "objectID": "slides/overview.html#rcpp-in-action",
-    "href": "slides/overview.html#rcpp-in-action",
-    "title": "Short Course on R Tools",
-    "section": "🔬 Rcpp in Action",
-    "text": "🔬 Rcpp in Action\n\n🚀 Rcpp bridges R and C++ for high-performance computing.\n🏁 Use cases:\n\nSpeed up loops, recursion, and matrix operations\nAccess C++ libraries and STL\nIntegrate C++ in R packages"
-  },
-  {
-    "objectID": "slides/overview.html#example-use-python-from-r",
-    "href": "slides/overview.html#example-use-python-from-r",
-    "title": "Short Course on R Tools",
-    "section": "🔁 Example: Use Python from R",
-    "text": "🔁 Example: Use Python from R\n\n\n🐍 Native Python\nfrom sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neural_network import MLPClassifier\niris = load_iris()\nX, y = iris.data, iris.target\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\nmlp = MLPClassifier(hidden_layer_sizes=(10,))\nmlp.fit(X_train, y_train)\ny_pred = mlp.predict(X_test)\n\n\n📦 R with reticulate\nlibrary(reticulate)\nsklearn &lt;- import(\"sklearn\")\nmodel_selection &lt;- sklearn$model_selection\nneural_network &lt;- sklearn$neural_network\nX &lt;- as.matrix(iris[, 1:4])         \ny &lt;- as.integer(iris$Species) - 1     \ntrain_test &lt;- model_selection$train_test_split(X, y, test_size = 0.2, random_state = 42)\nX_train &lt;- train_test[[1]]\nX_test &lt;- train_test[[2]]\ny_train &lt;- train_test[[3]]\ny_test &lt;- train_test[[4]]\nmlp &lt;- neural_network$MLPClassifier(hidden_layer_sizes = tuple(10L))\nmlp$fit(X_train, y_train)\ny_pred &lt;- mlp$predict(X_test)"
-  },
-  {
-    "objectID": "slides/overview.html#why-call-python-in-r",
-    "href": "slides/overview.html#why-call-python-in-r",
-    "title": "Short Course on R Tools",
-    "section": "💡 Why Call Python in R?",
-    "text": "💡 Why Call Python in R?\n\n\n🔄 Avoid rewriting code from one language to another\n🔁 Call shared models or preprocessing functions written in Python\n📦 Reuse Python packages or APIs within your R workflow\n📤 Publish reproducible reports that include both R and Python code"
-  },
-  {
-    "objectID": "slides/overview.html#what-is-reticulate",
-    "href": "slides/overview.html#what-is-reticulate",
-    "title": "Short Course on R Tools",
-    "section": "What is reticulate?",
-    "text": "What is reticulate?\n\n\nR package for interoperability with Python\nMaintains a shared Python session accessible from R\nAutomatic conversion of many R types to Python and vice versa\nSupports inline Python code in R Markdown and R scripts"
-  },
-  {
-    "objectID": "slides/overview.html#demo-python-from-r-in-rstudio",
-    "href": "slides/overview.html#demo-python-from-r-in-rstudio",
-    "title": "Short Course on R Tools",
-    "section": "🎥 Demo: Python from R in RStudio",
-    "text": "🎥 Demo: Python from R in RStudio"
-  },
-  {
-    "objectID": "slides/overview.html#motivations-to-package-your-code",
-    "href": "slides/overview.html#motivations-to-package-your-code",
-    "title": "Short Course on R Tools",
-    "section": "💡 Motivations to Package Your Code",
-    "text": "💡 Motivations to Package Your Code\n🧰 Why build a package?\n\n\n♻️ Reuse and organize reusable code chunks\n📖 Provide documentation and examples\n🧪 Add unit tests to ensure reliability\n🌐 Distribute:\n\nvia CRAN for wide access\nvia GitHub for collaborative development\nor keep it private for internal use"
-  },
-  {
-    "objectID": "slides/overview.html#package-structure-overview",
-    "href": "slides/overview.html#package-structure-overview",
-    "title": "Short Course on R Tools",
-    "section": "🏗 Package Structure Overview",
-    "text": "🏗 Package Structure Overview\nmypkg/\n├── DESCRIPTION         # 📋 Package metadata\n├── NAMESPACE           # 🔁 Exported functions & imports\n├── R/                  # 📂 Your R functions\n└── man/                # 📚 Auto-generated documentation\n\n💡 Other folders you may add:\n\n\n📂 tests/ → Unit tests (testthat)\n📂 vignettes/ → Long-form docs\n📂 data/ → Internal or example datasets"
-  },
-  {
-    "objectID": "slides/overview.html#demo-rfssa-package",
-    "href": "slides/overview.html#demo-rfssa-package",
-    "title": "Short Course on R Tools",
-    "section": "🎥 Demo: Rfssa Package",
-    "text": "🎥 Demo: Rfssa Package"
-  },
-  {
-    "objectID": "slides/overview.html#package-states-in-r",
-    "href": "slides/overview.html#package-states-in-r",
-    "title": "Short Course on R Tools",
-    "section": "🛠 Package States in R",
-    "text": "🛠 Package States in R\nR packages transition through five development states:\n\n\n🗂️ Source: your raw package folder\n📦 Bundled: compressed .tar.gz for sharing\n🧱 Binary: platform-specific precompiled version\n📚 Installed: available in your R library\n🧠 In-Memory: actively loaded via library()"
-  },
-  {
-    "objectID": "slides/overview.html#transitioning-between-states",
-    "href": "slides/overview.html#transitioning-between-states",
-    "title": "Short Course on R Tools",
-    "section": "🔁 Transitioning Between States",
-    "text": "🔁 Transitioning Between States"
-  },
-  {
-    "objectID": "slides/overview.html#submitting-to-cran",
-    "href": "slides/overview.html#submitting-to-cran",
-    "title": "Short Course on R Tools",
-    "section": "🚀 Submitting to CRAN",
-    "text": "🚀 Submitting to CRAN\n\n\n📦 CRAN = Comprehensive R Archive Network\n\n🎯 Goal: Make your R package public, discoverable, and installable\n✔ Must pass R CMD check with:\n\n❌ No ERRORs\n⚠️ No WARNINGs\n📝 Minimal and justifiable NOTEs\n\n📤 Submit with: devtools::release()"
-  },
-  {
-    "objectID": "slides/overview.html#confirmation-email-after-submission",
-    "href": "slides/overview.html#confirmation-email-after-submission",
-    "title": "Short Course on R Tools",
-    "section": "📩 Confirmation Email (After Submission)",
-    "text": "📩 Confirmation Email (After Submission)"
-  },
-  {
-    "objectID": "slides/overview.html#submission-confirmed-email",
-    "href": "slides/overview.html#submission-confirmed-email",
-    "title": "Short Course on R Tools",
-    "section": "📬 Submission Confirmed Email",
-    "text": "📬 Submission Confirmed Email"
-  },
-  {
-    "objectID": "slides/overview.html#pending-manual-inspection-email",
-    "href": "slides/overview.html#pending-manual-inspection-email",
-    "title": "Short Course on R Tools",
-    "section": "⏳ Pending Manual Inspection Email",
-    "text": "⏳ Pending Manual Inspection Email"
-  },
-  {
-    "objectID": "slides/overview.html#package-initially-accepted-email",
-    "href": "slides/overview.html#package-initially-accepted-email",
-    "title": "Short Course on R Tools",
-    "section": "✅ Package Initially Accepted Email",
-    "text": "✅ Package Initially Accepted Email\n\n\n\n🎉 Good news!"
-  },
-  {
-    "objectID": "slides/overview.html#package-built-on-cran-email",
-    "href": "slides/overview.html#package-built-on-cran-email",
-    "title": "Short Course on R Tools",
-    "section": "📦 Package Built on CRAN Email",
-    "text": "📦 Package Built on CRAN Email\n\n\n\n🧱 CRAN has built binaries for major platforms (Windows, …)."
-  },
-  {
-    "objectID": "slides/overview.html#cran-page-created",
-    "href": "slides/overview.html#cran-page-created",
-    "title": "Short Course on R Tools",
-    "section": "🌐 CRAN Page Created",
-    "text": "🌐 CRAN Page Created\n\n\n🌍 Your package is now live! Searchable and installable via:\n\ninstall.packages(\"Rfssa\")"
-  },
-  {
-    "objectID": "slides/overview.html#example-rfssa-package-github",
-    "href": "slides/overview.html#example-rfssa-package-github",
-    "title": "Short Course on R Tools",
-    "section": "📬 Example: Rfssa Package Github",
-    "text": "📬 Example: Rfssa Package Github"
-  },
-  {
-    "objectID": "slides/overview.html#why-use-git-github",
-    "href": "slides/overview.html#why-use-git-github",
-    "title": "Short Course on R Tools",
-    "section": "🌍 Why Use Git & GitHub?",
-    "text": "🌍 Why Use Git & GitHub?\n\n\n🔁 Version Control: Track and manage changes in code\n🤝 Collaboration: Work with others without overwriting files\n🧪 Reproducibility: Restore older versions when bugs occur\n🔄 Open Source: Share your package with the world\n\n\n\n\n🧰 Git = Local tracking tool\n☁️ GitHub = Online hosting and teamwork platform"
-  },
-  {
-    "objectID": "slides/overview.html#daily-git-workflow-in-rstudio",
-    "href": "slides/overview.html#daily-git-workflow-in-rstudio",
-    "title": "Short Course on R Tools",
-    "section": "🔁 Daily Git Workflow in RStudio",
-    "text": "🔁 Daily Git Workflow in RStudio\n\n🎯 A typical work cycle for package developers:\n\n\n\n\n\nStep\nDescription\n\n\n\n\n✏️ Edit\nMake changes to .R or .Rmd files\n\n\n✅ Stage\nSelect files to track in Git tab\n\n\n💬 Commit\nSave with a message (e.g., “Fix bug”)\n\n\n🚀 Push\nSend to GitHub"
-  },
-  {
-    "objectID": "slides/overview.html#demo-rfssa-github-package",
-    "href": "slides/overview.html#demo-rfssa-github-package",
-    "title": "Short Course on R Tools",
-    "section": "🎥 Demo: Rfssa Github Package",
-    "text": "🎥 Demo: Rfssa Github Package"
-  },
-  {
-    "objectID": "slides/Topic1.html#basics",
-    "href": "slides/Topic1.html#basics",
-    "title": "Short Course on R Tools",
-    "section": "Basics",
-    "text": "Basics\n\nAn S3 object is a base type with at least a class attribute\n\n\nf &lt;- factor(c(\"a\", \"b\", \"b\"))\nf\n#&gt; [1] a b b\n#&gt; Levels: a b\nattributes(f)\n#&gt; $levels\n#&gt; [1] \"a\" \"b\"\n#&gt; \n#&gt; $class\n#&gt; [1] \"factor\"\nunclass(f)\n#&gt; [1] 1 2 2\n#&gt; attr(,\"levels\")\n#&gt; [1] \"a\" \"b\"\n\ntime &lt;- strptime(c(\"2017-01-01\", \"2020-05-04 03:21\"), \"%Y-%m-%d\")\nstr(time)\n#&gt;  POSIXlt[1:2], format: \"2017-01-01\" \"2020-05-04\"\n\nclass(time) &lt;- NULL\nstr(time)\n#&gt; List of 11\n#&gt;  $ sec   : num [1:2] 0 0\n#&gt;  $ min   : int [1:2] 0 0\n#&gt;  $ hour  : int [1:2] 0 0\n#&gt;  $ mday  : int [1:2] 1 4\n#&gt;  $ mon   : int [1:2] 0 4\n#&gt;  $ year  : int [1:2] 117 120\n#&gt;  $ wday  : int [1:2] 0 1\n#&gt;  $ yday  : int [1:2] 0 124\n#&gt;  $ isdst : int [1:2] 0 0\n#&gt;  $ zone  : chr [1:2] \"UTC\" \"UTC\"\n#&gt;  $ gmtoff: int [1:2] 0 0\n#&gt;  - attr(*, \"tzone\")= chr \"UTC\"\n#&gt;  - attr(*, \"balanced\")= logi TRUE"
-  },
-  {
-    "objectID": "slides/Topic1.html#classes",
-    "href": "slides/Topic1.html#classes",
-    "title": "Short Course on R Tools",
-    "section": "Classes",
-    "text": "Classes\n# Create and assign class in one step\nx &lt;- structure(list(), class = \"my_class\")\n\n# Create, then set class\nx &lt;- list()\nclass(x) &lt;- \"my_class\"\n\nclass(x)\n#&gt; [1] \"my_class\"\ninherits(x, \"my_class\")\n#&gt; [1] TRUE\ninherits(x, \"your_class\")\n#&gt; [1] FALSE\n\n\nR doesn’t stop you from shooting yourself in the foot, but as long as you don’t aim the gun at your toes and pull the trigger, you won’t have a problem."
-  },
-  {
-    "objectID": "slides/Topic1.html#classes---common-practice",
-    "href": "slides/Topic1.html#classes---common-practice",
-    "title": "Short Course on R Tools",
-    "section": "Classes - Common Practice",
-    "text": "Classes - Common Practice\nTo avoid foot-bullet intersections when creating your own class, you may:\n\n\nA low-level constructor, new_myclass(), that efficiently creates new objects with the correct structure.\nA validator, validate_myclass(), that performs more computationally expensive checks to ensure that the object has correct values.\nA user-friendly helper, myclass(), that provides a convenient way for others to create objects of your class."
-  },
-  {
-    "objectID": "slides/Topic1.html#classes---example",
-    "href": "slides/Topic1.html#classes---example",
-    "title": "Short Course on R Tools",
-    "section": "Classes - Example",
-    "text": "Classes - Example\n\n## 1. Low‐level constructor: assume inputs are ok\nnew_myclass &lt;- function(values = numeric(), unit = character(1)) {\n  # no checks here beyond base‐R stopifnot\n  stopifnot(is.numeric(values), is.character(unit), length(unit) == 1)\n  structure(\n    list(values = values, unit = unit),\n    class = \"myclass\"\n  )\n}\n\n## 2. Validator: more thorough checks\nvalidate_myclass &lt;- function(x) {\n  if (!inherits(x, \"myclass\")) {\n    stop(\"`x` must be a 'myclass' object.\", call. = FALSE)\n  }\n  if (!is.numeric(x$values)) {\n    stop(\"`values` must be numeric.\", call. = FALSE)\n  }\n  if (any(is.na(x$values))) {\n    stop(\"`values` must not contain NA.\", call. = FALSE)\n  }\n  if (!is.character(x$unit) || length(x$unit) != 1) {\n    stop(\"`unit` must be a single character string.\", call. = FALSE)\n  }\n  TRUE\n}\n\n## (Optional) a simple print method\nprint.myclass &lt;- function(x, ...) {\n  cat(\"&lt;myclass&gt;  \", length(x$values), \"values [unit = \", x$unit, \"]\\n\", sep = \"\")\n  print(x$values)\n  invisible(x)\n}\n\n## 3. User‐facing helper: coerce/check inputs, then build + validate\nmyclass &lt;- function(values, unit = \"unitless\") {\n  # quick checks / coercions:\n  if (!is.numeric(values)) {\n    values &lt;- as.numeric(values)\n    if (any(is.na(values))) stop(\"`values` could not be coerced to numeric.\", call. = FALSE)\n  }\n  if (!is.character(unit) || length(unit) != 1) {\n    stop(\"`unit` must be a single character string.\", call. = FALSE)\n  }\n  # build & validate\n  obj &lt;- new_myclass(values = values, unit = unit)\n  validate_myclass(obj)\n  obj\n}\n\n## --- Example usage ---\nx &lt;- myclass(c(1.1, 2.2, 3.3), unit = \"kg\")\nprint(x)\n#&gt; &lt;myclass&gt; 3 values [unit = kg]\n#&gt; [1] 1.1 2.2 3.3\n\n# This will error because of an NA:\n# myclass(c(1, NA, 3))"
-  },
-  {
-    "objectID": "slides/Topic1.html#generics-and-methods---method-dispatch",
-    "href": "slides/Topic1.html#generics-and-methods---method-dispatch",
-    "title": "Short Course on R Tools",
-    "section": "Generics and Methods - Method Dispatch",
-    "text": "Generics and Methods - Method Dispatch\nView(print)\n#&gt; function (x, ...) \n#&gt; UseMethod(\"print\")\n\nftype(print)\n#&gt; [1] \"S3\"      \"generic\"\nftype(print.factor)\n#&gt; [1] \"S3\"     \"method\"\n\ns3_dispatch(print(f))\n#&gt; =&gt; print.factor\n#&gt;  * print.default\ns3_dispatch(print(unclass(f)))\n#&gt;    print.integer\n#&gt;    print.numeric\n#&gt; =&gt; print.default"
-  },
-  {
-    "objectID": "slides/Topic1.html#finding-methods",
-    "href": "slides/Topic1.html#finding-methods",
-    "title": "Short Course on R Tools",
-    "section": "Finding methods",
-    "text": "Finding methods\ns3_methods_generic(\"mean\")\n#&gt; # A tibble: 7 × 4\n#&gt;   generic class      visible source             \n#&gt;   &lt;chr&gt;   &lt;chr&gt;      &lt;lgl&gt;   &lt;chr&gt;              \n#&gt; 1 mean    Date       TRUE    base               \n#&gt; 2 mean    default    TRUE    base               \n#&gt; 3 mean    difftime   TRUE    base               \n#&gt; 4 mean    POSIXct    TRUE    base               \n#&gt; 5 mean    POSIXlt    TRUE    base               \n#&gt; 6 mean    quosure    FALSE   registered S3method\n#&gt; 7 mean    vctrs_vctr FALSE   registered S3method\n\ns3_methods_class(\"funts\")\n#&gt; # A tibble: 7 × 4\n#&gt;   generic class visible source             \n#&gt;   &lt;chr&gt;   &lt;chr&gt; &lt;lgl&gt;   &lt;chr&gt;              \n#&gt; 1 -       funts FALSE   registered S3method\n#&gt; 2 *       funts FALSE   registered S3method\n#&gt; 3 [       funts FALSE   registered S3method\n#&gt; 4 +       funts FALSE   registered S3method\n#&gt; 5 length  funts FALSE   registered S3method\n#&gt; 6 plot    funts FALSE   registered S3method\n#&gt; 7 print   funts FALSE   registered S3method"
-  },
-  {
-    "objectID": "slides/Topic1.html#creating-methods",
-    "href": "slides/Topic1.html#creating-methods",
-    "title": "Short Course on R Tools",
-    "section": "Creating methods",
-    "text": "Creating methods\n\n\nmean.myclass &lt;- function(x, ...) {\n  print(\"custom mean\")\n}\n\nmean(x)\n\n[1] \"custom mean\"\n\n\n\n\n\n\nA method must have the same arguments as its generic. This is enforced in packages by R CMD check.\n\n\n\n\n\nThere is one exception to this rule: if the generic has ..., the method can contain a superset of the arguments. This allows methods to take arbitrary additional arguments."
-  },
-  {
-    "objectID": "slides/Topic1.html#inheritance",
-    "href": "slides/Topic1.html#inheritance",
-    "title": "Short Course on R Tools",
-    "section": "Inheritance",
-    "text": "Inheritance\nx &lt;- factor(\"a\",\"b\",\"b\")\nclass(x)\n#&gt; \"factor\"\n\nclass(ordered(x))\n#&gt; \"ordered\" \"factor\"\n\ns3_dispatch(print(ordered(x)))\n#&gt;    print.ordered\n#&gt; =&gt; print.factor\n#&gt;  * print.default\n\ns3_dispatch(ordered(x)[1])\n#&gt;    [.ordered\n#&gt; =&gt; [.factor\n#&gt;    [.default\n#&gt; -&gt; [ (internal)\n\n\nWe’ll say that ordered is a subclass of factor and factor is a superclass of ordered."
-  },
-  {
-    "objectID": "slides/Topic1.html#inheritance-cont.",
-    "href": "slides/Topic1.html#inheritance-cont.",
-    "title": "Short Course on R Tools",
-    "section": "Inheritance Cont.",
-    "text": "Inheritance Cont.\n\nnew_secret &lt;- function(x = double()) {\n  stopifnot(is.double(x))\n  structure(x, class = \"secret\")\n}\n\nprint.secret &lt;- function(x, ...) {\n  print(strrep(\"x\", nchar(x)))\n  invisible(x)\n}\n\nx &lt;- new_secret(c(15, 1, 456))\nx\n#&gt; [1] \"xx\"  \"x\"   \"xxx\"\n\ns3_dispatch(x[1])\n#&gt;    [.secret\n#&gt;    [.default\n#&gt; =&gt; [ (internal)\n\nx[1]\n#&gt; [1] 15\n\n\n\nTo fix this, we need to provide a [.secret method."
-  },
-  {
-    "objectID": "slides/Topic1.html#inheritance-cont.---nextmethod",
-    "href": "slides/Topic1.html#inheritance-cont.---nextmethod",
-    "title": "Short Course on R Tools",
-    "section": "Inheritance Cont. - NextMethod()",
-    "text": "Inheritance Cont. - NextMethod()\n\n`[.secret` &lt;- function(x, i) {\n  x &lt;- unclass(x)\n  new_secret(x[i])\n}\n\nx[1]\n#&gt; [1] \"xx\"\n\n\n\nA better solution using NextMethod()\n\n\n`[.secret` &lt;- function(x, i) {\n  new_secret(NextMethod())\n}\n\nx[1]\n#&gt; [1] \"xx\"\n\ns3_dispatch(x[1])\n#&gt; =&gt; [.secret\n#&gt;    [.default\n#&gt; -&gt; [ (internal)"
-  },
-  {
-    "objectID": "slides/Topic1.html#generics-methods",
-    "href": "slides/Topic1.html#generics-methods",
-    "title": "Short Course on R Tools",
-    "section": "Generics & Methods",
-    "text": "Generics & Methods\n\n\nDefine generic:\nsetGeneric(\"greet\", function(x) standardGeneric(\"greet\"))\nDefine method:\nsetMethod(\"greet\", \"Person\", function(x) {\n  paste(\"Hello, my name is\", x@name)\n})\nExample:\ngreet(subj1)\n#&gt; [1] \"Hello, my name is Adam\""
-  },
-  {
-    "objectID": "slides/Topic1.html#inheritance-virtual-classes",
-    "href": "slides/Topic1.html#inheritance-virtual-classes",
-    "title": "Short Course on R Tools",
-    "section": "Inheritance & Virtual Classes",
-    "text": "Inheritance & Virtual Classes\n\n\nInheritance:\nsetClass(\"Employee\", contains = \"Person\",\n  slots = list(salary = \"numeric\"))\nExample:\nemp1 &lt;- new(\"Employee\", subj1, salary = 75000)\nemp1\n#&gt; An object of class \"Employee\"\n#&gt; Slot \"salary\":\n#&gt; [1] 75000\n#&gt; \n#&gt; Slot \"name\":\n#&gt; [1] \"Adam\"\n#&gt; \n#&gt; Slot \"age\":\n#&gt; [1] 30"
-  },
-  {
-    "objectID": "slides/Topic1.html#advanced-features",
-    "href": "slides/Topic1.html#advanced-features",
-    "title": "Short Course on R Tools",
-    "section": "Advanced Features",
-    "text": "Advanced Features\n\nActive bindings\nInheritance & extension\nPrivate vs public\nUse cases: GUI, stateful objects, iterative algorithms"
+    "objectID": "slides/Reticulate.html#exporting-r-builtin-functions-to-python",
+    "href": "slides/Reticulate.html#exporting-r-builtin-functions-to-python",
+    "title": "Integrate Python in R",
+    "section": "Exporting R Builtin Functions to Python",
+    "text": "Exporting R Builtin Functions to Python\nBuilt-in functions in R are functions implemented in C (compiled) and embedded directly into the R interpreter.\n⚠️ Builtin function needs wrapping. For example:\ntypeof(exp) # return \"builtin\"\npy$e &lt;- exp\n\nIn Python:\nprint(e(1))     \n\n\nTypeError: 'PyCapsule' object is not callable\n\n\n✅ Solution: Wrap the builtin in a closure\ne &lt;- function(x) exp(x)\npy$e &lt;- e\n\n\nIn Python:\nprint(e(1))  # ✅ Returns 2.718"
   },
   {
     "objectID": "about.html",
@@ -845,7 +887,7 @@
     "href": "index.html",
     "title": "STatisticians Advancing in R for Data Science (STAR-DS)",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the short course. Note that this schedule will be updated as we progress, and the timeline of topics and assignments might be updated throughout the course.\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nCODE\nDUE\n\n\n\n\n1\nTue, Apr 28\n Create dynamic Shiny web applications\n📚Topic 1  📚Topic 2  📖Shiny\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\nEnhance performance with Rcpp (C++)\n📚Topic 3  📖Rcpp for everyone\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n\n\n\n\n\n\n📝 HW 1 at 11:50 pm\n\n\n2\nTue, Apr 28\n Integrate Python in R using Reticulate\n📚Topic 4  📖Calling Python from R\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n Develop your own professional R package\n📚Topic 5  📖R package\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n Collaborate via GitHub / CRAN submission process\n📚Topic 6  📖Let’s Git started  📖Release R package\nR👩‍💻  R🛠️\n\n\n\n\n\n\nThu, Apr 30\n\n\n\n\n\n\n📝 HW 2 at 11:50 pm",
+    "text": "This page contains an outline of the topics, content, and assignments for the short course. Note that this schedule will be updated as we progress, and the timeline of topics and assignments might be updated throughout the course.\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nCODE\nDUE\n\n\n\n\n1\nTue, Apr 28\n Create dynamic Shiny web applications\n📚Topic 1  📖Shiny\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\nEnhance performance with Rcpp (C++)\n📚Topic 3  📖Rcpp for everyone\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n\n\n\n\n\n\n📝 HW 1 at 11:50 pm\n\n\n2\nTue, Apr 28\n Integrate Python in R using Reticulate\n📚Topic 4  📖Calling Python from R\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n Develop your own professional R package\n📚Topic 5  📖R package\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n Collaborate via GitHub / CRAN submission process\n📚Topic 6  📖Let’s Git started  📖Release R package\nR👩‍💻  R🛠️\n\n\n\n\n\n\nThu, Apr 30\n\n\n\n\n\n\n📝 HW 2 at 11:50 pm",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -1196,125 +1238,95 @@
     ]
   },
   {
-    "objectID": "slides/Topic2.html#structure-of-a-shiny-app-1",
-    "href": "slides/Topic2.html#structure-of-a-shiny-app-1",
-    "title": "Short Course on R Tools",
-    "section": "Structure of a Shiny App",
-    "text": "Structure of a Shiny App\n\n# app.R single-file app\nlibrary(shiny)\nui &lt;- fluidPage(\n  titlePanel(\"Hello Shiny\"),\n  sidebarLayout(\n    sidebarPanel(sliderInput(\"obs\", \"Observations:\", 1, 100, 50)),\n    mainPanel(plotOutput(\"distPlot\"))\n  )\n)\n\nserver &lt;- function(input, output) {\n  output$distPlot &lt;- renderPlot({\n    hist(rnorm(input$obs))\n  })\n}\n\nshinyApp(ui, server)\n\n\nui defines layout and inputs/outputs\nserver contains R code & reactivity",
-    "crumbs": [
-      "Slides",
-      "Shiny"
-    ]
+    "objectID": "slides/Rcpp.html#outline",
+    "href": "slides/Rcpp.html#outline",
+    "title": "Introduction to Rcpp",
+    "section": "Outline",
+    "text": "Outline\n\n\nMotivation & Introduction\nGetting Started with evalCpp() & cppFunction()\nUsing sourceCpp()\nData Types & Conversions\nStandard Template Library (STL)\nUsing Rcpp in Packages\nAdvanced Topics & Resources"
   },
   {
-    "objectID": "slides/Topic2.html#structure-of-a-shiny-app-2",
-    "href": "slides/Topic2.html#structure-of-a-shiny-app-2",
-    "title": "Short Course on R Tools",
-    "section": "Structure of a Shiny App",
-    "text": "Structure of a Shiny App\nShiny apps come in two parts:\n\n\n\nUI\n\nDefines the layout and appearance.\nContains elements such as:\n\nlayout structures (sidebars)\ninputs (text boxes, sliders, buttons)\noutputs (plots, tables)\n\n\n\n\nServer\n\nPerforms calculations.\nContains the logic to respond to user inputs, and update outputs.\nCommunicates with the UI to dynamically render outputs.",
-    "crumbs": [
-      "Slides",
-      "Shiny"
-    ]
+    "objectID": "slides/Rcpp.html#basic-usage-evalcpp",
+    "href": "slides/Rcpp.html#basic-usage-evalcpp",
+    "title": "Introduction to Rcpp",
+    "section": "Basic Usage: evalCpp()",
+    "text": "Basic Usage: evalCpp()\n\nevalCpp() evaluates a single C++ expression. Includes and dependencies can be declared.\nThis allows us to quickly check C++ constructs.\n\nlibrary(Rcpp)\n\nevalCpp(\"2 + 2\")  # simple test\n&gt;# [1] 4\n\nevalCpp(\"std::numeric_limits&lt;double&gt;::max()\")\n&gt;# [1] 1.79769e+308"
   },
   {
-    "objectID": "slides/Topic2.html#exercise",
-    "href": "slides/Topic2.html#exercise",
-    "title": "Short Course on R Tools",
-    "section": "Exercise",
-    "text": "Exercise\n\n\n\n\n\n\nOpen up your IDE of choice.\nMake sure you have the {shiny} package installed.\nCreate an app.R file.\nAdd ui and server elements, as well as shiny::shinyApp(ui, server).\nCheck it works.",
-    "crumbs": [
-      "Slides",
-      "Shiny"
-    ]
+    "objectID": "slides/Rcpp.html#simple-example---using-cppfunction",
+    "href": "slides/Rcpp.html#simple-example---using-cppfunction",
+    "title": "Introduction to Rcpp",
+    "section": "Simple Example - Using cppFunction()",
+    "text": "Simple Example - Using cppFunction()\n\nRcpp Version of ‘is this number odd or even’\n\nRcpp::cppFunction(\"\nbool isOdd_cpp(int num = 10) {\n  bool result = (num % 2 == 1);\n  return result;\n}\")\nc(isOdd_cpp(42L), isOdd_cpp(43L))\n&gt;# [1] FALSE TRUE\n\n\nUse cppFunction() in R console or script\nFast prototyping & testing\nGood for small functions"
   },
   {
-    "objectID": "slides/Topic2.html#shinyapps-gallery-1",
-    "href": "slides/Topic2.html#shinyapps-gallery-1",
-    "title": "Short Course on R Tools",
-    "section": "Shinyapps Gallery",
-    "text": "Shinyapps Gallery",
-    "crumbs": [
-      "Slides",
-      "Shiny"
-    ]
+    "objectID": "slides/Rcpp.html#second-example-var1-1",
+    "href": "slides/Rcpp.html#second-example-var1-1",
+    "title": "Introduction to Rcpp",
+    "section": "Second Example: VAR(1)",
+    "text": "Second Example: VAR(1)\nIn R (C++) code, given both the coefficient and error matrices:\n\nrSim &lt;- function(B, E) {\n  X &lt;- matrix(0, nrow(E), ncol(E))\n  for (r in 2:nrow(E)) {\n    X[r, ] = X[r-1, ] %*% B + E[r, ]\n  }\n  return(X)\n}\n\n\nC++ Version:\n\narma::mat cppSim(arma::mat B, arma::mat E) {\n  int m = E.n_rows, n = E.n_cols;\n  arma::mat X(m, n);\n  X.row(0) = arma::zeros&lt;arma::mat&gt;(1, n);\n  for (int r = 1; r &lt; m; r++) {\n    X.row(r) = X.row(r-1) * B + E.row(r);\n  }\n  return X;\n}"
   },
   {
-    "objectID": "slides/Topic2.html#widgets---input",
-    "href": "slides/Topic2.html#widgets---input",
-    "title": "Short Course on R Tools",
-    "section": "Widgets - Input",
-    "text": "Widgets - Input",
-    "crumbs": [
-      "Slides",
-      "Shiny"
-    ]
+    "objectID": "slides/Rcpp.html#second-example-var1-2",
+    "href": "slides/Rcpp.html#second-example-var1-2",
+    "title": "Introduction to Rcpp",
+    "section": "Second Example: VAR(1)",
+    "text": "Second Example: VAR(1)\n\nRcpp::cppFunction('arma::mat cppSim(arma::mat B, arma::mat E) {\n  int m = E.n_rows, n = E.n_cols;\n  arma::mat X(m, n);\n  X.row(0) = arma::zeros&lt;arma::mat&gt;(1, n);\n  for (int r = 1; r &lt; m; r++) {\n    X.row(r) = X.row(r-1) * B + E.row(r);\n  }\n  return X;\n}', depends=\"RcppArmadillo\")\n\na &lt;- matrix(c(0.5, 0.1, 0.1, 0.5), nrow = 2)\ne &lt;- matrix(rnorm(10000), ncol = 2)\nrbenchmark::benchmark(cppSim(a, e), rSim(a, e), order=\"relative\")[, 1:4]\n\n&gt;#    test           replications elapsed relative\n&gt;# 1  cppSim(a, e)  100         0.010   1.0\n&gt;# 2  rSim(a, e)    100         0.728  72.8"
   },
   {
-    "objectID": "slides/Topic2.html#widgets---output-table",
-    "href": "slides/Topic2.html#widgets---output-table",
-    "title": "Short Course on R Tools",
-    "section": "Widgets - Output Table",
-    "text": "Widgets - Output Table\n\n\n\n🔗 &lt;/&gt; VIEW CODE",
-    "crumbs": [
-      "Slides",
-      "Shiny"
-    ]
+    "objectID": "slides/Rcpp.html#pagerank",
+    "href": "slides/Rcpp.html#pagerank",
+    "title": "Introduction to Rcpp",
+    "section": "Pagerank",
+    "text": "Pagerank\n#remotes::install_github(\"https://github.com/andrie/pagerank.git\")\nsuppressMessages(library(utils))\nlibrary(pagerank)\n\ncran &lt;- \"https://cloud.r-project.org\"\npr &lt;- compute_pagerank(cran)\nround(100 * pr[1:5], 3)\n\n&gt;#   Rcpp    ggplot2     dplyr      MASS   magrittr\n&gt;# 2.744     1.516       1.274    1.122    0.814"
   },
   {
-    "objectID": "slides/Topic2.html#reactivity-demo",
-    "href": "slides/Topic2.html#reactivity-demo",
-    "title": "Short Course on R Tools",
-    "section": "Reactivity Demo",
-    "text": "Reactivity Demo",
-    "crumbs": [
-      "Slides",
-      "Shiny"
-    ]
+    "objectID": "slides/Rcpp.html#percentage-of-compiled-packages",
+    "href": "slides/Rcpp.html#percentage-of-compiled-packages",
+    "title": "Introduction to Rcpp",
+    "section": "Percentage of Compiled Packages",
+    "text": "Percentage of Compiled Packages\ndb &lt;- tools::CRAN_package_db()       # added in R 3.4.0\ndb &lt;- db[!duplicated(db[, 1]), ]     # rows: number of packages\n\nnTot &lt;- nrow(db)                     # columns: different attributes\nnRcpp &lt;- length(tools::dependsOnPkgs(\"Rcpp\", recursive = FALSE, installed = db))\nnCompiled &lt;- table(db[, \"NeedsCompilation\"])[[\"yes\"]]\n\npropRcpp &lt;- nRcpp / nCompiled * 100\ndata.frame(tot = nTot, totRcpp = nRcpp, totCompiled = nCompiled,\n           RcppPctOfCompiled = propRcpp)\n\n&gt;#   tot   totRcpp   totCompiled   RcppPctOfCompiled\n&gt;# 1 22501    3053        4981          61.29291"
   },
   {
-    "objectID": "slides/Topic2.html#isolate-demo",
-    "href": "slides/Topic2.html#isolate-demo",
-    "title": "Short Course on R Tools",
-    "section": "Isolate Demo",
-    "text": "Isolate Demo",
-    "crumbs": [
-      "Slides",
-      "Shiny"
-    ]
+    "objectID": "slides/Rcpp.html#using-sourcecpp",
+    "href": "slides/Rcpp.html#using-sourcecpp",
+    "title": "Introduction to Rcpp",
+    "section": "Using sourceCpp()",
+    "text": "Using sourceCpp()\n\n\nSo what just happened?\n\nWe defined a simple C++ function\n\nIt operates on a numeric vector argument\n\nWe ask Rcpp to ‘source it’ for us\n\nBehind the scenes Rcpp creates a wrapper\n\nRcpp then compiles, links, and loads the wrapper\n\nThe function is available in R under its C++ name\n\nBenefits:\n\nEditor support (syntax highlighting)\nEasier debugging & error tracking"
   },
   {
-    "objectID": "slides/Topic2.html#observers-demo",
-    "href": "slides/Topic2.html#observers-demo",
-    "title": "Short Course on R Tools",
-    "section": "Observers Demo",
-    "text": "Observers Demo",
-    "crumbs": [
-      "Slides",
-      "Shiny"
-    ]
+    "objectID": "slides/Rcpp.html#another-example-timing-r-implementation",
+    "href": "slides/Rcpp.html#another-example-timing-r-implementation",
+    "title": "Introduction to Rcpp",
+    "section": "Another Example: Timing R Implementation",
+    "text": "Another Example: Timing R Implementation\n\nThe R implementation:\n\n\nf &lt;- function(n) {\n  if (n &lt; 2) return(n)\n  return(f(n - 1) + f(n - 2))\n}\n\n\n\nTiming:\n\nlibrary(rbenchmark)\nbenchmark(f(15), f(20), f(25))[, 1:4]\n\n&gt;# test         replications elapsed   relative\n&gt;# 1 f(15)       100          0.06      1.0\n&gt;# 2 f(20)       100          0.75     12.5\n&gt;# 3 f(25)       100          7.92    132.0"
   },
   {
-    "objectID": "slides/Topic2.html#shinylive-deployment",
-    "href": "slides/Topic2.html#shinylive-deployment",
-    "title": "Short Course on R Tools",
-    "section": "Shinylive deployment",
-    "text": "Shinylive deployment",
-    "crumbs": [
-      "Slides",
-      "Shiny"
-    ]
+    "objectID": "slides/Rcpp.html#another-example-c-implementation",
+    "href": "slides/Rcpp.html#another-example-c-implementation",
+    "title": "Introduction to Rcpp",
+    "section": "Another Example: C++ Implementation",
+    "text": "Another Example: C++ Implementation\nint g(int n) {\n  if (n &lt; 2) return(n);\n  return(g(n - 1) + g(n - 2));\n}\n\nRcpp::cppFunction('\n  int g(int n) {\n    if (n &lt; 2) return(n);\n    return(g(n - 1) + g(n - 2)); \n  }')\n\nsapply(0:10, g)  # Using it on first 11 arguments\n\n&gt;# [1] 0 1 1 2 3 5 8 13 21 34 55"
   },
   {
-    "objectID": "slides/Topic2.html#shinylive-deployment-1",
-    "href": "slides/Topic2.html#shinylive-deployment-1",
-    "title": "Short Course on R Tools",
-    "section": "Shinylive deployment",
-    "text": "Shinylive deployment\nSee posit-dev.github.io/r-shinylive.\n\nThe {shinylive} package converts a standard shiny app into a shinylive app:\ninstall.packages(\"shinylive\")\nAssuming your app.R file is in a folder called app:\nshinylive::export(\"app\", \"site\")\nYou can then use the files in the site folder to deploy it as a normal website.\n*not all R packages are available for shinylive.\n**initial load time is still quite slow.",
-    "crumbs": [
-      "Slides",
-      "Shiny"
-    ]
+    "objectID": "slides/Rcpp.html#another-example-comparing-timing",
+    "href": "slides/Rcpp.html#another-example-comparing-timing",
+    "title": "Introduction to Rcpp",
+    "section": "Another Example: Comparing Timing",
+    "text": "Another Example: Comparing Timing\n\nRcpp implementation:\n\n\nRcpp::cppFunction('\n  int g(int n) {\n    if (n &lt; 2) return(n);\n    return(g(n - 1) + g(n - 2)); \n  }')\n\n\n\nTiming:\n\nlibrary(rbenchmark)\nbenchmark(f(25), g(25))[, 1:4]\n\n&gt;#   test      replications elapsed   relative\n&gt;# 1 f(25)      100          8.02     267.333\n&gt;# 2 g(25)      100          0.03       1.000\n\n\n\nA nice gain of a few orders of magnitude."
+  },
+  {
+    "objectID": "slides/Rcpp.html#types",
+    "href": "slides/Rcpp.html#types",
+    "title": "Introduction to Rcpp",
+    "section": "Types",
+    "text": "Types\nR Type mapping:\n\nStandard R types (integer, numeric, list, function, … and compound objects) are mapped to corresponding C++ types:\n\nlibrary(Rcpp)\ncppFunction(\"NumericVector logabs(NumericVector x) {\n  return log(abs(x));\n}\")\nlogabs(seq(-5, 5, by = 2))\n&gt;# [1] 1.609438 1.098612 0.000000 0.000000 1.098612 1.609438\n\n\nVectorized C++! Here log(abs()) runs directly on vectors as R would."
+  },
+  {
+    "objectID": "slides/Rcpp.html#stl-type-mapping",
+    "href": "slides/Rcpp.html#stl-type-mapping",
+    "title": "Introduction to Rcpp",
+    "section": "STL Type Mapping",
+    "text": "STL Type Mapping\n\ncode/logabs2.cpp\n\n\n#include &lt;Rcpp.h&gt;\nusing namespace Rcpp;\n\ninline double f(double x) { return ::log(::fabs(x)); }\n\n// [[Rcpp::export]]\nstd::vector&lt;double&gt; logabs2(std::vector&lt;double&gt; x) {\n  std::transform(x.begin(), x.end(), x.begin(), f);\n  return x;\n}\n\nNot vectorized but ‘sweeps’ f() along std::vector&lt;double&gt; via STL std::transform().\n\nlibrary(Rcpp)\nsourceCpp(\"code/logabs2.cpp\")\nlogabs2(seq(-5, 5, by = 2))\n&gt;# [1] 1.609438 1.098612 0.000000 0.000000 1.098612 1.609438"
   },
   {
     "objectID": "slides/Topic5.html#r-packages-the-fundamental-unit",
@@ -1768,347 +1780,6 @@
     ]
   },
   {
-    "objectID": "slides/Topic4.html#using-source_python",
-    "href": "slides/Topic4.html#using-source_python",
-    "title": "Short Course on R Tools",
-    "section": "📥 Using source_python()",
-    "text": "📥 Using source_python()\nVariables become directly available in the R global environment\n\n🔍 Example:\nConsider script.py file, includes following Python script:\ny = 2\ndef square(x):\n    return x **2\n\n\n✅ Works directly in R :\nlibrary(reticulate)\nsource_python(\"script.py\")\nsquare(4)\n\n\n[1] 16\n\n\nprint(y) \n\n\n2",
-    "crumbs": [
-      "Slides",
-      "Python in R"
-    ]
-  },
-  {
-    "objectID": "slides/Topic4.html#using-py_run_file",
-    "href": "slides/Topic4.html#using-py_run_file",
-    "title": "Short Course on R Tools",
-    "section": "📥 Using py_run_file()",
-    "text": "📥 Using py_run_file()\nAlso runs the script, but…\n\n\n❌ Does not expose functions/variables directly in R\nVariables and functions are stored in py$\n\n\n\npy_run_file(\"script.py\")\npy$square(4)\n\n\n[1] 16\n\n\nprint(py$y)\n\n\n2",
-    "crumbs": [
-      "Slides",
-      "Python in R"
-    ]
-  },
-  {
-    "objectID": "slides/Topic4.html#using-py_run_string",
-    "href": "slides/Topic4.html#using-py_run_string",
-    "title": "Short Course on R Tools",
-    "section": "🧩 Using py_run_string()",
-    "text": "🧩 Using py_run_string()\n\n\nExecutes the string in the shared Python session\nVariables created in Python are not added to R environment\nAccess Python variables in R using py$\n\n\n\npy_run_string(\"\ndef square(x):\n    return x ** 2\ny = 5\n\")\npy$y\n\n\n[1] 5\n\n\npy$square(4)\n\n\n[1] 16",
-    "crumbs": [
-      "Slides",
-      "Python in R"
-    ]
-  },
-  {
-    "objectID": "slides/Topic4.html#automatic-data-conversion",
-    "href": "slides/Topic4.html#automatic-data-conversion",
-    "title": "Short Course on R Tools",
-    "section": "🔁 Automatic Data Conversion",
-    "text": "🔁 Automatic Data Conversion\n\n\n\n\n\n\n\n\n\nR Object Type\nPython Equivalent\nNotes\n\n\n\n\nnumeric, integer\nfloat, int\nScalars or arrays\n\n\nlogical\nbool\nTRUE → True\n\n\ncharacter\nstr or list[str]\nVectorized strings → list\n\n\nvector, matrix\nnumpy.ndarray\nShape preserved\n\n\ndata.frame\npandas.DataFrame\nColumn types preserved\n\n\nlist (named)\ndict\nKeys from names\n\n\nlist (unnamed)\nlist\nSequential list\n\n\nNULL\nNone\n\n\n\nfunction (closure)\nPython callable\nIf inputs/outputs are convertible\n\n\nfunction (builtin)\n❌ PyCapsule\n⚠️ not callable in Python\n\n\nS3/S4/R6 objects\n❌ PyCapsule\n⚠️ Not convertible",
-    "crumbs": [
-      "Slides",
-      "Python in R"
-    ]
-  },
-  {
-    "objectID": "slides/Topic4.html#accessing-r-objects-from-python",
-    "href": "slides/Topic4.html#accessing-r-objects-from-python",
-    "title": "Short Course on R Tools",
-    "section": "Accessing R Objects from Python",
-    "text": "Accessing R Objects from Python\n🔍 Example: Let two following objects have been defined in R global environment:\nlibrary(reticulate)\nx &lt;- c(10, 20, 30)\nf &lt;- function(x) x^2\n\nIn Python we can access to these objects trough r object:\nprint(r.x)      \n[10, 20, 30]\nprint(r.f(3))  \n\n\n9",
-    "crumbs": [
-      "Slides",
-      "Python in R"
-    ]
-  },
-  {
-    "objectID": "slides/Topic4.html#exporting-r-objects-to-python",
-    "href": "slides/Topic4.html#exporting-r-objects-to-python",
-    "title": "Short Course on R Tools",
-    "section": "Exporting R Objects to Python",
-    "text": "Exporting R Objects to Python\nUse py$ assignment. In R:\nlibrary(reticulate)\nx &lt;- c(1, 2, 3)\npy$x &lt;- x        # Exports `x` to Python namespace\nf &lt;- function(n) n^2\npy$f &lt;- f        # Exports R function to Python\n\nNow usable from Python:\nprint(x) \n\n\n[1, 2, 3]\n\n\nprint(f(5))\n\n\n[1] 25",
-    "crumbs": [
-      "Slides",
-      "Python in R"
-    ]
-  },
-  {
-    "objectID": "slides/Topic4.html#exporting-r-closure-functions-to-python",
-    "href": "slides/Topic4.html#exporting-r-closure-functions-to-python",
-    "title": "Short Course on R Tools",
-    "section": "Exporting R Closure Functions to Python",
-    "text": "Exporting R Closure Functions to Python\nA closure in R is simply a user-defined function created with the function() keyword. It’s the most common type of function in R.\n✅ A closure fnction Works directly. In R:\npy$m &lt;- mean\ntypeof(mean) \n\n[1] \"closure\"\n\n\nIn Python:\nprint(m([1, 2, 3, 4, 5]))     \n\n\n3",
-    "crumbs": [
-      "Slides",
-      "Python in R"
-    ]
-  },
-  {
-    "objectID": "slides/Topic4.html#exporting-r-builtin-functions-to-python",
-    "href": "slides/Topic4.html#exporting-r-builtin-functions-to-python",
-    "title": "Short Course on R Tools",
-    "section": "Exporting R Builtin Functions to Python",
-    "text": "Exporting R Builtin Functions to Python\nBuilt-in functions in R are functions implemented in C (compiled) and embedded directly into the R interpreter.\n⚠️ Builtin function needs wrapping. For example:\ntypeof(exp) # return \"builtin\"\npy$e &lt;- exp\n\nIn Python:\nprint(e(1))     \n\n\nTypeError: 'PyCapsule' object is not callable\n\n\n✅ Solution: Wrap the builtin in a closure\ne &lt;- function(x) exp(x)\npy$e &lt;- e\n\n\nIn Python:\nprint(e(1))  # ✅ Returns 2.718",
-    "crumbs": [
-      "Slides",
-      "Python in R"
-    ]
-  },
-  {
-    "objectID": "slides/Topic4.html#demo-python-from-r-in-rstudio",
-    "href": "slides/Topic4.html#demo-python-from-r-in-rstudio",
-    "title": "Short Course on R Tools",
-    "section": "🎥 Demo: Python from R in RStudio",
-    "text": "🎥 Demo: Python from R in RStudio",
-    "crumbs": [
-      "Slides",
-      "Python in R"
-    ]
-  },
-  {
-    "objectID": "slides/Topic4.html#create-a-python-class-and-use-it-in-r",
-    "href": "slides/Topic4.html#create-a-python-class-and-use-it-in-r",
-    "title": "Short Course on R Tools",
-    "section": "🧩 Create a Python class and use it in R",
-    "text": "🧩 Create a Python class and use it in R\nYou can define a Python class (e.g., a neural network in PyTorch) and interact with it from R using reticulate.\n\n🧪 Python File: simple_net.py\nimport torch.nn as nn\n\nclass SimpleNet(nn.Module):\n    def __init__(self, n_input):\n        super().__init__()\n        self.fc = nn.Linear(n_input, 1)\n\n    def forward(self, x):\n        return self.fc(x)",
-    "crumbs": [
-      "Slides",
-      "Python in R"
-    ]
-  },
-  {
-    "objectID": "slides/Topic4.html#section",
-    "href": "slides/Topic4.html#section",
-    "title": "Short Course on R Tools",
-    "section": "",
-    "text": "🖥️ R Code to Load and Use the Python Class:\nlibrary(reticulate)\ntorch &lt;- import(\"torch\")\nsource_python(\"simple_net.py\")\n\n# Create model instance\nmodel &lt;- SimpleNet(5L)\n\n# Create input tensor (2 samples, 5 features)\ntorch$manual_seed(42L)\nx &lt;- torch$randn(c(2L, 5L))\n# Or:\n# set.seed(42)\n# x &lt;- torch$tensor(matrix(rnorm(10),nrow=2),detype=torch$float32)\n\n# Forward pass\noutput &lt;- model(x)\nprint(output)\n\ntensor([[-0.0285],\n        [-0.4532]], grad_fn=&lt;AddmmBackward0&gt;)",
-    "crumbs": [
-      "Slides",
-      "Python in R"
-    ]
-  },
-  {
-    "objectID": "slides/Topic4.html#project-structure",
-    "href": "slides/Topic4.html#project-structure",
-    "title": "Short Course on R Tools",
-    "section": "📂 Project Structure",
-    "text": "📂 Project Structure\nproject/\n├── model.py # Python torch model  \n├── train.py # Python training code \n├── cnn_model.pth # Saved PyTorch weights \n└── test_images/ # A few PNGs from MNIST test set",
-    "crumbs": [
-      "Slides",
-      "Python in R"
-    ]
-  },
-  {
-    "objectID": "slides/Topic4.html#python-model.py",
-    "href": "slides/Topic4.html#python-model.py",
-    "title": "Short Course on R Tools",
-    "section": "🐍 Python: model.py",
-    "text": "🐍 Python: model.py\nimport torch.nn as nn\nimport torch.nn.functional as F\n\nclass SimpleCNN(nn.Module):\n    def __init__(self):\n        super(SimpleCNN, self).__init__()\n        self.conv1_layer = nn.Conv2d(1, 16, kernel_size=3, padding=1)\n        self.conv2_layer = nn.Conv2d(16, 32, kernel_size=3, padding=1)\n        self.fc1_layer = nn.Linear(32 * 7 * 7, 128)\n        self.fc2_layer = nn.Linear(128, 10)\n\n    def forward(self, inputs):\n        x = F.relu(self.conv1_layer(inputs))\n        x = F.max_pool2d(x, kernel_size=2, stride=2)\n        x = F.relu(self.conv2_layer(x))\n        x = F.max_pool2d(x, kernel_size=2, stride=2)\n        x = x.view(-1, 32 * 7 * 7)\n        x = F.relu(self.fc1_layer(x))\n        x = self.fc2_layer(x)\n        return x",
-    "crumbs": [
-      "Slides",
-      "Python in R"
-    ]
-  },
-  {
-    "objectID": "slides/Topic4.html#mnist-dataset",
-    "href": "slides/Topic4.html#mnist-dataset",
-    "title": "Short Course on R Tools",
-    "section": "MNIST Dataset",
-    "text": "MNIST Dataset",
-    "crumbs": [
-      "Slides",
-      "Python in R"
-    ]
-  },
-  {
-    "objectID": "slides/Topic4.html#python-training-saving",
-    "href": "slides/Topic4.html#python-training-saving",
-    "title": "Short Course on R Tools",
-    "section": "🐍 Python: Training & Saving",
-    "text": "🐍 Python: Training & Saving\nimport torch\nimport torch.nn as nn\nimport torch.optim as optim\nimport torchvision\nimport torchvision.transforms as transforms\nfrom torch.utils.data import DataLoader\nfrom model import SimpleCNN\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n\ndata_transform = transforms.Compose([\n    transforms.ToTensor(),\n    transforms.Normalize((0.5,), (0.5,))\n])\n\ntrain_dataset = torchvision.datasets.MNIST(root='./data', train=True, transform=data_transform, download=False)\ntest_dataset = torchvision.datasets.MNIST(root='./data', train=False, transform=data_transform, download=False)\n\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n\ncnn_model = SimpleCNN().to(device)\nloss_func = nn.CrossEntropyLoss()\noptimizer = optim.Adam(cnn_model.parameters(), lr=0.001)\n\nfor epoch in range(5):\n    cnn_model.train()\n    running_loss = 0.0\n    for inputs, labels in train_loader:\n        inputs, labels = inputs.to(device), labels.to(device)\n        optimizer.zero_grad()\n        outputs = cnn_model(inputs)\n        loss = loss_func(outputs, labels)\n        loss.backward()\n        optimizer.step()\n        running_loss += loss.item()\n    print(f\"Epoch {epoch+1}, Loss: {running_loss / len(train_loader):.4f}\")\n\ncnn_model.eval()\ncorrect_predictions = 0\ntotal_samples = 0\nwith torch.no_grad():\n    for inputs, labels in test_loader:\n        inputs, labels = inputs.to(device), labels.to(device)\n        outputs = cnn_model(inputs)\n        _, predicted_labels = torch.max(outputs, 1)\n        total_samples += labels.size(0)\n        correct_predictions += (predicted_labels == labels).sum().item()\n\naccuracy = 100 * correct_predictions / total_samples\nprint(f\"Accuracy of test set: {accuracy:.2f}%\")\ntorch.save(cnn_model.state_dict(), 'cnn_model.pth')",
-    "crumbs": [
-      "Slides",
-      "Python in R"
-    ]
-  },
-  {
-    "objectID": "slides/Topic4.html#r-load-the-python-model",
-    "href": "slides/Topic4.html#r-load-the-python-model",
-    "title": "Short Course on R Tools",
-    "section": "🔗 R: Load the Python Model",
-    "text": "🔗 R: Load the Python Model\nlibrary(reticulate)\ntorch &lt;- import(\"torch\")\nImage &lt;- import(\"PIL.Image\", convert = FALSE)\nplt &lt;- import(\"matplotlib.pyplot\")\ntransforms &lt;- import(\"torchvision.transforms\", convert = TRUE)\nos &lt;- import(\"os\")\n\nsource_python(\"model.py\") # Loads SimpleCNN\n\ndevice &lt;- torch$device(\"cpu\")\nmodel &lt;- SimpleCNN()$to(device)\nmodel$load_state_dict(torch$load(\"cnn_model.pth\", map_location = device))\nmodel$eval()",
-    "crumbs": [
-      "Slides",
-      "Python in R"
-    ]
-  },
-  {
-    "objectID": "slides/Topic4.html#preprocess-predict-in-r",
-    "href": "slides/Topic4.html#preprocess-predict-in-r",
-    "title": "Short Course on R Tools",
-    "section": "🖼 Preprocess & Predict in R",
-    "text": "🖼 Preprocess & Predict in R\ntransform &lt;- transforms$Compose(list(\n  transforms$Grayscale(),\n  transforms$Resize(tuple(28L, 28L)),\n  transforms$ToTensor(),\n  transforms$Normalize(tuple(0.5), tuple(0.5))\n))\n\nimage_dir &lt;- \"test_images\"\nimage_files &lt;- sort(Filter(function(f) endsWith(f, \".png\"), os$listdir(image_dir)))\n\nplt$figure(figsize = tuple(10, 3))\nwith(torch$no_grad(), {\n  for (idx in seq_along(image_files)) {\n    image &lt;- Image$open(file.path(image_dir, image_files[[idx]]))\n    input_tensor &lt;- transform(image)$unsqueeze(0L)$to(device)\n    output &lt;- model(input_tensor)\n    predicted_label &lt;- torch$argmax(output, dim = 1L)$item()\n    plt$subplot(1L, length(image_files), idx)\n    plt$imshow(image$convert(\"L\"), cmap = \"gray\")\n    plt$title(sprintf(\"Predicted: %s\", predicted_label))\n    plt$axis(\"off\")\n  }\n})\nplt$tight_layout()\nplt$show()",
-    "crumbs": [
-      "Slides",
-      "Python in R"
-    ]
-  },
-  {
-    "objectID": "slides/Topic4.html#prediction-plot",
-    "href": "slides/Topic4.html#prediction-plot",
-    "title": "Short Course on R Tools",
-    "section": "Prediction plot",
-    "text": "Prediction plot",
-    "crumbs": [
-      "Slides",
-      "Python in R"
-    ]
-  },
-  {
-    "objectID": "slides/Topic3.html#outline",
-    "href": "slides/Topic3.html#outline",
-    "title": "Short Course on R Tools",
-    "section": "Outline",
-    "text": "Outline\n\n\nMotivation & Introduction\nGetting Started with evalCpp() & cppFunction()\nUsing sourceCpp()\nData Types & Conversions\nStandard Template Library (STL)\nUsing Rcpp in Packages\nAdvanced Topics & Resources",
-    "crumbs": [
-      "Slides",
-      "RCpp"
-    ]
-  },
-  {
-    "objectID": "slides/Topic3.html#basic-usage-evalcpp",
-    "href": "slides/Topic3.html#basic-usage-evalcpp",
-    "title": "Short Course on R Tools",
-    "section": "Basic Usage: evalCpp()",
-    "text": "Basic Usage: evalCpp()\n\nevalCpp() evaluates a single C++ expression. Includes and dependencies can be declared.\nThis allows us to quickly check C++ constructs.\n\nlibrary(Rcpp)\n\nevalCpp(\"2 + 2\")  # simple test\n&gt;# [1] 4\n\nevalCpp(\"std::numeric_limits&lt;double&gt;::max()\")\n&gt;# [1] 1.79769e+308",
-    "crumbs": [
-      "Slides",
-      "RCpp"
-    ]
-  },
-  {
-    "objectID": "slides/Topic3.html#simple-example---using-cppfunction",
-    "href": "slides/Topic3.html#simple-example---using-cppfunction",
-    "title": "Short Course on R Tools",
-    "section": "Simple Example - Using cppFunction()",
-    "text": "Simple Example - Using cppFunction()\n\nRcpp Version of ‘is this number odd or even’\n\nRcpp::cppFunction(\"\nbool isOdd_cpp(int num = 10) {\n  bool result = (num % 2 == 1);\n  return result;\n}\")\nc(isOdd_cpp(42L), isOdd_cpp(43L))\n&gt;# [1] FALSE TRUE\n\n\nUse cppFunction() in R console or script\nFast prototyping & testing\nGood for small functions",
-    "crumbs": [
-      "Slides",
-      "RCpp"
-    ]
-  },
-  {
-    "objectID": "slides/Topic3.html#second-example-var1-1",
-    "href": "slides/Topic3.html#second-example-var1-1",
-    "title": "Short Course on R Tools",
-    "section": "Second Example: VAR(1)",
-    "text": "Second Example: VAR(1)\nIn R (C++) code, given both the coefficient and error matrices:\n\nrSim &lt;- function(B, E) {\n  X &lt;- matrix(0, nrow(E), ncol(E))\n  for (r in 2:nrow(E)) {\n    X[r, ] = X[r-1, ] %*% B + E[r, ]\n  }\n  return(X)\n}\n\n\nC++ Version:\n\narma::mat cppSim(arma::mat B, arma::mat E) {\n  int m = E.n_rows, n = E.n_cols;\n  arma::mat X(m, n);\n  X.row(0) = arma::zeros&lt;arma::mat&gt;(1, n);\n  for (int r = 1; r &lt; m; r++) {\n    X.row(r) = X.row(r-1) * B + E.row(r);\n  }\n  return X;\n}",
-    "crumbs": [
-      "Slides",
-      "RCpp"
-    ]
-  },
-  {
-    "objectID": "slides/Topic3.html#second-example-var1-2",
-    "href": "slides/Topic3.html#second-example-var1-2",
-    "title": "Short Course on R Tools",
-    "section": "Second Example: VAR(1)",
-    "text": "Second Example: VAR(1)\n\nRcpp::cppFunction('arma::mat cppSim(arma::mat B, arma::mat E) {\n  int m = E.n_rows, n = E.n_cols;\n  arma::mat X(m, n);\n  X.row(0) = arma::zeros&lt;arma::mat&gt;(1, n);\n  for (int r = 1; r &lt; m; r++) {\n    X.row(r) = X.row(r-1) * B + E.row(r);\n  }\n  return X;\n}', depends=\"RcppArmadillo\")\n\na &lt;- matrix(c(0.5, 0.1, 0.1, 0.5), nrow = 2)\ne &lt;- matrix(rnorm(10000), ncol = 2)\nrbenchmark::benchmark(cppSim(a, e), rSim(a, e), order=\"relative\")[, 1:4]\n\n&gt;#    test           replications elapsed relative\n&gt;# 1  cppSim(a, e)  100         0.010   1.0\n&gt;# 2  rSim(a, e)    100         0.728  72.8",
-    "crumbs": [
-      "Slides",
-      "RCpp"
-    ]
-  },
-  {
-    "objectID": "slides/Topic3.html#pagerank",
-    "href": "slides/Topic3.html#pagerank",
-    "title": "Short Course on R Tools",
-    "section": "Pagerank",
-    "text": "Pagerank\n#remotes::install_github(\"https://github.com/andrie/pagerank.git\")\nsuppressMessages(library(utils))\nlibrary(pagerank)\n\ncran &lt;- \"https://cloud.r-project.org\"\npr &lt;- compute_pagerank(cran)\nround(100 * pr[1:5], 3)\n\n&gt;#   Rcpp    ggplot2     dplyr      MASS   magrittr\n&gt;# 2.744     1.516       1.274    1.122    0.814",
-    "crumbs": [
-      "Slides",
-      "RCpp"
-    ]
-  },
-  {
-    "objectID": "slides/Topic3.html#percentage-of-compiled-packages",
-    "href": "slides/Topic3.html#percentage-of-compiled-packages",
-    "title": "Short Course on R Tools",
-    "section": "Percentage of Compiled Packages",
-    "text": "Percentage of Compiled Packages\ndb &lt;- tools::CRAN_package_db()       # added in R 3.4.0\ndb &lt;- db[!duplicated(db[, 1]), ]     # rows: number of packages\n\nnTot &lt;- nrow(db)                     # columns: different attributes\nnRcpp &lt;- length(tools::dependsOnPkgs(\"Rcpp\", recursive = FALSE, installed = db))\nnCompiled &lt;- table(db[, \"NeedsCompilation\"])[[\"yes\"]]\n\npropRcpp &lt;- nRcpp / nCompiled * 100\ndata.frame(tot = nTot, totRcpp = nRcpp, totCompiled = nCompiled,\n           RcppPctOfCompiled = propRcpp)\n\n&gt;#   tot   totRcpp   totCompiled   RcppPctOfCompiled\n&gt;# 1 22501    3053        4981          61.29291",
-    "crumbs": [
-      "Slides",
-      "RCpp"
-    ]
-  },
-  {
-    "objectID": "slides/Topic3.html#using-sourcecpp",
-    "href": "slides/Topic3.html#using-sourcecpp",
-    "title": "Short Course on R Tools",
-    "section": "Using sourceCpp()",
-    "text": "Using sourceCpp()\n\n\nSo what just happened?\n\nWe defined a simple C++ function\n\nIt operates on a numeric vector argument\n\nWe ask Rcpp to ‘source it’ for us\n\nBehind the scenes Rcpp creates a wrapper\n\nRcpp then compiles, links, and loads the wrapper\n\nThe function is available in R under its C++ name\n\nBenefits:\n\nEditor support (syntax highlighting)\nEasier debugging & error tracking",
-    "crumbs": [
-      "Slides",
-      "RCpp"
-    ]
-  },
-  {
-    "objectID": "slides/Topic3.html#another-example-timing-r-implementation",
-    "href": "slides/Topic3.html#another-example-timing-r-implementation",
-    "title": "Short Course on R Tools",
-    "section": "Another Example: Timing R Implementation",
-    "text": "Another Example: Timing R Implementation\n\nThe R implementation:\n\n\nf &lt;- function(n) {\n  if (n &lt; 2) return(n)\n  return(f(n - 1) + f(n - 2))\n}\n\n\n\nTiming:\n\nlibrary(rbenchmark)\nbenchmark(f(15), f(20), f(25))[, 1:4]\n\n&gt;# test         replications elapsed   relative\n&gt;# 1 f(15)       100          0.06      1.0\n&gt;# 2 f(20)       100          0.75     12.5\n&gt;# 3 f(25)       100          7.92    132.0",
-    "crumbs": [
-      "Slides",
-      "RCpp"
-    ]
-  },
-  {
-    "objectID": "slides/Topic3.html#another-example-c-implementation",
-    "href": "slides/Topic3.html#another-example-c-implementation",
-    "title": "Short Course on R Tools",
-    "section": "Another Example: C++ Implementation",
-    "text": "Another Example: C++ Implementation\nint g(int n) {\n  if (n &lt; 2) return(n);\n  return(g(n - 1) + g(n - 2));\n}\n\nRcpp::cppFunction('\n  int g(int n) {\n    if (n &lt; 2) return(n);\n    return(g(n - 1) + g(n - 2)); \n  }')\n\nsapply(0:10, g)  # Using it on first 11 arguments\n\n&gt;# [1] 0 1 1 2 3 5 8 13 21 34 55",
-    "crumbs": [
-      "Slides",
-      "RCpp"
-    ]
-  },
-  {
-    "objectID": "slides/Topic3.html#another-example-comparing-timing",
-    "href": "slides/Topic3.html#another-example-comparing-timing",
-    "title": "Short Course on R Tools",
-    "section": "Another Example: Comparing Timing",
-    "text": "Another Example: Comparing Timing\n\nRcpp implementation:\n\n\nRcpp::cppFunction('\n  int g(int n) {\n    if (n &lt; 2) return(n);\n    return(g(n - 1) + g(n - 2)); \n  }')\n\n\n\nTiming:\n\nlibrary(rbenchmark)\nbenchmark(f(25), g(25))[, 1:4]\n\n&gt;#   test      replications elapsed   relative\n&gt;# 1 f(25)      100          8.02     267.333\n&gt;# 2 g(25)      100          0.03       1.000\n\n\n\nA nice gain of a few orders of magnitude.",
-    "crumbs": [
-      "Slides",
-      "RCpp"
-    ]
-  },
-  {
-    "objectID": "slides/Topic3.html#types",
-    "href": "slides/Topic3.html#types",
-    "title": "Short Course on R Tools",
-    "section": "Types",
-    "text": "Types\nR Type mapping:\n\nStandard R types (integer, numeric, list, function, … and compound objects) are mapped to corresponding C++ types:\n\nlibrary(Rcpp)\ncppFunction(\"NumericVector logabs(NumericVector x) {\n  return log(abs(x));\n}\")\nlogabs(seq(-5, 5, by = 2))\n&gt;# [1] 1.609438 1.098612 0.000000 0.000000 1.098612 1.609438\n\n\nVectorized C++! Here log(abs()) runs directly on vectors as R would.",
-    "crumbs": [
-      "Slides",
-      "RCpp"
-    ]
-  },
-  {
-    "objectID": "slides/Topic3.html#stl-type-mapping",
-    "href": "slides/Topic3.html#stl-type-mapping",
-    "title": "Short Course on R Tools",
-    "section": "STL Type Mapping",
-    "text": "STL Type Mapping\n\ncode/logabs2.cpp\n\n\n#include &lt;Rcpp.h&gt;\nusing namespace Rcpp;\n\ninline double f(double x) { return ::log(::fabs(x)); }\n\n// [[Rcpp::export]]\nstd::vector&lt;double&gt; logabs2(std::vector&lt;double&gt; x) {\n  std::transform(x.begin(), x.end(), x.begin(), f);\n  return x;\n}\n\nNot vectorized but ‘sweeps’ f() along std::vector&lt;double&gt; via STL std::transform().\n\nlibrary(Rcpp)\nsourceCpp(\"code/logabs2.cpp\")\nlogabs2(seq(-5, 5, by = 2))\n&gt;# [1] 1.609438 1.098612 0.000000 0.000000 1.098612 1.609438",
-    "crumbs": [
-      "Slides",
-      "RCpp"
-    ]
-  },
-  {
     "objectID": "slides/Topic6.html#what-happens-after-submission",
     "href": "slides/Topic6.html#what-happens-after-submission",
     "title": "Short Course on R Tools",
@@ -2228,5 +1899,313 @@
       "Slides",
       "GitHub / CRAN submission"
     ]
+  },
+  {
+    "objectID": "slides/old/Topic1.html#basics",
+    "href": "slides/old/Topic1.html#basics",
+    "title": "Short Course on R Tools",
+    "section": "Basics",
+    "text": "Basics\n\nAn S3 object is a base type with at least a class attribute\n\n\nf &lt;- factor(c(\"a\", \"b\", \"b\"))\nf\n#&gt; [1] a b b\n#&gt; Levels: a b\nattributes(f)\n#&gt; $levels\n#&gt; [1] \"a\" \"b\"\n#&gt; \n#&gt; $class\n#&gt; [1] \"factor\"\nunclass(f)\n#&gt; [1] 1 2 2\n#&gt; attr(,\"levels\")\n#&gt; [1] \"a\" \"b\"\n\ntime &lt;- strptime(c(\"2017-01-01\", \"2020-05-04 03:21\"), \"%Y-%m-%d\")\nstr(time)\n#&gt;  POSIXlt[1:2], format: \"2017-01-01\" \"2020-05-04\"\n\nclass(time) &lt;- NULL\nstr(time)\n#&gt; List of 11\n#&gt;  $ sec   : num [1:2] 0 0\n#&gt;  $ min   : int [1:2] 0 0\n#&gt;  $ hour  : int [1:2] 0 0\n#&gt;  $ mday  : int [1:2] 1 4\n#&gt;  $ mon   : int [1:2] 0 4\n#&gt;  $ year  : int [1:2] 117 120\n#&gt;  $ wday  : int [1:2] 0 1\n#&gt;  $ yday  : int [1:2] 0 124\n#&gt;  $ isdst : int [1:2] 0 0\n#&gt;  $ zone  : chr [1:2] \"UTC\" \"UTC\"\n#&gt;  $ gmtoff: int [1:2] 0 0\n#&gt;  - attr(*, \"tzone\")= chr \"UTC\"\n#&gt;  - attr(*, \"balanced\")= logi TRUE"
+  },
+  {
+    "objectID": "slides/old/Topic1.html#classes",
+    "href": "slides/old/Topic1.html#classes",
+    "title": "Short Course on R Tools",
+    "section": "Classes",
+    "text": "Classes\n# Create and assign class in one step\nx &lt;- structure(list(), class = \"my_class\")\n\n# Create, then set class\nx &lt;- list()\nclass(x) &lt;- \"my_class\"\n\nclass(x)\n#&gt; [1] \"my_class\"\ninherits(x, \"my_class\")\n#&gt; [1] TRUE\ninherits(x, \"your_class\")\n#&gt; [1] FALSE\n\n\nR doesn’t stop you from shooting yourself in the foot, but as long as you don’t aim the gun at your toes and pull the trigger, you won’t have a problem."
+  },
+  {
+    "objectID": "slides/old/Topic1.html#classes---common-practice",
+    "href": "slides/old/Topic1.html#classes---common-practice",
+    "title": "Short Course on R Tools",
+    "section": "Classes - Common Practice",
+    "text": "Classes - Common Practice\nTo avoid foot-bullet intersections when creating your own class, you may:\n\n\nA low-level constructor, new_myclass(), that efficiently creates new objects with the correct structure.\nA validator, validate_myclass(), that performs more computationally expensive checks to ensure that the object has correct values.\nA user-friendly helper, myclass(), that provides a convenient way for others to create objects of your class."
+  },
+  {
+    "objectID": "slides/old/Topic1.html#classes---example",
+    "href": "slides/old/Topic1.html#classes---example",
+    "title": "Short Course on R Tools",
+    "section": "Classes - Example",
+    "text": "Classes - Example\n\n## 1. Low‐level constructor: assume inputs are ok\nnew_myclass &lt;- function(values = numeric(), unit = character(1)) {\n  # no checks here beyond base‐R stopifnot\n  stopifnot(is.numeric(values), is.character(unit), length(unit) == 1)\n  structure(\n    list(values = values, unit = unit),\n    class = \"myclass\"\n  )\n}\n\n## 2. Validator: more thorough checks\nvalidate_myclass &lt;- function(x) {\n  if (!inherits(x, \"myclass\")) {\n    stop(\"`x` must be a 'myclass' object.\", call. = FALSE)\n  }\n  if (!is.numeric(x$values)) {\n    stop(\"`values` must be numeric.\", call. = FALSE)\n  }\n  if (any(is.na(x$values))) {\n    stop(\"`values` must not contain NA.\", call. = FALSE)\n  }\n  if (!is.character(x$unit) || length(x$unit) != 1) {\n    stop(\"`unit` must be a single character string.\", call. = FALSE)\n  }\n  TRUE\n}\n\n## (Optional) a simple print method\nprint.myclass &lt;- function(x, ...) {\n  cat(\"&lt;myclass&gt;  \", length(x$values), \"values [unit = \", x$unit, \"]\\n\", sep = \"\")\n  print(x$values)\n  invisible(x)\n}\n\n## 3. User‐facing helper: coerce/check inputs, then build + validate\nmyclass &lt;- function(values, unit = \"unitless\") {\n  # quick checks / coercions:\n  if (!is.numeric(values)) {\n    values &lt;- as.numeric(values)\n    if (any(is.na(values))) stop(\"`values` could not be coerced to numeric.\", call. = FALSE)\n  }\n  if (!is.character(unit) || length(unit) != 1) {\n    stop(\"`unit` must be a single character string.\", call. = FALSE)\n  }\n  # build & validate\n  obj &lt;- new_myclass(values = values, unit = unit)\n  validate_myclass(obj)\n  obj\n}\n\n## --- Example usage ---\nx &lt;- myclass(c(1.1, 2.2, 3.3), unit = \"kg\")\nprint(x)\n#&gt; &lt;myclass&gt; 3 values [unit = kg]\n#&gt; [1] 1.1 2.2 3.3\n\n# This will error because of an NA:\n# myclass(c(1, NA, 3))"
+  },
+  {
+    "objectID": "slides/old/Topic1.html#generics-and-methods---method-dispatch",
+    "href": "slides/old/Topic1.html#generics-and-methods---method-dispatch",
+    "title": "Short Course on R Tools",
+    "section": "Generics and Methods - Method Dispatch",
+    "text": "Generics and Methods - Method Dispatch\nView(print)\n#&gt; function (x, ...) \n#&gt; UseMethod(\"print\")\n\nftype(print)\n#&gt; [1] \"S3\"      \"generic\"\nftype(print.factor)\n#&gt; [1] \"S3\"     \"method\"\n\ns3_dispatch(print(f))\n#&gt; =&gt; print.factor\n#&gt;  * print.default\ns3_dispatch(print(unclass(f)))\n#&gt;    print.integer\n#&gt;    print.numeric\n#&gt; =&gt; print.default"
+  },
+  {
+    "objectID": "slides/old/Topic1.html#finding-methods",
+    "href": "slides/old/Topic1.html#finding-methods",
+    "title": "Short Course on R Tools",
+    "section": "Finding methods",
+    "text": "Finding methods\ns3_methods_generic(\"mean\")\n#&gt; # A tibble: 7 × 4\n#&gt;   generic class      visible source             \n#&gt;   &lt;chr&gt;   &lt;chr&gt;      &lt;lgl&gt;   &lt;chr&gt;              \n#&gt; 1 mean    Date       TRUE    base               \n#&gt; 2 mean    default    TRUE    base               \n#&gt; 3 mean    difftime   TRUE    base               \n#&gt; 4 mean    POSIXct    TRUE    base               \n#&gt; 5 mean    POSIXlt    TRUE    base               \n#&gt; 6 mean    quosure    FALSE   registered S3method\n#&gt; 7 mean    vctrs_vctr FALSE   registered S3method\n\ns3_methods_class(\"funts\")\n#&gt; # A tibble: 7 × 4\n#&gt;   generic class visible source             \n#&gt;   &lt;chr&gt;   &lt;chr&gt; &lt;lgl&gt;   &lt;chr&gt;              \n#&gt; 1 -       funts FALSE   registered S3method\n#&gt; 2 *       funts FALSE   registered S3method\n#&gt; 3 [       funts FALSE   registered S3method\n#&gt; 4 +       funts FALSE   registered S3method\n#&gt; 5 length  funts FALSE   registered S3method\n#&gt; 6 plot    funts FALSE   registered S3method\n#&gt; 7 print   funts FALSE   registered S3method"
+  },
+  {
+    "objectID": "slides/old/Topic1.html#creating-methods",
+    "href": "slides/old/Topic1.html#creating-methods",
+    "title": "Short Course on R Tools",
+    "section": "Creating methods",
+    "text": "Creating methods\n\n\nmean.myclass &lt;- function(x, ...) {\n  print(\"custom mean\")\n}\n\nmean(x)\n\n[1] \"custom mean\"\n\n\n\n\n\n\nA method must have the same arguments as its generic. This is enforced in packages by R CMD check.\n\n\n\n\n\nThere is one exception to this rule: if the generic has ..., the method can contain a superset of the arguments. This allows methods to take arbitrary additional arguments."
+  },
+  {
+    "objectID": "slides/old/Topic1.html#inheritance",
+    "href": "slides/old/Topic1.html#inheritance",
+    "title": "Short Course on R Tools",
+    "section": "Inheritance",
+    "text": "Inheritance\nx &lt;- factor(\"a\",\"b\",\"b\")\nclass(x)\n#&gt; \"factor\"\n\nclass(ordered(x))\n#&gt; \"ordered\" \"factor\"\n\ns3_dispatch(print(ordered(x)))\n#&gt;    print.ordered\n#&gt; =&gt; print.factor\n#&gt;  * print.default\n\ns3_dispatch(ordered(x)[1])\n#&gt;    [.ordered\n#&gt; =&gt; [.factor\n#&gt;    [.default\n#&gt; -&gt; [ (internal)\n\n\nWe’ll say that ordered is a subclass of factor and factor is a superclass of ordered."
+  },
+  {
+    "objectID": "slides/old/Topic1.html#inheritance-cont.",
+    "href": "slides/old/Topic1.html#inheritance-cont.",
+    "title": "Short Course on R Tools",
+    "section": "Inheritance Cont.",
+    "text": "Inheritance Cont.\n\nnew_secret &lt;- function(x = double()) {\n  stopifnot(is.double(x))\n  structure(x, class = \"secret\")\n}\n\nprint.secret &lt;- function(x, ...) {\n  print(strrep(\"x\", nchar(x)))\n  invisible(x)\n}\n\nx &lt;- new_secret(c(15, 1, 456))\nx\n#&gt; [1] \"xx\"  \"x\"   \"xxx\"\n\ns3_dispatch(x[1])\n#&gt;    [.secret\n#&gt;    [.default\n#&gt; =&gt; [ (internal)\n\nx[1]\n#&gt; [1] 15\n\n\n\nTo fix this, we need to provide a [.secret method."
+  },
+  {
+    "objectID": "slides/old/Topic1.html#inheritance-cont.---nextmethod",
+    "href": "slides/old/Topic1.html#inheritance-cont.---nextmethod",
+    "title": "Short Course on R Tools",
+    "section": "Inheritance Cont. - NextMethod()",
+    "text": "Inheritance Cont. - NextMethod()\n\n`[.secret` &lt;- function(x, i) {\n  x &lt;- unclass(x)\n  new_secret(x[i])\n}\n\nx[1]\n#&gt; [1] \"xx\"\n\n\n\nA better solution using NextMethod()\n\n\n`[.secret` &lt;- function(x, i) {\n  new_secret(NextMethod())\n}\n\nx[1]\n#&gt; [1] \"xx\"\n\ns3_dispatch(x[1])\n#&gt; =&gt; [.secret\n#&gt;    [.default\n#&gt; -&gt; [ (internal)"
+  },
+  {
+    "objectID": "slides/old/Topic1.html#generics-methods",
+    "href": "slides/old/Topic1.html#generics-methods",
+    "title": "Short Course on R Tools",
+    "section": "Generics & Methods",
+    "text": "Generics & Methods\n\n\nDefine generic:\nsetGeneric(\"greet\", function(x) standardGeneric(\"greet\"))\nDefine method:\nsetMethod(\"greet\", \"Person\", function(x) {\n  paste(\"Hello, my name is\", x@name)\n})\nExample:\ngreet(subj1)\n#&gt; [1] \"Hello, my name is Adam\""
+  },
+  {
+    "objectID": "slides/old/Topic1.html#inheritance-virtual-classes",
+    "href": "slides/old/Topic1.html#inheritance-virtual-classes",
+    "title": "Short Course on R Tools",
+    "section": "Inheritance & Virtual Classes",
+    "text": "Inheritance & Virtual Classes\n\n\nInheritance:\nsetClass(\"Employee\", contains = \"Person\",\n  slots = list(salary = \"numeric\"))\nExample:\nemp1 &lt;- new(\"Employee\", subj1, salary = 75000)\nemp1\n#&gt; An object of class \"Employee\"\n#&gt; Slot \"salary\":\n#&gt; [1] 75000\n#&gt; \n#&gt; Slot \"name\":\n#&gt; [1] \"Adam\"\n#&gt; \n#&gt; Slot \"age\":\n#&gt; [1] 30"
+  },
+  {
+    "objectID": "slides/old/Topic1.html#advanced-features",
+    "href": "slides/old/Topic1.html#advanced-features",
+    "title": "Short Course on R Tools",
+    "section": "Advanced Features",
+    "text": "Advanced Features\n\nActive bindings\nInheritance & extension\nPrivate vs public\nUse cases: GUI, stateful objects, iterative algorithms"
+  },
+  {
+    "objectID": "slides/old/Topic4.html#using-source_python",
+    "href": "slides/old/Topic4.html#using-source_python",
+    "title": "Short Course on R Tools",
+    "section": "📥 Using source_python()",
+    "text": "📥 Using source_python()\nVariables become directly available in the R global environment\n\n🔍 Example:\nConsider script.py file, includes following Python script:\ny = 2\ndef square(x):\n    return x **2\n\n\n✅ Works directly in R :\nlibrary(reticulate)\nsource_python(\"script.py\")\nsquare(4)\n\n\n[1] 16\n\n\nprint(y) \n\n\n2"
+  },
+  {
+    "objectID": "slides/old/Topic4.html#using-py_run_file",
+    "href": "slides/old/Topic4.html#using-py_run_file",
+    "title": "Short Course on R Tools",
+    "section": "📥 Using py_run_file()",
+    "text": "📥 Using py_run_file()\nAlso runs the script, but…\n\n\n❌ Does not expose functions/variables directly in R\nVariables and functions are stored in py$\n\n\n\npy_run_file(\"script.py\")\npy$square(4)\n\n\n[1] 16\n\n\nprint(py$y)\n\n\n2"
+  },
+  {
+    "objectID": "slides/old/Topic4.html#using-py_run_string",
+    "href": "slides/old/Topic4.html#using-py_run_string",
+    "title": "Short Course on R Tools",
+    "section": "🧩 Using py_run_string()",
+    "text": "🧩 Using py_run_string()\n\n\nExecutes the string in the shared Python session\nVariables created in Python are not added to R environment\nAccess Python variables in R using py$\n\n\n\npy_run_string(\"\ndef square(x):\n    return x ** 2\ny = 5\n\")\npy$y\n\n\n[1] 5\n\n\npy$square(4)\n\n\n[1] 16"
+  },
+  {
+    "objectID": "slides/old/Topic4.html#automatic-data-conversion",
+    "href": "slides/old/Topic4.html#automatic-data-conversion",
+    "title": "Short Course on R Tools",
+    "section": "🔁 Automatic Data Conversion",
+    "text": "🔁 Automatic Data Conversion\n\n\n\n\n\n\n\n\n\nR Object Type\nPython Equivalent\nNotes\n\n\n\n\nnumeric, integer\nfloat, int\nScalars or arrays\n\n\nlogical\nbool\nTRUE → True\n\n\ncharacter\nstr or list[str]\nVectorized strings → list\n\n\nvector, matrix\nnumpy.ndarray\nShape preserved\n\n\ndata.frame\npandas.DataFrame\nColumn types preserved\n\n\nlist (named)\ndict\nKeys from names\n\n\nlist (unnamed)\nlist\nSequential list\n\n\nNULL\nNone\n\n\n\nfunction (closure)\nPython callable\nIf inputs/outputs are convertible\n\n\nfunction (builtin)\n❌ PyCapsule\n⚠️ not callable in Python\n\n\nS3/S4/R6 objects\n❌ PyCapsule\n⚠️ Not convertible"
+  },
+  {
+    "objectID": "slides/old/Topic4.html#accessing-r-objects-from-python",
+    "href": "slides/old/Topic4.html#accessing-r-objects-from-python",
+    "title": "Short Course on R Tools",
+    "section": "Accessing R Objects from Python",
+    "text": "Accessing R Objects from Python\n🔍 Example: Let two following objects have been defined in R global environment:\nlibrary(reticulate)\nx &lt;- c(10, 20, 30)\nf &lt;- function(x) x^2\n\nIn Python we can access to these objects trough r object:\nprint(r.x)      \n[10, 20, 30]\nprint(r.f(3))  \n\n\n9"
+  },
+  {
+    "objectID": "slides/old/Topic4.html#exporting-r-objects-to-python",
+    "href": "slides/old/Topic4.html#exporting-r-objects-to-python",
+    "title": "Short Course on R Tools",
+    "section": "Exporting R Objects to Python",
+    "text": "Exporting R Objects to Python\nUse py$ assignment. In R:\nlibrary(reticulate)\nx &lt;- c(1, 2, 3)\npy$x &lt;- x        # Exports `x` to Python namespace\nf &lt;- function(n) n^2\npy$f &lt;- f        # Exports R function to Python\n\nNow usable from Python:\nprint(x) \n\n\n[1, 2, 3]\n\n\nprint(f(5))\n\n\n[1] 25"
+  },
+  {
+    "objectID": "slides/old/Topic4.html#exporting-r-closure-functions-to-python",
+    "href": "slides/old/Topic4.html#exporting-r-closure-functions-to-python",
+    "title": "Short Course on R Tools",
+    "section": "Exporting R Closure Functions to Python",
+    "text": "Exporting R Closure Functions to Python\nA closure in R is simply a user-defined function created with the function() keyword. It’s the most common type of function in R.\n✅ A closure fnction Works directly. In R:\npy$m &lt;- mean\ntypeof(mean) \n\n[1] \"closure\"\n\n\nIn Python:\nprint(m([1, 2, 3, 4, 5]))     \n\n\n3"
+  },
+  {
+    "objectID": "slides/old/Topic4.html#exporting-r-builtin-functions-to-python",
+    "href": "slides/old/Topic4.html#exporting-r-builtin-functions-to-python",
+    "title": "Short Course on R Tools",
+    "section": "Exporting R Builtin Functions to Python",
+    "text": "Exporting R Builtin Functions to Python\nBuilt-in functions in R are functions implemented in C (compiled) and embedded directly into the R interpreter.\n⚠️ Builtin function needs wrapping. For example:\ntypeof(exp) # return \"builtin\"\npy$e &lt;- exp\n\nIn Python:\nprint(e(1))     \n\n\nTypeError: 'PyCapsule' object is not callable\n\n\n✅ Solution: Wrap the builtin in a closure\ne &lt;- function(x) exp(x)\npy$e &lt;- e\n\n\nIn Python:\nprint(e(1))  # ✅ Returns 2.718"
+  },
+  {
+    "objectID": "slides/old/Topic4.html#demo-python-from-r-in-rstudio",
+    "href": "slides/old/Topic4.html#demo-python-from-r-in-rstudio",
+    "title": "Short Course on R Tools",
+    "section": "🎥 Demo: Python from R in RStudio",
+    "text": "🎥 Demo: Python from R in RStudio"
+  },
+  {
+    "objectID": "slides/old/Topic4.html#create-a-python-class-and-use-it-in-r",
+    "href": "slides/old/Topic4.html#create-a-python-class-and-use-it-in-r",
+    "title": "Short Course on R Tools",
+    "section": "🧩 Create a Python class and use it in R",
+    "text": "🧩 Create a Python class and use it in R\nYou can define a Python class (e.g., a neural network in PyTorch) and interact with it from R using reticulate.\n\n🧪 Python File: simple_net.py\nimport torch.nn as nn\n\nclass SimpleNet(nn.Module):\n    def __init__(self, n_input):\n        super().__init__()\n        self.fc = nn.Linear(n_input, 1)\n\n    def forward(self, x):\n        return self.fc(x)"
+  },
+  {
+    "objectID": "slides/old/Topic4.html#section",
+    "href": "slides/old/Topic4.html#section",
+    "title": "Short Course on R Tools",
+    "section": "",
+    "text": "🖥️ R Code to Load and Use the Python Class:\nlibrary(reticulate)\ntorch &lt;- import(\"torch\")\nsource_python(\"simple_net.py\")\n\n# Create model instance\nmodel &lt;- SimpleNet(5L)\n\n# Create input tensor (2 samples, 5 features)\ntorch$manual_seed(42L)\nx &lt;- torch$randn(c(2L, 5L))\n# Or:\n# set.seed(42)\n# x &lt;- torch$tensor(matrix(rnorm(10),nrow=2),detype=torch$float32)\n\n# Forward pass\noutput &lt;- model(x)\nprint(output)\n\ntensor([[-0.0285],\n        [-0.4532]], grad_fn=&lt;AddmmBackward0&gt;)"
+  },
+  {
+    "objectID": "slides/old/Topic4.html#project-structure",
+    "href": "slides/old/Topic4.html#project-structure",
+    "title": "Short Course on R Tools",
+    "section": "📂 Project Structure",
+    "text": "📂 Project Structure\nproject/\n├── model.py # Python torch model  \n├── train.py # Python training code \n├── cnn_model.pth # Saved PyTorch weights \n└── test_images/ # A few PNGs from MNIST test set"
+  },
+  {
+    "objectID": "slides/old/Topic4.html#python-model.py",
+    "href": "slides/old/Topic4.html#python-model.py",
+    "title": "Short Course on R Tools",
+    "section": "🐍 Python: model.py",
+    "text": "🐍 Python: model.py\nimport torch.nn as nn\nimport torch.nn.functional as F\n\nclass SimpleCNN(nn.Module):\n    def __init__(self):\n        super(SimpleCNN, self).__init__()\n        self.conv1_layer = nn.Conv2d(1, 16, kernel_size=3, padding=1)\n        self.conv2_layer = nn.Conv2d(16, 32, kernel_size=3, padding=1)\n        self.fc1_layer = nn.Linear(32 * 7 * 7, 128)\n        self.fc2_layer = nn.Linear(128, 10)\n\n    def forward(self, inputs):\n        x = F.relu(self.conv1_layer(inputs))\n        x = F.max_pool2d(x, kernel_size=2, stride=2)\n        x = F.relu(self.conv2_layer(x))\n        x = F.max_pool2d(x, kernel_size=2, stride=2)\n        x = x.view(-1, 32 * 7 * 7)\n        x = F.relu(self.fc1_layer(x))\n        x = self.fc2_layer(x)\n        return x"
+  },
+  {
+    "objectID": "slides/old/Topic4.html#mnist-dataset",
+    "href": "slides/old/Topic4.html#mnist-dataset",
+    "title": "Short Course on R Tools",
+    "section": "MNIST Dataset",
+    "text": "MNIST Dataset"
+  },
+  {
+    "objectID": "slides/old/Topic4.html#python-training-saving",
+    "href": "slides/old/Topic4.html#python-training-saving",
+    "title": "Short Course on R Tools",
+    "section": "🐍 Python: Training & Saving",
+    "text": "🐍 Python: Training & Saving\nimport torch\nimport torch.nn as nn\nimport torch.optim as optim\nimport torchvision\nimport torchvision.transforms as transforms\nfrom torch.utils.data import DataLoader\nfrom model import SimpleCNN\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n\ndata_transform = transforms.Compose([\n    transforms.ToTensor(),\n    transforms.Normalize((0.5,), (0.5,))\n])\n\ntrain_dataset = torchvision.datasets.MNIST(root='./data', train=True, transform=data_transform, download=False)\ntest_dataset = torchvision.datasets.MNIST(root='./data', train=False, transform=data_transform, download=False)\n\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n\ncnn_model = SimpleCNN().to(device)\nloss_func = nn.CrossEntropyLoss()\noptimizer = optim.Adam(cnn_model.parameters(), lr=0.001)\n\nfor epoch in range(5):\n    cnn_model.train()\n    running_loss = 0.0\n    for inputs, labels in train_loader:\n        inputs, labels = inputs.to(device), labels.to(device)\n        optimizer.zero_grad()\n        outputs = cnn_model(inputs)\n        loss = loss_func(outputs, labels)\n        loss.backward()\n        optimizer.step()\n        running_loss += loss.item()\n    print(f\"Epoch {epoch+1}, Loss: {running_loss / len(train_loader):.4f}\")\n\ncnn_model.eval()\ncorrect_predictions = 0\ntotal_samples = 0\nwith torch.no_grad():\n    for inputs, labels in test_loader:\n        inputs, labels = inputs.to(device), labels.to(device)\n        outputs = cnn_model(inputs)\n        _, predicted_labels = torch.max(outputs, 1)\n        total_samples += labels.size(0)\n        correct_predictions += (predicted_labels == labels).sum().item()\n\naccuracy = 100 * correct_predictions / total_samples\nprint(f\"Accuracy of test set: {accuracy:.2f}%\")\ntorch.save(cnn_model.state_dict(), 'cnn_model.pth')"
+  },
+  {
+    "objectID": "slides/old/Topic4.html#r-load-the-python-model",
+    "href": "slides/old/Topic4.html#r-load-the-python-model",
+    "title": "Short Course on R Tools",
+    "section": "🔗 R: Load the Python Model",
+    "text": "🔗 R: Load the Python Model\nlibrary(reticulate)\ntorch &lt;- import(\"torch\")\nImage &lt;- import(\"PIL.Image\", convert = FALSE)\nplt &lt;- import(\"matplotlib.pyplot\")\ntransforms &lt;- import(\"torchvision.transforms\", convert = TRUE)\nos &lt;- import(\"os\")\n\nsource_python(\"model.py\") # Loads SimpleCNN\n\ndevice &lt;- torch$device(\"cpu\")\nmodel &lt;- SimpleCNN()$to(device)\nmodel$load_state_dict(torch$load(\"cnn_model.pth\", map_location = device))\nmodel$eval()"
+  },
+  {
+    "objectID": "slides/old/Topic4.html#preprocess-predict-in-r",
+    "href": "slides/old/Topic4.html#preprocess-predict-in-r",
+    "title": "Short Course on R Tools",
+    "section": "🖼 Preprocess & Predict in R",
+    "text": "🖼 Preprocess & Predict in R\ntransform &lt;- transforms$Compose(list(\n  transforms$Grayscale(),\n  transforms$Resize(tuple(28L, 28L)),\n  transforms$ToTensor(),\n  transforms$Normalize(tuple(0.5), tuple(0.5))\n))\n\nimage_dir &lt;- \"test_images\"\nimage_files &lt;- sort(Filter(function(f) endsWith(f, \".png\"), os$listdir(image_dir)))\n\nplt$figure(figsize = tuple(10, 3))\nwith(torch$no_grad(), {\n  for (idx in seq_along(image_files)) {\n    image &lt;- Image$open(file.path(image_dir, image_files[[idx]]))\n    input_tensor &lt;- transform(image)$unsqueeze(0L)$to(device)\n    output &lt;- model(input_tensor)\n    predicted_label &lt;- torch$argmax(output, dim = 1L)$item()\n    plt$subplot(1L, length(image_files), idx)\n    plt$imshow(image$convert(\"L\"), cmap = \"gray\")\n    plt$title(sprintf(\"Predicted: %s\", predicted_label))\n    plt$axis(\"off\")\n  }\n})\nplt$tight_layout()\nplt$show()"
+  },
+  {
+    "objectID": "slides/old/Topic4.html#prediction-plot",
+    "href": "slides/old/Topic4.html#prediction-plot",
+    "title": "Short Course on R Tools",
+    "section": "Prediction plot",
+    "text": "Prediction plot"
+  },
+  {
+    "objectID": "slides/old/Topic3.html#outline",
+    "href": "slides/old/Topic3.html#outline",
+    "title": "Short Course on R Tools",
+    "section": "Outline",
+    "text": "Outline\n\n\nMotivation & Introduction\nGetting Started with evalCpp() & cppFunction()\nUsing sourceCpp()\nData Types & Conversions\nStandard Template Library (STL)\nUsing Rcpp in Packages\nAdvanced Topics & Resources"
+  },
+  {
+    "objectID": "slides/old/Topic3.html#basic-usage-evalcpp",
+    "href": "slides/old/Topic3.html#basic-usage-evalcpp",
+    "title": "Short Course on R Tools",
+    "section": "Basic Usage: evalCpp()",
+    "text": "Basic Usage: evalCpp()\n\nevalCpp() evaluates a single C++ expression. Includes and dependencies can be declared.\nThis allows us to quickly check C++ constructs.\n\nlibrary(Rcpp)\n\nevalCpp(\"2 + 2\")  # simple test\n&gt;# [1] 4\n\nevalCpp(\"std::numeric_limits&lt;double&gt;::max()\")\n&gt;# [1] 1.79769e+308"
+  },
+  {
+    "objectID": "slides/old/Topic3.html#simple-example---using-cppfunction",
+    "href": "slides/old/Topic3.html#simple-example---using-cppfunction",
+    "title": "Short Course on R Tools",
+    "section": "Simple Example - Using cppFunction()",
+    "text": "Simple Example - Using cppFunction()\n\nRcpp Version of ‘is this number odd or even’\n\nRcpp::cppFunction(\"\nbool isOdd_cpp(int num = 10) {\n  bool result = (num % 2 == 1);\n  return result;\n}\")\nc(isOdd_cpp(42L), isOdd_cpp(43L))\n&gt;# [1] FALSE TRUE\n\n\nUse cppFunction() in R console or script\nFast prototyping & testing\nGood for small functions"
+  },
+  {
+    "objectID": "slides/old/Topic3.html#second-example-var1-1",
+    "href": "slides/old/Topic3.html#second-example-var1-1",
+    "title": "Short Course on R Tools",
+    "section": "Second Example: VAR(1)",
+    "text": "Second Example: VAR(1)\nIn R (C++) code, given both the coefficient and error matrices:\n\nrSim &lt;- function(B, E) {\n  X &lt;- matrix(0, nrow(E), ncol(E))\n  for (r in 2:nrow(E)) {\n    X[r, ] = X[r-1, ] %*% B + E[r, ]\n  }\n  return(X)\n}\n\n\nC++ Version:\n\narma::mat cppSim(arma::mat B, arma::mat E) {\n  int m = E.n_rows, n = E.n_cols;\n  arma::mat X(m, n);\n  X.row(0) = arma::zeros&lt;arma::mat&gt;(1, n);\n  for (int r = 1; r &lt; m; r++) {\n    X.row(r) = X.row(r-1) * B + E.row(r);\n  }\n  return X;\n}"
+  },
+  {
+    "objectID": "slides/old/Topic3.html#second-example-var1-2",
+    "href": "slides/old/Topic3.html#second-example-var1-2",
+    "title": "Short Course on R Tools",
+    "section": "Second Example: VAR(1)",
+    "text": "Second Example: VAR(1)\n\nRcpp::cppFunction('arma::mat cppSim(arma::mat B, arma::mat E) {\n  int m = E.n_rows, n = E.n_cols;\n  arma::mat X(m, n);\n  X.row(0) = arma::zeros&lt;arma::mat&gt;(1, n);\n  for (int r = 1; r &lt; m; r++) {\n    X.row(r) = X.row(r-1) * B + E.row(r);\n  }\n  return X;\n}', depends=\"RcppArmadillo\")\n\na &lt;- matrix(c(0.5, 0.1, 0.1, 0.5), nrow = 2)\ne &lt;- matrix(rnorm(10000), ncol = 2)\nrbenchmark::benchmark(cppSim(a, e), rSim(a, e), order=\"relative\")[, 1:4]\n\n&gt;#    test           replications elapsed relative\n&gt;# 1  cppSim(a, e)  100         0.010   1.0\n&gt;# 2  rSim(a, e)    100         0.728  72.8"
+  },
+  {
+    "objectID": "slides/old/Topic3.html#pagerank",
+    "href": "slides/old/Topic3.html#pagerank",
+    "title": "Short Course on R Tools",
+    "section": "Pagerank",
+    "text": "Pagerank\n#remotes::install_github(\"https://github.com/andrie/pagerank.git\")\nsuppressMessages(library(utils))\nlibrary(pagerank)\n\ncran &lt;- \"https://cloud.r-project.org\"\npr &lt;- compute_pagerank(cran)\nround(100 * pr[1:5], 3)\n\n&gt;#   Rcpp    ggplot2     dplyr      MASS   magrittr\n&gt;# 2.744     1.516       1.274    1.122    0.814"
+  },
+  {
+    "objectID": "slides/old/Topic3.html#percentage-of-compiled-packages",
+    "href": "slides/old/Topic3.html#percentage-of-compiled-packages",
+    "title": "Short Course on R Tools",
+    "section": "Percentage of Compiled Packages",
+    "text": "Percentage of Compiled Packages\ndb &lt;- tools::CRAN_package_db()       # added in R 3.4.0\ndb &lt;- db[!duplicated(db[, 1]), ]     # rows: number of packages\n\nnTot &lt;- nrow(db)                     # columns: different attributes\nnRcpp &lt;- length(tools::dependsOnPkgs(\"Rcpp\", recursive = FALSE, installed = db))\nnCompiled &lt;- table(db[, \"NeedsCompilation\"])[[\"yes\"]]\n\npropRcpp &lt;- nRcpp / nCompiled * 100\ndata.frame(tot = nTot, totRcpp = nRcpp, totCompiled = nCompiled,\n           RcppPctOfCompiled = propRcpp)\n\n&gt;#   tot   totRcpp   totCompiled   RcppPctOfCompiled\n&gt;# 1 22501    3053        4981          61.29291"
+  },
+  {
+    "objectID": "slides/old/Topic3.html#using-sourcecpp",
+    "href": "slides/old/Topic3.html#using-sourcecpp",
+    "title": "Short Course on R Tools",
+    "section": "Using sourceCpp()",
+    "text": "Using sourceCpp()\n\n\nSo what just happened?\n\nWe defined a simple C++ function\n\nIt operates on a numeric vector argument\n\nWe ask Rcpp to ‘source it’ for us\n\nBehind the scenes Rcpp creates a wrapper\n\nRcpp then compiles, links, and loads the wrapper\n\nThe function is available in R under its C++ name\n\nBenefits:\n\nEditor support (syntax highlighting)\nEasier debugging & error tracking"
+  },
+  {
+    "objectID": "slides/old/Topic3.html#another-example-timing-r-implementation",
+    "href": "slides/old/Topic3.html#another-example-timing-r-implementation",
+    "title": "Short Course on R Tools",
+    "section": "Another Example: Timing R Implementation",
+    "text": "Another Example: Timing R Implementation\n\nThe R implementation:\n\n\nf &lt;- function(n) {\n  if (n &lt; 2) return(n)\n  return(f(n - 1) + f(n - 2))\n}\n\n\n\nTiming:\n\nlibrary(rbenchmark)\nbenchmark(f(15), f(20), f(25))[, 1:4]\n\n&gt;# test         replications elapsed   relative\n&gt;# 1 f(15)       100          0.06      1.0\n&gt;# 2 f(20)       100          0.75     12.5\n&gt;# 3 f(25)       100          7.92    132.0"
+  },
+  {
+    "objectID": "slides/old/Topic3.html#another-example-c-implementation",
+    "href": "slides/old/Topic3.html#another-example-c-implementation",
+    "title": "Short Course on R Tools",
+    "section": "Another Example: C++ Implementation",
+    "text": "Another Example: C++ Implementation\nint g(int n) {\n  if (n &lt; 2) return(n);\n  return(g(n - 1) + g(n - 2));\n}\n\nRcpp::cppFunction('\n  int g(int n) {\n    if (n &lt; 2) return(n);\n    return(g(n - 1) + g(n - 2)); \n  }')\n\nsapply(0:10, g)  # Using it on first 11 arguments\n\n&gt;# [1] 0 1 1 2 3 5 8 13 21 34 55"
+  },
+  {
+    "objectID": "slides/old/Topic3.html#another-example-comparing-timing",
+    "href": "slides/old/Topic3.html#another-example-comparing-timing",
+    "title": "Short Course on R Tools",
+    "section": "Another Example: Comparing Timing",
+    "text": "Another Example: Comparing Timing\n\nRcpp implementation:\n\n\nRcpp::cppFunction('\n  int g(int n) {\n    if (n &lt; 2) return(n);\n    return(g(n - 1) + g(n - 2)); \n  }')\n\n\n\nTiming:\n\nlibrary(rbenchmark)\nbenchmark(f(25), g(25))[, 1:4]\n\n&gt;#   test      replications elapsed   relative\n&gt;# 1 f(25)      100          8.02     267.333\n&gt;# 2 g(25)      100          0.03       1.000\n\n\n\nA nice gain of a few orders of magnitude."
+  },
+  {
+    "objectID": "slides/old/Topic3.html#types",
+    "href": "slides/old/Topic3.html#types",
+    "title": "Short Course on R Tools",
+    "section": "Types",
+    "text": "Types\nR Type mapping:\n\nStandard R types (integer, numeric, list, function, … and compound objects) are mapped to corresponding C++ types:\n\nlibrary(Rcpp)\ncppFunction(\"NumericVector logabs(NumericVector x) {\n  return log(abs(x));\n}\")\nlogabs(seq(-5, 5, by = 2))\n&gt;# [1] 1.609438 1.098612 0.000000 0.000000 1.098612 1.609438\n\n\nVectorized C++! Here log(abs()) runs directly on vectors as R would."
+  },
+  {
+    "objectID": "slides/old/Topic3.html#stl-type-mapping",
+    "href": "slides/old/Topic3.html#stl-type-mapping",
+    "title": "Short Course on R Tools",
+    "section": "STL Type Mapping",
+    "text": "STL Type Mapping\n\ncode/logabs2.cpp\n\n\n#include &lt;Rcpp.h&gt;\nusing namespace Rcpp;\n\ninline double f(double x) { return ::log(::fabs(x)); }\n\n// [[Rcpp::export]]\nstd::vector&lt;double&gt; logabs2(std::vector&lt;double&gt; x) {\n  std::transform(x.begin(), x.end(), x.begin(), f);\n  return x;\n}\n\nNot vectorized but ‘sweeps’ f() along std::vector&lt;double&gt; via STL std::transform().\n\nlibrary(Rcpp)\nsourceCpp(\"code/logabs2.cpp\")\nlogabs2(seq(-5, 5, by = 2))\n&gt;# [1] 1.609438 1.098612 0.000000 0.000000 1.098612 1.609438"
   }
 ]
