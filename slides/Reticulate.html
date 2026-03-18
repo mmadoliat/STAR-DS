@@ -419,52 +419,52 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </section>
 <section id="outline" class="title-slide slide level1 scrollable center">
 <h1>Outline</h1>
-<div>
+<div class="fragment fade-up">
 <ul>
-<li class="fragment">Why integrate Python into R?</li>
-<li class="fragment">What is <code>reticulate</code>?</li>
-<li class="fragment">Installation &amp; Setup</li>
-<li class="fragment">Importing Python Modules into R</li>
-<li class="fragment">Python Objects &amp; Data Conversion</li>
-<li class="fragment">Sourcing Python Scripts in R</li>
-<li class="fragment">Accessing R Objects in Python</li>
-<li class="fragment">Working with Python Classes in R</li>
-<li class="fragment">reticulate in R Markdown &amp; Quarto</li>
+<li>Why integrate Python into R?</li>
+<li>What is <code>reticulate</code>?</li>
+<li>Installation &amp; Setup</li>
+<li>Importing Python Modules into R</li>
+<li>Python Objects &amp; Data Conversion</li>
+<li>Sourcing Python Scripts in R</li>
+<li>Accessing R Objects in Python</li>
+<li>Working with Python Classes in R</li>
+<li>reticulate in R Markdown &amp; Quarto</li>
 </ul>
 </div>
 </section>
 
 <section id="why-integrate-python-into-r" class="title-slide slide level1 scrollable center">
 <h1>Why integrate Python into R?</h1>
-<div>
 <ul>
-<li class="fragment"><strong>Access powerful Python libraries:</strong>
+<li><strong>Access powerful Python libraries:</strong>
 <ul>
-<li class="fragment">Deep Learning: <code>PyTorch</code>, <code>TensorFlow</code>, <code>Keras</code></li>
-<li class="fragment">Machine Learning: <code>scikit-learn</code>, <code>XGBoost</code>, <code>LightGBM</code></li>
-<li class="fragment">NLP: <code>spaCy</code>, <code>HuggingFace transformers</code></li>
-<li class="fragment">Computer Vision: <code>OpenCV</code></li>
+<li>Deep Learning: <code>PyTorch</code>, <code>TensorFlow</code>, <code>Keras</code></li>
+<li>Machine Learning: <code>scikit-learn</code>, <code>XGBoost</code>, <code>LightGBM</code></li>
+<li>NLP: <code>spaCy</code>, <code>HuggingFace transformers</code></li>
+<li>Computer Vision: <code>OpenCV</code></li>
 </ul></li>
-<li class="fragment"><strong>Combine the best of both worlds</strong>
+</ul>
+<div class="fragment">
 <ul>
-<li class="fragment">R: data manipulation, statistics, visualization (<code>ggplot2</code>, <code>dplyr</code>)</li>
-<li class="fragment">Python: ML/AI, scripting, general programming</li>
+<li><strong>Combine the best of both worlds</strong>
+<ul>
+<li>R: data manipulation, statistics, visualization (<code>ggplot2</code>, <code>dplyr</code>)</li>
+<li>Python: ML/AI, scripting, general programming</li>
 </ul></li>
-<li class="fragment">Avoid rewriting code or switching environments</li>
+<li>Avoid rewriting code or switching environments</li>
 </ul>
 </div>
 </section>
 
 <section id="what-is-reticulate" class="title-slide slide level1 center">
 <h1>What is <code>reticulate</code>?</h1>
-<div>
 <ul>
-<li class="fragment"><p>R package for interoperability with Python</p></li>
-<li class="fragment"><p>Maintains a shared Python session accessible from R</p></li>
-<li class="fragment"><p>Automatic conversion of many R types to Python and vice versa</p></li>
-<li class="fragment"><p>Supports inline Python code in R Markdown and R scripts</p></li>
+<li><p>R package for interoperability with Python</p></li>
+<li><p>Maintains a shared Python session accessible from R</p></li>
+<li><p>Automatic conversion of many R types to Python and vice versa</p></li>
+<li><p>Supports inline Python code in R Markdown and R scripts</p></li>
 </ul>
-</div>
 </section>
 
 <section id="installation-setup" class="title-slide slide level1 center">
@@ -473,37 +473,29 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">install.packages</span>(<span class="st">"reticulate"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p>🐍 <strong>Ensure Python is installed</strong><br> Use system Python, Anaconda, or a virtual environment. You can check the Python configuration in R:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb2-2"><a></a><span class="fu">py_available</span>() <span class="co"># Check python availability</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>[1] FALSE</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2" data-code-line-numbers="1|2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb2-2"><a></a><span class="fu">py_available</span>() <span class="co"># Check python availability</span></span>
+<span id="cb2-3"><a></a>[<span class="dv">1</span>] <span class="cn">FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p><strong>🔗 Bind to a specific Python version</strong></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># use_python("C://Users/your_username/AppData/Local/Programs/Python/Python313")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">py_config</span>() <span class="co">#Inspect current setup</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3" data-code-line-numbers="1|2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># use_python("C://Users/your_username/AppData/Local/Programs/Python/Python313")</span></span>
+<span id="cb3-2"><a></a><span class="fu">py_config</span>() <span class="co">#Inspect current setup</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 
 <section id="importing-python-modules-into-r" class="title-slide slide level1 center">
 <h1>Importing Python Modules into R</h1>
 <p><strong>📦 Use <code>import()</code> to bring Python modules into R</strong></p>
-<div class="sourceCode" id="cb6" height="200" data-code-line-numbers="1|2|3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb6-2"><a></a>np <span class="ot">&lt;-</span> <span class="fu">import</span>(<span class="st">"numpy"</span>)</span>
-<span id="cb6-3"><a></a>np<span class="sc">$</span><span class="fu">mean</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>))  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a></a>[1] 2.5</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb4" height="200" data-code-line-numbers="1-2|3-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb4-2"><a></a>np <span class="ot">&lt;-</span> <span class="fu">import</span>(<span class="st">"numpy"</span>)</span>
+<span id="cb4-3"><a></a>np<span class="sc">$</span><span class="fu">mean</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>))  </span>
+<span id="cb4-4"><a></a>[<span class="dv">1</span>] <span class="fl">2.5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p><strong>📦 Use <code>import_builtins()</code> to import Python built-in functions</strong></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>py_builtins <span class="ot">&lt;-</span> <span class="fu">import_builtins</span>()</span>
-<span id="cb8-2"><a></a>py_builtins<span class="sc">$</span><span class="fu">len</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>))   </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a></a>[1] 3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5" height="200" data-code-line-numbers="1|2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>py_builtins <span class="ot">&lt;-</span> <span class="fu">import_builtins</span>()</span>
+<span id="cb5-2"><a></a>py_builtins<span class="sc">$</span><span class="fu">len</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>))   </span>
+<span id="cb5-3"><a></a>[<span class="dv">1</span>] <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 
@@ -515,88 +507,66 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 <li>Use <code>py_run_string()</code> to run inline Python code from R</li>
 </ul>
 </section>
-<section id="using-source_python" class="slide level2" data-transition="convex">
+<section id="using-source_python" class="slide level2">
 <h2>📥 Using <code>source_python()</code></h2>
 <p>Variables become <strong>directly available in the R global environment</strong></p>
 <div class="fragment">
 <p><strong>🔍 Example:</strong></p>
 <p>Consider <code>script.py</code> file, includes following Python script:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>y <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb10-2"><a></a><span class="kw">def</span> square(x):</span>
-<span id="cb10-3"><a></a>    <span class="cf">return</span> x <span class="op">**</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>y <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb6-2"><a></a><span class="kw">def</span> square(x):</span>
+<span id="cb6-3"><a></a>    <span class="cf">return</span> x <span class="op">**</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>✅ Works directly in R :</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb11-2"><a></a><span class="fu">source_python</span>(<span class="st">"script.py"</span>)</span>
-<span id="cb11-3"><a></a><span class="fu">square</span>(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a></a>[1] 16</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">print</span>(y) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a></a>2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7" height="200" data-code-line-numbers="1-2|3-4|5-6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb7-2"><a></a><span class="fu">source_python</span>(<span class="st">"script.py"</span>)</span>
+<span id="cb7-3"><a></a><span class="fu">print</span>(y) </span>
+<span id="cb7-4"><a></a>[<span class="dv">1</span>] <span class="dv">2</span></span>
+<span id="cb7-5"><a></a><span class="fu">square</span>(<span class="dv">4</span>)</span>
+<span id="cb7-6"><a></a>[<span class="dv">1</span>] <span class="dv">16</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="using-py_run_file" class="slide level2" data-transition="zoom">
+<section id="using-py_run_file" class="slide level2">
 <h2>📥 Using <code>py_run_file()</code></h2>
 <p>Also runs the script, but…</p>
-<div>
 <ul>
-<li class="fragment">❌ Does not expose functions/variables directly in R</li>
-<li class="fragment">Variables and functions are stored in <code>py$</code></li>
+<li>❌ Does not expose functions/variables directly in R</li>
+<li>Variables and functions are stored in <code>py$</code></li>
 </ul>
-</div>
 <div class="fragment">
-<div class="sourceCode" id="cb15" height="200" data-code-line-numbers="1|2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">py_run_file</span>(<span class="st">"script.py"</span>)</span>
-<span id="cb15-2"><a></a>py<span class="sc">$</span><span class="fu">square</span>(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a></a>[1] 16</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">print</span>(py<span class="sc">$</span>y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb18-1"><a></a>2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8" height="200" data-code-line-numbers="1|2-3|4-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">py_run_file</span>(<span class="st">"script.py"</span>)</span>
+<span id="cb8-2"><a></a><span class="fu">print</span>(py<span class="sc">$</span>y)</span>
+<span id="cb8-3"><a></a>[<span class="dv">1</span>] <span class="dv">2</span></span>
+<span id="cb8-4"><a></a>py<span class="sc">$</span><span class="fu">square</span>(<span class="dv">4</span>)</span>
+<span id="cb8-5"><a></a>[<span class="dv">1</span>] <span class="dv">16</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="using-py_run_string" class="slide level2" data-transition="slide">
+<section id="using-py_run_string" class="slide level2">
 <h2>🧩 Using <code>py_run_string()</code></h2>
-<div>
 <ul>
-<li class="fragment">Executes the string in the shared Python session</li>
-<li class="fragment">Variables created in Python are not added to R environment</li>
-<li class="fragment">Access Python variables in R using <code>py$</code></li>
+<li>Executes the string in the shared Python session</li>
+<li>Variables created in Python are not added to R environment</li>
+<li>Access Python variables in R using <code>py$</code></li>
 </ul>
-</div>
 <div class="fragment">
-<div class="sourceCode" id="cb19" height="200" data-code-line-numbers="1-5|6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">py_run_string</span>(<span class="st">"</span></span>
-<span id="cb19-2"><a></a><span class="st">def square(x):</span></span>
-<span id="cb19-3"><a></a><span class="st">    return x ** 2</span></span>
-<span id="cb19-4"><a></a><span class="st">y = 5</span></span>
-<span id="cb19-5"><a></a><span class="st">"</span>)</span>
-<span id="cb19-6"><a></a>py<span class="sc">$</span>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb20-1"><a></a>[1] 5</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>py<span class="sc">$</span><span class="fu">square</span>(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb22-1"><a></a>[1] 16</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9" height="200" data-code-line-numbers="1-5|6-7|8-9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">py_run_string</span>(<span class="st">"</span></span>
+<span id="cb9-2"><a></a><span class="st">def square(x):</span></span>
+<span id="cb9-3"><a></a><span class="st">    return x ** 2</span></span>
+<span id="cb9-4"><a></a><span class="st">y = 5</span></span>
+<span id="cb9-5"><a></a><span class="st">"</span>)</span>
+<span id="cb9-6"><a></a>py<span class="sc">$</span>y</span>
+<span id="cb9-7"><a></a>[<span class="dv">1</span>] <span class="dv">5</span></span>
+<span id="cb9-8"><a></a>py<span class="sc">$</span><span class="fu">square</span>(<span class="dv">4</span>)</span>
+<span id="cb9-9"><a></a>[<span class="dv">1</span>] <span class="dv">16</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section>
-<section id="data-conversion-accessing-r-objects-in-python" class="title-slide slide level1 center" data-transition="zoom">
+<section id="data-conversion-accessing-r-objects-in-python" class="title-slide slide level1 center">
 <h1>Data Conversion &amp; Accessing R Objects in Python</h1>
 
 </section>
-<section id="automatic-data-conversion" class="slide level2" data-transition="slide">
+<section id="automatic-data-conversion" class="slide level2">
 <h2>🔁 Automatic Data Conversion</h2>
 <div class="small">
 <table>
@@ -672,122 +642,110 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </table>
 </div>
 </section>
-<section id="accessing-r-objects-from-python" class="slide level2" data-transition="slide">
+<section id="accessing-r-objects-from-python" class="slide level2">
 <h2>Accessing R Objects from Python</h2>
 <p><strong>🔍 Example:</strong><br> Let two following objects have been defined in R global environment:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb23-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>)</span>
-<span id="cb23-3"><a></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x) x<span class="sc">^</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb10-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>)</span>
+<span id="cb10-3"><a></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x) x<span class="sc">^</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p>In Python we can access to these objects trough <code>r</code> object:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a></a><span class="bu">print</span>(r.x)      </span>
-<span id="cb24-2"><a></a>[<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>]</span>
-<span id="cb24-3"><a></a><span class="bu">print</span>(r.f(<span class="dv">3</span>))  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb25-1"><a></a>9</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11" height="200" data-code-line-numbers="1-2|3-4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="bu">print</span>(r.x)      </span>
+<span id="cb11-2"><a></a>[<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>]</span>
+<span id="cb11-3"><a></a><span class="bu">print</span>(r.f(<span class="dv">3</span>))  </span>
+<span id="cb11-4"><a></a><span class="dv">9</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="exporting-r-objects-to-python" class="slide level2" data-transition="slide">
 <h2>Exporting R Objects to Python</h2>
 <p>Use <code>py$</code> assignment. In R:</p>
-<div class="sourceCode" id="cb26" data-code-line-numbers="1-3|5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb26-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb26-3"><a></a>py<span class="sc">$</span>x <span class="ot">&lt;-</span> x        <span class="co"># Exports `x` to Python namespace</span></span>
-<span id="cb26-4"><a></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(n) n<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb26-5"><a></a>py<span class="sc">$</span>f <span class="ot">&lt;-</span> f        <span class="co"># Exports R function to Python</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12" data-code-line-numbers="1-3|4-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb12-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb12-3"><a></a>py<span class="sc">$</span>x <span class="ot">&lt;-</span> x        <span class="co"># Exports `x` to Python namespace</span></span>
+<span id="cb12-4"><a></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(n) n<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb12-5"><a></a>py<span class="sc">$</span>f <span class="ot">&lt;-</span> f        <span class="co"># Exports R function to Python</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p>Now usable from Python:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a></a><span class="bu">print</span>(x) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb28"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb28-1"><a></a>[1, 2, 3]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">print</span>(<span class="fu">f</span>(<span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb30"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb30-1"><a></a>[1] 25</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13" height="200" data-code-line-numbers="1-2|3-4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="bu">print</span>(x) </span>
+<span id="cb13-2"><a></a>[<span class="fl">1.0</span>, <span class="fl">2.0</span>, <span class="fl">3.0</span>]</span>
+<span id="cb13-3"><a></a><span class="bu">print</span>(f(<span class="dv">5</span>))</span>
+<span id="cb13-4"><a></a><span class="fl">25.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="exporting-r-closure-functions-to-python" class="slide level2" data-transition="slide">
 <h2>Exporting R Closure Functions to Python</h2>
 <p>A <strong>closure</strong> in R is simply a user-defined function created with the function() keyword. It’s the most common type of function in R.</p>
 <p>✅ A <strong>closure</strong> fnction Works directly. In R:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>py<span class="sc">$</span>m <span class="ot">&lt;-</span> mean</span>
-<span id="cb31-2"><a></a><span class="fu">typeof</span>(mean) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<div class="sourceCode" id="cb32"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb32-1"><a></a>[1] "closure"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb14" data-code-line-numbers="1|2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>py<span class="sc">$</span>m <span class="ot">&lt;-</span> mean</span>
+<span id="cb14-2"><a></a><span class="fu">typeof</span>(mean) </span>
+<span id="cb14-3"><a></a>[<span class="dv">1</span>] <span class="st">"closure"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p>In Python:</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a></a><span class="bu">print</span>(m([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]))     </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb34"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb34-1"><a></a>3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15" height="200" data-code-line-numbers="1|2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="bu">print</span>(m([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]))     </span>
+<span id="cb15-2"><a></a><span class="fl">3.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="exporting-r-builtin-functions-to-python" class="slide level2" data-transition="slide">
 <h2>Exporting R <code>Builtin</code> Functions to Python</h2>
 <p><strong>Built-in</strong> functions in R are functions implemented in C (compiled) and embedded directly into the R interpreter.</p>
 <p>⚠️ Builtin function needs wrapping. For example:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">typeof</span>(exp) <span class="co"># return "builtin"</span></span>
-<span id="cb35-2"><a></a>py<span class="sc">$</span>e <span class="ot">&lt;-</span> exp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16" data-code-line-numbers="1-2|3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">typeof</span>(exp)</span>
+<span id="cb16-2"><a></a>[<span class="dv">1</span>] <span class="st">"builtin"</span></span>
+<span id="cb16-3"><a></a>py<span class="sc">$</span>e <span class="ot">&lt;-</span> exp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p>In Python:</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a></a><span class="bu">print</span>(e(<span class="dv">1</span>))     </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb37"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb37-1"><a></a>TypeError: 'PyCapsule' object is not callable</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17" height="200" data-code-line-numbers="1|2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="bu">print</span>(e(<span class="dv">1</span>))     </span>
+<span id="cb17-2"><a></a><span class="pp">TypeError</span>: <span class="st">'PyCapsule'</span> <span class="bu">object</span> <span class="kw">is</span> <span class="kw">not</span> <span class="bu">callable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>✅ Solution: Wrap the builtin in a closure</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a>e <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">exp</span>(x)</span>
-<span id="cb38-2"><a></a>py<span class="sc">$</span>e <span class="ot">&lt;-</span> e</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18" data-code-line-numbers="1|2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>e <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">exp</span>(x)</span>
+<span id="cb18-2"><a></a>py<span class="sc">$</span>e <span class="ot">&lt;-</span> e</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>In Python:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a></a><span class="bu">print</span>(e(<span class="dv">1</span>))  <span class="co"># ✅ Returns 2.718</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="bu">print</span>(e(<span class="dv">1</span>))  </span>
+<span id="cb19-2"><a></a><span class="fl">2.718281828459045</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section id="reticulate-in-r-markdown-quarto" class="title-slide slide level1 center">
 <h1>reticulate in R Markdown &amp; Quarto</h1>
-<div class="sourceCode" id="cb40"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb40-1"><a></a><span class="in">```{.python}</span></span>
-<span id="cb40-2"><a></a><span class="in">import numpy as np</span></span>
-<span id="cb40-3"><a></a><span class="in">x = np.arange(10)</span></span>
-<span id="cb40-4"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a></a><span class="in">```{.python}</span></span>
+<span id="cb20-2"><a></a><span class="in">import numpy as np</span></span>
+<span id="cb20-3"><a></a><span class="in">x = np.arange(10)</span></span>
+<span id="cb20-4"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li><strong>Chunk engines</strong>: <code>{python}</code>, <code>{python3}</code></li>
 <li><strong>Return to R</strong>:</li>
 </ul>
-<div class="sourceCode" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a>r_vec <span class="ot">&lt;-</span> py<span class="sc">$</span>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>r_vec <span class="ot">&lt;-</span> py<span class="sc">$</span>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li><strong>Quarto YAML</strong>:</li>
 </ul>
-<div class="sourceCode" id="cb42"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb42-1"><a></a><span class="fu">execute</span><span class="kw">:</span></span>
-<span id="cb42-2"><a></a><span class="at">  </span><span class="fu">echo</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb22-1"><a></a><span class="fu">execute</span><span class="kw">:</span></span>
+<span id="cb22-2"><a></a><span class="at">  </span><span class="fu">echo</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 
 <section id="shiny-python-integration" class="title-slide slide level1 center">
 <h1>Shiny &amp; Python Integration</h1>
 <p>🧬 Run Python code dynamically inside a Shiny app using <code>reticulate</code></p>
-<div class="sourceCode" id="cb43" data-code-line-numbers="1-2|3-6|7-13|14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a><span class="fu">library</span>(shiny)</span>
-<span id="cb43-2"><a></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb43-3"><a></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
-<span id="cb43-4"><a></a>  <span class="fu">actionButton</span>(<span class="st">"btn"</span>, <span class="st">"Compute in Python"</span>),</span>
-<span id="cb43-5"><a></a>  <span class="fu">verbatimTextOutput</span>(<span class="st">"out"</span>)</span>
-<span id="cb43-6"><a></a>)</span>
-<span id="cb43-7"><a></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output) {</span>
-<span id="cb43-8"><a></a>  <span class="fu">observeEvent</span>(input<span class="sc">$</span>btn, {</span>
-<span id="cb43-9"><a></a>    <span class="co"># Run Python code when button is clicked</span></span>
-<span id="cb43-10"><a></a>    <span class="fu">py_run_string</span>(<span class="st">"import math; res = math.factorial(10)"</span>)</span>
-<span id="cb43-11"><a></a>    output<span class="sc">$</span>out <span class="ot">&lt;-</span> <span class="fu">renderText</span>(py<span class="sc">$</span>res)</span>
-<span id="cb43-12"><a></a>  })</span>
-<span id="cb43-13"><a></a>}</span>
-<span id="cb43-14"><a></a><span class="fu">shinyApp</span>(ui, server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23" data-code-line-numbers="1-2|3-6|7-13|14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">library</span>(shiny)</span>
+<span id="cb23-2"><a></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb23-3"><a></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
+<span id="cb23-4"><a></a>  <span class="fu">actionButton</span>(<span class="st">"btn"</span>, <span class="st">"Compute in Python"</span>),</span>
+<span id="cb23-5"><a></a>  <span class="fu">verbatimTextOutput</span>(<span class="st">"out"</span>)</span>
+<span id="cb23-6"><a></a>)</span>
+<span id="cb23-7"><a></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output) {</span>
+<span id="cb23-8"><a></a>  <span class="fu">observeEvent</span>(input<span class="sc">$</span>btn, {</span>
+<span id="cb23-9"><a></a>    <span class="co"># Run Python code when button is clicked</span></span>
+<span id="cb23-10"><a></a>    <span class="fu">py_run_string</span>(<span class="st">"import math; res = math.factorial(10)"</span>)</span>
+<span id="cb23-11"><a></a>    output<span class="sc">$</span>out <span class="ot">&lt;-</span> <span class="fu">renderText</span>(py<span class="sc">$</span>res)</span>
+<span id="cb23-12"><a></a>  })</span>
+<span id="cb23-13"><a></a>}</span>
+<span id="cb23-14"><a></a><span class="fu">shinyApp</span>(ui, server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 
-<section id="resources-further-reading" class="title-slide slide level1 center" data-transition="zoom">
+<section id="resources-further-reading" class="title-slide slide level1 center">
 <h1>Resources &amp; Further Reading</h1>
 <ul>
 <li>reticulate docs: <a href="https://rstudio.github.io/reticulate/" class="uri">https://rstudio.github.io/reticulate/</a></li>

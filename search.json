@@ -614,21 +614,21 @@
     "href": "slides/Reticulate.html#using-source_python",
     "title": "Integrate Python in R",
     "section": "📥 Using source_python()",
-    "text": "📥 Using source_python()\nVariables become directly available in the R global environment\n\n🔍 Example:\nConsider script.py file, includes following Python script:\ny = 2\ndef square(x):\n    return x **2\n\n\n✅ Works directly in R :\nlibrary(reticulate)\nsource_python(\"script.py\")\nsquare(4)\n\n\n[1] 16\n\n\nprint(y) \n\n\n2"
+    "text": "📥 Using source_python()\nVariables become directly available in the R global environment\n\n🔍 Example:\nConsider script.py file, includes following Python script:\ny = 2\ndef square(x):\n    return x **2\n\n\n✅ Works directly in R :\nlibrary(reticulate)\nsource_python(\"script.py\")\nprint(y) \n[1] 2\nsquare(4)\n[1] 16"
   },
   {
     "objectID": "slides/Reticulate.html#using-py_run_file",
     "href": "slides/Reticulate.html#using-py_run_file",
     "title": "Integrate Python in R",
     "section": "📥 Using py_run_file()",
-    "text": "📥 Using py_run_file()\nAlso runs the script, but…\n\n\n❌ Does not expose functions/variables directly in R\nVariables and functions are stored in py$\n\n\n\npy_run_file(\"script.py\")\npy$square(4)\n\n\n[1] 16\n\n\nprint(py$y)\n\n\n2"
+    "text": "📥 Using py_run_file()\nAlso runs the script, but…\n\n❌ Does not expose functions/variables directly in R\nVariables and functions are stored in py$\n\n\npy_run_file(\"script.py\")\nprint(py$y)\n[1] 2\npy$square(4)\n[1] 16"
   },
   {
     "objectID": "slides/Reticulate.html#using-py_run_string",
     "href": "slides/Reticulate.html#using-py_run_string",
     "title": "Integrate Python in R",
     "section": "🧩 Using py_run_string()",
-    "text": "🧩 Using py_run_string()\n\n\nExecutes the string in the shared Python session\nVariables created in Python are not added to R environment\nAccess Python variables in R using py$\n\n\n\npy_run_string(\"\ndef square(x):\n    return x ** 2\ny = 5\n\")\npy$y\n\n\n[1] 5\n\n\npy$square(4)\n\n\n[1] 16"
+    "text": "🧩 Using py_run_string()\n\nExecutes the string in the shared Python session\nVariables created in Python are not added to R environment\nAccess Python variables in R using py$\n\n\npy_run_string(\"\ndef square(x):\n    return x ** 2\ny = 5\n\")\npy$y\n[1] 5\npy$square(4)\n[1] 16"
   },
   {
     "objectID": "slides/Reticulate.html#automatic-data-conversion",
@@ -642,28 +642,28 @@
     "href": "slides/Reticulate.html#accessing-r-objects-from-python",
     "title": "Integrate Python in R",
     "section": "Accessing R Objects from Python",
-    "text": "Accessing R Objects from Python\n🔍 Example: Let two following objects have been defined in R global environment:\nlibrary(reticulate)\nx &lt;- c(10, 20, 30)\nf &lt;- function(x) x^2\n\nIn Python we can access to these objects trough r object:\nprint(r.x)      \n[10, 20, 30]\nprint(r.f(3))  \n\n\n9"
+    "text": "Accessing R Objects from Python\n🔍 Example: Let two following objects have been defined in R global environment:\nlibrary(reticulate)\nx &lt;- c(10, 20, 30)\nf &lt;- function(x) x^2\n\nIn Python we can access to these objects trough r object:\nprint(r.x)      \n[10, 20, 30]\nprint(r.f(3))  \n9"
   },
   {
     "objectID": "slides/Reticulate.html#exporting-r-objects-to-python",
     "href": "slides/Reticulate.html#exporting-r-objects-to-python",
     "title": "Integrate Python in R",
     "section": "Exporting R Objects to Python",
-    "text": "Exporting R Objects to Python\nUse py$ assignment. In R:\nlibrary(reticulate)\nx &lt;- c(1, 2, 3)\npy$x &lt;- x        # Exports `x` to Python namespace\nf &lt;- function(n) n^2\npy$f &lt;- f        # Exports R function to Python\n\nNow usable from Python:\nprint(x) \n\n\n[1, 2, 3]\n\n\nprint(f(5))\n\n\n[1] 25"
+    "text": "Exporting R Objects to Python\nUse py$ assignment. In R:\nlibrary(reticulate)\nx &lt;- c(1, 2, 3)\npy$x &lt;- x        # Exports `x` to Python namespace\nf &lt;- function(n) n^2\npy$f &lt;- f        # Exports R function to Python\n\nNow usable from Python:\nprint(x) \n[1.0, 2.0, 3.0]\nprint(f(5))\n25.0"
   },
   {
     "objectID": "slides/Reticulate.html#exporting-r-closure-functions-to-python",
     "href": "slides/Reticulate.html#exporting-r-closure-functions-to-python",
     "title": "Integrate Python in R",
     "section": "Exporting R Closure Functions to Python",
-    "text": "Exporting R Closure Functions to Python\nA closure in R is simply a user-defined function created with the function() keyword. It’s the most common type of function in R.\n✅ A closure fnction Works directly. In R:\npy$m &lt;- mean\ntypeof(mean) \n\n[1] \"closure\"\n\n\nIn Python:\nprint(m([1, 2, 3, 4, 5]))     \n\n\n3"
+    "text": "Exporting R Closure Functions to Python\nA closure in R is simply a user-defined function created with the function() keyword. It’s the most common type of function in R.\n✅ A closure fnction Works directly. In R:\npy$m &lt;- mean\ntypeof(mean) \n[1] \"closure\"\n\nIn Python:\nprint(m([1, 2, 3, 4, 5]))     \n3.0"
   },
   {
     "objectID": "slides/Reticulate.html#exporting-r-builtin-functions-to-python",
     "href": "slides/Reticulate.html#exporting-r-builtin-functions-to-python",
     "title": "Integrate Python in R",
     "section": "Exporting R Builtin Functions to Python",
-    "text": "Exporting R Builtin Functions to Python\nBuilt-in functions in R are functions implemented in C (compiled) and embedded directly into the R interpreter.\n⚠️ Builtin function needs wrapping. For example:\ntypeof(exp) # return \"builtin\"\npy$e &lt;- exp\n\nIn Python:\nprint(e(1))     \n\n\nTypeError: 'PyCapsule' object is not callable\n\n\n✅ Solution: Wrap the builtin in a closure\ne &lt;- function(x) exp(x)\npy$e &lt;- e\n\n\nIn Python:\nprint(e(1))  # ✅ Returns 2.718"
+    "text": "Exporting R Builtin Functions to Python\nBuilt-in functions in R are functions implemented in C (compiled) and embedded directly into the R interpreter.\n⚠️ Builtin function needs wrapping. For example:\ntypeof(exp)\n[1] \"builtin\"\npy$e &lt;- exp\n\nIn Python:\nprint(e(1))     \nTypeError: 'PyCapsule' object is not callable\n\n\n✅ Solution: Wrap the builtin in a closure\ne &lt;- function(x) exp(x)\npy$e &lt;- e\n\n\nIn Python:\nprint(e(1))  \n2.718281828459045"
   },
   {
     "objectID": "about.html",
@@ -887,7 +887,7 @@
     "href": "index.html",
     "title": "STatisticians Advancing in R for Data Science (STAR-DS)",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the short course. Note that this schedule will be updated as we progress, and the timeline of topics and assignments might be updated throughout the course.\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nCODE\nDUE\n\n\n\n\n1\nTue, Apr 28\n Create dynamic Shiny web applications\n📚Topic 1  📖Shiny\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\nEnhance performance with Rcpp (C++)\n📚Topic 3  📖Rcpp for everyone\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n\n\n\n\n\n\n📝 HW 1 at 11:50 pm\n\n\n2\nTue, Apr 28\n Integrate Python in R using Reticulate\n📚Topic 4  📖Calling Python from R\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n Develop your own professional R package\n📚Topic 5  📖R package\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n Collaborate via GitHub / CRAN submission process\n📚Topic 6  📖Let’s Git started  📖Release R package\nR👩‍💻  R🛠️\n\n\n\n\n\n\nThu, Apr 30\n\n\n\n\n\n\n📝 HW 2 at 11:50 pm",
+    "text": "This page contains an outline of the topics, content, and assignments for the short course. Note that this schedule will be updated as we progress, and the timeline of topics and assignments might be updated throughout the course.\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nCODE\nDUE\n\n\n\n\n1\nTue, Apr 28\n Create dynamic Shiny web applications\n📚Topic 1  📖Shiny\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\nEnhance performance with Rcpp (C++)\n📚Topic 2  📖Rcpp for everyone\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n\n\n\n\n\n\n📝 HW 1 at 11:50 pm\n\n\n1\nTue, Apr 28\n Integrate Python in R using Reticulate\n📚Topic 3  📖Calling Python from R\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n Develop your own professional R package\n📚Topic 4?  📖R package\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n Collaborate via GitHub / CRAN submission process\n📚Topic 5?  📖Let’s Git started  📖Release R package\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n\n\n\n\n\n\n📝 HW 2 at 11:50 pm",
     "crumbs": [
       "Course information",
       "Schedule"
