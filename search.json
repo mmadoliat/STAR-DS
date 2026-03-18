@@ -551,119 +551,187 @@
     "href": "slides/DataVizShiny.html#hello-shiny-app",
     "title": "Data Visualization and Shiny",
     "section": "Hello Shiny App",
-    "text": "Hello Shiny App"
+    "text": "Hello Shiny App",
+    "crumbs": [
+      "Slides",
+      "Shiny"
+    ]
   },
   {
     "objectID": "slides/DataVizShiny.html#structure-of-a-shiny-app-1",
     "href": "slides/DataVizShiny.html#structure-of-a-shiny-app-1",
     "title": "Data Visualization and Shiny",
     "section": "Structure of a Shiny App",
-    "text": "Structure of a Shiny App\n\n# app.R single-file app\nlibrary(shiny)\nui &lt;- fluidPage(\n  titlePanel(\"Hello Shiny\"),\n  sidebarLayout(\n    sidebarPanel(sliderInput(\"obs\", \"Observations:\", 1, 100, 50)),\n    mainPanel(plotOutput(\"distPlot\"))\n  )\n)\n\nserver &lt;- function(input, output) {\n  output$distPlot &lt;- renderPlot({\n    hist(rnorm(input$obs))\n  })\n}\n\nshinyApp(ui, server)\n\n\nui defines layout and inputs/outputs\nserver contains R code & reactivity"
+    "text": "Structure of a Shiny App\n\n# app.R single-file app\nlibrary(shiny)\nui &lt;- fluidPage(\n  titlePanel(\"Hello Shiny\"),\n  sidebarLayout(\n    sidebarPanel(sliderInput(\"obs\", \"Observations:\", 1, 100, 50)),\n    mainPanel(plotOutput(\"distPlot\"))\n  )\n)\n\nserver &lt;- function(input, output) {\n  output$distPlot &lt;- renderPlot({\n    hist(rnorm(input$obs))\n  })\n}\n\nshinyApp(ui, server)\n\n\nui defines layout and inputs/outputs\nserver contains R code & reactivity",
+    "crumbs": [
+      "Slides",
+      "Shiny"
+    ]
   },
   {
     "objectID": "slides/DataVizShiny.html#structure-of-a-shiny-app-2",
     "href": "slides/DataVizShiny.html#structure-of-a-shiny-app-2",
     "title": "Data Visualization and Shiny",
     "section": "Structure of a Shiny App",
-    "text": "Structure of a Shiny App\nShiny apps come in two parts:\n\n\nUI\n\nDefines the layout and appearance.\nContains elements such as:\n\nlayout structures (sidebars)\ninputs (text boxes, sliders, buttons)\noutputs (plots, tables)\n\n\n\nServer\n\nPerforms calculations.\nContains the logic to respond to user inputs, and update outputs.\nCommunicates with the UI to dynamically render outputs."
+    "text": "Structure of a Shiny App\nShiny apps come in two parts:\n\n\nUI\n\nDefines the layout and appearance.\nContains elements such as:\n\nlayout structures (sidebars)\ninputs (text boxes, sliders, buttons)\noutputs (plots, tables)\n\n\n\nServer\n\nPerforms calculations.\nContains the logic to respond to user inputs, and update outputs.\nCommunicates with the UI to dynamically render outputs.",
+    "crumbs": [
+      "Slides",
+      "Shiny"
+    ]
   },
   {
     "objectID": "slides/DataVizShiny.html#k-nn-regression-explorer",
     "href": "slides/DataVizShiny.html#k-nn-regression-explorer",
     "title": "Data Visualization and Shiny",
     "section": "k-NN Regression Explorer",
-    "text": "k-NN Regression Explorer"
+    "text": "k-NN Regression Explorer",
+    "crumbs": [
+      "Slides",
+      "Shiny"
+    ]
   },
   {
     "objectID": "slides/DataVizShiny.html#traintest-helper",
     "href": "slides/DataVizShiny.html#traintest-helper",
     "title": "Data Visualization and Shiny",
     "section": "Train/test helper",
-    "text": "Train/test helper\nmake_split &lt;- function(data, prop = 0.7) {\n  n &lt;- nrow(data)\n  train_idx &lt;- sample(n, size = floor(prop * n))\n  list(train = data[train_idx, ], test = data[-train_idx, ])\n}\n\nWe use this function to split the mtcars data into a train and test set."
+    "text": "Train/test helper\nmake_split &lt;- function(data, prop = 0.7) {\n  n &lt;- nrow(data)\n  train_idx &lt;- sample(n, size = floor(prop * n))\n  list(train = data[train_idx, ], test = data[-train_idx, ])\n}\n\nWe use this function to split the mtcars data into a train and test set.",
+    "crumbs": [
+      "Slides",
+      "Shiny"
+    ]
   },
   {
     "objectID": "slides/DataVizShiny.html#ui-1",
     "href": "slides/DataVizShiny.html#ui-1",
     "title": "Data Visualization and Shiny",
     "section": "UI",
-    "text": "UI\n\nui &lt;- fluidPage(\n  titlePanel(\"k-NN Regression Explorer\"),\n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"k\", \"Number of neighbors (k):\",\n                  min = 1, max = 20, value = 5, step = 1),\n      radioButtons(\"backend\", \"Compute backend:\",\n                   choices = c(\"R\",\"cpp\"), selected = \"cpp\"),\n      actionButton(\"resample\", \"New train/test split\"),\n      hr(),\n      h4(\"Performance\"),\n      verbatimTextOutput(\"trainPerf\"),\n      verbatimTextOutput(\"testPerf\")\n    ),\n    mainPanel(\n      plotOutput(\"predPlot\", height = \"400px\"),\n      tableOutput(\"predTable\")\n    )\n  )\n)"
+    "text": "UI\n\nui &lt;- fluidPage(\n  titlePanel(\"k-NN Regression Explorer\"),\n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"k\", \"Number of neighbors (k):\",\n                  min = 1, max = 20, value = 5, step = 1),\n      radioButtons(\"backend\", \"Compute backend:\",\n                   choices = c(\"R\",\"cpp\"), selected = \"cpp\"),\n      actionButton(\"resample\", \"New train/test split\"),\n      hr(),\n      h4(\"Performance\"),\n      verbatimTextOutput(\"trainPerf\"),\n      verbatimTextOutput(\"testPerf\")\n    ),\n    mainPanel(\n      plotOutput(\"predPlot\", height = \"400px\"),\n      tableOutput(\"predTable\")\n    )\n  )\n)",
+    "crumbs": [
+      "Slides",
+      "Shiny"
+    ]
   },
   {
     "objectID": "slides/DataVizShiny.html#server-part-one",
     "href": "slides/DataVizShiny.html#server-part-one",
     "title": "Data Visualization and Shiny",
     "section": "Server (part one)",
-    "text": "Server (part one)\n\nserver &lt;- function(input, output, session) {\n  # reactive train/test split, re-draw when resample pressed\n  split &lt;- eventReactive(input$resample, {\n    make_split(mtcars, prop = 0.92)\n  }, ignoreNULL = FALSE)\n  \n  # compute fitted (train) and predicted (test)\n  fitted_vals &lt;- reactive({\n    d_train &lt;- split()$train\n    knn_pred(d_train[, c(\"wt\", \"qsec\")], d_train[, c(\"mpg\")], \n             d_train[, c(\"wt\", \"qsec\")], input$k, input$backend)\n  })\n  predicted &lt;- reactive({\n    d_train &lt;- split()$train\n    d_test &lt;- split()$test\n    knn_pred(d_train[, c(\"wt\", \"qsec\")], d_train[, c(\"mpg\")], \n             d_test[, c(\"wt\", \"qsec\")], input$k, input$backend)\n  })\n  \n  # compute metrics\n  mse &lt;- function(obs, pred) mean((obs - pred)^2)\n  r2  &lt;- function(obs, pred) 1 - (sum((obs - pred)^2) / sum((obs - mean(obs))^2))\n  \n  output$trainPerf &lt;- renderPrint({\n    obs &lt;- split()$train$mpg\n    cat(\"Training set:\\n\")\n    cat(\"  MSE =\", round(mse(obs, fitted_vals()$preds), 3),\n        \"  R² =\", round(r2(obs, fitted_vals()$preds), 3), \"\\n\")\n  })\n  output$testPerf &lt;- renderPrint({\n    obs &lt;- split()$test$mpg\n    cat(\"Test set:\\n\")\n    cat(\"  MSE =\", round(mse(obs, predicted()$preds), 3),\n        \"  R² =\", round(r2(obs, predicted()$preds), 3), \"\\n\")\n  })\n  \n  # Plot showing the k nearest neighbors for each test point\n  output$predPlot &lt;- renderPlot({\n    # Store train/test\n    d_train &lt;- split()$train\n    d_test &lt;- split()$test\n    d_test$id = 1:nrow(d_test)\n    \n    # Create df for geom_segment \n    nn &lt;- segment_df(d_train[, c(\"wt\", \"qsec\")], \n                     d_test[, c(\"wt\", \"qsec\")], \n                     predicted()$ids, input$k)\n    \n    # Add predictions for test set\n    d_test$pred &lt;- predicted()$preds\n    \n    # Create the plot\n    ggplot() +\n      geom_segment(aes(x = test_wt, xend = train_wt, \n                       y = test_qsec, yend = train_qsec), \n                   color = \"grey50\", linetype = \"dotted\",\n                   data = nn) +\n      geom_point(aes(x = wt, y = qsec, color = mpg), \n                 size = 2, data = d_train) +\n      geom_text(aes(x = wt, y = qsec, color = pred, label = id), \n                size = 5, fontface = \"bold\", data = d_test) +\n      scale_color_gradient(low = \"#6A00A8FF\", high = \"#FCA636FF\") +\n      theme_classic() +\n      labs(x = \"wt\", y = \"qsec\")\n  })\n  \n  # show first few test observations\n  output$predTable &lt;- renderTable({\n    d_test &lt;- split()$test\n    data.frame(\n      id = 1:nrow(d_test),\n      car = rownames(d_test),\n      actual = round(d_test$mpg,2),\n      predicted = round(predicted()$preds,2)\n    )\n  }, rownames = FALSE)\n}\n\n\neventReactive() updates in response to a specific event (i.e. button push)."
+    "text": "Server (part one)\n\nserver &lt;- function(input, output, session) {\n  # reactive train/test split, re-draw when resample pressed\n  split &lt;- eventReactive(input$resample, {\n    make_split(mtcars, prop = 0.92)\n  }, ignoreNULL = FALSE)\n  \n  # compute fitted (train) and predicted (test)\n  fitted_vals &lt;- reactive({\n    d_train &lt;- split()$train\n    knn_pred(d_train[, c(\"wt\", \"qsec\")], d_train[, c(\"mpg\")], \n             d_train[, c(\"wt\", \"qsec\")], input$k, input$backend)\n  })\n  predicted &lt;- reactive({\n    d_train &lt;- split()$train\n    d_test &lt;- split()$test\n    knn_pred(d_train[, c(\"wt\", \"qsec\")], d_train[, c(\"mpg\")], \n             d_test[, c(\"wt\", \"qsec\")], input$k, input$backend)\n  })\n  \n  # compute metrics\n  mse &lt;- function(obs, pred) mean((obs - pred)^2)\n  r2  &lt;- function(obs, pred) 1 - (sum((obs - pred)^2) / sum((obs - mean(obs))^2))\n  \n  output$trainPerf &lt;- renderPrint({\n    obs &lt;- split()$train$mpg\n    cat(\"Training set:\\n\")\n    cat(\"  MSE =\", round(mse(obs, fitted_vals()$preds), 3),\n        \"  R² =\", round(r2(obs, fitted_vals()$preds), 3), \"\\n\")\n  })\n  output$testPerf &lt;- renderPrint({\n    obs &lt;- split()$test$mpg\n    cat(\"Test set:\\n\")\n    cat(\"  MSE =\", round(mse(obs, predicted()$preds), 3),\n        \"  R² =\", round(r2(obs, predicted()$preds), 3), \"\\n\")\n  })\n  \n  # Plot showing the k nearest neighbors for each test point\n  output$predPlot &lt;- renderPlot({\n    # Store train/test\n    d_train &lt;- split()$train\n    d_test &lt;- split()$test\n    d_test$id = 1:nrow(d_test)\n    \n    # Create df for geom_segment \n    nn &lt;- segment_df(d_train[, c(\"wt\", \"qsec\")], \n                     d_test[, c(\"wt\", \"qsec\")], \n                     predicted()$ids, input$k)\n    \n    # Add predictions for test set\n    d_test$pred &lt;- predicted()$preds\n    \n    # Create the plot\n    ggplot() +\n      geom_segment(aes(x = test_wt, xend = train_wt, \n                       y = test_qsec, yend = train_qsec), \n                   color = \"grey50\", linetype = \"dotted\",\n                   data = nn) +\n      geom_point(aes(x = wt, y = qsec, color = mpg), \n                 size = 2, data = d_train) +\n      geom_text(aes(x = wt, y = qsec, color = pred, label = id), \n                size = 5, fontface = \"bold\", data = d_test) +\n      scale_color_gradient(low = \"#6A00A8FF\", high = \"#FCA636FF\") +\n      theme_classic() +\n      labs(x = \"wt\", y = \"qsec\")\n  })\n  \n  # show first few test observations\n  output$predTable &lt;- renderTable({\n    d_test &lt;- split()$test\n    data.frame(\n      id = 1:nrow(d_test),\n      car = rownames(d_test),\n      actual = round(d_test$mpg,2),\n      predicted = round(predicted()$preds,2)\n    )\n  }, rownames = FALSE)\n}\n\n\neventReactive() updates in response to a specific event (i.e. button push).",
+    "crumbs": [
+      "Slides",
+      "Shiny"
+    ]
   },
   {
     "objectID": "slides/DataVizShiny.html#server-part-two",
     "href": "slides/DataVizShiny.html#server-part-two",
     "title": "Data Visualization and Shiny",
     "section": "Server (part two)",
-    "text": "Server (part two)\n\nserver &lt;- function(input, output, session) {\n  # reactive train/test split, re-draw when resample pressed\n  split &lt;- eventReactive(input$resample, {\n    make_split(mtcars, prop = 0.92)\n  }, ignoreNULL = FALSE)\n  \n  # compute fitted (train) and predicted (test)\n  fitted_vals &lt;- reactive({\n    d_train &lt;- split()$train\n    knn_pred(d_train[, c(\"wt\", \"qsec\")], d_train[, c(\"mpg\")], \n             d_train[, c(\"wt\", \"qsec\")], input$k, input$backend)\n  })\n  predicted &lt;- reactive({\n    d_train &lt;- split()$train\n    d_test &lt;- split()$test\n    knn_pred(d_train[, c(\"wt\", \"qsec\")], d_train[, c(\"mpg\")], \n             d_test[, c(\"wt\", \"qsec\")], input$k, input$backend)\n  })\n  \n  # compute metrics\n  mse &lt;- function(obs, pred) mean((obs - pred)^2)\n  r2  &lt;- function(obs, pred) 1 - (sum((obs - pred)^2) / sum((obs - mean(obs))^2))\n  \n  output$trainPerf &lt;- renderPrint({\n    obs &lt;- split()$train$mpg\n    cat(\"Training set:\\n\")\n    cat(\"  MSE =\", round(mse(obs, fitted_vals()$preds), 3),\n        \"  R² =\", round(r2(obs, fitted_vals()$preds), 3), \"\\n\")\n  })\n  output$testPerf &lt;- renderPrint({\n    obs &lt;- split()$test$mpg\n    cat(\"Test set:\\n\")\n    cat(\"  MSE =\", round(mse(obs, predicted()$preds), 3),\n        \"  R² =\", round(r2(obs, predicted()$preds), 3), \"\\n\")\n  })\n  \n  # Plot showing the k nearest neighbors for each test point\n  output$predPlot &lt;- renderPlot({\n    # Store train/test\n    d_train &lt;- split()$train\n    d_test &lt;- split()$test\n    d_test$id = 1:nrow(d_test)\n    \n    # Create df for geom_segment \n    nn &lt;- segment_df(d_train[, c(\"wt\", \"qsec\")], \n                     d_test[, c(\"wt\", \"qsec\")], \n                     predicted()$ids, input$k)\n    \n    # Add predictions for test set\n    d_test$pred &lt;- predicted()$preds\n    \n    # Create the plot\n    ggplot() +\n      geom_segment(aes(x = test_wt, xend = train_wt, \n                       y = test_qsec, yend = train_qsec), \n                   color = \"grey50\", linetype = \"dotted\",\n                   data = nn) +\n      geom_point(aes(x = wt, y = qsec, color = mpg), \n                 size = 2, data = d_train) +\n      geom_text(aes(x = wt, y = qsec, color = pred, label = id), \n                size = 5, fontface = \"bold\", data = d_test) +\n      scale_color_gradient(low = \"#6A00A8FF\", high = \"#FCA636FF\") +\n      theme_classic() +\n      labs(x = \"wt\", y = \"qsec\")\n  })\n  \n  # show first few test observations\n  output$predTable &lt;- renderTable({\n    d_test &lt;- split()$test\n    data.frame(\n      id = 1:nrow(d_test),\n      car = rownames(d_test),\n      actual = round(d_test$mpg,2),\n      predicted = round(predicted()$preds,2)\n    )\n  }, rownames = FALSE)\n}\n\n\nreactive() updates in response to any input change."
+    "text": "Server (part two)\n\nserver &lt;- function(input, output, session) {\n  # reactive train/test split, re-draw when resample pressed\n  split &lt;- eventReactive(input$resample, {\n    make_split(mtcars, prop = 0.92)\n  }, ignoreNULL = FALSE)\n  \n  # compute fitted (train) and predicted (test)\n  fitted_vals &lt;- reactive({\n    d_train &lt;- split()$train\n    knn_pred(d_train[, c(\"wt\", \"qsec\")], d_train[, c(\"mpg\")], \n             d_train[, c(\"wt\", \"qsec\")], input$k, input$backend)\n  })\n  predicted &lt;- reactive({\n    d_train &lt;- split()$train\n    d_test &lt;- split()$test\n    knn_pred(d_train[, c(\"wt\", \"qsec\")], d_train[, c(\"mpg\")], \n             d_test[, c(\"wt\", \"qsec\")], input$k, input$backend)\n  })\n  \n  # compute metrics\n  mse &lt;- function(obs, pred) mean((obs - pred)^2)\n  r2  &lt;- function(obs, pred) 1 - (sum((obs - pred)^2) / sum((obs - mean(obs))^2))\n  \n  output$trainPerf &lt;- renderPrint({\n    obs &lt;- split()$train$mpg\n    cat(\"Training set:\\n\")\n    cat(\"  MSE =\", round(mse(obs, fitted_vals()$preds), 3),\n        \"  R² =\", round(r2(obs, fitted_vals()$preds), 3), \"\\n\")\n  })\n  output$testPerf &lt;- renderPrint({\n    obs &lt;- split()$test$mpg\n    cat(\"Test set:\\n\")\n    cat(\"  MSE =\", round(mse(obs, predicted()$preds), 3),\n        \"  R² =\", round(r2(obs, predicted()$preds), 3), \"\\n\")\n  })\n  \n  # Plot showing the k nearest neighbors for each test point\n  output$predPlot &lt;- renderPlot({\n    # Store train/test\n    d_train &lt;- split()$train\n    d_test &lt;- split()$test\n    d_test$id = 1:nrow(d_test)\n    \n    # Create df for geom_segment \n    nn &lt;- segment_df(d_train[, c(\"wt\", \"qsec\")], \n                     d_test[, c(\"wt\", \"qsec\")], \n                     predicted()$ids, input$k)\n    \n    # Add predictions for test set\n    d_test$pred &lt;- predicted()$preds\n    \n    # Create the plot\n    ggplot() +\n      geom_segment(aes(x = test_wt, xend = train_wt, \n                       y = test_qsec, yend = train_qsec), \n                   color = \"grey50\", linetype = \"dotted\",\n                   data = nn) +\n      geom_point(aes(x = wt, y = qsec, color = mpg), \n                 size = 2, data = d_train) +\n      geom_text(aes(x = wt, y = qsec, color = pred, label = id), \n                size = 5, fontface = \"bold\", data = d_test) +\n      scale_color_gradient(low = \"#6A00A8FF\", high = \"#FCA636FF\") +\n      theme_classic() +\n      labs(x = \"wt\", y = \"qsec\")\n  })\n  \n  # show first few test observations\n  output$predTable &lt;- renderTable({\n    d_test &lt;- split()$test\n    data.frame(\n      id = 1:nrow(d_test),\n      car = rownames(d_test),\n      actual = round(d_test$mpg,2),\n      predicted = round(predicted()$preds,2)\n    )\n  }, rownames = FALSE)\n}\n\n\nreactive() updates in response to any input change.",
+    "crumbs": [
+      "Slides",
+      "Shiny"
+    ]
   },
   {
     "objectID": "slides/DataVizShiny.html#server-part-three",
     "href": "slides/DataVizShiny.html#server-part-three",
     "title": "Data Visualization and Shiny",
     "section": "Server (part three)",
-    "text": "Server (part three)\n\nserver &lt;- function(input, output, session) {\n  # reactive train/test split, re-draw when resample pressed\n  split &lt;- eventReactive(input$resample, {\n    make_split(mtcars, prop = 0.92)\n  }, ignoreNULL = FALSE)\n  \n  # compute fitted (train) and predicted (test)\n  fitted_vals &lt;- reactive({\n    d_train &lt;- split()$train\n    knn_pred(d_train[, c(\"wt\", \"qsec\")], d_train[, c(\"mpg\")], \n             d_train[, c(\"wt\", \"qsec\")], input$k, input$backend)\n  })\n  predicted &lt;- reactive({\n    d_train &lt;- split()$train\n    d_test &lt;- split()$test\n    knn_pred(d_train[, c(\"wt\", \"qsec\")], d_train[, c(\"mpg\")], \n             d_test[, c(\"wt\", \"qsec\")], input$k, input$backend)\n  })\n  \n  # compute metrics\n  mse &lt;- function(obs, pred) mean((obs - pred)^2)\n  r2  &lt;- function(obs, pred) 1 - (sum((obs - pred)^2) / sum((obs - mean(obs))^2))\n  \n  output$trainPerf &lt;- renderPrint({\n    obs &lt;- split()$train$mpg\n    cat(\"Training set:\\n\")\n    cat(\"  MSE =\", round(mse(obs, fitted_vals()$preds), 3),\n        \"  R² =\", round(r2(obs, fitted_vals()$preds), 3), \"\\n\")\n  })\n  output$testPerf &lt;- renderPrint({\n    obs &lt;- split()$test$mpg\n    cat(\"Test set:\\n\")\n    cat(\"  MSE =\", round(mse(obs, predicted()$preds), 3),\n        \"  R² =\", round(r2(obs, predicted()$preds), 3), \"\\n\")\n  })\n  \n  # Plot showing the k nearest neighbors for each test point\n  output$predPlot &lt;- renderPlot({\n    # Store train/test\n    d_train &lt;- split()$train\n    d_test &lt;- split()$test\n    d_test$id = 1:nrow(d_test)\n    \n    # Create df for geom_segment \n    nn &lt;- segment_df(d_train[, c(\"wt\", \"qsec\")], \n                     d_test[, c(\"wt\", \"qsec\")], \n                     predicted()$ids, input$k)\n    \n    # Add predictions for test set\n    d_test$pred &lt;- predicted()$preds\n    \n    # Create the plot\n    ggplot() +\n      geom_segment(aes(x = test_wt, xend = train_wt, \n                       y = test_qsec, yend = train_qsec), \n                   color = \"grey50\", linetype = \"dotted\",\n                   data = nn) +\n      geom_point(aes(x = wt, y = qsec, color = mpg), \n                 size = 2, data = d_train) +\n      geom_text(aes(x = wt, y = qsec, color = pred, label = id), \n                size = 5, fontface = \"bold\", data = d_test) +\n      scale_color_gradient(low = \"#6A00A8FF\", high = \"#FCA636FF\") +\n      theme_classic() +\n      labs(x = \"wt\", y = \"qsec\")\n  })\n  \n  # show first few test observations\n  output$predTable &lt;- renderTable({\n    d_test &lt;- split()$test\n    data.frame(\n      id = 1:nrow(d_test),\n      car = rownames(d_test),\n      actual = round(d_test$mpg,2),\n      predicted = round(predicted()$preds,2)\n    )\n  }, rownames = FALSE)\n}\n\n\nrenderPlot() must be paired with plotOutput() in UI."
+    "text": "Server (part three)\n\nserver &lt;- function(input, output, session) {\n  # reactive train/test split, re-draw when resample pressed\n  split &lt;- eventReactive(input$resample, {\n    make_split(mtcars, prop = 0.92)\n  }, ignoreNULL = FALSE)\n  \n  # compute fitted (train) and predicted (test)\n  fitted_vals &lt;- reactive({\n    d_train &lt;- split()$train\n    knn_pred(d_train[, c(\"wt\", \"qsec\")], d_train[, c(\"mpg\")], \n             d_train[, c(\"wt\", \"qsec\")], input$k, input$backend)\n  })\n  predicted &lt;- reactive({\n    d_train &lt;- split()$train\n    d_test &lt;- split()$test\n    knn_pred(d_train[, c(\"wt\", \"qsec\")], d_train[, c(\"mpg\")], \n             d_test[, c(\"wt\", \"qsec\")], input$k, input$backend)\n  })\n  \n  # compute metrics\n  mse &lt;- function(obs, pred) mean((obs - pred)^2)\n  r2  &lt;- function(obs, pred) 1 - (sum((obs - pred)^2) / sum((obs - mean(obs))^2))\n  \n  output$trainPerf &lt;- renderPrint({\n    obs &lt;- split()$train$mpg\n    cat(\"Training set:\\n\")\n    cat(\"  MSE =\", round(mse(obs, fitted_vals()$preds), 3),\n        \"  R² =\", round(r2(obs, fitted_vals()$preds), 3), \"\\n\")\n  })\n  output$testPerf &lt;- renderPrint({\n    obs &lt;- split()$test$mpg\n    cat(\"Test set:\\n\")\n    cat(\"  MSE =\", round(mse(obs, predicted()$preds), 3),\n        \"  R² =\", round(r2(obs, predicted()$preds), 3), \"\\n\")\n  })\n  \n  # Plot showing the k nearest neighbors for each test point\n  output$predPlot &lt;- renderPlot({\n    # Store train/test\n    d_train &lt;- split()$train\n    d_test &lt;- split()$test\n    d_test$id = 1:nrow(d_test)\n    \n    # Create df for geom_segment \n    nn &lt;- segment_df(d_train[, c(\"wt\", \"qsec\")], \n                     d_test[, c(\"wt\", \"qsec\")], \n                     predicted()$ids, input$k)\n    \n    # Add predictions for test set\n    d_test$pred &lt;- predicted()$preds\n    \n    # Create the plot\n    ggplot() +\n      geom_segment(aes(x = test_wt, xend = train_wt, \n                       y = test_qsec, yend = train_qsec), \n                   color = \"grey50\", linetype = \"dotted\",\n                   data = nn) +\n      geom_point(aes(x = wt, y = qsec, color = mpg), \n                 size = 2, data = d_train) +\n      geom_text(aes(x = wt, y = qsec, color = pred, label = id), \n                size = 5, fontface = \"bold\", data = d_test) +\n      scale_color_gradient(low = \"#6A00A8FF\", high = \"#FCA636FF\") +\n      theme_classic() +\n      labs(x = \"wt\", y = \"qsec\")\n  })\n  \n  # show first few test observations\n  output$predTable &lt;- renderTable({\n    d_test &lt;- split()$test\n    data.frame(\n      id = 1:nrow(d_test),\n      car = rownames(d_test),\n      actual = round(d_test$mpg,2),\n      predicted = round(predicted()$preds,2)\n    )\n  }, rownames = FALSE)\n}\n\n\nrenderPlot() must be paired with plotOutput() in UI.",
+    "crumbs": [
+      "Slides",
+      "Shiny"
+    ]
   },
   {
     "objectID": "slides/Reticulate.html#using-source_python",
     "href": "slides/Reticulate.html#using-source_python",
     "title": "Integrate Python in R",
     "section": "📥 Using source_python()",
-    "text": "📥 Using source_python()\nVariables become directly available in the R global environment\n\n🔍 Example:\nConsider script.py file, includes following Python script:\ny = 2\ndef square(x):\n    return x **2\n\n\n✅ Works directly in R :\nlibrary(reticulate)\nsource_python(\"script.py\")\nprint(y) \n[1] 2\nsquare(4)\n[1] 16"
+    "text": "📥 Using source_python()\nVariables become directly available in the R global environment\n\n🔍 Example:\nConsider script.py file, includes following Python script:\ny = 2\ndef square(x):\n    return x **2\n\n\n✅ Works directly in R :\nlibrary(reticulate)\nsource_python(\"script.py\")\nprint(y) \n[1] 2\nsquare(4)\n[1] 16",
+    "crumbs": [
+      "Slides",
+      "Python in R"
+    ]
   },
   {
     "objectID": "slides/Reticulate.html#using-py_run_file",
     "href": "slides/Reticulate.html#using-py_run_file",
     "title": "Integrate Python in R",
     "section": "📥 Using py_run_file()",
-    "text": "📥 Using py_run_file()\nAlso runs the script, but…\n\n❌ Does not expose functions/variables directly in R\nVariables and functions are stored in py$\n\n\npy_run_file(\"script.py\")\nprint(py$y)\n[1] 2\npy$square(4)\n[1] 16"
+    "text": "📥 Using py_run_file()\nAlso runs the script, but…\n\n❌ Does not expose functions/variables directly in R\nVariables and functions are stored in py$\n\n\npy_run_file(\"script.py\")\nprint(py$y)\n[1] 2\npy$square(4)\n[1] 16",
+    "crumbs": [
+      "Slides",
+      "Python in R"
+    ]
   },
   {
     "objectID": "slides/Reticulate.html#using-py_run_string",
     "href": "slides/Reticulate.html#using-py_run_string",
     "title": "Integrate Python in R",
     "section": "🧩 Using py_run_string()",
-    "text": "🧩 Using py_run_string()\n\nExecutes the string in the shared Python session\nVariables created in Python are not added to R environment\nAccess Python variables in R using py$\n\n\npy_run_string(\"\ndef square(x):\n    return x ** 2\ny = 5\n\")\npy$y\n[1] 5\npy$square(4)\n[1] 16"
+    "text": "🧩 Using py_run_string()\n\nExecutes the string in the shared Python session\nVariables created in Python are not added to R environment\nAccess Python variables in R using py$\n\n\npy_run_string(\"\ndef square(x):\n    return x ** 2\ny = 5\n\")\npy$y\n[1] 5\npy$square(4)\n[1] 16",
+    "crumbs": [
+      "Slides",
+      "Python in R"
+    ]
   },
   {
     "objectID": "slides/Reticulate.html#automatic-data-conversion",
     "href": "slides/Reticulate.html#automatic-data-conversion",
     "title": "Integrate Python in R",
     "section": "🔁 Automatic Data Conversion",
-    "text": "🔁 Automatic Data Conversion\n\n\n\n\n\n\n\n\n\nR Object Type\nPython Equivalent\nNotes\n\n\n\n\nnumeric, integer\nfloat, int\nScalars or arrays\n\n\nlogical\nbool\nTRUE → True\n\n\ncharacter\nstr or list[str]\nVectorized strings → list\n\n\nvector, matrix\nnumpy.ndarray\nShape preserved\n\n\ndata.frame\npandas.DataFrame\nColumn types preserved\n\n\nlist (named)\ndict\nKeys from names\n\n\nlist (unnamed)\nlist\nSequential list\n\n\nNULL\nNone\n\n\n\nfunction (closure)\nPython callable\nIf inputs/outputs are convertible\n\n\nfunction (builtin)\n❌ PyCapsule\n⚠️ not callable in Python\n\n\nS3/S4/R6 objects\n❌ PyCapsule\n⚠️ Not convertible"
+    "text": "🔁 Automatic Data Conversion\n\n\n\n\n\n\n\n\n\nR Object Type\nPython Equivalent\nNotes\n\n\n\n\nnumeric, integer\nfloat, int\nScalars or arrays\n\n\nlogical\nbool\nTRUE → True\n\n\ncharacter\nstr or list[str]\nVectorized strings → list\n\n\nvector, matrix\nnumpy.ndarray\nShape preserved\n\n\ndata.frame\npandas.DataFrame\nColumn types preserved\n\n\nlist (named)\ndict\nKeys from names\n\n\nlist (unnamed)\nlist\nSequential list\n\n\nNULL\nNone\n\n\n\nfunction (closure)\nPython callable\nIf inputs/outputs are convertible\n\n\nfunction (builtin)\n❌ PyCapsule\n⚠️ not callable in Python\n\n\nS3/S4/R6 objects\n❌ PyCapsule\n⚠️ Not convertible",
+    "crumbs": [
+      "Slides",
+      "Python in R"
+    ]
   },
   {
     "objectID": "slides/Reticulate.html#accessing-r-objects-from-python",
     "href": "slides/Reticulate.html#accessing-r-objects-from-python",
     "title": "Integrate Python in R",
     "section": "Accessing R Objects from Python",
-    "text": "Accessing R Objects from Python\n🔍 Example: Let two following objects have been defined in R global environment:\nlibrary(reticulate)\nx &lt;- c(10, 20, 30)\nf &lt;- function(x) x^2\n\nIn Python we can access to these objects trough r object:\nprint(r.x)      \n[10, 20, 30]\nprint(r.f(3))  \n9"
+    "text": "Accessing R Objects from Python\n🔍 Example: Let two following objects have been defined in R global environment:\nlibrary(reticulate)\nx &lt;- c(10, 20, 30)\nf &lt;- function(x) x^2\n\nIn Python we can access to these objects trough r object:\nprint(r.x)      \n[10, 20, 30]\nprint(r.f(3))  \n9",
+    "crumbs": [
+      "Slides",
+      "Python in R"
+    ]
   },
   {
     "objectID": "slides/Reticulate.html#exporting-r-objects-to-python",
     "href": "slides/Reticulate.html#exporting-r-objects-to-python",
     "title": "Integrate Python in R",
     "section": "Exporting R Objects to Python",
-    "text": "Exporting R Objects to Python\nUse py$ assignment. In R:\nlibrary(reticulate)\nx &lt;- c(1, 2, 3)\npy$x &lt;- x        # Exports `x` to Python namespace\nf &lt;- function(n) n^2\npy$f &lt;- f        # Exports R function to Python\n\nNow usable from Python:\nprint(x) \n[1.0, 2.0, 3.0]\nprint(f(5))\n25.0"
+    "text": "Exporting R Objects to Python\nUse py$ assignment. In R:\nlibrary(reticulate)\nx &lt;- c(1, 2, 3)\npy$x &lt;- x        # Exports `x` to Python namespace\nf &lt;- function(n) n^2\npy$f &lt;- f        # Exports R function to Python\n\nNow usable from Python:\nprint(x) \n[1.0, 2.0, 3.0]\nprint(f(5))\n25.0",
+    "crumbs": [
+      "Slides",
+      "Python in R"
+    ]
   },
   {
     "objectID": "slides/Reticulate.html#exporting-r-closure-functions-to-python",
     "href": "slides/Reticulate.html#exporting-r-closure-functions-to-python",
     "title": "Integrate Python in R",
     "section": "Exporting R Closure Functions to Python",
-    "text": "Exporting R Closure Functions to Python\nA closure in R is simply a user-defined function created with the function() keyword. It’s the most common type of function in R.\n✅ A closure fnction Works directly. In R:\npy$m &lt;- mean\ntypeof(mean) \n[1] \"closure\"\n\nIn Python:\nprint(m([1, 2, 3, 4, 5]))     \n3.0"
+    "text": "Exporting R Closure Functions to Python\nA closure in R is simply a user-defined function created with the function() keyword. It’s the most common type of function in R.\n✅ A closure fnction Works directly. In R:\npy$m &lt;- mean\ntypeof(mean) \n[1] \"closure\"\n\nIn Python:\nprint(m([1, 2, 3, 4, 5]))     \n3.0",
+    "crumbs": [
+      "Slides",
+      "Python in R"
+    ]
   },
   {
     "objectID": "slides/Reticulate.html#exporting-r-builtin-functions-to-python",
     "href": "slides/Reticulate.html#exporting-r-builtin-functions-to-python",
     "title": "Integrate Python in R",
     "section": "Exporting R Builtin Functions to Python",
-    "text": "Exporting R Builtin Functions to Python\nBuilt-in functions in R are functions implemented in C (compiled) and embedded directly into the R interpreter.\n⚠️ Builtin function needs wrapping. For example:\ntypeof(exp)\n[1] \"builtin\"\npy$e &lt;- exp\n\nIn Python:\nprint(e(1))     \nTypeError: 'PyCapsule' object is not callable\n\n\n✅ Solution: Wrap the builtin in a closure\ne &lt;- function(x) exp(x)\npy$e &lt;- e\n\n\nIn Python:\nprint(e(1))  \n2.718281828459045"
+    "text": "Exporting R Builtin Functions to Python\nBuilt-in functions in R are functions implemented in C (compiled) and embedded directly into the R interpreter.\n⚠️ Builtin function needs wrapping. For example:\ntypeof(exp)\n[1] \"builtin\"\npy$e &lt;- exp\n\nIn Python:\nprint(e(1))     \nTypeError: 'PyCapsule' object is not callable\n\n\n✅ Solution: Wrap the builtin in a closure\ne &lt;- function(x) exp(x)\npy$e &lt;- e\n\n\nIn Python:\nprint(e(1))  \n2.718281828459045",
+    "crumbs": [
+      "Slides",
+      "Python in R"
+    ]
   },
   {
     "objectID": "about.html",
@@ -1242,91 +1310,143 @@
     "href": "slides/Rcpp.html#outline",
     "title": "Introduction to Rcpp",
     "section": "Outline",
-    "text": "Outline\n\n\nMotivation & Introduction\nGetting Started with evalCpp() & cppFunction()\nUsing sourceCpp()\nData Types & Conversions\nStandard Template Library (STL)\nUsing Rcpp in Packages\nAdvanced Topics & Resources"
+    "text": "Outline\n\n\nMotivation & Introduction\nGetting Started with evalCpp() & cppFunction()\nUsing sourceCpp()\nData Types & Conversions\nStandard Template Library (STL)\nUsing Rcpp in Packages\nAdvanced Topics & Resources",
+    "crumbs": [
+      "Slides",
+      "RCpp"
+    ]
   },
   {
     "objectID": "slides/Rcpp.html#basic-usage-evalcpp",
     "href": "slides/Rcpp.html#basic-usage-evalcpp",
     "title": "Introduction to Rcpp",
     "section": "Basic Usage: evalCpp()",
-    "text": "Basic Usage: evalCpp()\n\nevalCpp() evaluates a single C++ expression. Includes and dependencies can be declared.\nThis allows us to quickly check C++ constructs.\n\nlibrary(Rcpp)\n\nevalCpp(\"2 + 2\")  # simple test\n&gt;# [1] 4\n\nevalCpp(\"std::numeric_limits&lt;double&gt;::max()\")\n&gt;# [1] 1.79769e+308"
+    "text": "Basic Usage: evalCpp()\n\nevalCpp() evaluates a single C++ expression. Includes and dependencies can be declared.\nThis allows us to quickly check C++ constructs.\n\nlibrary(Rcpp)\n\nevalCpp(\"2 + 2\")  # simple test\n&gt;# [1] 4\n\nevalCpp(\"std::numeric_limits&lt;double&gt;::max()\")\n&gt;# [1] 1.79769e+308",
+    "crumbs": [
+      "Slides",
+      "RCpp"
+    ]
   },
   {
     "objectID": "slides/Rcpp.html#simple-example---using-cppfunction",
     "href": "slides/Rcpp.html#simple-example---using-cppfunction",
     "title": "Introduction to Rcpp",
     "section": "Simple Example - Using cppFunction()",
-    "text": "Simple Example - Using cppFunction()\n\nRcpp Version of ‘is this number odd or even’\n\nRcpp::cppFunction(\"\nbool isOdd_cpp(int num = 10) {\n  bool result = (num % 2 == 1);\n  return result;\n}\")\nc(isOdd_cpp(42L), isOdd_cpp(43L))\n&gt;# [1] FALSE TRUE\n\n\nUse cppFunction() in R console or script\nFast prototyping & testing\nGood for small functions"
+    "text": "Simple Example - Using cppFunction()\n\nRcpp Version of ‘is this number odd or even’\n\nRcpp::cppFunction(\"\nbool isOdd_cpp(int num = 10) {\n  bool result = (num % 2 == 1);\n  return result;\n}\")\nc(isOdd_cpp(42L), isOdd_cpp(43L))\n&gt;# [1] FALSE TRUE\n\n\nUse cppFunction() in R console or script\nFast prototyping & testing\nGood for small functions",
+    "crumbs": [
+      "Slides",
+      "RCpp"
+    ]
   },
   {
     "objectID": "slides/Rcpp.html#second-example-var1-1",
     "href": "slides/Rcpp.html#second-example-var1-1",
     "title": "Introduction to Rcpp",
     "section": "Second Example: VAR(1)",
-    "text": "Second Example: VAR(1)\nIn R (C++) code, given both the coefficient and error matrices:\n\nrSim &lt;- function(B, E) {\n  X &lt;- matrix(0, nrow(E), ncol(E))\n  for (r in 2:nrow(E)) {\n    X[r, ] = X[r-1, ] %*% B + E[r, ]\n  }\n  return(X)\n}\n\n\nC++ Version:\n\narma::mat cppSim(arma::mat B, arma::mat E) {\n  int m = E.n_rows, n = E.n_cols;\n  arma::mat X(m, n);\n  X.row(0) = arma::zeros&lt;arma::mat&gt;(1, n);\n  for (int r = 1; r &lt; m; r++) {\n    X.row(r) = X.row(r-1) * B + E.row(r);\n  }\n  return X;\n}"
+    "text": "Second Example: VAR(1)\nIn R (C++) code, given both the coefficient and error matrices:\n\nrSim &lt;- function(B, E) {\n  X &lt;- matrix(0, nrow(E), ncol(E))\n  for (r in 2:nrow(E)) {\n    X[r, ] = X[r-1, ] %*% B + E[r, ]\n  }\n  return(X)\n}\n\n\nC++ Version:\n\narma::mat cppSim(arma::mat B, arma::mat E) {\n  int m = E.n_rows, n = E.n_cols;\n  arma::mat X(m, n);\n  X.row(0) = arma::zeros&lt;arma::mat&gt;(1, n);\n  for (int r = 1; r &lt; m; r++) {\n    X.row(r) = X.row(r-1) * B + E.row(r);\n  }\n  return X;\n}",
+    "crumbs": [
+      "Slides",
+      "RCpp"
+    ]
   },
   {
     "objectID": "slides/Rcpp.html#second-example-var1-2",
     "href": "slides/Rcpp.html#second-example-var1-2",
     "title": "Introduction to Rcpp",
     "section": "Second Example: VAR(1)",
-    "text": "Second Example: VAR(1)\n\nRcpp::cppFunction('arma::mat cppSim(arma::mat B, arma::mat E) {\n  int m = E.n_rows, n = E.n_cols;\n  arma::mat X(m, n);\n  X.row(0) = arma::zeros&lt;arma::mat&gt;(1, n);\n  for (int r = 1; r &lt; m; r++) {\n    X.row(r) = X.row(r-1) * B + E.row(r);\n  }\n  return X;\n}', depends=\"RcppArmadillo\")\n\na &lt;- matrix(c(0.5, 0.1, 0.1, 0.5), nrow = 2)\ne &lt;- matrix(rnorm(10000), ncol = 2)\nrbenchmark::benchmark(cppSim(a, e), rSim(a, e), order=\"relative\")[, 1:4]\n\n&gt;#    test           replications elapsed relative\n&gt;# 1  cppSim(a, e)  100         0.010   1.0\n&gt;# 2  rSim(a, e)    100         0.728  72.8"
+    "text": "Second Example: VAR(1)\n\nRcpp::cppFunction('arma::mat cppSim(arma::mat B, arma::mat E) {\n  int m = E.n_rows, n = E.n_cols;\n  arma::mat X(m, n);\n  X.row(0) = arma::zeros&lt;arma::mat&gt;(1, n);\n  for (int r = 1; r &lt; m; r++) {\n    X.row(r) = X.row(r-1) * B + E.row(r);\n  }\n  return X;\n}', depends=\"RcppArmadillo\")\n\na &lt;- matrix(c(0.5, 0.1, 0.1, 0.5), nrow = 2)\ne &lt;- matrix(rnorm(10000), ncol = 2)\nrbenchmark::benchmark(cppSim(a, e), rSim(a, e), order=\"relative\")[, 1:4]\n\n&gt;#    test           replications elapsed relative\n&gt;# 1  cppSim(a, e)  100         0.010   1.0\n&gt;# 2  rSim(a, e)    100         0.728  72.8",
+    "crumbs": [
+      "Slides",
+      "RCpp"
+    ]
   },
   {
     "objectID": "slides/Rcpp.html#pagerank",
     "href": "slides/Rcpp.html#pagerank",
     "title": "Introduction to Rcpp",
     "section": "Pagerank",
-    "text": "Pagerank\n#remotes::install_github(\"https://github.com/andrie/pagerank.git\")\nsuppressMessages(library(utils))\nlibrary(pagerank)\n\ncran &lt;- \"https://cloud.r-project.org\"\npr &lt;- compute_pagerank(cran)\nround(100 * pr[1:5], 3)\n\n&gt;#   Rcpp    ggplot2     dplyr      MASS   magrittr\n&gt;# 2.744     1.516       1.274    1.122    0.814"
+    "text": "Pagerank\n#remotes::install_github(\"https://github.com/andrie/pagerank.git\")\nsuppressMessages(library(utils))\nlibrary(pagerank)\n\ncran &lt;- \"https://cloud.r-project.org\"\npr &lt;- compute_pagerank(cran)\nround(100 * pr[1:5], 3)\n\n&gt;#   Rcpp    ggplot2     dplyr      MASS   magrittr\n&gt;# 2.744     1.516       1.274    1.122    0.814",
+    "crumbs": [
+      "Slides",
+      "RCpp"
+    ]
   },
   {
     "objectID": "slides/Rcpp.html#percentage-of-compiled-packages",
     "href": "slides/Rcpp.html#percentage-of-compiled-packages",
     "title": "Introduction to Rcpp",
     "section": "Percentage of Compiled Packages",
-    "text": "Percentage of Compiled Packages\ndb &lt;- tools::CRAN_package_db()       # added in R 3.4.0\ndb &lt;- db[!duplicated(db[, 1]), ]     # rows: number of packages\n\nnTot &lt;- nrow(db)                     # columns: different attributes\nnRcpp &lt;- length(tools::dependsOnPkgs(\"Rcpp\", recursive = FALSE, installed = db))\nnCompiled &lt;- table(db[, \"NeedsCompilation\"])[[\"yes\"]]\n\npropRcpp &lt;- nRcpp / nCompiled * 100\ndata.frame(tot = nTot, totRcpp = nRcpp, totCompiled = nCompiled,\n           RcppPctOfCompiled = propRcpp)\n\n&gt;#   tot   totRcpp   totCompiled   RcppPctOfCompiled\n&gt;# 1 22501    3053        4981          61.29291"
+    "text": "Percentage of Compiled Packages\ndb &lt;- tools::CRAN_package_db()       # added in R 3.4.0\ndb &lt;- db[!duplicated(db[, 1]), ]     # rows: number of packages\n\nnTot &lt;- nrow(db)                     # columns: different attributes\nnRcpp &lt;- length(tools::dependsOnPkgs(\"Rcpp\", recursive = FALSE, installed = db))\nnCompiled &lt;- table(db[, \"NeedsCompilation\"])[[\"yes\"]]\n\npropRcpp &lt;- nRcpp / nCompiled * 100\ndata.frame(tot = nTot, totRcpp = nRcpp, totCompiled = nCompiled,\n           RcppPctOfCompiled = propRcpp)\n\n&gt;#   tot   totRcpp   totCompiled   RcppPctOfCompiled\n&gt;# 1 22501    3053        4981          61.29291",
+    "crumbs": [
+      "Slides",
+      "RCpp"
+    ]
   },
   {
     "objectID": "slides/Rcpp.html#using-sourcecpp",
     "href": "slides/Rcpp.html#using-sourcecpp",
     "title": "Introduction to Rcpp",
     "section": "Using sourceCpp()",
-    "text": "Using sourceCpp()\n\n\nSo what just happened?\n\nWe defined a simple C++ function\n\nIt operates on a numeric vector argument\n\nWe ask Rcpp to ‘source it’ for us\n\nBehind the scenes Rcpp creates a wrapper\n\nRcpp then compiles, links, and loads the wrapper\n\nThe function is available in R under its C++ name\n\nBenefits:\n\nEditor support (syntax highlighting)\nEasier debugging & error tracking"
+    "text": "Using sourceCpp()\n\n\nSo what just happened?\n\nWe defined a simple C++ function\n\nIt operates on a numeric vector argument\n\nWe ask Rcpp to ‘source it’ for us\n\nBehind the scenes Rcpp creates a wrapper\n\nRcpp then compiles, links, and loads the wrapper\n\nThe function is available in R under its C++ name\n\nBenefits:\n\nEditor support (syntax highlighting)\nEasier debugging & error tracking",
+    "crumbs": [
+      "Slides",
+      "RCpp"
+    ]
   },
   {
     "objectID": "slides/Rcpp.html#another-example-timing-r-implementation",
     "href": "slides/Rcpp.html#another-example-timing-r-implementation",
     "title": "Introduction to Rcpp",
     "section": "Another Example: Timing R Implementation",
-    "text": "Another Example: Timing R Implementation\n\nThe R implementation:\n\n\nf &lt;- function(n) {\n  if (n &lt; 2) return(n)\n  return(f(n - 1) + f(n - 2))\n}\n\n\n\nTiming:\n\nlibrary(rbenchmark)\nbenchmark(f(15), f(20), f(25))[, 1:4]\n\n&gt;# test         replications elapsed   relative\n&gt;# 1 f(15)       100          0.06      1.0\n&gt;# 2 f(20)       100          0.75     12.5\n&gt;# 3 f(25)       100          7.92    132.0"
+    "text": "Another Example: Timing R Implementation\n\nThe R implementation:\n\n\nf &lt;- function(n) {\n  if (n &lt; 2) return(n)\n  return(f(n - 1) + f(n - 2))\n}\n\n\n\nTiming:\n\nlibrary(rbenchmark)\nbenchmark(f(15), f(20), f(25))[, 1:4]\n\n&gt;# test         replications elapsed   relative\n&gt;# 1 f(15)       100          0.06      1.0\n&gt;# 2 f(20)       100          0.75     12.5\n&gt;# 3 f(25)       100          7.92    132.0",
+    "crumbs": [
+      "Slides",
+      "RCpp"
+    ]
   },
   {
     "objectID": "slides/Rcpp.html#another-example-c-implementation",
     "href": "slides/Rcpp.html#another-example-c-implementation",
     "title": "Introduction to Rcpp",
     "section": "Another Example: C++ Implementation",
-    "text": "Another Example: C++ Implementation\nint g(int n) {\n  if (n &lt; 2) return(n);\n  return(g(n - 1) + g(n - 2));\n}\n\nRcpp::cppFunction('\n  int g(int n) {\n    if (n &lt; 2) return(n);\n    return(g(n - 1) + g(n - 2)); \n  }')\n\nsapply(0:10, g)  # Using it on first 11 arguments\n\n&gt;# [1] 0 1 1 2 3 5 8 13 21 34 55"
+    "text": "Another Example: C++ Implementation\nint g(int n) {\n  if (n &lt; 2) return(n);\n  return(g(n - 1) + g(n - 2));\n}\n\nRcpp::cppFunction('\n  int g(int n) {\n    if (n &lt; 2) return(n);\n    return(g(n - 1) + g(n - 2)); \n  }')\n\nsapply(0:10, g)  # Using it on first 11 arguments\n\n&gt;# [1] 0 1 1 2 3 5 8 13 21 34 55",
+    "crumbs": [
+      "Slides",
+      "RCpp"
+    ]
   },
   {
     "objectID": "slides/Rcpp.html#another-example-comparing-timing",
     "href": "slides/Rcpp.html#another-example-comparing-timing",
     "title": "Introduction to Rcpp",
     "section": "Another Example: Comparing Timing",
-    "text": "Another Example: Comparing Timing\n\nRcpp implementation:\n\n\nRcpp::cppFunction('\n  int g(int n) {\n    if (n &lt; 2) return(n);\n    return(g(n - 1) + g(n - 2)); \n  }')\n\n\n\nTiming:\n\nlibrary(rbenchmark)\nbenchmark(f(25), g(25))[, 1:4]\n\n&gt;#   test      replications elapsed   relative\n&gt;# 1 f(25)      100          8.02     267.333\n&gt;# 2 g(25)      100          0.03       1.000\n\n\n\nA nice gain of a few orders of magnitude."
+    "text": "Another Example: Comparing Timing\n\nRcpp implementation:\n\n\nRcpp::cppFunction('\n  int g(int n) {\n    if (n &lt; 2) return(n);\n    return(g(n - 1) + g(n - 2)); \n  }')\n\n\n\nTiming:\n\nlibrary(rbenchmark)\nbenchmark(f(25), g(25))[, 1:4]\n\n&gt;#   test      replications elapsed   relative\n&gt;# 1 f(25)      100          8.02     267.333\n&gt;# 2 g(25)      100          0.03       1.000\n\n\n\nA nice gain of a few orders of magnitude.",
+    "crumbs": [
+      "Slides",
+      "RCpp"
+    ]
   },
   {
     "objectID": "slides/Rcpp.html#types",
     "href": "slides/Rcpp.html#types",
     "title": "Introduction to Rcpp",
     "section": "Types",
-    "text": "Types\nR Type mapping:\n\nStandard R types (integer, numeric, list, function, … and compound objects) are mapped to corresponding C++ types:\n\nlibrary(Rcpp)\ncppFunction(\"NumericVector logabs(NumericVector x) {\n  return log(abs(x));\n}\")\nlogabs(seq(-5, 5, by = 2))\n&gt;# [1] 1.609438 1.098612 0.000000 0.000000 1.098612 1.609438\n\n\nVectorized C++! Here log(abs()) runs directly on vectors as R would."
+    "text": "Types\nR Type mapping:\n\nStandard R types (integer, numeric, list, function, … and compound objects) are mapped to corresponding C++ types:\n\nlibrary(Rcpp)\ncppFunction(\"NumericVector logabs(NumericVector x) {\n  return log(abs(x));\n}\")\nlogabs(seq(-5, 5, by = 2))\n&gt;# [1] 1.609438 1.098612 0.000000 0.000000 1.098612 1.609438\n\n\nVectorized C++! Here log(abs()) runs directly on vectors as R would.",
+    "crumbs": [
+      "Slides",
+      "RCpp"
+    ]
   },
   {
     "objectID": "slides/Rcpp.html#stl-type-mapping",
     "href": "slides/Rcpp.html#stl-type-mapping",
     "title": "Introduction to Rcpp",
     "section": "STL Type Mapping",
-    "text": "STL Type Mapping\n\ncode/logabs2.cpp\n\n\n#include &lt;Rcpp.h&gt;\nusing namespace Rcpp;\n\ninline double f(double x) { return ::log(::fabs(x)); }\n\n// [[Rcpp::export]]\nstd::vector&lt;double&gt; logabs2(std::vector&lt;double&gt; x) {\n  std::transform(x.begin(), x.end(), x.begin(), f);\n  return x;\n}\n\nNot vectorized but ‘sweeps’ f() along std::vector&lt;double&gt; via STL std::transform().\n\nlibrary(Rcpp)\nsourceCpp(\"code/logabs2.cpp\")\nlogabs2(seq(-5, 5, by = 2))\n&gt;# [1] 1.609438 1.098612 0.000000 0.000000 1.098612 1.609438"
+    "text": "STL Type Mapping\n\ncode/logabs2.cpp\n\n\n#include &lt;Rcpp.h&gt;\nusing namespace Rcpp;\n\ninline double f(double x) { return ::log(::fabs(x)); }\n\n// [[Rcpp::export]]\nstd::vector&lt;double&gt; logabs2(std::vector&lt;double&gt; x) {\n  std::transform(x.begin(), x.end(), x.begin(), f);\n  return x;\n}\n\nNot vectorized but ‘sweeps’ f() along std::vector&lt;double&gt; via STL std::transform().\n\nlibrary(Rcpp)\nsourceCpp(\"code/logabs2.cpp\")\nlogabs2(seq(-5, 5, by = 2))\n&gt;# [1] 1.609438 1.098612 0.000000 0.000000 1.098612 1.609438",
+    "crumbs": [
+      "Slides",
+      "RCpp"
+    ]
   },
   {
     "objectID": "slides/Topic5.html#r-packages-the-fundamental-unit",
