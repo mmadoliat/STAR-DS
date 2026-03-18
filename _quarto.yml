@@ -62,13 +62,13 @@ website:
           - href: hands-on/HO3.qmd
             text: RCpp
           - href: hands-on/HW1.qmd
-            text: First Week HW
-          - href: 
+            text: First HW
+          - href: hands-on/HO4.qmd
             text: Python in R
-          - href: 
+          - href: hands-on/HO5.qmd
             text: R Package
-          - href: 
-            text: GitHub
+          - href: hands-on/HW2.qmd
+            text: Second HW
       - section: "Miscellaneous"
         contents:
           - href: course-links.qmd
