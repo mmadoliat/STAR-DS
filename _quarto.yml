@@ -45,11 +45,11 @@ website:
             text: Schedule
       - section: "Slides"
         contents:
-          - href: slides/Topic2.qmd
+          - href: slides/DataVizShiny.qmd
             text: Shiny
-          - href: slides/Topic3.qmd
+          - href: slides/Rcpp.qmd
             text: RCpp
-          - href: slides/Topic4.qmd
+          - href: slides/Reticulate.qmd
             text: Python in R
           - href: slides/Topic5.qmd
             text: R package
