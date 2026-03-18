@@ -13,7 +13,7 @@ format:
 
 # Outline {.scrollable}
 
-::: incremental
+::: {.fragment .fade-up}
 -   Why integrate Python into R?
 -   What is `reticulate`?
 -   Installation & Setup
@@ -27,21 +27,21 @@ format:
 
 # Why integrate Python into R? {.scrollable}
 
-::: incremental
 -   **Access powerful Python libraries:**
     -   Deep Learning: `PyTorch`, `TensorFlow`, `Keras`
     -   Machine Learning: `scikit-learn`, `XGBoost`, `LightGBM`
     -   NLP: `spaCy`, `HuggingFace transformers`
     -   Computer Vision: `OpenCV`
+
+. . .
+
 -   **Combine the best of both worlds**
     -   R: data manipulation, statistics, visualization (`ggplot2`, `dplyr`)
     -   Python: ML/AI, scripting, general programming
 -   Avoid rewriting code or switching environments
-:::
 
 # What is `reticulate`?
 
-::: incremental
 -   R package for interoperability with Python
 
 -   Maintains a shared Python session accessible from R
@@ -49,7 +49,6 @@ format:
 -   Automatic conversion of many R types to Python and vice versa
 
 -   Supports inline Python code in R Markdown and R scripts
-:::
 
 # Installation & Setup
 
@@ -63,14 +62,9 @@ install.packages("reticulate")
 
 🐍 **Ensure Python is installed**<br/> Use system Python, Anaconda, or a virtual environment. You can check the Python configuration in R:
 
-``` r
+``` {.r code-line-numbers="1|2-3"}
 library(reticulate)
 py_available() # Check python availability
-```
-
-. . .
-
-``` text
 [1] FALSE
 ```
 
@@ -78,13 +72,8 @@ py_available() # Check python availability
 
 **🔗 Bind to a specific Python version**
 
-``` r
+``` {.r code-line-numbers="1|2"}
 # use_python("C://Users/your_username/AppData/Local/Programs/Python/Python313")
-```
-
-. . .
-
-``` r
 py_config() #Inspect current setup
 ```
 
@@ -92,15 +81,10 @@ py_config() #Inspect current setup
 
 **📦 Use `import()` to bring Python modules into R**
 
-``` {.r code-line-numbers="1|2|3" height="200"}
+``` {.r code-line-numbers="1-2|3-4" height="200"}
 library(reticulate)
 np <- import("numpy")
 np$mean(c(1, 2, 3, 4))  
-```
-
-. . .
-
-``` text
 [1] 2.5
 ```
 
@@ -108,14 +92,9 @@ np$mean(c(1, 2, 3, 4))
 
 **📦 Use `import_builtins()` to import Python built-in functions**
 
-``` r
+``` {.r code-line-numbers="1|2-3" height="200"}
 py_builtins <- import_builtins()
 py_builtins$len(c(1, 2, 3))   
-```
-
-. . .
-
-``` text
 [1] 3
 ```
 
@@ -124,7 +103,7 @@ py_builtins$len(c(1, 2, 3))
 -   Use `source_python()` or `py_run_file()` to run `.py` scripts from R
 -   Use `py_run_string()` to run inline Python code from R
 
-## 📥 Using `source_python()` {transition="convex"}
+## 📥 Using `source_python()` 
 
 Variables become **directly available in the R global environment**
 
@@ -144,104 +123,55 @@ def square(x):
 
 ✅ Works directly in R :
 
-``` r
+``` {.r code-line-numbers="1-2|3-4|5-6" height="200"}
 library(reticulate)
 source_python("script.py")
+print(y) 
+[1] 2
 square(4)
-```
-
-. . .
-
-``` text
 [1] 16
 ```
 
-. . .
-
-``` r
-print(y) 
-```
-
-. . .
-
-``` text
-2
-```
-
-## 📥 Using `py_run_file()` {transition="zoom"}
+## 📥 Using `py_run_file()`
 
 Also runs the script, but...
 
-::: incremental
 -   ❌ Does not expose functions/variables directly in R
 -   Variables and functions are stored in `py$`
-:::
 
 . . .
 
-``` {.r code-line-numbers="1|2" height="200"}
+``` {.r code-line-numbers="1|2-3|4-5" height="200"}
 py_run_file("script.py")
+print(py$y)
+[1] 2
 py$square(4)
-```
-
-. . .
-
-``` text
 [1] 16
 ```
 
-. . .
+## 🧩 Using `py_run_string()`
 
-``` r
-print(py$y)
-```
-
-. . .
-
-``` text
-2
-```
-
-## 🧩 Using `py_run_string()` {transition="slide"}
-
-::: incremental
 -   Executes the string in the shared Python session
 -   Variables created in Python are not added to R environment
 -   Access Python variables in R using `py$`
-:::
 
 . . .
 
-``` {.r code-line-numbers="1-5|6" height="200"}
+``` {.r code-line-numbers="1-5|6-7|8-9" height="200"}
 py_run_string("
 def square(x):
     return x ** 2
 y = 5
 ")
 py$y
-```
-
-. . .
-
-``` text
 [1] 5
-```
-
-. . .
-
-``` r
 py$square(4)
-```
-
-. . .
-
-``` text
 [1] 16
 ```
 
-# Data Conversion & Accessing R Objects in Python {transition="zoom"}
+# Data Conversion & Accessing R Objects in Python
 
-## 🔁 Automatic Data Conversion {transition="slide"}
+## 🔁 Automatic Data Conversion
 
 ::: small
 | R Object Type | Python Equivalent | Notes |
@@ -261,7 +191,7 @@ py$square(4)
 : {tbl-colwidths="\[30,30,40\]"}
 :::
 
-## Accessing R Objects from Python {transition="slide"}
+## Accessing R Objects from Python
 
 **🔍 Example:**<br/> Let two following objects have been defined in R global environment:
 
@@ -275,15 +205,10 @@ f <- function(x) x^2
 
 In Python we can access to these objects trough `r` object:
 
-``` python
+``` {.python code-line-numbers="1-2|3-4" height="200"}
 print(r.x)      
 [10, 20, 30]
 print(r.f(3))  
-```
-
-. . .
-
-``` text
 9
 ```
 
@@ -291,7 +216,7 @@ print(r.f(3))
 
 Use `py$` assignment. In R:
 
-``` {.r code-line-numbers="1-3|5"}
+``` {.r code-line-numbers="1-3|4-5"}
 library(reticulate)
 x <- c(1, 2, 3)
 py$x <- x        # Exports `x` to Python namespace
@@ -303,26 +228,11 @@ py$f <- f        # Exports R function to Python
 
 Now usable from Python:
 
-``` python
+``` {.python code-line-numbers="1-2|3-4" height="200"}
 print(x) 
-```
-
-. . .
-
-``` text
-[1, 2, 3]
-```
-
-. . .
-
-``` r
+[1.0, 2.0, 3.0]
 print(f(5))
-```
-
-. . .
-
-``` text
-[1] 25
+25.0
 ```
 
 ## Exporting R Closure Functions to Python {transition="slide"}
@@ -331,14 +241,9 @@ A **closure** in R is simply a user-defined function created with the function()
 
 ✅ A **closure** fnction Works directly. In R:
 
-``` r
+``` {.r code-line-numbers="1|2-3"}
 py$m <- mean
 typeof(mean) 
-```
-
-. . .
-
-``` text
 [1] "closure"
 ```
 
@@ -346,14 +251,9 @@ typeof(mean)
 
 In Python:
 
-``` python
+``` {.python code-line-numbers="1|2" height="200"}
 print(m([1, 2, 3, 4, 5]))     
-```
-
-. . .
-
-``` text
-3
+3.0
 ```
 
 ## Exporting R `Builtin` Functions to Python {transition="slide"}
@@ -362,8 +262,9 @@ print(m([1, 2, 3, 4, 5]))
 
 ⚠️ Builtin function needs wrapping. For example:
 
-``` r
-typeof(exp) # return "builtin"
+``` {.r code-line-numbers="1-2|3"}
+typeof(exp)
+[1] "builtin"
 py$e <- exp
 ```
 
@@ -371,13 +272,8 @@ py$e <- exp
 
 In Python:
 
-``` python
+``` {.python code-line-numbers="1|2" height="200"}
 print(e(1))     
-```
-
-. . .
-
-``` text
 TypeError: 'PyCapsule' object is not callable
 ```
 
@@ -385,7 +281,7 @@ TypeError: 'PyCapsule' object is not callable
 
 ✅ Solution: Wrap the builtin in a closure
 
-``` r
+``` {.r code-line-numbers="1|2"}
 e <- function(x) exp(x)
 py$e <- e
 ```
@@ -395,7 +291,8 @@ py$e <- e
 In Python:
 
 ``` python
-print(e(1))  # ✅ Returns 2.718
+print(e(1))  
+2.718281828459045
 ```
 
 # reticulate in R Markdown & Quarto
@@ -442,7 +339,7 @@ server <- function(input, output) {
 shinyApp(ui, server)
 ```
 
-# Resources & Further Reading {transition="zoom"}
+# Resources & Further Reading
 
 -   reticulate docs: <https://rstudio.github.io/reticulate/>
 -   Tutorials: RStudio blog posts
