@@ -756,56 +756,88 @@
     "href": "hands-on/HW2.html",
     "title": "Homework Assignment 2",
     "section": "",
-    "text": "Please complete the following tasks within one week and share your work as a GitHub repository linke.\n\n\n\n\n\n\n\nBuild a simple R package that achieves a specific task.\n\nExamples of goals:\n\nData cleaning helper functions\n\nA small visualization wrapper\n\nStatistical functions (e.g., custom summary stats)\n\nImporting/transforming a public dataset\n\n\n\n\n\n\n\nYour package should solve a simple but useful problem for statistics. Possible ideas:\n\nDescriptive Statistics Toolkit: Functions to compute mean, variance, quantiles, skewness, kurtosis.\n\nVisualization Helper: Custom plotting functions for common statistical distributions.\n\nProbability Distribution Tools: Simulate and analyze distributions (Normal, Poisson, Binomial, etc.).\n\nRegression Helpers: Easy-to-use wrappers for linear/logistic regression summaries.\n\nTime Series Mini Toolkit: Simple functions for moving averages, decomposition, and plotting.\n\nResampling Methods: Implement bootstrap and permutation tests.\n\n\n\n\n\n\nPick a clear, unique package name.\n\nExample: statHelper, bootResampleR, easyViz, probSimR.\n\n\nProvide documentation:\n\nDESCRIPTION file with title, description, author.\n\nFunction-level help with #' Roxygen comments.\n\nREADME.md explaining package goal, installation, usage.\n\n\nAdd at least one vignette/tutorial showing examples.\n\n\n\n\n\nEmbed at least one dataset inside your package. Suggestions:\n\nBuilt-in datasets (iris, mtcars, airquality).\n\nPublic datasets (but keep them small):\n\nDaily stock prices (few days).\n\nStudents’ grades (simulated).\n\nCOVID-19 sample (subset).\n\nRandomly generated survey data.\n\n\n\n\n\n\n\nCreate a GitHub repository.\n\nPush your package code.\n\nAdd a LICENSE file.\n\nShare the repository link with your instructor.\n\n\n\n\n\n\n\n\nPart\nDescription\nPoints\n\n\n\n\nTask Design\nClear, meaningful statistical goal\n15\n\n\nPackage Structure\nCorrect folder & file setup\n15\n\n\nFunctions\nAt least 3 well-written functions\n20\n\n\nDocumentation\nDESCRIPTION, README, Roxygen comments\n15\n\n\nDataset\nCorrectly embedded with documentation\n10\n\n\nVignette\nExample usage in Rmarkdown\n10\n\n\nGitHub Repository\nProper setup, LICENSE, clean commits\n10\n\n\nPresentation\nClear, creative, user-friendly\n5\n\n\n\n\n\n\n\n\nDeadline: [set your date here]\n\nSubmit: GitHub repository link shared via email or LMS.\n\nBonus: +5 points if package installs directly with devtools::install_github(\"username/package\").\n\n\nGood luck, and remember to commit and push often!"
+    "text": "Please complete the following tasks within one week and share your work as a GitHub repository linke.\n\n\n\n\n\n\n\nBuild a simple R package that achieves a specific task.\n\nExamples of goals:\n\nData cleaning helper functions\n\nA small visualization wrapper\n\nStatistical functions (e.g., custom summary stats)\n\nImporting/transforming a public dataset\n\n\n\n\n\n\n\nYour package should solve a simple but useful problem for statistics. Possible ideas:\n\nDescriptive Statistics Toolkit: Functions to compute mean, variance, quantiles, skewness, kurtosis.\n\nVisualization Helper: Custom plotting functions for common statistical distributions.\n\nProbability Distribution Tools: Simulate and analyze distributions (Normal, Poisson, Binomial, etc.).\n\nRegression Helpers: Easy-to-use wrappers for linear/logistic regression summaries.\n\nTime Series Mini Toolkit: Simple functions for moving averages, decomposition, and plotting.\n\nResampling Methods: Implement bootstrap and permutation tests.\n\n\n\n\n\n\nPick a clear, unique package name.\n\nExample: statHelper, bootResampleR, easyViz, probSimR.\n\n\nProvide documentation:\n\nDESCRIPTION file with title, description, author.\n\nFunction-level help with #' Roxygen comments.\n\nREADME.md explaining package goal, installation, usage.\n\n\nAdd at least one vignette/tutorial showing examples.\n\n\n\n\n\nEmbed at least one dataset inside your package. Suggestions:\n\nBuilt-in datasets (iris, mtcars, airquality).\n\nPublic datasets (but keep them small):\n\nDaily stock prices (few days).\n\nStudents’ grades (simulated).\n\nCOVID-19 sample (subset).\n\nRandomly generated survey data.\n\n\n\n\n\n\n\nCreate a GitHub repository.\n\nPush your package code.\n\nAdd a LICENSE file.\n\nShare the repository link with your instructor.\n\n\n\n\n\n\n\n\nPart\nDescription\nPoints\n\n\n\n\nTask Design\nClear, meaningful statistical goal\n15\n\n\nPackage Structure\nCorrect folder & file setup\n15\n\n\nFunctions\nAt least 3 well-written functions\n20\n\n\nDocumentation\nDESCRIPTION, README, Roxygen comments\n15\n\n\nDataset\nCorrectly embedded with documentation\n10\n\n\nVignette\nExample usage in Rmarkdown\n10\n\n\nGitHub Repository\nProper setup, LICENSE, clean commits\n10\n\n\nPresentation\nClear, creative, user-friendly\n5\n\n\n\n\n\n\n\n\nDeadline: [set your date here]\n\nSubmit: GitHub repository link shared via email or LMS.\n\nBonus: +5 points if package installs directly with devtools::install_github(\"username/package\").\n\n\nGood luck, and remember to commit and push often!",
+    "crumbs": [
+      "Hands-on / HW",
+      "Second HW"
+    ]
   },
   {
     "objectID": "hands-on/HW2.html#build-share-your-package",
     "href": "hands-on/HW2.html#build-share-your-package",
     "title": "Homework Assignment 2",
     "section": "",
-    "text": "Build a simple R package that achieves a specific task.\n\nExamples of goals:\n\nData cleaning helper functions\n\nA small visualization wrapper\n\nStatistical functions (e.g., custom summary stats)\n\nImporting/transforming a public dataset"
+    "text": "Build a simple R package that achieves a specific task.\n\nExamples of goals:\n\nData cleaning helper functions\n\nA small visualization wrapper\n\nStatistical functions (e.g., custom summary stats)\n\nImporting/transforming a public dataset",
+    "crumbs": [
+      "Hands-on / HW",
+      "Second HW"
+    ]
   },
   {
     "objectID": "hands-on/HW2.html#step-1-choose-a-task-goal-of-your-package",
     "href": "hands-on/HW2.html#step-1-choose-a-task-goal-of-your-package",
     "title": "Homework Assignment 2",
     "section": "",
-    "text": "Your package should solve a simple but useful problem for statistics. Possible ideas:\n\nDescriptive Statistics Toolkit: Functions to compute mean, variance, quantiles, skewness, kurtosis.\n\nVisualization Helper: Custom plotting functions for common statistical distributions.\n\nProbability Distribution Tools: Simulate and analyze distributions (Normal, Poisson, Binomial, etc.).\n\nRegression Helpers: Easy-to-use wrappers for linear/logistic regression summaries.\n\nTime Series Mini Toolkit: Simple functions for moving averages, decomposition, and plotting.\n\nResampling Methods: Implement bootstrap and permutation tests."
+    "text": "Your package should solve a simple but useful problem for statistics. Possible ideas:\n\nDescriptive Statistics Toolkit: Functions to compute mean, variance, quantiles, skewness, kurtosis.\n\nVisualization Helper: Custom plotting functions for common statistical distributions.\n\nProbability Distribution Tools: Simulate and analyze distributions (Normal, Poisson, Binomial, etc.).\n\nRegression Helpers: Easy-to-use wrappers for linear/logistic regression summaries.\n\nTime Series Mini Toolkit: Simple functions for moving averages, decomposition, and plotting.\n\nResampling Methods: Implement bootstrap and permutation tests.",
+    "crumbs": [
+      "Hands-on / HW",
+      "Second HW"
+    ]
   },
   {
     "objectID": "hands-on/HW2.html#step-2-name-and-documentation",
     "href": "hands-on/HW2.html#step-2-name-and-documentation",
     "title": "Homework Assignment 2",
     "section": "",
-    "text": "Pick a clear, unique package name.\n\nExample: statHelper, bootResampleR, easyViz, probSimR.\n\n\nProvide documentation:\n\nDESCRIPTION file with title, description, author.\n\nFunction-level help with #' Roxygen comments.\n\nREADME.md explaining package goal, installation, usage.\n\n\nAdd at least one vignette/tutorial showing examples."
+    "text": "Pick a clear, unique package name.\n\nExample: statHelper, bootResampleR, easyViz, probSimR.\n\n\nProvide documentation:\n\nDESCRIPTION file with title, description, author.\n\nFunction-level help with #' Roxygen comments.\n\nREADME.md explaining package goal, installation, usage.\n\n\nAdd at least one vignette/tutorial showing examples.",
+    "crumbs": [
+      "Hands-on / HW",
+      "Second HW"
+    ]
   },
   {
     "objectID": "hands-on/HW2.html#step-3-include-a-dataset",
     "href": "hands-on/HW2.html#step-3-include-a-dataset",
     "title": "Homework Assignment 2",
     "section": "",
-    "text": "Embed at least one dataset inside your package. Suggestions:\n\nBuilt-in datasets (iris, mtcars, airquality).\n\nPublic datasets (but keep them small):\n\nDaily stock prices (few days).\n\nStudents’ grades (simulated).\n\nCOVID-19 sample (subset).\n\nRandomly generated survey data."
+    "text": "Embed at least one dataset inside your package. Suggestions:\n\nBuilt-in datasets (iris, mtcars, airquality).\n\nPublic datasets (but keep them small):\n\nDaily stock prices (few days).\n\nStudents’ grades (simulated).\n\nCOVID-19 sample (subset).\n\nRandomly generated survey data.",
+    "crumbs": [
+      "Hands-on / HW",
+      "Second HW"
+    ]
   },
   {
     "objectID": "hands-on/HW2.html#step-4-publish-on-github",
     "href": "hands-on/HW2.html#step-4-publish-on-github",
     "title": "Homework Assignment 2",
     "section": "",
-    "text": "Create a GitHub repository.\n\nPush your package code.\n\nAdd a LICENSE file.\n\nShare the repository link with your instructor."
+    "text": "Create a GitHub repository.\n\nPush your package code.\n\nAdd a LICENSE file.\n\nShare the repository link with your instructor.",
+    "crumbs": [
+      "Hands-on / HW",
+      "Second HW"
+    ]
   },
   {
     "objectID": "hands-on/HW2.html#grading-rubric-total-100-points",
     "href": "hands-on/HW2.html#grading-rubric-total-100-points",
     "title": "Homework Assignment 2",
     "section": "",
-    "text": "Part\nDescription\nPoints\n\n\n\n\nTask Design\nClear, meaningful statistical goal\n15\n\n\nPackage Structure\nCorrect folder & file setup\n15\n\n\nFunctions\nAt least 3 well-written functions\n20\n\n\nDocumentation\nDESCRIPTION, README, Roxygen comments\n15\n\n\nDataset\nCorrectly embedded with documentation\n10\n\n\nVignette\nExample usage in Rmarkdown\n10\n\n\nGitHub Repository\nProper setup, LICENSE, clean commits\n10\n\n\nPresentation\nClear, creative, user-friendly\n5"
+    "text": "Part\nDescription\nPoints\n\n\n\n\nTask Design\nClear, meaningful statistical goal\n15\n\n\nPackage Structure\nCorrect folder & file setup\n15\n\n\nFunctions\nAt least 3 well-written functions\n20\n\n\nDocumentation\nDESCRIPTION, README, Roxygen comments\n15\n\n\nDataset\nCorrectly embedded with documentation\n10\n\n\nVignette\nExample usage in Rmarkdown\n10\n\n\nGitHub Repository\nProper setup, LICENSE, clean commits\n10\n\n\nPresentation\nClear, creative, user-friendly\n5",
+    "crumbs": [
+      "Hands-on / HW",
+      "Second HW"
+    ]
   },
   {
     "objectID": "hands-on/HW2.html#submission",
     "href": "hands-on/HW2.html#submission",
     "title": "Homework Assignment 2",
     "section": "",
-    "text": "Deadline: [set your date here]\n\nSubmit: GitHub repository link shared via email or LMS.\n\nBonus: +5 points if package installs directly with devtools::install_github(\"username/package\").\n\n\nGood luck, and remember to commit and push often!"
+    "text": "Deadline: [set your date here]\n\nSubmit: GitHub repository link shared via email or LMS.\n\nBonus: +5 points if package installs directly with devtools::install_github(\"username/package\").\n\n\nGood luck, and remember to commit and push often!",
+    "crumbs": [
+      "Hands-on / HW",
+      "Second HW"
+    ]
   },
   {
     "objectID": "hands-on/HW1.html",
@@ -815,7 +847,7 @@
     "text": "Please complete the following tasks within one week and submit your work as a GitHub repository.\n\n\n\n\nDifferent Distances: Update your knn_s3 implementation to support a dist = c(\"sse\", \"sad\") argument for L1 and L2 distances.\nDocumentation: Add roxygen2 comments for the new argument and regenerate the help files using devtools::document().\n\n\n\n\n\n\nDynamic Predictors: In the k-NN app, add a multi-select input that allows users to choose predictor variables at runtime.\nDownload Button: Implement functionality to download the test-set predictions as a CSV file.\n\n\n\n\n\n\nBenchmark Script: Create benchmark_knn_dims.R to compare runtimes for pure R vs Rcpp implementations across combinations of sample size \\(n \\in \\{500, 1000, 2000\\}\\) and feature count \\(p \\in \\{3, 5, 10\\}\\).\nSummary Report: Produce a one-page PDF summarizing your benchmarks, key code changes, and performance recommendations.\n\n\n\n\n\nYour GitHub repository should be organized as follows:\nknn_workshop_hw/\n├── R/           # R scripts and tests\n├── app/         # Shiny app files\n├── src/         # C++ source for Rcpp\n├── benchmark_knn_dims.R\n├── report.pdf   # summary of benchmarks and findings\n└── README.md    # overview and instructions\nThe README must include: - Setup instructions for all components - A sample run demonstrating each part of the assignment\n\nGood luck, and feel free to reach out with any questions!",
     "crumbs": [
       "Hands-on / HW",
-      "First Week HW"
+      "First HW"
     ]
   },
   {
@@ -826,7 +858,7 @@
     "text": "Different Distances: Update your knn_s3 implementation to support a dist = c(\"sse\", \"sad\") argument for L1 and L2 distances.\nDocumentation: Add roxygen2 comments for the new argument and regenerate the help files using devtools::document().",
     "crumbs": [
       "Hands-on / HW",
-      "First Week HW"
+      "First HW"
     ]
   },
   {
@@ -837,7 +869,7 @@
     "text": "Dynamic Predictors: In the k-NN app, add a multi-select input that allows users to choose predictor variables at runtime.\nDownload Button: Implement functionality to download the test-set predictions as a CSV file.",
     "crumbs": [
       "Hands-on / HW",
-      "First Week HW"
+      "First HW"
     ]
   },
   {
@@ -848,7 +880,7 @@
     "text": "Benchmark Script: Create benchmark_knn_dims.R to compare runtimes for pure R vs Rcpp implementations across combinations of sample size \\(n \\in \\{500, 1000, 2000\\}\\) and feature count \\(p \\in \\{3, 5, 10\\}\\).\nSummary Report: Produce a one-page PDF summarizing your benchmarks, key code changes, and performance recommendations.",
     "crumbs": [
       "Hands-on / HW",
-      "First Week HW"
+      "First HW"
     ]
   },
   {
@@ -859,7 +891,7 @@
     "text": "Your GitHub repository should be organized as follows:\nknn_workshop_hw/\n├── R/           # R scripts and tests\n├── app/         # Shiny app files\n├── src/         # C++ source for Rcpp\n├── benchmark_knn_dims.R\n├── report.pdf   # summary of benchmarks and findings\n└── README.md    # overview and instructions\nThe README must include: - Setup instructions for all components - A sample run demonstrating each part of the assignment\n\nGood luck, and feel free to reach out with any questions!",
     "crumbs": [
       "Hands-on / HW",
-      "First Week HW"
+      "First HW"
     ]
   },
   {
@@ -867,77 +899,121 @@
     "href": "hands-on/HO5.html",
     "title": "Hands-on: Build Your k-NN R Package",
     "section": "",
-    "text": "In this 45 min session you will:\n\nCreate a new R package to wrap your custom k-NN code.\nOrganize R scripts and C++ code in the package structure.\nDocument functions using Roxygen2.\nInstall and test your package.\nRun predictions and visualize results from the package."
+    "text": "In this 45 min session you will:\n\nCreate a new R package to wrap your custom k-NN code.\nOrganize R scripts and C++ code in the package structure.\nDocument functions using Roxygen2.\nInstall and test your package.\nRun predictions and visualize results from the package.",
+    "crumbs": [
+      "Hands-on / HW",
+      "R Package"
+    ]
   },
   {
     "objectID": "hands-on/HO5.html#overview",
     "href": "hands-on/HO5.html#overview",
     "title": "Hands-on: Build Your k-NN R Package",
     "section": "",
-    "text": "In this 45 min session you will:\n\nCreate a new R package to wrap your custom k-NN code.\nOrganize R scripts and C++ code in the package structure.\nDocument functions using Roxygen2.\nInstall and test your package.\nRun predictions and visualize results from the package."
+    "text": "In this 45 min session you will:\n\nCreate a new R package to wrap your custom k-NN code.\nOrganize R scripts and C++ code in the package structure.\nDocument functions using Roxygen2.\nInstall and test your package.\nRun predictions and visualize results from the package.",
+    "crumbs": [
+      "Hands-on / HW",
+      "R Package"
+    ]
   },
   {
     "objectID": "hands-on/HO5.html#setup",
     "href": "hands-on/HO5.html#setup",
     "title": "Hands-on: Build Your k-NN R Package",
     "section": "Setup",
-    "text": "Setup\n\nCreate a new R package project in RStudio:\n\n# Replace \"knnPackage\" with your chosen package name\nusethis::create_package(\"knnPackage\")\n\nCopy the prepared files into your package:\n\nknnPackage/\n├── R/           # R scripts with roxygen2 (knn_s3.R, knn_s3_formula.R)\n├── src/\n\nR/knn_s3.R: S3 class for k-NN\nR/knn_s3_formula.R: Formula interface and predict methods\nsrc/knn_pred.cpp: Rcpp implementation for fast predictions\n\nAll three files already contain Roxygen2 comments, so your functions will be automatically exported."
+    "text": "Setup\n\nCreate a new R package project in RStudio:\n\n# Replace \"knnPackage\" with your chosen package name\nusethis::create_package(\"knnPackage\")\n\nCopy the prepared files into your package:\n\nknnPackage/\n├── R/           # R scripts with roxygen2 (knn_s3.R, knn_s3_formula.R)\n├── src/\n\nR/knn_s3.R: S3 class for k-NN\nR/knn_s3_formula.R: Formula interface and predict methods\nsrc/knn_pred.cpp: Rcpp implementation for fast predictions\n\nAll three files already contain Roxygen2 comments, so your functions will be automatically exported.",
+    "crumbs": [
+      "Hands-on / HW",
+      "R Package"
+    ]
   },
   {
     "objectID": "hands-on/HO5.html#document-your-package",
     "href": "hands-on/HO5.html#document-your-package",
     "title": "Hands-on: Build Your k-NN R Package",
     "section": "1. Document your package",
-    "text": "1. Document your package\nGenerate documentation for all exported functions:\ndevtools::document(\"knnPackage\")\nCheck that .Rd files are created in man/."
+    "text": "1. Document your package\nGenerate documentation for all exported functions:\ndevtools::document(\"knnPackage\")\nCheck that .Rd files are created in man/.",
+    "crumbs": [
+      "Hands-on / HW",
+      "R Package"
+    ]
   },
   {
     "objectID": "hands-on/HO5.html#install-and-load-your-package",
     "href": "hands-on/HO5.html#install-and-load-your-package",
     "title": "Hands-on: Build Your k-NN R Package",
     "section": "2. Install and load your package",
-    "text": "2. Install and load your package\n# Install locally\ndevtools::install(\"knnPackage\")\n\n# Load package\nlibrary(knnPackage)"
+    "text": "2. Install and load your package\n# Install locally\ndevtools::install(\"knnPackage\")\n\n# Load package\nlibrary(knnPackage)",
+    "crumbs": [
+      "Hands-on / HW",
+      "R Package"
+    ]
   },
   {
     "objectID": "hands-on/HO5.html#traintest-split",
     "href": "hands-on/HO5.html#traintest-split",
     "title": "Hands-on: Build Your k-NN R Package",
     "section": "3. Train/test split",
-    "text": "3. Train/test split\nUse mtcars to test your package:\nset.seed(42)\nn &lt;- nrow(mtcars)\ntrain_idx &lt;- sample(seq_len(n), size = round(0.7 * n))\ntrain &lt;- mtcars[train_idx, ]\ntest  &lt;- mtcars[-train_idx, ]"
+    "text": "3. Train/test split\nUse mtcars to test your package:\nset.seed(42)\nn &lt;- nrow(mtcars)\ntrain_idx &lt;- sample(seq_len(n), size = round(0.7 * n))\ntrain &lt;- mtcars[train_idx, ]\ntest  &lt;- mtcars[-train_idx, ]",
+    "crumbs": [
+      "Hands-on / HW",
+      "R Package"
+    ]
   },
   {
     "objectID": "hands-on/HO5.html#fit-models-using-package-functions",
     "href": "hands-on/HO5.html#fit-models-using-package-functions",
     "title": "Hands-on: Build Your k-NN R Package",
     "section": "4. Fit models using package functions",
-    "text": "4. Fit models using package functions\n# Fit k-NN models with k=5 and k=10\nmod5  &lt;- knn_s3(mpg ~ disp + hp + wt, train, k = 5)\nmod10 &lt;- knn_s3(mpg ~ disp + hp + wt, train, k = 10)\n\n# Predict using Rcpp\npred5  &lt;- predict(mod5, newdata = test, method = \"cpp\")\npred10 &lt;- predict(mod10, newdata = test, method = \"cpp\")"
+    "text": "4. Fit models using package functions\n# Fit k-NN models with k=5 and k=10\nmod5  &lt;- knn_s3(mpg ~ disp + hp + wt, train, k = 5)\nmod10 &lt;- knn_s3(mpg ~ disp + hp + wt, train, k = 10)\n\n# Predict using Rcpp\npred5  &lt;- predict(mod5, newdata = test, method = \"cpp\")\npred10 &lt;- predict(mod10, newdata = test, method = \"cpp\")",
+    "crumbs": [
+      "Hands-on / HW",
+      "R Package"
+    ]
   },
   {
     "objectID": "hands-on/HO5.html#evaluate-performance",
     "href": "hands-on/HO5.html#evaluate-performance",
     "title": "Hands-on: Build Your k-NN R Package",
     "section": "5. Evaluate performance",
-    "text": "5. Evaluate performance\nrmse &lt;- function(y, yhat) sqrt(mean((y - yhat)^2))\nmae  &lt;- function(y, yhat) mean(abs(y - yhat))\n\nperf &lt;- data.frame(\n  Model = c(\"k=5\", \"k=10\"),\n  RMSE  = c(rmse(test$mpg, pred5), rmse(test$mpg, pred10)),\n  MAE   = c(mae(test$mpg, pred5), mae(test$mpg, pred10))\n)\nprint(perf)"
+    "text": "5. Evaluate performance\nrmse &lt;- function(y, yhat) sqrt(mean((y - yhat)^2))\nmae  &lt;- function(y, yhat) mean(abs(y - yhat))\n\nperf &lt;- data.frame(\n  Model = c(\"k=5\", \"k=10\"),\n  RMSE  = c(rmse(test$mpg, pred5), rmse(test$mpg, pred10)),\n  MAE   = c(mae(test$mpg, pred5), mae(test$mpg, pred10))\n)\nprint(perf)",
+    "crumbs": [
+      "Hands-on / HW",
+      "R Package"
+    ]
   },
   {
     "objectID": "hands-on/HO5.html#visualize-predictions",
     "href": "hands-on/HO5.html#visualize-predictions",
     "title": "Hands-on: Build Your k-NN R Package",
     "section": "6. Visualize predictions",
-    "text": "6. Visualize predictions\nlibrary(tidyr)\nlibrary(ggplot2)\n\ntest$pred5 &lt;- pred5\ntest$pred10 &lt;- pred10\n\ntest_long &lt;- test %&gt;%\n  pivot_longer(cols = c(pred5, pred10), \n               names_to = \"Model\", values_to = \"Prediction\")\n\nggplot(test_long, aes(x = mpg, y = Prediction, color = Model)) +\n  geom_point(size = 3, alpha = 0.6) +\n  geom_abline(slope = 1, intercept = 0, linetype = \"dashed\") +\n  labs(title = \"Predicted vs Actual MPG (from Package)\",\n       x = \"Actual MPG\", y = \"Predicted MPG\") +\n  scale_color_manual(values = c(\"pred5\" = \"blue\", \"pred10\" = \"red\"),\n                     labels = c(\"k = 5\", \"k = 10\")) +\n  theme_minimal()"
+    "text": "6. Visualize predictions\nlibrary(tidyr)\nlibrary(ggplot2)\n\ntest$pred5 &lt;- pred5\ntest$pred10 &lt;- pred10\n\ntest_long &lt;- test %&gt;%\n  pivot_longer(cols = c(pred5, pred10), \n               names_to = \"Model\", values_to = \"Prediction\")\n\nggplot(test_long, aes(x = mpg, y = Prediction, color = Model)) +\n  geom_point(size = 3, alpha = 0.6) +\n  geom_abline(slope = 1, intercept = 0, linetype = \"dashed\") +\n  labs(title = \"Predicted vs Actual MPG (from Package)\",\n       x = \"Actual MPG\", y = \"Predicted MPG\") +\n  scale_color_manual(values = c(\"pred5\" = \"blue\", \"pred10\" = \"red\"),\n                     labels = c(\"k = 5\", \"k = 10\")) +\n  theme_minimal()",
+    "crumbs": [
+      "Hands-on / HW",
+      "R Package"
+    ]
   },
   {
     "objectID": "hands-on/HO5.html#discussion",
     "href": "hands-on/HO5.html#discussion",
     "title": "Hands-on: Build Your k-NN R Package",
     "section": "Discussion",
-    "text": "Discussion\n\nVerify that the package functions work as expected.\nInspect the help pages generated from Roxygen2.\nDiscuss the benefits of wrapping your code into a package:\n\nReusability\nDocumentation\nEasy sharing"
+    "text": "Discussion\n\nVerify that the package functions work as expected.\nInspect the help pages generated from Roxygen2.\nDiscuss the benefits of wrapping your code into a package:\n\nReusability\nDocumentation\nEasy sharing",
+    "crumbs": [
+      "Hands-on / HW",
+      "R Package"
+    ]
   },
   {
     "objectID": "hands-on/HO5.html#next-steps",
     "href": "hands-on/HO5.html#next-steps",
     "title": "Hands-on: Build Your k-NN R Package",
     "section": "Next steps",
-    "text": "Next steps\n\nAdd more utility functions (e.g., cross-validation) to your package.\nInclude unit tests with testthat for your main functions.\nShare your package via GitHub for collaborative development."
+    "text": "Next steps\n\nAdd more utility functions (e.g., cross-validation) to your package.\nInclude unit tests with testthat for your main functions.\nShare your package via GitHub for collaborative development.",
+    "crumbs": [
+      "Hands-on / HW",
+      "R Package"
+    ]
   },
   {
     "objectID": "course-links.html",
@@ -955,7 +1031,7 @@
     "href": "index.html",
     "title": "STatisticians Advancing in R for Data Science (STAR-DS)",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the short course. Note that this schedule will be updated as we progress, and the timeline of topics and assignments might be updated throughout the course.\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nCODE\nDUE\n\n\n\n\n1\nTue, Apr 28\n Create dynamic Shiny web applications\n📚Topic 1  📖Shiny\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\nEnhance performance with Rcpp (C++)\n📚Topic 2  📖Rcpp for everyone\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n\n\n\n\n\n\n📝 HW 1 at 11:50 pm\n\n\n1\nTue, Apr 28\n Integrate Python in R using Reticulate\n📚Topic 3  📖Calling Python from R\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n Develop your own professional R package\n📚Topic 4?  📖R package\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n Collaborate via GitHub / CRAN submission process\n📚Topic 5?  📖Let’s Git started  📖Release R package\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n\n\n\n\n\n\n📝 HW 2 at 11:50 pm",
+    "text": "This page contains an outline of the topics, content, and assignments for the short course. Note that this schedule will be updated as we progress, and the timeline of topics and assignments might be updated throughout the course.\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nCODE\nDUE\n\n\n\n\n1\nTue, Apr 28\n Create dynamic Shiny web applications\n📚Topic 1  📖Shiny\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\nEnhance performance with Rcpp (C++)\n📚Topic 2  📖Rcpp for everyone\n[R👩‍💻]  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n\n\n\n\n\n\n📝 HW 1 at 11:50 pm\n\n\n1\nTue, Apr 28\n Integrate Python in R using Reticulate\n📚Topic 3  📖Calling Python from R\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n Develop your own professional R package\n📚Topic 4?  📖R package\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n Collaborate via GitHub / CRAN submission process\n📚Topic 5?  📖Let’s Git started  📖Release R package\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n\n\n\n\n\n\n📝 HW 2 at 11:50 pm",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -1001,56 +1077,88 @@
     "href": "hands-on/HO4.html",
     "title": "Hands-on: k-NN Regression with Python-powered Train/Test Split",
     "section": "",
-    "text": "In this 30 min session you will:\n\nLearn how to integrate Python code into R using the reticulate package.\nUse scikit-learn’s train_test_split() function (Python) to prepare datasets in R.\nFit a custom S3-based k-NN regression model in R.\nEvaluate predictions and compare observed vs predicted values."
+    "text": "In this 30 min session you will:\n\nLearn how to integrate Python code into R using the reticulate package.\nUse scikit-learn’s train_test_split() function (Python) to prepare datasets in R.\nFit a custom S3-based k-NN regression model in R.\nEvaluate predictions and compare observed vs predicted values.",
+    "crumbs": [
+      "Hands-on / HW",
+      "Python in R"
+    ]
   },
   {
     "objectID": "hands-on/HO4.html#overview",
     "href": "hands-on/HO4.html#overview",
     "title": "Hands-on: k-NN Regression with Python-powered Train/Test Split",
     "section": "",
-    "text": "In this 30 min session you will:\n\nLearn how to integrate Python code into R using the reticulate package.\nUse scikit-learn’s train_test_split() function (Python) to prepare datasets in R.\nFit a custom S3-based k-NN regression model in R.\nEvaluate predictions and compare observed vs predicted values."
+    "text": "In this 30 min session you will:\n\nLearn how to integrate Python code into R using the reticulate package.\nUse scikit-learn’s train_test_split() function (Python) to prepare datasets in R.\nFit a custom S3-based k-NN regression model in R.\nEvaluate predictions and compare observed vs predicted values.",
+    "crumbs": [
+      "Hands-on / HW",
+      "Python in R"
+    ]
   },
   {
     "objectID": "hands-on/HO4.html#setup",
     "href": "hands-on/HO4.html#setup",
     "title": "Hands-on: k-NN Regression with Python-powered Train/Test Split",
     "section": "Setup",
-    "text": "Setup\nDownload the S3 k-NN implementation script:\ncurl -O https://raw.githubusercontent.com/mmadoliat/WSoRT/refs/heads/main/R/knn_s3_formula.R\nSource them in your R console:\nsource(\"knn_s3_formula.R\")"
+    "text": "Setup\nDownload the S3 k-NN implementation script:\ncurl -O https://raw.githubusercontent.com/mmadoliat/WSoRT/refs/heads/main/R/knn_s3_formula.R\nSource them in your R console:\nsource(\"knn_s3_formula.R\")",
+    "crumbs": [
+      "Hands-on / HW",
+      "Python in R"
+    ]
   },
   {
     "objectID": "hands-on/HO4.html#import-python-packages",
     "href": "hands-on/HO4.html#import-python-packages",
     "title": "Hands-on: k-NN Regression with Python-powered Train/Test Split",
     "section": "Import Python packages",
-    "text": "Import Python packages\nlibrary(reticulate)\nsklearn_model_selection &lt;- import(\"sklearn.model_selection\", convert = TRUE)"
+    "text": "Import Python packages\nlibrary(reticulate)\nsklearn_model_selection &lt;- import(\"sklearn.model_selection\", convert = TRUE)",
+    "crumbs": [
+      "Hands-on / HW",
+      "Python in R"
+    ]
   },
   {
     "objectID": "hands-on/HO4.html#custom-helper-split-data-in-python-return-as-list-of-r-data.frames",
     "href": "hands-on/HO4.html#custom-helper-split-data-in-python-return-as-list-of-r-data.frames",
     "title": "Hands-on: k-NN Regression with Python-powered Train/Test Split",
     "section": "Custom helper: Split data in Python, return as list of R data.frames",
-    "text": "Custom helper: Split data in Python, return as list of R data.frames\npy_train_test_split &lt;- function(data, test_size = 0.3, seed = 42L) {\n  set.seed(seed)\n  X &lt;- as.matrix(data[, -1, drop = FALSE])\n  y &lt;- data[[1]]\n\n  split &lt;- sklearn_model_selection$train_test_split(\n    X, y,\n    test_size = test_size,\n    random_state = as.integer(seed)\n  )\n\n  # unpack results from Python tuple\n  X_train &lt;- split[[1]]\n  X_test  &lt;- split[[2]]\n  y_train &lt;- split[[3]]\n  y_test  &lt;- split[[4]]\n\n  train_df &lt;- as.data.frame(cbind(y_train, X_train))\n  names(train_df) &lt;- names(data)\n  test_df &lt;- as.data.frame(cbind(y_test, X_test))\n  names(test_df) &lt;- names(data)\n\n  list(train = train_df, test = test_df)\n}"
+    "text": "Custom helper: Split data in Python, return as list of R data.frames\npy_train_test_split &lt;- function(data, test_size = 0.3, seed = 42L) {\n  set.seed(seed)\n  X &lt;- as.matrix(data[, -1, drop = FALSE])\n  y &lt;- data[[1]]\n\n  split &lt;- sklearn_model_selection$train_test_split(\n    X, y,\n    test_size = test_size,\n    random_state = as.integer(seed)\n  )\n\n  # unpack results from Python tuple\n  X_train &lt;- split[[1]]\n  X_test  &lt;- split[[2]]\n  y_train &lt;- split[[3]]\n  y_test  &lt;- split[[4]]\n\n  train_df &lt;- as.data.frame(cbind(y_train, X_train))\n  names(train_df) &lt;- names(data)\n  test_df &lt;- as.data.frame(cbind(y_test, X_test))\n  names(test_df) &lt;- names(data)\n\n  list(train = train_df, test = test_df)\n}",
+    "crumbs": [
+      "Hands-on / HW",
+      "Python in R"
+    ]
   },
   {
     "objectID": "hands-on/HO4.html#use-python-to-split-mtcars-into-traintest",
     "href": "hands-on/HO4.html#use-python-to-split-mtcars-into-traintest",
     "title": "Hands-on: k-NN Regression with Python-powered Train/Test Split",
     "section": "Use Python to split mtcars into train/test",
-    "text": "Use Python to split mtcars into train/test\nsplit_data &lt;- py_train_test_split(mtcars[, c(\"mpg\", \"disp\", \"hp\", \"wt\")], test_size = 0.3)\n\ntrain_df &lt;- split_data$train\ntest_df  &lt;- split_data$test\n\n# Fit the S3 k-NN model on train set\nmodel &lt;- knn_s3(mpg ~ disp + hp + wt, train_df, k = 5)\nsummary(model)\n\n# Predict on test set\npreds &lt;- predict(model, newdata = test_df, method = \"R\")\ncbind(Observed = test_df$mpg, Predicted = round(preds, 2))"
+    "text": "Use Python to split mtcars into train/test\nsplit_data &lt;- py_train_test_split(mtcars[, c(\"mpg\", \"disp\", \"hp\", \"wt\")], test_size = 0.3)\n\ntrain_df &lt;- split_data$train\ntest_df  &lt;- split_data$test\n\n# Fit the S3 k-NN model on train set\nmodel &lt;- knn_s3(mpg ~ disp + hp + wt, train_df, k = 5)\nsummary(model)\n\n# Predict on test set\npreds &lt;- predict(model, newdata = test_df, method = \"R\")\ncbind(Observed = test_df$mpg, Predicted = round(preds, 2))",
+    "crumbs": [
+      "Hands-on / HW",
+      "Python in R"
+    ]
   },
   {
     "objectID": "hands-on/HO4.html#use-python-to-split-mtcars-into-traintest-1",
     "href": "hands-on/HO4.html#use-python-to-split-mtcars-into-traintest-1",
     "title": "Hands-on: k-NN Regression with Python-powered Train/Test Split",
     "section": "Use Python to split mtcars into train/test",
-    "text": "Use Python to split mtcars into train/test\nsplit_data &lt;- py_train_test_split(mtcars[, c(\"mpg\", \"disp\", \"hp\", \"wt\")], test_size = 0.3)\n\ntrain_df &lt;- split_data$train\ntest_df  &lt;- split_data$test\n\n# Fit the S3 k-NN model on train set\nmodel &lt;- knn_s3(mpg ~ disp + hp + wt, train_df, k = 5)\nsummary(model)\n\n# Predict on test set\npreds &lt;- predict(model, newdata = test_df, method = \"R\")\ncbind(Observed = test_df$mpg, Predicted = round(preds, 2))"
+    "text": "Use Python to split mtcars into train/test\nsplit_data &lt;- py_train_test_split(mtcars[, c(\"mpg\", \"disp\", \"hp\", \"wt\")], test_size = 0.3)\n\ntrain_df &lt;- split_data$train\ntest_df  &lt;- split_data$test\n\n# Fit the S3 k-NN model on train set\nmodel &lt;- knn_s3(mpg ~ disp + hp + wt, train_df, k = 5)\nsummary(model)\n\n# Predict on test set\npreds &lt;- predict(model, newdata = test_df, method = \"R\")\ncbind(Observed = test_df$mpg, Predicted = round(preds, 2))",
+    "crumbs": [
+      "Hands-on / HW",
+      "Python in R"
+    ]
   },
   {
     "objectID": "hands-on/HO4.html#tasks",
     "href": "hands-on/HO4.html#tasks",
     "title": "Hands-on: k-NN Regression with Python-powered Train/Test Split",
     "section": "Tasks",
-    "text": "Tasks\n\nChange the train/test split ratio to 0.5 and observe changes in model performance.\nModify py_train_test_split() to return NumPy arrays instead of data frames — verify how this affects R code.\n(Optional) Replace the R prediction with Python’s sklearn.neighbors.KNeighborsRegressor and compare results.\n\n\nGood luck!"
+    "text": "Tasks\n\nChange the train/test split ratio to 0.5 and observe changes in model performance.\nModify py_train_test_split() to return NumPy arrays instead of data frames — verify how this affects R code.\n(Optional) Replace the R prediction with Python’s sklearn.neighbors.KNeighborsRegressor and compare results.\n\n\nGood luck!",
+    "crumbs": [
+      "Hands-on / HW",
+      "Python in R"
+    ]
   },
   {
     "objectID": "hands-on/HO2.html",
