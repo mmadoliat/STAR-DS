@@ -1,6 +1,6 @@
 ---
-title: "Statisticians Advancing in R for Data Science"
-subtitle: "Data Visualization and Shiny"
+title: "<br><span style='color:#FDB913'>Data Visualization and Shiny</span>"
+subtitle: "Statisticians Advancing in R<br> for Data Science"
 title-slide-attributes:
   data-background-image: mu-bg.png
   data-background-size: stretch
