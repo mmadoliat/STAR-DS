@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-html/tabby.min.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.9">
 
   <meta name="author" content="Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic">
@@ -15,8 +15,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -95,13 +95,13 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #d4d0ab; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
-  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -388,14 +388,12 @@
       margin-right: 0; 
     }
   </style>
-  <link href="../../site_libs/countdown-0.6.0/countdown.css" rel="stylesheet">
-  <script src="../../site_libs/countdown-0.6.0/countdown.js"></script>
 <meta property="og:title" content="STAR-DS - Short Course on R Tools">
-<meta property="og:description" content="Building Interactive Web Apps with Shiny">
+<meta property="og:description" content="Collaborate via GitHub">
 <meta property="og:site_name" content="STAR-DS">
 <meta name="twitter:title" content="STAR-DS - Short Course on R Tools">
-<meta name="twitter:description" content="Building Interactive Web Apps with Shiny">
-<meta name="twitter:image" content="http://tinyurl.com/STAR-DS/slides/old/images/twitter-card.png">
+<meta name="twitter:description" content="Collaborate via GitHub">
+<meta name="twitter:image" content="http://tinyurl.com/STAR-DS/slides/images/twitter-card.png">
 <meta name="twitter:creator" content="@mmadoliat">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -405,7 +403,7 @@
 
 <section id="title-slide" data-background-image="mu-bg.png" data-background-size="stretch" data-slide-number="none" class="quarto-title-block center">
   <h1 class="title">Short Course on R Tools</h1>
-  <p class="subtitle">Building Interactive Web Apps with Shiny</p>
+  <p class="subtitle">Collaborate via GitHub</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -419,320 +417,294 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </div>
 
 </section>
-<section id="outline" class="title-slide slide level1 center">
-<h1>Outline</h1>
-<div class="fragment fade-up">
+<section id="why-version-control" class="title-slide slide level1 center">
+<h1>🔁 Why Version Control?</h1>
+<div>
 <ul>
-<li>Introduction to Shiny</li>
-<li>App Structure: UI &amp; Server</li>
-<li>Inputs &amp; Outputs</li>
-<li>Shinyapps Gallery</li>
-<li>Reactivity, Isolate &amp; Observer</li>
-<li>Deployment &amp; Best Practices</li>
-<li>Hands-on Exercises</li>
-</ul>
-</div>
-</section>
-
-<section id="introduction-to-shiny" class="title-slide slide level1 center">
-<h1>Introduction to Shiny</h1>
-<ul>
-<li><p><strong>What is Shiny?</strong></p>
-<ul>
-<li><p>R package for interactive web apps</p></li>
-<li><p>No web dev expertise needed</p></li>
-</ul></li>
-<li><p><strong>When to use</strong>: dashboards, interactive reports, teaching tools</p></li>
-<li><p><strong>Tutorial sources</strong>:</p>
-<ul>
-<li><p><a href="https://shiny.posit.co/r/getstarted">RStudio official tutorial</a></p></li>
-<li><p><a href="https://mastering-shiny.org/"><em>Mastering Shiny</em> by Hadley Wickham</a></p></li>
-</ul></li>
-<li><p><a href="http://tinyurl.com/dna-Rstudio" target="_blank">🔗 Launch R</a>: run <code>shiny::runExample("01_hello")</code>.</p></li>
-</ul>
-<div style="margin-top: -550px;">
-
-</div>
-
-<img src="images/shiny/shiny.png" width="500" style="opacity: 0.05;" align="right" class="r-stretch"></section>
-
-<section>
-<section id="structure-of-a-shiny-app" class="title-slide slide level1 center" data-auto-animate="true">
-<h1 data-id="quarto-animate-title">Structure of a Shiny App</h1>
-<div class="shrink-code">
-<div class="sourceCode" id="cb1" height="200" data-code-line-numbers="1-2|3-5|7-9|11"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb1-1" class="hljs-ln-code"><a></a><span class="co"># app.R single-file app</span></span>
-<span id="cb1-2" class="hljs-ln-code"><a></a><span class="fu">library</span>(shiny)</span>
-<span id="cb1-3" class="hljs-ln-code"><a></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
-<span id="cb1-4" class="hljs-ln-code"><a></a>  ...</span>
-<span id="cb1-5" class="hljs-ln-code"><a></a>)</span>
-<span id="cb1-6" class="hljs-ln-code"><a></a></span>
-<span id="cb1-7" class="hljs-ln-code"><a></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output) {</span>
-<span id="cb1-8" class="hljs-ln-code"><a></a>  ...</span>
-<span id="cb1-9" class="hljs-ln-code"><a></a>}</span>
-<span id="cb1-10" class="hljs-ln-code"><a></a></span>
-<span id="cb1-11" class="hljs-ln-code"><a></a><span class="fu">shinyApp</span>(ui, server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li><p><code>ui</code> defines layout and inputs/outputs</p></li>
-<li><p><code>server</code> contains R code &amp; reactivity</p></li>
-</ul>
-</section>
-<section id="structure-of-a-shiny-app-1" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Structure of a Shiny App</h2>
-<div class="shrink-code">
-<div class="sourceCode" id="cb2" height="200" data-code-line-numbers="1-2|3-9|11-15|17"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb2-1" class="hljs-ln-code"><a></a><span class="co"># app.R single-file app</span></span>
-<span id="cb2-2" class="hljs-ln-code"><a></a><span class="fu">library</span>(shiny)</span>
-<span id="cb2-3" class="hljs-ln-code"><a></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
-<span id="cb2-4" class="hljs-ln-code"><a></a>  <span class="fu">titlePanel</span>(<span class="st">"Hello Shiny"</span>),</span>
-<span id="cb2-5" class="hljs-ln-code"><a></a>  <span class="fu">sidebarLayout</span>(</span>
-<span id="cb2-6" class="hljs-ln-code"><a></a>    <span class="fu">sidebarPanel</span>(<span class="fu">sliderInput</span>(<span class="st">"obs"</span>, <span class="st">"Observations:"</span>, <span class="dv">1</span>, <span class="dv">100</span>, <span class="dv">50</span>)),</span>
-<span id="cb2-7" class="hljs-ln-code"><a></a>    <span class="fu">mainPanel</span>(<span class="fu">plotOutput</span>(<span class="st">"distPlot"</span>))</span>
-<span id="cb2-8" class="hljs-ln-code"><a></a>  )</span>
-<span id="cb2-9" class="hljs-ln-code"><a></a>)</span>
-<span id="cb2-10" class="hljs-ln-code"><a></a></span>
-<span id="cb2-11" class="hljs-ln-code"><a></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output) {</span>
-<span id="cb2-12" class="hljs-ln-code"><a></a>  output<span class="sc">$</span>distPlot <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
-<span id="cb2-13" class="hljs-ln-code"><a></a>    <span class="fu">hist</span>(<span class="fu">rnorm</span>(input<span class="sc">$</span>obs))</span>
-<span id="cb2-14" class="hljs-ln-code"><a></a>  })</span>
-<span id="cb2-15" class="hljs-ln-code"><a></a>}</span>
-<span id="cb2-16" class="hljs-ln-code"><a></a></span>
-<span id="cb2-17" class="hljs-ln-code"><a></a><span class="fu">shinyApp</span>(ui, server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li><p><code>ui</code> defines layout and inputs/outputs</p></li>
-<li><p><code>server</code> contains R code &amp; reactivity</p></li>
-</ul>
-</section>
-<section id="structure-of-a-shiny-app-2" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Structure of a Shiny App</h2>
-<p>Shiny apps come in two parts:</p>
-<div class="columns">
-<div class="column fragment">
-<!-- -->
-<h3 id="ui">UI</h3>
-<ul>
-<li><p>Defines the layout and appearance.</p></li>
-<li><p>Contains elements such as:</p>
-<ul>
-<li>layout structures (sidebars)</li>
-<li>inputs (text boxes, sliders, buttons)</li>
-<li>outputs (plots, tables)</li>
-</ul></li>
-</ul>
-</div><div class="column fragment">
-<!-- -->
-<h3 id="server">Server</h3>
-<ul>
-<li><p>Performs calculations.</p></li>
-<li><p>Contains the logic to respond to user inputs, and update outputs.</p></li>
-<li><p>Communicates with the UI to dynamically render outputs.</p></li>
-</ul>
-</div>
-</div>
-</section></section>
-<section>
-<section id="shinyapps-gallery" class="title-slide slide level1 center">
-<h1>Shinyapps Gallery</h1>
-<iframe class="stretch" data-src="https://gallery.shinyapps.io/001-hello/">
-</iframe>
-<div class="smallest">
-<p><a href="http://tinyurl.com/dna-Rstudio" target="_blank">🔗 Launch R</a>: File &gt; New File &gt; Shiny Web App…</p>
-</div>
-</section>
-<section id="exercise" class="slide level2">
-<h2>Exercise</h2>
-<div class="cell">
-<div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_eb955cea" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-margin:0.5em;--countdown-font-size:2em;--countdown-color-border:#b20e10;--countdown-color-text:#b20e10;--countdown-color-running-background:#b20e10;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-text:#b20e10;"></countdown-timer>
-</div>
-</div>
-<ul>
-<li><p>Open up your IDE of choice.</p></li>
-<li><p>Make sure you have the {shiny} package installed.</p></li>
-<li><p>Create an <code>app.R</code> file.</p></li>
-<li><p>Add <code>ui</code> and <code>server</code> elements, as well as <code>shiny::shinyApp(ui, server)</code>.</p></li>
-<li><p>Check it works.</p></li>
-</ul>
-</section>
-<section id="shinyapps-gallery-1" class="slide level2">
-<h2>Shinyapps Gallery</h2>
-<iframe class="stretch" data-src="https://gallery.shinyapps.io/050-kmeans-example/">
-</iframe>
-</section></section>
-<section>
-<section id="inputs-outputs" class="title-slide slide level1 center">
-<h1>Inputs &amp; Outputs</h1>
-<ul>
-<li><p><strong>Inputs</strong>: <code>textInput()</code>, <code>selectInput()</code>, <code>sliderInput()</code>, etc.</p></li>
-<li><p><strong>Outputs</strong>: <code>renderPlot()</code>, <code>renderTable()</code>, <code>renderUI()</code>, etc.</p></li>
-<li><p><strong>Binding</strong>: output objects referenced by <code>output$...</code></p></li>
-</ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>input<span class="sc">$</span>slider  <span class="co"># numeric</span></span>
-<span id="cb3-2"><a></a>input<span class="sc">$</span>check   <span class="co"># logical</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="widgets---input" class="slide level2">
-<h2>Widgets - Input</h2>
-<iframe class="stretch" data-src="https://gallery.shinyapps.io/081-widgets-gallery/">
-</iframe>
-</section>
-<section id="widgets---output-table" class="slide level2">
-<h2>Widgets - Output Table</h2>
-<iframe class="stretch" data-src="https://gallery.shinyapps.io/109-render-table/">
-</iframe>
-<div class="smallest">
-<p><a href="https://github.com/rstudio/shiny-examples/tree/main/109-render-table/" target="_blank">🔗 &lt;/&gt; VIEW CODE</a></p>
-</div>
-</section></section>
-<section>
-<section id="reactivity-fundamentals" class="title-slide slide level1 center">
-<h1>Reactivity Fundamentals</h1>
-<ul>
-<li><p><strong>Reactive expressions</strong>: cache results</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>rv <span class="ot">&lt;-</span> <span class="fu">reactive</span>({ <span class="fu">rnorm</span>(input<span class="sc">$</span>obs) })</span>
-<span id="cb4-2"><a></a>output<span class="sc">$</span>plot <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>(<span class="fu">hist</span>(<span class="fu">rv</span>()))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><strong>isolate()</strong>: break reactive chain</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>output<span class="sc">$</span>summary <span class="ot">&lt;-</span> <span class="fu">renderText</span>({</span>
-<span id="cb5-2"><a></a>  <span class="fu">paste0</span>(<span class="st">'input$text is "'</span>, input<span class="sc">$</span>text,</span>
-<span id="cb5-3"><a></a>  <span class="st">'", and input$n is '</span>, <span class="fu">isolate</span>(input<span class="sc">$</span>n))</span>
-<span id="cb5-4"><a></a>})      </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><strong>Observers</strong>: side-effect actions</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">observeEvent</span>(input<span class="sc">$</span>go, { <span class="fu">showModal</span>(...) })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul>
-</section>
-<section id="reactivity-demo" class="slide level2">
-<h2>Reactivity Demo</h2>
-<iframe class="stretch" data-src="https://gallery.shinyapps.io/003-reactivity/">
-</iframe>
-</section>
-<section id="isolate-demo" class="slide level2">
-<h2>Isolate Demo</h2>
-<iframe class="stretch" data-src="https://gallery.shinyapps.io/049-isolate-demo/">
-</iframe>
-</section>
-<section id="observers-demo" class="slide level2">
-<h2>Observers Demo</h2>
-<iframe class="stretch" data-src="https://gallery.shinyapps.io/055-observer-demo/">
-</iframe>
-</section></section>
-<section>
-<section id="deploying-a-shiny-app" class="title-slide slide level1 center">
-<h1>Deploying a Shiny app</h1>
-<ul>
-<li><p>What do we mean by deployment?</p>
-<ul>
-<li>Getting the Shiny app off your laptop and out into the world!</li>
-</ul></li>
-</ul>
-<div class="fragment">
-<ul>
-<li><em>Traditional</em> deployment</li>
+<li class="fragment">Track and restore changes in code over time</li>
+<li class="fragment">Collaborate without overwriting others’ work</li>
+<li class="fragment">Revert to earlier working versions if bugs appear</li>
 </ul>
 </div>
 <div class="fragment">
-<div class="columns">
-<div class="column">
-<div class="small">
+<p>Tools Used:</p>
+<div>
 <ul>
-<li>We need a server to run the R code:
+<li class="fragment"><code>git</code> (local)</li>
+<li class="fragment"><code>GitHub</code> (remote)</li>
+<li class="fragment"><code>RStudio</code> (IDE)</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="example-knnreg-package-github" class="title-slide slide level1 center" data-transition="zoom">
+<h1>Example: KNNreg Package Github</h1>
+
+<img data-src="images/github/knnregGit.png" class="quarto-figure quarto-figure-left r-stretch" style="width:95.0%" alt="Screenshot of Pagerank"></section>
+<section id="git-github-basics" class="slide level2">
+<h2>Git &amp; GitHub Basics</h2>
+<div>
 <ul>
-<li>shinyapps.io</li>
-<li>Posit Connect</li>
-<li>Private server (e.g.&nbsp;university)</li>
+<li class="fragment"><strong>Git</strong>: Version control system for your local project<br>
+</li>
+<li class="fragment"><strong>GitHub</strong>: Cloud platform to share and collaborate</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Key Terms:</p>
+<div>
+<ul>
+<li class="fragment"><strong>Commit</strong> = Savepoint</li>
+<li class="fragment"><strong>Push/Pull</strong> = Send/Receive changes</li>
+<li class="fragment"><strong>Repo</strong> = Project folder</li>
+</ul>
+</div>
+</div>
+<div class="fragment">
+<blockquote>
+<p>Example: You push your R package to GitHub, allowing your coauthor to edit documentation and submit a pull request.</p>
+</blockquote>
+</div>
+</section>
+<section id="installing-git" class="slide level2">
+<h2>Installing Git</h2>
+<div>
+<ul>
+<li class="fragment">Go to <a href="https://git-scm.com/downloads">git-scm.com</a></li>
+<li class="fragment">Choose your operating system:
+<ul>
+<li class="fragment"><strong>Windows</strong>: Download <code>.exe</code> and install with default options</li>
+<li class="fragment"><strong>macOS</strong>: Install via Homebrew <code>brew install git</code> or <strong>Git installer</strong></li>
+<li class="fragment"><strong>Linux</strong>: Use package manager, e.g.:</li>
 </ul></li>
 </ul>
 </div>
-</div><div class="column">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/shiny/deploy.png" class="quarto-figure quarto-figure-center" style="width:90.0%" alt="Screenshot of Rstudio"></p>
-</figure>
+<div class="fragment">
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a>  <span class="fu">sudo</span> apt install git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="verifying-git-installation" class="slide level2">
+<h2>Verifying Git Installation</h2>
+<p>Run this in your Terminal (or Command Prompt):</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="fu">git</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<p>✅ You should see something like:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>git version 2.43.0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="fragment">
+<blockquote>
+<p>If this works, Git is installed correctly!</p>
+</blockquote>
+</div>
+</section>
+<section id="configuring-git-identity" class="slide level2">
+<h2>Configuring Git Identity</h2>
+<p>🔧 Set your global Git identity:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span>
+<span id="cb4-2"><a></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"you@example.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<p>✅ To check the name or email currently set in Git, use these commands:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a></a><span class="fu">git</span> config <span class="at">--global</span> user.name </span>
+<span id="cb5-2"><a></a><span class="fu">git</span> config <span class="at">--global</span> user.email </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="connect-github-to-r-create-pat" class="slide level2 scrollable">
+<h2>Connect GitHub to R (Create PAT)</h2>
+<ol type="1">
+<li>In R:</li>
+</ol>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div>
+<ol start="2" type="1">
+<li class="fragment">GitHub will open — generate a Personal Access Token (PAT)</li>
+<li class="fragment">Copy the token (only shown once!)</li>
+<li class="fragment">Back in R:</li>
+</ol>
+</div>
+<div class="fragment">
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Paste your token when prompted.</p>
+</div>
+<div class="fragment">
+<blockquote>
+<p>✅ You’ve now authenticated GitHub from R!</p>
+</blockquote>
+</div>
+</section>
+<section id="check-setup" class="slide level2">
+<h2>Check Setup</h2>
+<p>Use this helpful diagnostic tool:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>usethis<span class="sc">::</span><span class="fu">git_sitrep</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<p>💡 This tells you:</p>
+<div>
+<ul>
+<li class="fragment">Whether Git is installed</li>
+<li class="fragment">Whether GitHub is connected</li>
+<li class="fragment">If PAT is stored</li>
+</ul>
 </div>
 </div>
 </section>
-<section id="shinylive-deployment" class="slide level2">
-<h2>Shinylive deployment</h2>
-<div class="quarto-figure quarto-figure-left">
-<figure>
-<p><img data-src="images/shiny/traditional.png" class="quarto-figure quarto-figure-left" style="width:70.0%" alt="Traditional diagram"></p>
-</figure>
-</div>
-<div style="margin-top: -75px;">
-
+<section id="creating-a-new-git-enabled-project" class="slide level2 scrollable">
+<h2>📁 Creating a New Git-Enabled Project</h2>
+<p>In RStudio:</p>
+<div>
+<ol type="1">
+<li class="fragment"><strong>File → New Project</strong></li>
+<li class="fragment">Choose: <strong>New Directory</strong> → <strong>R Package</strong> (or <strong>New Project</strong>)</li>
+<li class="fragment">Check the box: ✅ “Create a git repository”</li>
+<li class="fragment">Finish project setup</li>
+</ol>
 </div>
 <div class="fragment">
-<div class="quarto-figure quarto-figure-right">
-<figure>
-<p><img data-src="images/shiny/shinylive.png" class="quarto-figure quarto-figure-right" style="width:70.0%" alt="Shinylive diagram"></p>
-</figure>
-</div>
+<blockquote>
+<p>📁 A <code>.git</code> folder is created — this is a Git repo!</p>
+</blockquote>
 </div>
 </section>
-<section id="shinylive-deployment-1" class="slide level2">
-<h2>Shinylive deployment</h2>
-<p>See <a href="https://posit-dev.github.io/r-shinylive/">posit-dev.github.io/r-shinylive</a>.</p>
-<div class="fragment">
-<p>The {shinylive} package converts a standard shiny app into a shinylive app:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">install.packages</span>(<span class="st">"shinylive"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Assuming your <code>app.R</code> file is in a folder called <code>app</code>:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>shinylive<span class="sc">::</span><span class="fu">export</span>(<span class="st">"app"</span>, <span class="st">"site"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>You can then use the files in the <code>site</code> folder to deploy it as a normal website.</p>
-<p>*not all R packages are available for shinylive.</p>
-<p>**initial load time is still quite slow.</p>
+<section id="connect-to-github" class="slide level2">
+<h2>Connect to GitHub</h2>
+<p>Run this to create and link a GitHub repo:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>usethis<span class="sc">::</span><span class="fu">use_github</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will:</p>
+<div>
+<ul>
+<li class="fragment">Push your project to GitHub</li>
+<li class="fragment">Open the new repo in your browser</li>
+</ul>
+<p>💡 You can now push/pull changes from RStudio Git tab</p>
 </div>
 </section></section>
-<section id="tips-for-building-shiny-apps" class="title-slide slide level1 center">
-<h1>Tips for building Shiny apps</h1>
+<section>
+<section id="common-git-workflow" class="title-slide slide level1 center scrollable">
+<h1>Common Git Workflow</h1>
+<div>
+<ol type="1">
+<li class="fragment">Edit <code>R/stats_module.R</code><br>
+</li>
+<li class="fragment">Pull → Stage → Commit → Push<br>
+</li>
+<li class="fragment">Repeat</li>
+</ol>
+</div>
+<div class="fragment">
+<p>What each step means:</p>
+<div>
 <ul>
-<li><p>Build tests using <a href="https://rstudio.github.io/shinytest2/">shinytest2</a>.</p></li>
-<li><p>Building apps as packages helps with dependency management.</p></li>
-<li><p>Learn a little bit of HTML, CSS, and Javascript.</p></li>
-<li><p><a href="https://mastering-shiny.org/scaling-modules.html">Modules</a> are a good way to reuse bits of UI and server code across the application.</p></li>
-<li><p>Start with pen and paper… (think about user experience!)</p></li>
+<li class="fragment">Pull: get latest changes from GitHub</li>
+<li class="fragment">Stage: select changes to include</li>
+<li class="fragment">Commit: save a snapshot with a message</li>
+<li class="fragment">Commit: save a snapshot with a message</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="good-commit-messages" class="slide level2">
+<h2>Good Commit Messages</h2>
+<div>
+<blockquote>
+<p>“Add function documentation to knn_pred()”</p>
+</blockquote>
+<ul>
+<li class="fragment">specific<br>
+</li>
+<li class="fragment">explains what changed<br>
+</li>
+<li class="fragment">useful for future you and collaborators</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Common Mistakes:</p>
+<div>
+<ul>
+<li class="fragment"><p>Committing everything without checking</p></li>
+<li class="fragment"><p>Vague messages like “fix” or “updates”</p></li>
+<li class="fragment"><p>Forgetting to pull before starting work</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="working-with-branches" class="slide level2">
+<h2>Working with Branches</h2>
+<div>
+<p>Git branch: a separate “copy” of your project’s code where you can safely make changes without affecting the main version.</p>
+<p>Branches let you:</p>
+<ul>
+<li class="fragment"><p>Work on features without breaking main code</p></li>
+<li class="fragment"><p>Try experiments safely</p></li>
+<li class="fragment"><p>Collaborate in parallel</p></li>
+</ul>
+</div>
+</section>
+<section id="branch-workflow" class="slide level2 scrollable">
+<h2>Branch Workflow</h2>
+<div>
+<ol type="1">
+<li class="fragment">Create a branch (e.g.&nbsp;<code>add-visual</code>)<br>
+</li>
+<li class="fragment">Edit code on branch<br>
+</li>
+<li class="fragment">Commit changes<br>
+</li>
+<li class="fragment">Push branch to GitHub<br>
+</li>
+<li class="fragment">Open Pull Request (PR)<br>
+</li>
+<li class="fragment">Merge into main</li>
+</ol>
+</div>
+</section>
+<section id="summary-of-branching" class="slide level2">
+<h2>Summary of Branching</h2>
+<div>
+<ul>
+<li class="fragment"><strong>main</strong> → stable version of your project</li>
+<li class="fragment"><strong>branch</strong> → experimental workspace</li>
+<li class="fragment"><strong>merge</strong> → combine changes into main</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Branching is helpful because:</p>
+<div>
+<ul>
+<li class="fragment">Prevents breaking working code</li>
+<li class="fragment">Makes collaboration easier</li>
+<li class="fragment">Keeps project history clean</li>
+<li class="fragment">Enables review before merging</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="github-summary" class="slide level2">
+<h2>Github Summary</h2>
+<div style="font-size: 130%;">
+<p><strong>Daily workflow:</strong></p>
+<p>Pull → Edit → Stage → Commit → Push</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>For new features:</strong></p>
+<p>Branch → Edit → Commit → Push</p>
+<p>→ Open Pull Request → Merge</p>
+</div>
+</section></section>
+<section id="resources-further-reading" class="title-slide slide level1 center">
+<h1>Resources &amp; Further Reading</h1>
+<ul>
+<li><strong>Happy Git &amp; GitHub for the useR</strong>: <a href="https://happygitwithr.com/" class="uri">https://happygitwithr.com/</a></li>
+<li><strong>usethis</strong>: <a href="https://usethis.r-lib.org" class="uri">https://usethis.r-lib.org</a></li>
+<li><strong>GitHub Docs</strong>: workflows, Actions, projects</li>
 </ul>
 </section>
 
-<section id="hands-on-exercises-30-min" class="title-slide slide level1 center" data-auto-animate="true">
-<h1 data-id="quarto-animate-title">Hands-on Exercises (30 min)</h1>
-
-<img data-src="images/oop/knn2.png" width="1000" class="r-stretch"><div class="fragment">
-<ul>
-<li><a href="https://github.com/mmadoliat/WSoRT/blob/main/R/app.R" target="_blank">KNN Regression via shiny</a></li>
-</ul>
-</div>
-</section>
-
-<section id="resources-further-reading" class="title-slide slide level1 center" data-auto-animate="true">
-<h1 data-id="quarto-animate-title">Resources &amp; Further Reading</h1>
-<ul>
-<li><p>RStudio tutorial: <a href="https://shiny.rstudio.com/tutorial/">shiny.rstudio.com/tutorial</a></p></li>
-<li><p>Mastering Shiny: <a href="https://mastering-shiny.org/">mastering-shiny.org</a></p></li>
-<li><p>ShinyUiEditor: <a href="https://rstudio.github.io/shinyuieditor/">rstudio.github.io/shinyuieditor</a></p></li>
-<li><p>Shiny for Python: <a href="https://shiny.posit.co/py/">shiny.posit.co/py</a></p></li>
-<li><p>shinythemes: <a href="https://rstudio.github.io/shinythemes/">rstudio.github.io/shinythemes</a></p></li>
-<li><p>shinylive examples: <a href="https://shinylive.io/r/examples/">shinylive.io/r/examples/</a></p></li>
-<li><p>Examples: <a href="https://github.com/rstudio/shiny-examples/">github.com/rstudio/shiny-examples/</a></p></li>
-</ul>
-</section>
-
-<section id="qa" class="title-slide slide level1 center" data-auto-animate="true">
-<h1 data-id="quarto-animate-title">Q&amp;A</h1>
-<p><img src="images/shiny/shiny.png" width="500" style="opacity: 0.05;" align="right"></p>
-<div style="margin-top: 200px;">
-
-</div>
-<div style="text-align: center;">
-<div class="large">
-<p><strong>Thank You</strong></p>
-</div>
-</div>
-<ul>
-<li>Happy coding with Shiny!</li>
-</ul>
+<section id="thank-you" class="title-slide slide level1 center">
+<h1>Thank you!</h1>
+<p>Questions &amp; Discussion</p>
 
 <div class="quarto-auto-generated-content">
-<p><img src="../logo.png" class="slide-logo"></p>
+<p><img src="logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p><a href="http://tinyurl.com/STAR-DS">🔗 http://tinyurl.com/STAR-DS</a></p>
 </div>
@@ -742,20 +714,20 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -950,44 +922,6 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

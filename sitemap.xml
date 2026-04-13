@@ -1,103 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://tinyurl.com/STAR-DS/slides/old/overview.html</loc>
-    <lastmod>2026-04-03T21:00:59.624Z</lastmod>
-  </url>
-  <url>
-    <loc>http://tinyurl.com/STAR-DS/slides/old/Topic3.html</loc>
-    <lastmod>2026-04-03T21:00:59.607Z</lastmod>
-  </url>
-  <url>
-    <loc>http://tinyurl.com/STAR-DS/slides/old/Topic7.html</loc>
-    <lastmod>2026-04-03T21:00:59.623Z</lastmod>
-  </url>
-  <url>
-    <loc>http://tinyurl.com/STAR-DS/slides/Rcpp.html</loc>
-    <lastmod>2026-04-03T21:00:59.329Z</lastmod>
-  </url>
-  <url>
-    <loc>http://tinyurl.com/STAR-DS/slides/DataVizShiny.html</loc>
-    <lastmod>2026-04-03T21:00:59.329Z</lastmod>
-  </url>
-  <url>
-    <loc>http://tinyurl.com/STAR-DS/slides/Topic6.html</loc>
-    <lastmod>2026-04-03T21:00:59.329Z</lastmod>
-  </url>
-  <url>
-    <loc>http://tinyurl.com/STAR-DS/hands-on/HO1.html</loc>
-    <lastmod>2026-04-03T21:00:59.287Z</lastmod>
-  </url>
-  <url>
-    <loc>http://tinyurl.com/STAR-DS/hands-on/HO5.html</loc>
-    <lastmod>2026-04-03T21:00:59.288Z</lastmod>
-  </url>
-  <url>
-    <loc>http://tinyurl.com/STAR-DS/hands-on/HO2.html</loc>
-    <lastmod>2026-04-03T21:00:59.288Z</lastmod>
-  </url>
-  <url>
-    <loc>http://tinyurl.com/STAR-DS/hands-on/HW2.html</loc>
-    <lastmod>2026-04-03T21:00:59.288Z</lastmod>
-  </url>
-  <url>
-    <loc>http://tinyurl.com/STAR-DS/index.html</loc>
-    <lastmod>2026-04-03T21:00:59.295Z</lastmod>
-  </url>
-  <url>
     <loc>http://tinyurl.com/STAR-DS/course-syllabus.html</loc>
-    <lastmod>2026-04-03T21:00:59.287Z</lastmod>
-  </url>
-  <url>
-    <loc>http://tinyurl.com/STAR-DS/course-links.html</loc>
-    <lastmod>2026-04-03T21:00:59.287Z</lastmod>
+    <lastmod>2026-04-13T15:01:20.255Z</lastmod>
   </url>
   <url>
     <loc>http://tinyurl.com/STAR-DS/about.html</loc>
-    <lastmod>2026-04-03T21:00:59.287Z</lastmod>
+    <lastmod>2026-04-13T15:01:20.255Z</lastmod>
   </url>
   <url>
-    <loc>http://tinyurl.com/STAR-DS/misc/cheatsheets.html</loc>
-    <lastmod>2026-04-03T21:00:59.295Z</lastmod>
+    <loc>http://tinyurl.com/STAR-DS/course-links.html</loc>
+    <lastmod>2026-04-13T15:01:20.255Z</lastmod>
   </url>
   <url>
-    <loc>http://tinyurl.com/STAR-DS/course-overview.html</loc>
-    <lastmod>2026-04-03T21:00:59.287Z</lastmod>
-  </url>
-  <url>
-    <loc>http://tinyurl.com/STAR-DS/hands-on/HO4.html</loc>
-    <lastmod>2026-04-03T21:00:59.288Z</lastmod>
-  </url>
-  <url>
-    <loc>http://tinyurl.com/STAR-DS/hands-on/HW1.html</loc>
-    <lastmod>2026-04-03T21:00:59.288Z</lastmod>
-  </url>
-  <url>
-    <loc>http://tinyurl.com/STAR-DS/hands-on/HO3.html</loc>
-    <lastmod>2026-04-03T21:00:59.288Z</lastmod>
-  </url>
-  <url>
-    <loc>http://tinyurl.com/STAR-DS/slides/Reticulate.html</loc>
-    <lastmod>2026-04-03T21:00:59.329Z</lastmod>
-  </url>
-  <url>
-    <loc>http://tinyurl.com/STAR-DS/slides/Package.html</loc>
-    <lastmod>2026-04-03T21:00:59.329Z</lastmod>
-  </url>
-  <url>
-    <loc>http://tinyurl.com/STAR-DS/slides/Topic5.html</loc>
-    <lastmod>2026-04-03T21:00:59.329Z</lastmod>
-  </url>
-  <url>
-    <loc>http://tinyurl.com/STAR-DS/slides/old/Topic2.html</loc>
-    <lastmod>2026-04-03T21:00:59.607Z</lastmod>
+    <loc>http://tinyurl.com/STAR-DS/slides/DataVizShiny.html</loc>
+    <lastmod>2026-04-13T15:01:20.297Z</lastmod>
   </url>
   <url>
     <loc>http://tinyurl.com/STAR-DS/slides/old/Topic1.html</loc>
-    <lastmod>2026-04-03T21:00:59.607Z</lastmod>
+    <lastmod>2026-04-13T15:01:20.580Z</lastmod>
+  </url>
+  <url>
+    <loc>http://tinyurl.com/STAR-DS/slides/old/Topic2.html</loc>
+    <lastmod>2026-04-13T15:01:20.581Z</lastmod>
+  </url>
+  <url>
+    <loc>http://tinyurl.com/STAR-DS/slides/old/overview.html</loc>
+    <lastmod>2026-04-13T15:01:20.598Z</lastmod>
+  </url>
+  <url>
+    <loc>http://tinyurl.com/STAR-DS/slides/Topic6.html</loc>
+    <lastmod>2026-04-13T15:01:20.297Z</lastmod>
+  </url>
+  <url>
+    <loc>http://tinyurl.com/STAR-DS/slides/Reticulate.html</loc>
+    <lastmod>2026-04-13T15:01:20.297Z</lastmod>
+  </url>
+  <url>
+    <loc>http://tinyurl.com/STAR-DS/slides/Package.html</loc>
+    <lastmod>2026-04-13T15:01:20.297Z</lastmod>
+  </url>
+  <url>
+    <loc>http://tinyurl.com/STAR-DS/hands-on/HO5.html</loc>
+    <lastmod>2026-04-13T15:01:20.256Z</lastmod>
+  </url>
+  <url>
+    <loc>http://tinyurl.com/STAR-DS/hands-on/HO4.html</loc>
+    <lastmod>2026-04-13T15:01:20.256Z</lastmod>
+  </url>
+  <url>
+    <loc>http://tinyurl.com/STAR-DS/hands-on/HO2.html</loc>
+    <lastmod>2026-04-13T15:01:20.256Z</lastmod>
+  </url>
+  <url>
+    <loc>http://tinyurl.com/STAR-DS/hands-on/HO1.html</loc>
+    <lastmod>2026-04-13T15:01:20.255Z</lastmod>
+  </url>
+  <url>
+    <loc>http://tinyurl.com/STAR-DS/hands-on/HW2.html</loc>
+    <lastmod>2026-04-13T15:01:20.256Z</lastmod>
+  </url>
+  <url>
+    <loc>http://tinyurl.com/STAR-DS/hands-on/HW1.html</loc>
+    <lastmod>2026-04-13T15:01:20.256Z</lastmod>
+  </url>
+  <url>
+    <loc>http://tinyurl.com/STAR-DS/hands-on/HO3.html</loc>
+    <lastmod>2026-04-13T15:01:20.256Z</lastmod>
+  </url>
+  <url>
+    <loc>http://tinyurl.com/STAR-DS/slides/Github.html</loc>
+    <lastmod>2026-04-13T15:01:20.297Z</lastmod>
+  </url>
+  <url>
+    <loc>http://tinyurl.com/STAR-DS/slides/Topic5.html</loc>
+    <lastmod>2026-04-13T15:01:20.297Z</lastmod>
   </url>
   <url>
     <loc>http://tinyurl.com/STAR-DS/slides/old/Topic4.html</loc>
-    <lastmod>2026-04-03T21:00:59.607Z</lastmod>
+    <lastmod>2026-04-13T15:01:20.581Z</lastmod>
+  </url>
+  <url>
+    <loc>http://tinyurl.com/STAR-DS/slides/old/Topic3.html</loc>
+    <lastmod>2026-04-13T15:01:20.581Z</lastmod>
+  </url>
+  <url>
+    <loc>http://tinyurl.com/STAR-DS/slides/old/Topic7.html</loc>
+    <lastmod>2026-04-13T15:01:20.597Z</lastmod>
+  </url>
+  <url>
+    <loc>http://tinyurl.com/STAR-DS/slides/Rcpp.html</loc>
+    <lastmod>2026-04-13T15:01:20.297Z</lastmod>
+  </url>
+  <url>
+    <loc>http://tinyurl.com/STAR-DS/misc/cheatsheets.html</loc>
+    <lastmod>2026-04-13T15:01:20.263Z</lastmod>
+  </url>
+  <url>
+    <loc>http://tinyurl.com/STAR-DS/course-overview.html</loc>
+    <lastmod>2026-04-13T15:01:20.255Z</lastmod>
+  </url>
+  <url>
+    <loc>http://tinyurl.com/STAR-DS/index.html</loc>
+    <lastmod>2026-04-13T15:01:20.263Z</lastmod>
   </url>
 </urlset>
