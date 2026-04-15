@@ -114,7 +114,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "About this site!"
   },
   {
     "objectID": "course-links.html",
@@ -2752,7 +2752,7 @@
     "href": "index.html",
     "title": "STatisticians Advancing in R for Data Science (STAR-DS)",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the short course. Note that this schedule will be updated as we progress, and the timeline of topics and assignments might be updated throughout the course.\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nCODE\nDUE\n\n\n\n\n1\nTue, Apr 28\n Create dynamic Shiny web applications\n📚Topic 1  📖Shiny\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\nEnhance performance with Rcpp (C++)\n📚Topic 2  📖Rcpp for everyone\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n\n\n\n\n\n\n📝 HW 1 at 11:50 pm\n\n\n1\nTue, Apr 28\n Integrate Python in R using Reticulate\n📚Topic 3  📖Calling Python from R\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n Develop your own professional R package\n📚Topic 4?  📖R package\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n Collaborate via GitHub / CRAN submission process\n📚Topic 5?  📖Let’s Git started  📖Release R package\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n\n\n\n\n\n\n📝 HW 2 at 11:50 pm",
+    "text": "This page contains an outline of the topics, content, and assignments for the short course. Note that this schedule will be updated as we progress, and the timeline of topics and assignments might be updated throughout the course.\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nCODE\nDUE\n\n\n\n\n1\nTue, Apr 28\n Create dynamic Shiny web applications\n📚Topic 1  📖Shiny\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\nEnhance performance with Rcpp (C++)\n📚Topic 2  📖Rcpp for everyone\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n\n\n\n\n\n\n📝 HW 1 at 11:50 pm\n\n\n1\nTue, Apr 28\n Integrate Python in R using Reticulate\n📚Topic 3  📖Calling Python from R\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n Develop your own professional R package\n📚Topic 4  📖R package\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n Collaborate via GitHub / CRAN submission process\n📚Topic 5  📖Let’s Git started  📖Release R package\nR👩‍💻  R🛠️\n\n\n\n\n\n\nTue, Apr 28\n\n\n\n\n\n\n📝 HW 2 at 11:50 pm",
     "crumbs": [
       "Course information",
       "Schedule"
