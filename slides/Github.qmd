@@ -1,6 +1,6 @@
 ---
-title: "Short Course on R Tools"
-subtitle: "Collaborate via GitHub"
+title: "<br><span style='color:#FDB913'>Collaborate via Github</span>"
+subtitle: "Statisticians Advancing in R<br> for Data Science"
 title-slide-attributes:
   data-background-image: mu-bg.png
   data-background-size: stretch
@@ -11,7 +11,7 @@ format:
     scrollable: true
 ---
 
-# 🔁 Why Version Control?
+# Why Version Control?
 
 ::: incremental
 -   Track and restore changes in code over time
@@ -82,7 +82,7 @@ git --version
 
 . . .
 
-✅ You should see something like:
+You should see something like:
 
 ``` text
 git version 2.43.0
@@ -94,7 +94,7 @@ git version 2.43.0
 
 ## Configuring Git Identity
 
-🔧 Set your global Git identity:
+Set your global Git identity:
 
 ``` bash
 git config --global user.name "Your Name"
@@ -103,7 +103,7 @@ git config --global user.email "you@example.com"
 
 . . .
 
-✅ To check the name or email currently set in Git, use these commands:
+To check the name or email currently set in Git, use these commands:
 
 ``` bash
 git config --global user.name 
@@ -134,7 +134,7 @@ Paste your token when prompted.
 
 . . .
 
-> ✅ You’ve now authenticated GitHub from R!
+> You’ve now authenticated GitHub from R!
 
 ## Check Setup
 
@@ -146,7 +146,7 @@ usethis::git_sitrep()
 
 . . .
 
-💡 This tells you:
+This tells you:
 
 ::: incremental
 -   Whether Git is installed
@@ -154,20 +154,20 @@ usethis::git_sitrep()
 -   If PAT is stored
 :::
 
-## 📁 Creating a New Git-Enabled Project
+## Creating a New Git-Enabled Project
 
 In RStudio:
 
 ::: incremental
 1.  **File → New Project**
 2.  Choose: **New Directory** → **R Package** (or **New Project**)
-3.  Check the box: ✅ "Create a git repository"
+3.  Check the box: "Create a git repository"
 4.  Finish project setup
 :::
 
 . . .
 
-> 📁 A `.git` folder is created — this is a Git repo!
+> A `.git` folder is created — this is a Git repo!
 
 ## Connect to GitHub
 
@@ -183,7 +183,7 @@ This will:
 -   Push your project to GitHub
 -   Open the new repo in your browser
 
-💡 You can now push/pull changes from RStudio Git tab
+You can now push/pull changes from RStudio Git tab
 :::
 
 # Common Git Workflow

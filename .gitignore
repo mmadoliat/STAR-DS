@@ -2,8 +2,10 @@
 .Rhistory
 .RData
 .Ruserdata
-.DS_Store 
+.DS_Store
 
 /.quarto/
 _site
 _freeze
+**/*.quarto_ipynb
+backup_slides/
