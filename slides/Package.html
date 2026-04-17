@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.9">
 
   <meta name="author" content="Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic">
-  <title>STAR-DS – Short Course on R Tools</title>
+  <title>STAR-DS –  Develop your own professional R package</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -388,11 +388,11 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="STAR-DS - Short Course on R Tools">
-<meta property="og:description" content="Develop your own professional R package">
+<meta property="og:title" content="STAR-DS - Develop your own professional R package">
+<meta property="og:description" content="Statisticians Advancing in R for Data Science">
 <meta property="og:site_name" content="STAR-DS">
-<meta name="twitter:title" content="STAR-DS - Short Course on R Tools">
-<meta name="twitter:description" content="Develop your own professional R package">
+<meta name="twitter:title" content="STAR-DS - Develop your own professional R package">
+<meta name="twitter:description" content="Statisticians Advancing in R for Data Science">
 <meta name="twitter:image" content="http://tinyurl.com/STAR-DS/slides/images/twitter-card.png">
 <meta name="twitter:creator" content="@mmadoliat">
 <meta name="twitter:card" content="summary_large_image">
@@ -402,8 +402,8 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="mu-bg.png" data-background-size="stretch" data-slide-number="none" class="quarto-title-block center">
-  <h1 class="title">Short Course on R Tools</h1>
-  <p class="subtitle">Develop your own professional R package</p>
+  <h1 class="title"><br><span style="color:#FDB913">Develop your own professional R package</span></h1>
+  <p class="subtitle">Statisticians Advancing in R<br> for Data Science</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -434,18 +434,18 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </div>
 </section>
 <section id="r-packages-the-fundamental-unit" class="slide level2">
-<h2>📦 R Packages: The Fundamental Unit</h2>
+<h2>R Packages: The Fundamental Unit</h2>
 <p>In R, the <strong>fundamental unit of shareable code</strong> is the <strong>package</strong>.</p>
 <p>A package bundles together:</p>
 <div>
 <ul>
-<li class="fragment">🧑‍💻 Code<br>
+<li class="fragment">Code<br>
 </li>
-<li class="fragment">📊 Data<br>
+<li class="fragment">Data<br>
 </li>
-<li class="fragment">📚 Documentation<br>
+<li class="fragment">Documentation<br>
 </li>
-<li class="fragment">🧪 Tests<br>
+<li class="fragment">Tests<br>
 </li>
 </ul>
 </div>
@@ -454,32 +454,32 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </div>
 </section>
 <section id="you-already-use-packages" class="slide level2">
-<h2>📦 You Already Use Packages!</h2>
+<h2>You Already Use Packages!</h2>
 <p>If you’re here, you already know how to work with packages:</p>
 <div>
 <ul>
-<li class="fragment"><p>📥 Install a package from CRAN:</p>
+<li class="fragment"><p>Install a package from CRAN:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">install.packages</span>(<span class="st">"x"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li class="fragment"><p>▶️ Use a package in R:</p>
+<li class="fragment"><p>Use a package in R:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(<span class="st">"x"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li class="fragment"><p>❓ Get help on them with</p>
+<li class="fragment"><p>Get help on them with</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>package?x</span>
 <span id="cb3-2"><a></a><span class="fu">help</span>(<span class="at">package =</span> <span class="st">"x"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
 </div>
 </section>
 <section id="goal-of-this-talk" class="slide level2">
-<h2>🎯 Goal of This Talk</h2>
-<p>This workshop is about moving from <strong>using packages</strong> ➡️ to <strong>developing your own</strong>.</p>
+<h2>Goal of This Talk</h2>
+<p>This workshop is about moving from <strong>using packages</strong> to <strong>developing your own</strong>.</p>
 <div class="fragment">
 <p><strong>Why?</strong></p>
 <div>
 <ul>
-<li class="fragment">🚀 To share your code with others<br>
+<li class="fragment">To share your code with others<br>
 </li>
-<li class="fragment">📦 To make your code easy to install, use, and learn<br>
+<li class="fragment">To make your code easy to install, use, and learn<br>
 </li>
-<li class="fragment">⏳ To save yourself time with conventions and structure</li>
+<li class="fragment">o save yourself time with conventions and structure</li>
 </ul>
 </div>
 </div>
@@ -490,18 +490,18 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 <p>Make sure you have:</p>
 <div>
 <ul>
-<li class="fragment">🛠 The latest version of <strong>R</strong>.</li>
-<li class="fragment">🛠 The latest version of <strong>RStudio</strong>.</li>
+<li class="fragment">The latest version of <strong>R</strong>.</li>
+<li class="fragment">The latest version of <strong>RStudio</strong>.</li>
 </ul>
 </div>
 <div class="fragment fade-up">
-<p><strong>📦 Required Packages:</strong></p>
+<p><strong>Required Packages:</strong></p>
 <p>Install the essential development tools:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"devtools"</span>, <span class="st">"roxygen2"</span>, <span class="st">"testthat"</span>, <span class="st">"knitr"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="key-packages" class="slide level2">
-<h2>📦 Key Packages</h2>
+<h2>Key Packages</h2>
 <div>
 <ul>
 <li class="fragment"><p><strong><code>devtools</code></strong>: Simplifies package development by wrapping complex workflows into easy commands</p></li>
@@ -512,7 +512,7 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </div>
 <div class="fragment fade-up">
 <blockquote>
-<p>💡 These tools help automate, test, document, and share your package like a pro.</p>
+<p>These tools help automate, test, document, and share your package like a pro.</p>
 </blockquote>
 </div>
 </section></section>
@@ -522,7 +522,7 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 
 </section>
 <section id="directory-layout" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">🧩 Directory layout</h2>
+<h2 data-id="quarto-animate-title">Directory layout</h2>
 <div class="sourceCode" id="cb5"><pre class="sourceCode numberSource text number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode hljs"><span id="cb5-1" class="hljs-ln-code"><a></a>  mypkg/</span>
 <span id="cb5-2" class="hljs-ln-code"><a></a>  ├── DESCRIPTION         # Package metadata</span>
 <span id="cb5-3" class="hljs-ln-code"><a></a>  ├── NAMESPACE           # Exported functions &amp; imports</span>
@@ -536,89 +536,33 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </section>
 <section id="directory-layout-1" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">🧩 Directory layout</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource text number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode hljs"><span id="cb6-1" class="hljs-ln-code"><a></a>  mypkg/</span>
-<span id="cb6-2" class="hljs-ln-code"><a></a>  ├── DESCRIPTION         # Package metadata</span>
-<span id="cb6-3" class="hljs-ln-code"><a></a>  ├── NAMESPACE           # Exported functions &amp; imports</span>
-<span id="cb6-4" class="hljs-ln-code"><a></a>  ├── R/                  # Your R functions</span>
-<span id="cb6-5" class="hljs-ln-code"><a></a>  ├── man/                # Auto-generated documentation</span>
-<span id="cb6-6" class="hljs-ln-code"><a></a>  ├── tests/              # Unit tests with testthat</span>
-<span id="cb6-7" class="hljs-ln-code"><a></a>  ├── vignettes/          # Long-form documentation (Rmd)</span>
-<span id="cb6-8" class="hljs-ln-code"><a></a>  ├── data/               # Data sets (.rda files)</span>
-<span id="cb6-9" class="hljs-ln-code"><a></a>  └── inst/               # Installed files (e.g., app/, extdata/)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource text number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode hljs"><span id="cb6-1" class="hljs-ln-code"><a></a>mypkg/</span>
+<span id="cb6-2" class="hljs-ln-code"><a></a>├── DESCRIPTION         # Package metadata</span>
+<span id="cb6-3" class="hljs-ln-code"><a></a>├── NAMESPACE           # Exported functions &amp; imports</span>
+<span id="cb6-4" class="hljs-ln-code"><a></a>├── R/                  # Your R functions</span>
+<span id="cb6-5" class="hljs-ln-code"><a></a>├── src/                # C/C++ code (Rcpp, compiled extensions)</span>
+<span id="cb6-6" class="hljs-ln-code"><a></a>├── man/                # Auto-generated documentation</span>
+<span id="cb6-7" class="hljs-ln-code"><a></a>├── tests/              # Unit tests with testthat</span>
+<span id="cb6-8" class="hljs-ln-code"><a></a>├── vignettes/          # Long-form documentation (Rmd)</span>
+<span id="cb6-9" class="hljs-ln-code"><a></a>├── data/               # Data sets (.rda files)</span>
+<span id="cb6-10" class="hljs-ln-code"><a></a>└── inst/               # Installed files (e.g., app/, extdata/)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="package-states-in-r" class="slide level2" data-transition="zoom">
-<h2>🛠 Package States in R</h2>
-<p>R packages transition through five development states:</p>
+<section id="package-states-in-r" class="slide level2">
+<h2>Package States in R</h2>
+<p>R packages move through a lifecycle from development to execution:</p>
 <div>
 <ul>
-<li class="fragment">🗂️ <strong>Source</strong>: your raw package folder</li>
-<li class="fragment">📦 <strong>Bundled</strong>: compressed .tar.gz for sharing</li>
-<li class="fragment">🧱 <strong>Binary</strong>: platform-specific precompiled version</li>
-<li class="fragment">📚 <strong>Installed</strong>: available in your R library</li>
-<li class="fragment">🧠 <strong>In-Memory</strong>: actively loaded via library()</li>
-</ul>
-</div>
-<div class="fragment fade-up">
-<blockquote>
-<p>Understanding these states helps you manage installation, sharing, and usage workflows.</p>
-</blockquote>
-</div>
-</section>
-<section id="source-package" class="slide level2" data-transition="zoom">
-<h2>🗂️ Source Package</h2>
-<p>A <strong>source package</strong> is just a folder with a specific structure:</p>
-<ul>
-<li><code>DESCRIPTION</code> file<br>
+<li class="fragment"><strong>Source</strong>: editable folder with <code>DESCRIPTION</code>, <code>R/</code>, and optional components<br>
 </li>
-<li><code>R/</code> folder with <code>.R</code> files<br>
+<li class="fragment"><strong>Bundled</strong>: compressed <code>.tar.gz</code> file created from source (portable, not yet usable)<br>
 </li>
-<li>Optional: <code>man/</code>, <code>tests/</code>, <code>vignettes/</code></li>
+<li class="fragment"><strong>Binary</strong>: precompiled package for a specific operating system<br>
+</li>
+<li class="fragment"><strong>Installed</strong>: unpacked into an R library and ready to use<br>
+</li>
+<li class="fragment"><strong>In-memory</strong>: loaded into R session via <code>library()</code> and actively running<br>
+</li>
 </ul>
-<div class="fragment fade-up">
-<blockquote>
-<p>It’s editable and human-readable — your starting point for development.</p>
-</blockquote>
-</div>
-</section>
-<section id="bundled-package" class="slide level2">
-<h2>📦 Bundled Package</h2>
-<p>A <strong>bundled package</strong> is a compressed <code>.tar.gz</code> file created from a source package.</p>
-<ul>
-<li>Commonly called a <strong>source tarball</strong></li>
-<li>Created using <code>devtools::build()</code></li>
-<li>Platform-independent format for distribution</li>
-</ul>
-<div class="fragment fade-up">
-<blockquote>
-<p>It acts as a transportable unit — not directly usable until installed.</p>
-</blockquote>
-</div>
-</section>
-<section id="binary-package" class="slide level2" data-transition="zoom">
-<h2>🧱 Binary Package</h2>
-<p>A <strong>binary package</strong> is a platform-specific compiled package:</p>
-<ul>
-<li>Windows: <code>.zip</code></li>
-<li>macOS: <code>.tgz</code></li>
-<li>Created using <code>devtools::build(binary = TRUE)</code></li>
-</ul>
-<div class="fragment fade-up">
-<blockquote>
-<p>Ideal for users without development tools — typically distributed by CRAN.</p>
-</blockquote>
-</div>
-</section>
-<section id="installed-package" class="slide level2" data-transition="zoom">
-<h2>📚 Installed Package</h2>
-<p>An <strong>installed package</strong> is one that’s been unpacked and placed into a library folder.</p>
-<ul>
-<li>No longer a single file</li>
-<li>Ready to be loaded into memory</li>
-</ul>
-<div class="fragment fade-up">
-<blockquote>
-<p><code>install.packages()</code> or <code>devtools::install_*()</code> bring packages into this state.</p>
-</blockquote>
 </div>
 </section>
 <section id="transitioning-between-states" class="slide level2" data-transition="convex">
@@ -638,7 +582,7 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </ol>
 </div>
 <div class="fragment fade-up">
-<p>❌ You <strong>cannot</strong> use:</p>
+<p>You <strong>cannot</strong> use:</p>
 <ul>
 <li>Hyphens <code>-</code></li>
 <li>Underscores <code>_</code></li>
@@ -646,7 +590,7 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </div>
 </section>
 <section id="creating-your-package" class="slide level2">
-<h2>🛠️ Creating Your Package</h2>
+<h2>Creating Your Package</h2>
 <p>Once you have a name, create the package using either:</p>
 <div>
 <ul>
@@ -657,11 +601,11 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </ul>
 </div>
 <div class="fragment fade-up">
-<p>👉 Both options run the same function under the hood.</p>
+<p>Both options run the same function under the hood.</p>
 </div>
 </section>
 <section id="what-gets-created" class="slide level2">
-<h2>📦 What Gets Created?</h2>
+<h2>What Gets Created?</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
 <div>
@@ -689,7 +633,7 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </div>
 </section>
 <section id="description-file" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">📄 DESCRIPTION File</h2>
+<h2 data-id="quarto-animate-title">DESCRIPTION File</h2>
 <p>The <code>DESCRIPTION</code> file provides overall metadata about your package:</p>
 <div>
 <ul>
@@ -706,7 +650,7 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </div>
 </section>
 <section id="sample-description-file" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">🧾 Sample DESCRIPTION File</h2>
+<h2 data-id="quarto-animate-title">Sample DESCRIPTION File</h2>
 <div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode hljs"><span id="cb7-1" class="hljs-ln-code"><a></a>Package: KNNreg</span>
 <span id="cb7-2" class="hljs-ln-code"><a></a>Type: Package</span>
 <span id="cb7-3" class="hljs-ln-code"><a></a>Title: k-Nearest Neighbors Regression with Shiny App</span>
@@ -729,16 +673,8 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </ul>
 </div>
 </section>
-<section id="example-from-ggplot2" class="slide level2">
-<h2>🧪 Example from <code>ggplot2</code>:</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a></a>Title: Create Elegant Data Visualisations Using the Grammar of Graphics</span>
-<span id="cb8-2"><a></a>Description: A system for 'declaratively' creating graphics,</span>
-<span id="cb8-3"><a></a>  based on "The Grammar of Graphics". You provide the data,</span>
-<span id="cb8-4"><a></a>  tell 'ggplot2' how to map variables to aesthetics, what</span>
-<span id="cb8-5"><a></a>  graphical primitives to use, and it takes care of the details.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
 <section id="imports-vs.-suggests" class="slide level2">
-<h2>📦 Imports vs.&nbsp;Suggests</h2>
+<h2>Imports vs.&nbsp;Suggests</h2>
 <p><strong>Imports</strong></p>
 <div>
 <ul>
@@ -764,7 +700,7 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </div>
 </section>
 <section id="namespace-file" class="slide level2">
-<h2>📂 NAMESPACE File</h2>
+<h2>NAMESPACE File</h2>
 <p>The <code>NAMESPACE</code> file defines the <strong>interface</strong> of your package.</p>
 <p>It controls:</p>
 <div>
@@ -781,15 +717,15 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </div>
 </section>
 <section id="example-namespace-file" class="slide level2">
-<h2>🧾 Example: NAMESPACE File</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a></a># Generated by roxygen2: do not edit by hand</span>
-<span id="cb9-2"><a></a></span>
-<span id="cb9-3"><a></a>export(knn_pred)</span>
-<span id="cb9-4"><a></a>export(run_knn_app)</span>
-<span id="cb9-5"><a></a>import(ggplot2)</span>
-<span id="cb9-6"><a></a>importFrom(Rcpp,evalCpp)</span>
-<span id="cb9-7"><a></a>importFrom(shiny,runApp)</span>
-<span id="cb9-8"><a></a>useDynLib(KNNreg, .registration = TRUE)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<h2>Example: NAMESPACE File</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a></a># Generated by roxygen2: do not edit by hand</span>
+<span id="cb8-2"><a></a></span>
+<span id="cb8-3"><a></a>export(knn_pred)</span>
+<span id="cb8-4"><a></a>export(run_knn_app)</span>
+<span id="cb8-5"><a></a>import(ggplot2)</span>
+<span id="cb8-6"><a></a>importFrom(Rcpp,evalCpp)</span>
+<span id="cb8-7"><a></a>importFrom(shiny,runApp)</span>
+<span id="cb8-8"><a></a>useDynLib(KNNreg, .registration = TRUE)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <ul>
 <li><p><code>export()</code> — makes a function available to users</p></li>
@@ -800,14 +736,14 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </div>
 </section>
 <section id="how-to-generate-namespace" class="slide level2">
-<h2>✍️ How to Generate NAMESPACE</h2>
+<h2>How to Generate NAMESPACE</h2>
 <p>In <code>.R</code> files:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co">#' @export</span></span>
-<span id="cb10-2"><a></a>r_func <span class="ot">&lt;-</span> <span class="cf">function</span>(x) { ... }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="co">#' @export</span></span>
+<span id="cb9-2"><a></a>r_func <span class="ot">&lt;-</span> <span class="cf">function</span>(x) { ... }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p>In <code>.cpp</code> files:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource cpp number-lines code-with-copy"><code class="sourceCode cpp"><span id="cb11-1"><a></a><span class="co">// [[Rcpp::export]]</span></span>
-<span id="cb11-2"><a></a><span class="dt">double</span> myRcpp<span class="op">-</span>func<span class="op">(</span><span class="dt">int</span> x<span class="op">,</span> <span class="dt">double</span> y<span class="op">)</span> <span class="op">{</span> <span class="op">...</span> <span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource cpp number-lines code-with-copy"><code class="sourceCode cpp"><span id="cb10-1"><a></a><span class="co">// [[Rcpp::export]]</span></span>
+<span id="cb10-2"><a></a><span class="dt">double</span> myRcpp<span class="op">-</span>func<span class="op">(</span><span class="dt">int</span> x<span class="op">,</span> <span class="dt">double</span> y<span class="op">)</span> <span class="op">{</span> <span class="op">...</span> <span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section>
@@ -816,9 +752,9 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 <p>To add functionality to your package, you’ll write:</p>
 <div>
 <ul>
-<li class="fragment">✅ Functions — saved as <code>.R</code> scripts in the <code>R/</code> folder<br>
+<li class="fragment">Functions — saved as <code>.R</code> scripts in the <code>R/</code> folder<br>
 </li>
-<li class="fragment">📝 Documentation — using <strong>roxygen2</strong> comments above each function</li>
+<li class="fragment">DDocumentation — using <strong>roxygen2</strong> comments above each function</li>
 </ul>
 </div>
 <div class="fragment fade-up">
@@ -828,36 +764,36 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </div>
 </section>
 <section id="code-placement" class="slide level2">
-<h2>📂 Code Placement</h2>
+<h2>Code Placement</h2>
 <p>All your functions go in the <code>R/</code> folder.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a></a>mypkg/</span>
-<span id="cb12-2"><a></a>├── R/</span>
-<span id="cb12-3"><a></a>│   ├── my_function.R</span>
-<span id="cb12-4"><a></a>│   └── helpers.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a></a>mypkg/</span>
+<span id="cb11-2"><a></a>├── R/</span>
+<span id="cb11-3"><a></a>│   ├── my_function.R</span>
+<span id="cb11-4"><a></a>│   └── helpers.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Each <code>.R</code> file can contain one or more functions.</p>
 </section>
 <section id="documenting-functions-with-roxygen2" class="slide level2">
-<h2>📝 Documenting Functions with Roxygen2</h2>
+<h2>Documenting Functions with Roxygen2</h2>
 <p>Use special comments starting with <code>#'</code> to write function documentation:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="co">#' Sum of Square Function</span></span>
-<span id="cb13-2"><a></a><span class="co">#'</span></span>
-<span id="cb13-3"><a></a><span class="co">#' This function computes the Sum of Squares of a numeric vector</span></span>
-<span id="cb13-4"><a></a><span class="co">#' </span></span>
-<span id="cb13-5"><a></a><span class="co">#' @param x Numeric vector</span></span>
-<span id="cb13-6"><a></a><span class="co">#' @return Numeric sum of x</span></span>
-<span id="cb13-7"><a></a><span class="co">#'</span></span>
-<span id="cb13-8"><a></a><span class="co">#' @examples</span></span>
-<span id="cb13-9"><a></a><span class="co">#' x &lt;- 1:5</span></span>
-<span id="cb13-10"><a></a><span class="co">#' y &lt;- my_function(x)</span></span>
-<span id="cb13-11"><a></a><span class="co">#' print(y)</span></span>
-<span id="cb13-12"><a></a><span class="co">#'</span></span>
-<span id="cb13-13"><a></a>my_function <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">sum</span>(x<span class="sc">^</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="co">#' Sum of Square Function</span></span>
+<span id="cb12-2"><a></a><span class="co">#'</span></span>
+<span id="cb12-3"><a></a><span class="co">#' This function computes the Sum of Squares of a numeric vector</span></span>
+<span id="cb12-4"><a></a><span class="co">#' </span></span>
+<span id="cb12-5"><a></a><span class="co">#' @param x Numeric vector</span></span>
+<span id="cb12-6"><a></a><span class="co">#' @return Numeric sum of x</span></span>
+<span id="cb12-7"><a></a><span class="co">#'</span></span>
+<span id="cb12-8"><a></a><span class="co">#' @examples</span></span>
+<span id="cb12-9"><a></a><span class="co">#' x &lt;- 1:5</span></span>
+<span id="cb12-10"><a></a><span class="co">#' y &lt;- my_function(x)</span></span>
+<span id="cb12-11"><a></a><span class="co">#' print(y)</span></span>
+<span id="cb12-12"><a></a><span class="co">#'</span></span>
+<span id="cb12-13"><a></a>my_function <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">sum</span>(x<span class="sc">^</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This will generate help files in the <strong>man/</strong> folder.</p>
 </section>
 <section id="generate-documentation" class="slide level2">
-<h2>⚙️ Generate Documentation</h2>
+<h2>Generate Documentation</h2>
 <p>After writing your function and roxygen2 comments, run:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>devtools<span class="sc">::</span><span class="fu">document</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>devtools<span class="sc">::</span><span class="fu">document</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This will:</p>
 <div>
 <ul>
@@ -866,8 +802,24 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </ul>
 </div>
 <div class="fragment fade-up">
-<p>💡 You can also press <code>Ctrl+Shift+D</code> in RStudio.</p>
+<p>You can also press <code>Ctrl+Shift+D</code> in RStudio.</p>
 </div>
+</section>
+<section id="src-folder-and-rcpp-integration" class="slide level2">
+<h2>src/ Folder and Rcpp Integration</h2>
+<p>The src/ folder is used for compiled C/C++ code (Rcpp).</p>
+<div>
+<ul>
+<li class="fragment">Contains .cpp files</li>
+<li class="fragment">Requires Rcpp in DESCRIPTION</li>
+</ul>
+</div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a></a>KNNreg/</span>
+<span id="cb14-2"><a></a>├── src/</span>
+<span id="cb14-3"><a></a>│   └── knn_pred.cpp</span>
+<span id="cb14-4"><a></a>├── R/</span>
+<span id="cb14-5"><a></a>│   ├── knn_helpers.R</span>
+<span id="cb14-6"><a></a>│   └── knn_pred.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section></section>
 <section>
 <section id="build-a-simple-package-from-scratch" class="title-slide slide level1 center">
@@ -877,15 +829,16 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 <ul>
 <li class="fragment"><p>Step 1: Create Your Package</p></li>
 <li class="fragment"><p>Step 2: Add a Dataset</p></li>
-<li class="fragment"><p>Step 3: Write Your Functions</p></li>
-<li class="fragment"><p>Step 4: Document Your Functions</p></li>
-<li class="fragment"><p>Step 5: Load and Check the Package</p></li>
-<li class="fragment"><p>Step 6: Build and Install the Package</p></li>
+<li class="fragment"><p>Step 3: Write Your Functions (R code in <code>R/</code>)</p></li>
+<li class="fragment"><p>Step 4: Add Compiled Code (Optional <code>src/</code> for Rcpp/C++)</p></li>
+<li class="fragment"><p>Step 5: Document Your Functions</p></li>
+<li class="fragment"><p>Step 6: Load and Check the Package</p></li>
+<li class="fragment"><p>Step 7: Build and Install the Package</p></li>
 </ul>
 </div>
 </section>
 <section id="create-your-package" class="slide level2">
-<h2>1️⃣ Create Your Package</h2>
+<h2>1. Create Your Package</h2>
 <p>Use <code>usethis</code> to create a new package directory:</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>usethis<span class="sc">::</span><span class="fu">create_package</span>(<span class="st">"KNNreg"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This creates:</p>
@@ -898,7 +851,7 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </div>
 </section>
 <section id="add-a-dataset" class="slide level2">
-<h2>2️⃣ Add a Dataset</h2>
+<h2>2. Add a Dataset</h2>
 <p>Let’s include a built-in dataset (mtcars) for simplicity:</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>usethis<span class="sc">::</span><span class="fu">use_data</span>(mtcars, <span class="at">overwrite =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
@@ -906,14 +859,17 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 <div class="sourceCode" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>minipkg<span class="sc">::</span>mtcars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="write-your-functions" class="slide level2 incremental">
-<h2>3️⃣ Write Your Functions</h2>
+<section id="write-your-functions" class="slide level2">
+<h2>3. Write Your Functions</h2>
+<div>
 <ul>
-<li><p>Create function files in the R/ folder.</p></li>
-<li><p>Keep important functions in separate files.</p></li>
-<li><p>Place helper functions together in a single file.</p></li>
-<li><p>This structure keeps your project organized and maintainable.</p></li>
+<li class="fragment"><p>Create function files in the R/ folder.</p></li>
+<li class="fragment"><p>Keep important functions in separate files.</p></li>
+<li class="fragment"><p>Place helper functions together in a single file.</p></li>
+<li class="fragment"><p>This structure keeps your project organized and maintainable.</p></li>
 </ul>
+</div>
+<div class="fragment fade-up">
 <p>Create a new file: <strong>R/knn_pred.R</strong></p>
 <div class="sourceCode" id="cb18" data-code-line-numbers="1-1|2-5|7-13|15-22|24-39|41-43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>knn_pred <span class="ot">&lt;-</span> <span class="cf">function</span>(train_x, train_y, test_x, k) {</span>
 <span id="cb18-2"><a></a>  <span class="co"># Coerce types</span></span>
@@ -959,11 +915,72 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 <span id="cb18-42"><a></a></span>
 <span id="cb18-43"><a></a>  out</span>
 <span id="cb18-44"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="add-compiled-code" class="slide level2">
+<h2>4. Add Compiled Code</h2>
+<div>
+<ul>
+<li class="fragment">Add <code>.cpp</code> files in the <code>src/</code> folder<br>
+</li>
+<li class="fragment">Compiled code is linked to R through Rcpp<br>
+</li>
+<li class="fragment">Called from standard R functions in the <code>R/</code> folder</li>
+</ul>
+</div>
+<div class="fragment fade-up">
+<p>Create a new file: <strong>src/knn_pred.cpp</strong></p>
+<div class="sourceCode" id="cb19" data-code-line-numbers="1-1|2-5|7-13|15-22|24-39|41-43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="sc">/</span><span class="er">/</span> [[Rcpp<span class="sc">::</span><span class="fu">depends</span>(Rcpp)]]</span>
+<span id="cb19-2"><a></a><span class="co">#include &lt;Rcpp.h&gt;</span></span>
+<span id="cb19-3"><a></a>using namespace Rcpp;</span>
+<span id="cb19-4"><a></a></span>
+<span id="cb19-5"><a></a><span class="sc">/</span><span class="er">/</span> [[Rcpp<span class="sc">::</span>export]]</span>
+<span id="cb19-6"><a></a>List <span class="fu">knn_pred_cpp</span>(NumericMatrix train_x,</span>
+<span id="cb19-7"><a></a>                           NumericVector train_y,</span>
+<span id="cb19-8"><a></a>                           NumericMatrix test_x,</span>
+<span id="cb19-9"><a></a>                           int k) {</span>
+<span id="cb19-10"><a></a>  int n <span class="ot">=</span> <span class="fu">train_x.nrow</span>(), </span>
+<span id="cb19-11"><a></a>    p <span class="ot">=</span> <span class="fu">train_x.ncol</span>(), </span>
+<span id="cb19-12"><a></a>    m <span class="ot">=</span> <span class="fu">test_x.nrow</span>();</span>
+<span id="cb19-13"><a></a>  NumericVector <span class="fu">preds</span>(m);</span>
+<span id="cb19-14"><a></a>  int id_length <span class="ot">=</span> m <span class="sc">*</span> k;</span>
+<span id="cb19-15"><a></a>  IntegerVector <span class="fu">ids</span>(id_length);</span>
+<span id="cb19-16"><a></a></span>
+<span id="cb19-17"><a></a>  </span>
+<span id="cb19-18"><a></a>  <span class="cf">for</span> (int <span class="at">j =</span> <span class="dv">0</span>; j <span class="sc">&lt;</span> m; <span class="sc">++</span>j) {</span>
+<span id="cb19-19"><a></a>    <span class="sc">/</span><span class="er">/</span> compute and <span class="fu">store</span> (distance,index)</span>
+<span id="cb19-20"><a></a>    std<span class="sc">::</span>vector<span class="sc">&lt;</span>std<span class="sc">::</span>pair<span class="sc">&lt;</span>double,int<span class="sc">&gt;</span><span class="er">&gt;</span> <span class="fu">dists</span>(n);</span>
+<span id="cb19-21"><a></a>    <span class="cf">for</span> (int <span class="at">i =</span> <span class="dv">0</span>; i <span class="sc">&lt;</span> n; <span class="sc">++</span>i) {</span>
+<span id="cb19-22"><a></a>      double sumsq <span class="ot">=</span> <span class="dv">0</span>;</span>
+<span id="cb19-23"><a></a>      <span class="cf">for</span> (int <span class="at">d =</span> <span class="dv">0</span>; d <span class="sc">&lt;</span> p; <span class="sc">++</span>d) {</span>
+<span id="cb19-24"><a></a>        double diff <span class="ot">=</span> <span class="fu">train_x</span>(i,d) <span class="sc">-</span> <span class="fu">test_x</span>(j,d);</span>
+<span id="cb19-25"><a></a>        sumsq <span class="sc">+</span><span class="er">=</span> diff <span class="sc">*</span> diff;</span>
+<span id="cb19-26"><a></a>      }</span>
+<span id="cb19-27"><a></a>      dists[i] <span class="ot">=</span> std<span class="sc">::</span><span class="fu">make_pair</span>(sumsq, i);</span>
+<span id="cb19-28"><a></a>    }</span>
+<span id="cb19-29"><a></a>    <span class="sc">/</span><span class="er">/</span> partial sort to get k nearest</span>
+<span id="cb19-30"><a></a>    std<span class="sc">::</span><span class="fu">nth_element</span>(<span class="fu">dists.begin</span>(), <span class="fu">dists.begin</span>() <span class="sc">+</span> k, <span class="fu">dists.end</span>(),</span>
+<span id="cb19-31"><a></a>                     [](auto <span class="sc">&amp;</span>a, auto <span class="sc">&amp;</span>b){ return a.first <span class="sc">&lt;</span> b.first; });</span>
+<span id="cb19-32"><a></a>    double s <span class="ot">=</span> <span class="dv">0</span>;</span>
+<span id="cb19-33"><a></a>    <span class="cf">for</span> (int <span class="at">r =</span> <span class="dv">0</span>; r <span class="sc">&lt;</span> k; <span class="sc">++</span>r) {</span>
+<span id="cb19-34"><a></a>      s <span class="sc">+</span><span class="er">=</span> train_y[dists[r].second];</span>
+<span id="cb19-35"><a></a>      ids[j <span class="sc">*</span> k  <span class="sc">+</span> r] <span class="ot">=</span> std<span class="sc">::</span>get<span class="sc">&lt;</span><span class="dv">1</span><span class="sc">&gt;</span>(dists[r]);</span>
+<span id="cb19-36"><a></a>    }</span>
+<span id="cb19-37"><a></a>    preds[j] <span class="ot">=</span> s <span class="sc">/</span> k;</span>
+<span id="cb19-38"><a></a>  }</span>
+<span id="cb19-39"><a></a>  </span>
+<span id="cb19-40"><a></a>  List ret;</span>
+<span id="cb19-41"><a></a>  ret[<span class="st">"preds"</span>] <span class="ot">=</span> preds;</span>
+<span id="cb19-42"><a></a>  ret[<span class="st">"ids"</span>] <span class="ot">=</span> ids <span class="sc">+</span> <span class="dv">1</span>;</span>
+<span id="cb19-43"><a></a>  </span>
+<span id="cb19-44"><a></a>  return ret;</span>
+<span id="cb19-45"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="document-your-functions" class="slide level2">
-<h2>4️⃣ Document Your Functions</h2>
+<h2>5. Document Your Functions</h2>
 <p>Run the following command to generate docs:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>devtools<span class="sc">::</span><span class="fu">document</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>devtools<span class="sc">::</span><span class="fu">document</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This will:</p>
 <div>
 <ul>
@@ -973,12 +990,12 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </div>
 </section>
 <section id="load-and-test-the-package" class="slide level2">
-<h2>5️⃣ Load and Test the Package</h2>
+<h2>6. Load and Test the Package</h2>
 <p>In the console:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>devtools<span class="sc">::</span><span class="fu">load_all</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>devtools<span class="sc">::</span><span class="fu">load_all</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment fade-up">
 <p>Check to make sure there are no issues with your package compiling:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>devtools<span class="sc">::</span><span class="fu">check</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>devtools<span class="sc">::</span><span class="fu">check</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment fade-up">
 <p>The output will look like:</p>
@@ -990,31 +1007,31 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </div>
 </section>
 <section id="build-and-install-the-package" class="slide level2">
-<h2>6️⃣ Build and Install the Package</h2>
+<h2>7. Build and Install the Package</h2>
 <p>Build the package locally:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>devtools<span class="sc">::</span><span class="fu">build</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>devtools<span class="sc">::</span><span class="fu">build</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment fade-up">
 <p>Install it:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>devtools<span class="sc">::</span><span class="fu">install</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>devtools<span class="sc">::</span><span class="fu">install</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment fade-up">
 <p>Now you can use it like any other package:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">library</span>(KNNreg)</span>
-<span id="cb24-2"><a></a></span>
-<span id="cb24-3"><a></a><span class="co"># Simulate training and test data</span></span>
-<span id="cb24-4"><a></a>train_x <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">50</span>), <span class="at">nrow =</span> <span class="dv">10</span>)</span>
-<span id="cb24-5"><a></a>train_y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
-<span id="cb24-6"><a></a>test_x <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">20</span>), <span class="at">nrow =</span> <span class="dv">4</span>)</span>
-<span id="cb24-7"><a></a></span>
-<span id="cb24-8"><a></a><span class="co"># Set number of nearest neighbors</span></span>
-<span id="cb24-9"><a></a>k <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb24-10"><a></a></span>
-<span id="cb24-11"><a></a><span class="co"># Run the kNN algorithm</span></span>
-<span id="cb24-12"><a></a><span class="fu">knn_pred</span>(train_x, train_y, test_x, k, <span class="at">method =</span> <span class="st">"cpp"</span>) <span class="co"># test C++ backend</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">library</span>(KNNreg)</span>
+<span id="cb25-2"><a></a></span>
+<span id="cb25-3"><a></a><span class="co"># Simulate training and test data</span></span>
+<span id="cb25-4"><a></a>train_x <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">50</span>), <span class="at">nrow =</span> <span class="dv">10</span>)</span>
+<span id="cb25-5"><a></a>train_y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
+<span id="cb25-6"><a></a>test_x <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">20</span>), <span class="at">nrow =</span> <span class="dv">4</span>)</span>
+<span id="cb25-7"><a></a></span>
+<span id="cb25-8"><a></a><span class="co"># Set number of nearest neighbors</span></span>
+<span id="cb25-9"><a></a>k <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb25-10"><a></a></span>
+<span id="cb25-11"><a></a><span class="co"># Run the kNN algorithm</span></span>
+<span id="cb25-12"><a></a><span class="fu">knn_pred</span>(train_x, train_y, test_x, k, <span class="at">method =</span> <span class="st">"cpp"</span>) <span class="co"># test C++ backend</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="helpknn_pred" class="slide level2" data-transition="convex">
-<h2>🚀 <code>help("knn_pred")</code></h2>
+<h2><code>help("knn_pred")</code></h2>
 
 <img data-src="images/package/help_knn.png" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%" alt="Screenshot of Pagerank"></section></section>
 <section id="hands-on-exercises-30-min" class="title-slide slide level1 center scrollable">
@@ -1036,7 +1053,6 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 <li class="fragment">Handling NOTEs and WARNINGs</li>
 <li class="fragment">Simulate a CRAN Check</li>
 <li class="fragment">Submit to CRAN</li>
-<li class="fragment">Collaborate via GitHub</li>
 </ol>
 </div>
 </section>
@@ -1047,9 +1063,9 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 <p>Submitting to CRAN means:</p>
 <div>
 <ul>
-<li class="fragment">✅ Your package is publicly available</li>
-<li class="fragment">🧪 It passes strict quality checks</li>
-<li class="fragment">🌍 It becomes accessible via <code>install.packages("yourpkg")</code></li>
+<li class="fragment">Your package is publicly available</li>
+<li class="fragment">It passes strict quality checks</li>
+<li class="fragment">It becomes accessible via <code>install.packages("yourpkg")</code></li>
 </ul>
 </div>
 </section>
@@ -1068,7 +1084,7 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </div>
 <div class="fragment">
 <p>Run:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>devtools<span class="sc">::</span><span class="fu">check</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>devtools<span class="sc">::</span><span class="fu">check</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 
@@ -1077,7 +1093,7 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 <p>Some NOTEs are common (e.g., missing author ORCID), but…</p>
 <div class="fragment fade-up">
 <blockquote>
-<p>❗ Never submit to CRAN with unaddressed <strong>ERRORs</strong> or <strong>WARNINGs</strong></p>
+<p>Never submit to CRAN with unaddressed <strong>ERRORs</strong> or <strong>WARNINGs</strong></p>
 </blockquote>
 </div>
 <div class="fragment">
@@ -1093,15 +1109,15 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </section>
 
 <section id="simulate-a-cran-check" class="title-slide slide level1 center">
-<h1>4. Simulate a CRAN Check 🧪</h1>
+<h1>4. Simulate a CRAN Check</h1>
 <p>Use <code>rhub</code> to simulate CRAN checks on different platforms:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>rhub<span class="sc">::</span><span class="fu">check_for_cran</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>rhub<span class="sc">::</span><span class="fu">check_for_cran</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Or test specific platforms:</p>
 <div class="fragment">
-<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>rhub<span class="sc">::</span><span class="fu">check</span>(<span class="at">platform =</span> <span class="st">"windows-x86_64-release"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a>rhub<span class="sc">::</span><span class="fu">check</span>(<span class="at">platform =</span> <span class="st">"windows-x86_64-release"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
-<p>✅ This helps catch issues that only appear on Windows or macOS.</p>
+<p>This helps catch issues that only appear on Windows or macOS.</p>
 </div>
 </section>
 
@@ -1109,7 +1125,7 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 <section id="submit-to-cran" class="title-slide slide level1 center">
 <h1>5. Submit to CRAN</h1>
 <p>Use the <code>devtools</code> helper:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a>devtools<span class="sc">::</span><span class="fu">release</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>devtools<span class="sc">::</span><span class="fu">release</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This will:</p>
 <div>
 <ul>
@@ -1121,7 +1137,7 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </div>
 </section>
 <section id="what-happens-after-submission" class="slide level2">
-<h2>📬 What Happens After Submission?</h2>
+<h2>What Happens After Submission?</h2>
 <div>
 <ul>
 <li class="fragment">You’ll get an automated confirmation email</li>
@@ -1132,15 +1148,15 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 <ul>
 <li>They may:
 <ul>
-<li>Accept it immediately ✅</li>
-<li>Request fixes or clarifications ✍️</li>
-<li>Reject with detailed reasons ❌</li>
+<li>Accept it immediately</li>
+<li>Request fixes or clarifications</li>
+<li>Reject with detailed reasons</li>
 </ul></li>
 </ul>
 </div>
 </section>
 <section id="updating-a-cran-package" class="slide level2">
-<h2>🔄 Updating a CRAN Package</h2>
+<h2>Updating a CRAN Package</h2>
 <p>To submit an update:</p>
 <div>
 <ul>
@@ -1151,7 +1167,7 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </ul>
 </div>
 <div class="fragment fade-up">
-<p>📌 You can only submit <strong>once every 1–2 weeks</strong> (per package).</p>
+<p>You can only submit <strong>once every 1–2 weeks</strong> (per package).</p>
 </div>
 </section></section>
 <section id="resources-further-reading" class="title-slide slide level1 center">
@@ -1165,7 +1181,7 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </section>
 
 <section id="thank-you" class="title-slide slide level1 center">
-<h1>🙏 Thank you!</h1>
+<h1>Thank you!</h1>
 <p>Questions &amp; Discussion</p>
 
 <div class="quarto-auto-generated-content">

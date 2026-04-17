@@ -851,233 +851,212 @@
   {
     "objectID": "slides/Package.html#r-packages-the-fundamental-unit",
     "href": "slides/Package.html#r-packages-the-fundamental-unit",
-    "title": "Short Course on R Tools",
-    "section": "📦 R Packages: The Fundamental Unit",
-    "text": "📦 R Packages: The Fundamental Unit\nIn R, the fundamental unit of shareable code is the package.\nA package bundles together:\n\n\n🧑‍💻 Code\n\n📊 Data\n\n📚 Documentation\n\n🧪 Tests\n\n\n\n\n➡️ All in one place, easy to share with others."
+    "title": "Develop your own professional R package",
+    "section": "R Packages: The Fundamental Unit",
+    "text": "R Packages: The Fundamental Unit\nIn R, the fundamental unit of shareable code is the package.\nA package bundles together:\n\n\nCode\n\nData\n\nDocumentation\n\nTests\n\n\n\n\n➡️ All in one place, easy to share with others."
   },
   {
     "objectID": "slides/Package.html#you-already-use-packages",
     "href": "slides/Package.html#you-already-use-packages",
-    "title": "Short Course on R Tools",
-    "section": "📦 You Already Use Packages!",
-    "text": "📦 You Already Use Packages!\nIf you’re here, you already know how to work with packages:\n\n\n📥 Install a package from CRAN:\ninstall.packages(\"x\")\n▶️ Use a package in R:\nlibrary(\"x\")\n❓ Get help on them with\npackage?x\nhelp(package = \"x\")"
+    "title": "Develop your own professional R package",
+    "section": "You Already Use Packages!",
+    "text": "You Already Use Packages!\nIf you’re here, you already know how to work with packages:\n\n\nInstall a package from CRAN:\ninstall.packages(\"x\")\nUse a package in R:\nlibrary(\"x\")\nGet help on them with\npackage?x\nhelp(package = \"x\")"
   },
   {
     "objectID": "slides/Package.html#goal-of-this-talk",
     "href": "slides/Package.html#goal-of-this-talk",
-    "title": "Short Course on R Tools",
-    "section": "🎯 Goal of This Talk",
-    "text": "🎯 Goal of This Talk\nThis workshop is about moving from using packages ➡️ to developing your own.\n\nWhy?\n\n\n🚀 To share your code with others\n\n📦 To make your code easy to install, use, and learn\n\n⏳ To save yourself time with conventions and structure"
+    "title": "Develop your own professional R package",
+    "section": "Goal of This Talk",
+    "text": "Goal of This Talk\nThis workshop is about moving from using packages to developing your own.\n\nWhy?\n\n\nTo share your code with others\n\nTo make your code easy to install, use, and learn\n\no save yourself time with conventions and structure"
   },
   {
     "objectID": "slides/Package.html#key-packages",
     "href": "slides/Package.html#key-packages",
-    "title": "Short Course on R Tools",
-    "section": "📦 Key Packages",
-    "text": "📦 Key Packages\n\n\ndevtools: Simplifies package development by wrapping complex workflows into easy commands\nroxygen2: Generates documentation from special comments in your function code\ntestthat: Provides a framework for unit testing and ensures your functions work correctly and safely over time\nknitr: Powers dynamic report generation and vignette building that integrates code, results, and text using R Markdown\n\n\n\n\n💡 These tools help automate, test, document, and share your package like a pro."
+    "title": "Develop your own professional R package",
+    "section": "Key Packages",
+    "text": "Key Packages\n\n\ndevtools: Simplifies package development by wrapping complex workflows into easy commands\nroxygen2: Generates documentation from special comments in your function code\ntestthat: Provides a framework for unit testing and ensures your functions work correctly and safely over time\nknitr: Powers dynamic report generation and vignette building that integrates code, results, and text using R Markdown\n\n\n\n\nThese tools help automate, test, document, and share your package like a pro."
   },
   {
     "objectID": "slides/Package.html#directory-layout",
     "href": "slides/Package.html#directory-layout",
-    "title": "Short Course on R Tools",
-    "section": "🧩 Directory layout",
-    "text": "🧩 Directory layout\n  mypkg/\n  ├── DESCRIPTION         # Package metadata\n  ├── NAMESPACE           # Exported functions & imports\n  ├── R/                  # Your R functions\n  └── man/                # Auto-generated documentation\n\n\n💡 Tip: Many folders in an R package are optional and included as needed."
+    "title": "Develop your own professional R package",
+    "section": "Directory layout",
+    "text": "Directory layout\n  mypkg/\n  ├── DESCRIPTION         # Package metadata\n  ├── NAMESPACE           # Exported functions & imports\n  ├── R/                  # Your R functions\n  └── man/                # Auto-generated documentation\n\n\n💡 Tip: Many folders in an R package are optional and included as needed."
   },
   {
     "objectID": "slides/Package.html#directory-layout-1",
     "href": "slides/Package.html#directory-layout-1",
-    "title": "Short Course on R Tools",
+    "title": "Develop your own professional R package",
     "section": "🧩 Directory layout",
-    "text": "🧩 Directory layout\n  mypkg/\n  ├── DESCRIPTION         # Package metadata\n  ├── NAMESPACE           # Exported functions & imports\n  ├── R/                  # Your R functions\n  ├── man/                # Auto-generated documentation\n  ├── tests/              # Unit tests with testthat\n  ├── vignettes/          # Long-form documentation (Rmd)\n  ├── data/               # Data sets (.rda files)\n  └── inst/               # Installed files (e.g., app/, extdata/)"
+    "text": "🧩 Directory layout\nmypkg/\n├── DESCRIPTION         # Package metadata\n├── NAMESPACE           # Exported functions & imports\n├── R/                  # Your R functions\n├── src/                # C/C++ code (Rcpp, compiled extensions)\n├── man/                # Auto-generated documentation\n├── tests/              # Unit tests with testthat\n├── vignettes/          # Long-form documentation (Rmd)\n├── data/               # Data sets (.rda files)\n└── inst/               # Installed files (e.g., app/, extdata/)"
   },
   {
     "objectID": "slides/Package.html#package-states-in-r",
     "href": "slides/Package.html#package-states-in-r",
-    "title": "Short Course on R Tools",
-    "section": "🛠 Package States in R",
-    "text": "🛠 Package States in R\nR packages transition through five development states:\n\n\n🗂️ Source: your raw package folder\n📦 Bundled: compressed .tar.gz for sharing\n🧱 Binary: platform-specific precompiled version\n📚 Installed: available in your R library\n🧠 In-Memory: actively loaded via library()\n\n\n\n\nUnderstanding these states helps you manage installation, sharing, and usage workflows."
-  },
-  {
-    "objectID": "slides/Package.html#source-package",
-    "href": "slides/Package.html#source-package",
-    "title": "Short Course on R Tools",
-    "section": "🗂️ Source Package",
-    "text": "🗂️ Source Package\nA source package is just a folder with a specific structure:\n\nDESCRIPTION file\n\nR/ folder with .R files\n\nOptional: man/, tests/, vignettes/\n\n\n\nIt’s editable and human-readable — your starting point for development."
-  },
-  {
-    "objectID": "slides/Package.html#bundled-package",
-    "href": "slides/Package.html#bundled-package",
-    "title": "Short Course on R Tools",
-    "section": "📦 Bundled Package",
-    "text": "📦 Bundled Package\nA bundled package is a compressed .tar.gz file created from a source package.\n\nCommonly called a source tarball\nCreated using devtools::build()\nPlatform-independent format for distribution\n\n\n\nIt acts as a transportable unit — not directly usable until installed."
-  },
-  {
-    "objectID": "slides/Package.html#binary-package",
-    "href": "slides/Package.html#binary-package",
-    "title": "Short Course on R Tools",
-    "section": "🧱 Binary Package",
-    "text": "🧱 Binary Package\nA binary package is a platform-specific compiled package:\n\nWindows: .zip\nmacOS: .tgz\nCreated using devtools::build(binary = TRUE)\n\n\n\nIdeal for users without development tools — typically distributed by CRAN."
-  },
-  {
-    "objectID": "slides/Package.html#installed-package",
-    "href": "slides/Package.html#installed-package",
-    "title": "Short Course on R Tools",
-    "section": "📚 Installed Package",
-    "text": "📚 Installed Package\nAn installed package is one that’s been unpacked and placed into a library folder.\n\nNo longer a single file\nReady to be loaded into memory\n\n\n\ninstall.packages() or devtools::install_*() bring packages into this state."
+    "title": "Develop your own professional R package",
+    "section": "Package States in R",
+    "text": "Package States in R\nR packages move through a lifecycle from development to execution:\n\n\nSource: editable folder with DESCRIPTION, R/, and optional components\n\nBundled: compressed .tar.gz file created from source (portable, not yet usable)\n\nBinary: precompiled package for a specific operating system\n\nInstalled: unpacked into an R library and ready to use\n\nIn-memory: loaded into R session via library() and actively running"
   },
   {
     "objectID": "slides/Package.html#transitioning-between-states",
     "href": "slides/Package.html#transitioning-between-states",
-    "title": "Short Course on R Tools",
+    "title": "Develop your own professional R package",
     "section": "🔁 Transitioning Between States",
     "text": "🔁 Transitioning Between States"
   },
   {
     "objectID": "slides/Package.html#creating-your-package",
     "href": "slides/Package.html#creating-your-package",
-    "title": "Short Course on R Tools",
-    "section": "🛠️ Creating Your Package",
-    "text": "🛠️ Creating Your Package\nOnce you have a name, create the package using either:\n\n\nusethis::create_package(\"mypkg\")\n\nRStudio UI:\nFile → New Project → New Directory → R Package\n\n\n\n👉 Both options run the same function under the hood."
+    "title": "Develop your own professional R package",
+    "section": "Creating Your Package",
+    "text": "Creating Your Package\nOnce you have a name, create the package using either:\n\n\nusethis::create_package(\"mypkg\")\n\nRStudio UI:\nFile → New Project → New Directory → R Package\n\n\n\nBoth options run the same function under the hood."
   },
   {
     "objectID": "slides/Package.html#what-gets-created",
     "href": "slides/Package.html#what-gets-created",
-    "title": "Short Course on R Tools",
-    "section": "📦 What Gets Created?",
-    "text": "📦 What Gets Created?\n\n\n\n\nR/ folder → for your function code\n\nDESCRIPTION file → metadata\n\nNAMESPACE file → exports/imports\n\nmypkg.Rproj → RStudio project file\n\n.Rbuildignore, .gitignore → build and Git helpers"
+    "title": "Develop your own professional R package",
+    "section": "What Gets Created?",
+    "text": "What Gets Created?\n\n\n\n\nR/ folder → for your function code\n\nDESCRIPTION file → metadata\n\nNAMESPACE file → exports/imports\n\nmypkg.Rproj → RStudio project file\n\n.Rbuildignore, .gitignore → build and Git helpers"
   },
   {
     "objectID": "slides/Package.html#description-file",
     "href": "slides/Package.html#description-file",
-    "title": "Short Course on R Tools",
-    "section": "📄 DESCRIPTION File",
-    "text": "📄 DESCRIPTION File\nThe DESCRIPTION file provides overall metadata about your package:\n\n\nPackage name and version\n\nAuthor and maintainer info\n\nDependencies (Imports, Suggests)\n\nDescription and license\n\nBuild-related metadata"
+    "title": "Develop your own professional R package",
+    "section": "DESCRIPTION File",
+    "text": "DESCRIPTION File\nThe DESCRIPTION file provides overall metadata about your package:\n\n\nPackage name and version\n\nAuthor and maintainer info\n\nDependencies (Imports, Suggests)\n\nDescription and license\n\nBuild-related metadata"
   },
   {
     "objectID": "slides/Package.html#sample-description-file",
     "href": "slides/Package.html#sample-description-file",
-    "title": "Short Course on R Tools",
-    "section": "🧾 Sample DESCRIPTION File",
-    "text": "🧾 Sample DESCRIPTION File\nPackage: KNNreg\nType: Package\nTitle: k-Nearest Neighbors Regression with Shiny App\nVersion: 0.0.1\nDate: 2026-03-19\nAuthors@R: c(person(\"Daniel\", \"Cirkovic\", role = c(\"aut\")), person(\"Jaihee\", \"Choi\", role = c(\"aut\")), person(\"Mehdi\", \"Maadooliat\", role = c(\"aut\", \"cre\"), email = \"mehdi.maadooliat@marquette.edu\"))\nDescription: kNN regression functions and an interactive Shiny app.\nLicense: GPL (&gt;= 2)\nImports: Rcpp (&gt;= 1.1.1), shiny, ggplot2\nLinkingTo: Rcpp\nEncoding: UTF-8\nRoxygenNote: 7.3.3\n\n\nOne paragraph, plain text\n\nMultiple sentences OK\n\nShould describe what the package does"
-  },
-  {
-    "objectID": "slides/Package.html#example-from-ggplot2",
-    "href": "slides/Package.html#example-from-ggplot2",
-    "title": "Short Course on R Tools",
-    "section": "🧪 Example from ggplot2:",
-    "text": "🧪 Example from ggplot2:\nTitle: Create Elegant Data Visualisations Using the Grammar of Graphics\nDescription: A system for 'declaratively' creating graphics,\n  based on \"The Grammar of Graphics\". You provide the data,\n  tell 'ggplot2' how to map variables to aesthetics, what\n  graphical primitives to use, and it takes care of the details."
+    "title": "Develop your own professional R package",
+    "section": "Sample DESCRIPTION File",
+    "text": "Sample DESCRIPTION File\nPackage: KNNreg\nType: Package\nTitle: k-Nearest Neighbors Regression with Shiny App\nVersion: 0.0.1\nDate: 2026-03-19\nAuthors@R: c(person(\"Daniel\", \"Cirkovic\", role = c(\"aut\")), person(\"Jaihee\", \"Choi\", role = c(\"aut\")), person(\"Mehdi\", \"Maadooliat\", role = c(\"aut\", \"cre\"), email = \"mehdi.maadooliat@marquette.edu\"))\nDescription: kNN regression functions and an interactive Shiny app.\nLicense: GPL (&gt;= 2)\nImports: Rcpp (&gt;= 1.1.1), shiny, ggplot2\nLinkingTo: Rcpp\nEncoding: UTF-8\nRoxygenNote: 7.3.3\n\n\nOne paragraph, plain text\n\nMultiple sentences OK\n\nShould describe what the package does"
   },
   {
     "objectID": "slides/Package.html#imports-vs.-suggests",
     "href": "slides/Package.html#imports-vs.-suggests",
-    "title": "Short Course on R Tools",
-    "section": "📦 Imports vs. Suggests",
-    "text": "📦 Imports vs. Suggests\nImports\n\n\nPackages required at runtime\nAutomatically installed with your package\nNeeded for core functionality\n\n\n\nSuggests\n\n\nOptional or development-time dependencies\nUsed in examples, tests, or vignettes\nNot required to run the core package\n\n\n\n\nUse usethis::use_package(\"pkg\", type = \"Imports\") to manage these easily."
+    "title": "Develop your own professional R package",
+    "section": "Imports vs. Suggests",
+    "text": "Imports vs. Suggests\nImports\n\n\nPackages required at runtime\nAutomatically installed with your package\nNeeded for core functionality\n\n\n\nSuggests\n\n\nOptional or development-time dependencies\nUsed in examples, tests, or vignettes\nNot required to run the core package\n\n\n\n\nUse usethis::use_package(\"pkg\", type = \"Imports\") to manage these easily."
   },
   {
     "objectID": "slides/Package.html#namespace-file",
     "href": "slides/Package.html#namespace-file",
-    "title": "Short Course on R Tools",
-    "section": "📂 NAMESPACE File",
-    "text": "📂 NAMESPACE File\nThe NAMESPACE file defines the interface of your package.\nIt controls:\n\n\nWhat functions your package exports\nWhat functions it imports from other packages\nS3/S4 method registrations (if needed)\n\n\n\n\nThis file is auto-generated by roxygen2, so you typically don’t edit it by hand."
+    "title": "Develop your own professional R package",
+    "section": "NAMESPACE File",
+    "text": "NAMESPACE File\nThe NAMESPACE file defines the interface of your package.\nIt controls:\n\n\nWhat functions your package exports\nWhat functions it imports from other packages\nS3/S4 method registrations (if needed)\n\n\n\n\nThis file is auto-generated by roxygen2, so you typically don’t edit it by hand."
   },
   {
     "objectID": "slides/Package.html#example-namespace-file",
     "href": "slides/Package.html#example-namespace-file",
-    "title": "Short Course on R Tools",
-    "section": "🧾 Example: NAMESPACE File",
-    "text": "🧾 Example: NAMESPACE File\n# Generated by roxygen2: do not edit by hand\n\nexport(knn_pred)\nexport(run_knn_app)\nimport(ggplot2)\nimportFrom(Rcpp,evalCpp)\nimportFrom(shiny,runApp)\nuseDynLib(KNNreg, .registration = TRUE)\n\n\nexport() — makes a function available to users\nimport() — brings in all exported objects from a package\nimportFrom() — imports specific functions\nuseDynLib() — links compiled code (C/C++/Fortran) to your package. Required when your package uses compiled routines (e.g., via Rcpp)"
+    "title": "Develop your own professional R package",
+    "section": "Example: NAMESPACE File",
+    "text": "Example: NAMESPACE File\n# Generated by roxygen2: do not edit by hand\n\nexport(knn_pred)\nexport(run_knn_app)\nimport(ggplot2)\nimportFrom(Rcpp,evalCpp)\nimportFrom(shiny,runApp)\nuseDynLib(KNNreg, .registration = TRUE)\n\n\nexport() — makes a function available to users\nimport() — brings in all exported objects from a package\nimportFrom() — imports specific functions\nuseDynLib() — links compiled code (C/C++/Fortran) to your package. Required when your package uses compiled routines (e.g., via Rcpp)"
   },
   {
     "objectID": "slides/Package.html#how-to-generate-namespace",
     "href": "slides/Package.html#how-to-generate-namespace",
-    "title": "Short Course on R Tools",
-    "section": "✍️ How to Generate NAMESPACE",
-    "text": "✍️ How to Generate NAMESPACE\nIn .R files:\n#' @export\nr_func &lt;- function(x) { ... }\n\nIn .cpp files:\n// [[Rcpp::export]]\ndouble myRcpp-func(int x, double y) { ... }"
+    "title": "Develop your own professional R package",
+    "section": "How to Generate NAMESPACE",
+    "text": "How to Generate NAMESPACE\nIn .R files:\n#' @export\nr_func &lt;- function(x) { ... }\n\nIn .cpp files:\n// [[Rcpp::export]]\ndouble myRcpp-func(int x, double y) { ... }"
   },
   {
     "objectID": "slides/Package.html#code-placement",
     "href": "slides/Package.html#code-placement",
-    "title": "Short Course on R Tools",
-    "section": "📂 Code Placement",
-    "text": "📂 Code Placement\nAll your functions go in the R/ folder.\nmypkg/\n├── R/\n│   ├── my_function.R\n│   └── helpers.R\nEach .R file can contain one or more functions."
+    "title": "Develop your own professional R package",
+    "section": "Code Placement",
+    "text": "Code Placement\nAll your functions go in the R/ folder.\nmypkg/\n├── R/\n│   ├── my_function.R\n│   └── helpers.R\nEach .R file can contain one or more functions."
   },
   {
     "objectID": "slides/Package.html#documenting-functions-with-roxygen2",
     "href": "slides/Package.html#documenting-functions-with-roxygen2",
-    "title": "Short Course on R Tools",
-    "section": "📝 Documenting Functions with Roxygen2",
-    "text": "📝 Documenting Functions with Roxygen2\nUse special comments starting with #' to write function documentation:\n#' Sum of Square Function\n#'\n#' This function computes the Sum of Squares of a numeric vector\n#' \n#' @param x Numeric vector\n#' @return Numeric sum of x\n#'\n#' @examples\n#' x &lt;- 1:5\n#' y &lt;- my_function(x)\n#' print(y)\n#'\nmy_function &lt;- function(x) sum(x^2)\nThis will generate help files in the man/ folder."
+    "title": "Develop your own professional R package",
+    "section": "Documenting Functions with Roxygen2",
+    "text": "Documenting Functions with Roxygen2\nUse special comments starting with #' to write function documentation:\n#' Sum of Square Function\n#'\n#' This function computes the Sum of Squares of a numeric vector\n#' \n#' @param x Numeric vector\n#' @return Numeric sum of x\n#'\n#' @examples\n#' x &lt;- 1:5\n#' y &lt;- my_function(x)\n#' print(y)\n#'\nmy_function &lt;- function(x) sum(x^2)\nThis will generate help files in the man/ folder."
   },
   {
     "objectID": "slides/Package.html#generate-documentation",
     "href": "slides/Package.html#generate-documentation",
-    "title": "Short Course on R Tools",
-    "section": "⚙️ Generate Documentation",
-    "text": "⚙️ Generate Documentation\nAfter writing your function and roxygen2 comments, run:\ndevtools::document()\nThis will:\n\n\nUpdate the NAMESPACE file\nCreate .Rd help files in the man/ folder\n\n\n\n💡 You can also press Ctrl+Shift+D in RStudio."
+    "title": "Develop your own professional R package",
+    "section": "Generate Documentation",
+    "text": "Generate Documentation\nAfter writing your function and roxygen2 comments, run:\ndevtools::document()\nThis will:\n\n\nUpdate the NAMESPACE file\nCreate .Rd help files in the man/ folder\n\n\n\nYou can also press Ctrl+Shift+D in RStudio."
+  },
+  {
+    "objectID": "slides/Package.html#src-folder-and-rcpp-integration",
+    "href": "slides/Package.html#src-folder-and-rcpp-integration",
+    "title": "Develop your own professional R package",
+    "section": "src/ Folder and Rcpp Integration",
+    "text": "src/ Folder and Rcpp Integration\nThe src/ folder is used for compiled C/C++ code (Rcpp).\n\n\nContains .cpp files\nRequires Rcpp in DESCRIPTION\n\n\nKNNreg/\n├── src/\n│   └── knn_pred.cpp\n├── R/\n│   ├── knn_helpers.R\n│   └── knn_pred.R"
   },
   {
     "objectID": "slides/Package.html#create-your-package",
     "href": "slides/Package.html#create-your-package",
-    "title": "Short Course on R Tools",
-    "section": "1️⃣ Create Your Package",
-    "text": "1️⃣ Create Your Package\nUse usethis to create a new package directory:\nusethis::create_package(\"KNNreg\")\nThis creates:\n\n\nR/, DESCRIPTION, NAMESPACE\n.Rproj, .gitignore, .Rbuildignore\nOpens new RStudio project for your package"
+    "title": "Develop your own professional R package",
+    "section": "1. Create Your Package",
+    "text": "1. Create Your Package\nUse usethis to create a new package directory:\nusethis::create_package(\"KNNreg\")\nThis creates:\n\n\nR/, DESCRIPTION, NAMESPACE\n.Rproj, .gitignore, .Rbuildignore\nOpens new RStudio project for your package"
   },
   {
     "objectID": "slides/Package.html#add-a-dataset",
     "href": "slides/Package.html#add-a-dataset",
-    "title": "Short Course on R Tools",
-    "section": "2️⃣ Add a Dataset",
-    "text": "2️⃣ Add a Dataset\nLet’s include a built-in dataset (mtcars) for simplicity:\nusethis::use_data(mtcars, overwrite = TRUE)\n\nThis creates a data/mtcars.rda file — accessible via\nminipkg::mtcars"
+    "title": "Develop your own professional R package",
+    "section": "2. Add a Dataset",
+    "text": "2. Add a Dataset\nLet’s include a built-in dataset (mtcars) for simplicity:\nusethis::use_data(mtcars, overwrite = TRUE)\n\nThis creates a data/mtcars.rda file — accessible via\nminipkg::mtcars"
   },
   {
     "objectID": "slides/Package.html#write-your-functions",
     "href": "slides/Package.html#write-your-functions",
-    "title": "Short Course on R Tools",
-    "section": "3️⃣ Write Your Functions",
-    "text": "3️⃣ Write Your Functions\n\nCreate function files in the R/ folder.\nKeep important functions in separate files.\nPlace helper functions together in a single file.\nThis structure keeps your project organized and maintainable.\n\nCreate a new file: R/knn_pred.R\nknn_pred &lt;- function(train_x, train_y, test_x, k) {\n  # Coerce types\n  train_x &lt;- as.matrix(train_x)\n  test_x  &lt;- as.matrix(test_x)\n  train_y &lt;- as.numeric(train_y)\n\n  # Scale train and test appropriately\n  train_x &lt;- scale(train_x)\n  # Extract the mean and sd used\n  train_mean &lt;- attr(train_x, \"scaled:center\")\n  train_sd &lt;- attr(train_x, \"scaled:scale\")\n  # Apply the same transformation to test data\n  test_x &lt;- scale(test_x, center = train_mean, scale = train_sd)\n\n  n &lt;- nrow(train_x)\n  p &lt;- ncol(train_x)\n  m &lt;- nrow(test_x)\n\n  # Store predictions\n  preds &lt;- numeric(m)\n  # Store ids of k nearest neighbors\n  ids &lt;- numeric(m * k)\n\n  for (j in seq_len(m)) {\n\n    # Squared Euclidean distances using matrix ops (fast):\n    # t(train_x) is p x n; subtract p-vector test_x[j,]; colSums -&gt; length n\n    dists &lt;- colSums((t(train_x) - test_x[j, ])^2)\n\n    # Indices of k smallest distances (full sort, simple & reliable)\n    idx_k &lt;- order(dists)[seq_len(k)]\n\n    # Mean of neighbor labels\n    preds[j] &lt;- mean(train_y[idx_k])\n\n    # Store ids of nearest neighbors\n    # ids of vars\n    ids[((j-1) * k + 1):(j * k)] &lt;- idx_k\n  }\n\n  out = list(\"preds\" = preds, \"ids\" = ids)\n\n  out\n}"
+    "title": "Develop your own professional R package",
+    "section": "3. Write Your Functions",
+    "text": "3. Write Your Functions\n\n\nCreate function files in the R/ folder.\nKeep important functions in separate files.\nPlace helper functions together in a single file.\nThis structure keeps your project organized and maintainable.\n\n\n\nCreate a new file: R/knn_pred.R\nknn_pred &lt;- function(train_x, train_y, test_x, k) {\n  # Coerce types\n  train_x &lt;- as.matrix(train_x)\n  test_x  &lt;- as.matrix(test_x)\n  train_y &lt;- as.numeric(train_y)\n\n  # Scale train and test appropriately\n  train_x &lt;- scale(train_x)\n  # Extract the mean and sd used\n  train_mean &lt;- attr(train_x, \"scaled:center\")\n  train_sd &lt;- attr(train_x, \"scaled:scale\")\n  # Apply the same transformation to test data\n  test_x &lt;- scale(test_x, center = train_mean, scale = train_sd)\n\n  n &lt;- nrow(train_x)\n  p &lt;- ncol(train_x)\n  m &lt;- nrow(test_x)\n\n  # Store predictions\n  preds &lt;- numeric(m)\n  # Store ids of k nearest neighbors\n  ids &lt;- numeric(m * k)\n\n  for (j in seq_len(m)) {\n\n    # Squared Euclidean distances using matrix ops (fast):\n    # t(train_x) is p x n; subtract p-vector test_x[j,]; colSums -&gt; length n\n    dists &lt;- colSums((t(train_x) - test_x[j, ])^2)\n\n    # Indices of k smallest distances (full sort, simple & reliable)\n    idx_k &lt;- order(dists)[seq_len(k)]\n\n    # Mean of neighbor labels\n    preds[j] &lt;- mean(train_y[idx_k])\n\n    # Store ids of nearest neighbors\n    # ids of vars\n    ids[((j-1) * k + 1):(j * k)] &lt;- idx_k\n  }\n\n  out = list(\"preds\" = preds, \"ids\" = ids)\n\n  out\n}"
+  },
+  {
+    "objectID": "slides/Package.html#add-compiled-code",
+    "href": "slides/Package.html#add-compiled-code",
+    "title": "Develop your own professional R package",
+    "section": "4. Add Compiled Code",
+    "text": "4. Add Compiled Code\n\n\nAdd .cpp files in the src/ folder\n\nCompiled code is linked to R through Rcpp\n\nCalled from standard R functions in the R/ folder\n\n\n\nCreate a new file: src/knn_pred.cpp\n// [[Rcpp::depends(Rcpp)]]\n#include &lt;Rcpp.h&gt;\nusing namespace Rcpp;\n\n// [[Rcpp::export]]\nList knn_pred_cpp(NumericMatrix train_x,\n                           NumericVector train_y,\n                           NumericMatrix test_x,\n                           int k) {\n  int n = train_x.nrow(), \n    p = train_x.ncol(), \n    m = test_x.nrow();\n  NumericVector preds(m);\n  int id_length = m * k;\n  IntegerVector ids(id_length);\n\n  \n  for (int j = 0; j &lt; m; ++j) {\n    // compute and store (distance,index)\n    std::vector&lt;std::pair&lt;double,int&gt;&gt; dists(n);\n    for (int i = 0; i &lt; n; ++i) {\n      double sumsq = 0;\n      for (int d = 0; d &lt; p; ++d) {\n        double diff = train_x(i,d) - test_x(j,d);\n        sumsq += diff * diff;\n      }\n      dists[i] = std::make_pair(sumsq, i);\n    }\n    // partial sort to get k nearest\n    std::nth_element(dists.begin(), dists.begin() + k, dists.end(),\n                     [](auto &a, auto &b){ return a.first &lt; b.first; });\n    double s = 0;\n    for (int r = 0; r &lt; k; ++r) {\n      s += train_y[dists[r].second];\n      ids[j * k  + r] = std::get&lt;1&gt;(dists[r]);\n    }\n    preds[j] = s / k;\n  }\n  \n  List ret;\n  ret[\"preds\"] = preds;\n  ret[\"ids\"] = ids + 1;\n  \n  return ret;\n}"
   },
   {
     "objectID": "slides/Package.html#document-your-functions",
     "href": "slides/Package.html#document-your-functions",
-    "title": "Short Course on R Tools",
-    "section": "4️⃣ Document Your Functions",
-    "text": "4️⃣ Document Your Functions\nRun the following command to generate docs:\ndevtools::document()\nThis will:\n\n\nAdd export(knn_pred) to your NAMESPACE\nCreate man/knn_pred.Rd"
+    "title": "Develop your own professional R package",
+    "section": "5. Document Your Functions",
+    "text": "5. Document Your Functions\nRun the following command to generate docs:\ndevtools::document()\nThis will:\n\n\nAdd export(knn_pred) to your NAMESPACE\nCreate man/knn_pred.Rd"
   },
   {
     "objectID": "slides/Package.html#load-and-test-the-package",
     "href": "slides/Package.html#load-and-test-the-package",
-    "title": "Short Course on R Tools",
-    "section": "5️⃣ Load and Test the Package",
-    "text": "5️⃣ Load and Test the Package\nIn the console:\ndevtools::load_all()\n\nCheck to make sure there are no issues with your package compiling:\ndevtools::check()\n\n\nThe output will look like:"
+    "title": "Develop your own professional R package",
+    "section": "6. Load and Test the Package",
+    "text": "6. Load and Test the Package\nIn the console:\ndevtools::load_all()\n\nCheck to make sure there are no issues with your package compiling:\ndevtools::check()\n\n\nThe output will look like:"
   },
   {
     "objectID": "slides/Package.html#build-and-install-the-package",
     "href": "slides/Package.html#build-and-install-the-package",
-    "title": "Short Course on R Tools",
-    "section": "6️⃣ Build and Install the Package",
-    "text": "6️⃣ Build and Install the Package\nBuild the package locally:\ndevtools::build()\n\nInstall it:\ndevtools::install()\n\n\nNow you can use it like any other package:\nlibrary(KNNreg)\n\n# Simulate training and test data\ntrain_x &lt;- matrix(rnorm(50), nrow = 10)\ntrain_y &lt;- rnorm(10)\ntest_x &lt;- matrix(rnorm(20), nrow = 4)\n\n# Set number of nearest neighbors\nk &lt;- 3\n\n# Run the kNN algorithm\nknn_pred(train_x, train_y, test_x, k, method = \"cpp\") # test C++ backend"
+    "title": "Develop your own professional R package",
+    "section": "7. Build and Install the Package",
+    "text": "7. Build and Install the Package\nBuild the package locally:\ndevtools::build()\n\nInstall it:\ndevtools::install()\n\n\nNow you can use it like any other package:\nlibrary(KNNreg)\n\n# Simulate training and test data\ntrain_x &lt;- matrix(rnorm(50), nrow = 10)\ntrain_y &lt;- rnorm(10)\ntest_x &lt;- matrix(rnorm(20), nrow = 4)\n\n# Set number of nearest neighbors\nk &lt;- 3\n\n# Run the kNN algorithm\nknn_pred(train_x, train_y, test_x, k, method = \"cpp\") # test C++ backend"
   },
   {
     "objectID": "slides/Package.html#helpknn_pred",
     "href": "slides/Package.html#helpknn_pred",
-    "title": "Short Course on R Tools",
-    "section": "🚀 help(\"knn_pred\")",
-    "text": "🚀 help(\"knn_pred\")"
+    "title": "Develop your own professional R package",
+    "section": "help(\"knn_pred\")",
+    "text": "help(\"knn_pred\")"
   },
   {
     "objectID": "slides/Package.html#what-happens-after-submission",
     "href": "slides/Package.html#what-happens-after-submission",
-    "title": "Short Course on R Tools",
-    "section": "📬 What Happens After Submission?",
-    "text": "📬 What Happens After Submission?\n\n\nYou’ll get an automated confirmation email\nWithin ~24–72 hours, a CRAN maintainer will review your package\n\n\n\n\nThey may:\n\nAccept it immediately ✅\nRequest fixes or clarifications ✍️\nReject with detailed reasons ❌"
+    "title": "Develop your own professional R package",
+    "section": "What Happens After Submission?",
+    "text": "What Happens After Submission?\n\n\nYou’ll get an automated confirmation email\nWithin ~24–72 hours, a CRAN maintainer will review your package\n\n\n\n\nThey may:\n\nAccept it immediately\nRequest fixes or clarifications\nReject with detailed reasons"
   },
   {
     "objectID": "slides/Package.html#updating-a-cran-package",
     "href": "slides/Package.html#updating-a-cran-package",
-    "title": "Short Course on R Tools",
-    "section": "🔄 Updating a CRAN Package",
-    "text": "🔄 Updating a CRAN Package\nTo submit an update:\n\n\nBump the version (e.g., from 1.0.0 → 1.0.1)\nAdd a clear NEWS.md entry\nEnsure compatibility with current R version and dependencies\nFollow the same submission process\n\n\n\n📌 You can only submit once every 1–2 weeks (per package)."
+    "title": "Develop your own professional R package",
+    "section": "Updating a CRAN Package",
+    "text": "Updating a CRAN Package\nTo submit an update:\n\n\nBump the version (e.g., from 1.0.0 → 1.0.1)\nAdd a clear NEWS.md entry\nEnsure compatibility with current R version and dependencies\nFollow the same submission process\n\n\n\nYou can only submit once every 1–2 weeks (per package)."
   },
   {
     "objectID": "hands-on/HO5.html",
@@ -1612,91 +1591,91 @@
   {
     "objectID": "slides/Github.html#git-github-basics",
     "href": "slides/Github.html#git-github-basics",
-    "title": "Short Course on R Tools",
+    "title": "Collaborate via Github",
     "section": "Git & GitHub Basics",
     "text": "Git & GitHub Basics\n\n\nGit: Version control system for your local project\n\nGitHub: Cloud platform to share and collaborate\n\n\n\nKey Terms:\n\n\nCommit = Savepoint\nPush/Pull = Send/Receive changes\nRepo = Project folder\n\n\n\n\n\nExample: You push your R package to GitHub, allowing your coauthor to edit documentation and submit a pull request."
   },
   {
     "objectID": "slides/Github.html#installing-git",
     "href": "slides/Github.html#installing-git",
-    "title": "Short Course on R Tools",
+    "title": "Collaborate via Github",
     "section": "Installing Git",
     "text": "Installing Git\n\n\nGo to git-scm.com\nChoose your operating system:\n\nWindows: Download .exe and install with default options\nmacOS: Install via Homebrew brew install git or Git installer\nLinux: Use package manager, e.g.:\n\n\n\n\n  sudo apt install git"
   },
   {
     "objectID": "slides/Github.html#verifying-git-installation",
     "href": "slides/Github.html#verifying-git-installation",
-    "title": "Short Course on R Tools",
+    "title": "Collaborate via Github",
     "section": "Verifying Git Installation",
-    "text": "Verifying Git Installation\nRun this in your Terminal (or Command Prompt):\ngit --version\n\n✅ You should see something like:\ngit version 2.43.0\n\n\n\nIf this works, Git is installed correctly!"
+    "text": "Verifying Git Installation\nRun this in your Terminal (or Command Prompt):\ngit --version\n\nYou should see something like:\ngit version 2.43.0\n\n\n\nIf this works, Git is installed correctly!"
   },
   {
     "objectID": "slides/Github.html#configuring-git-identity",
     "href": "slides/Github.html#configuring-git-identity",
-    "title": "Short Course on R Tools",
+    "title": "Collaborate via Github",
     "section": "Configuring Git Identity",
-    "text": "Configuring Git Identity\n🔧 Set your global Git identity:\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"you@example.com\"\n\n✅ To check the name or email currently set in Git, use these commands:\ngit config --global user.name \ngit config --global user.email"
+    "text": "Configuring Git Identity\nSet your global Git identity:\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"you@example.com\"\n\nTo check the name or email currently set in Git, use these commands:\ngit config --global user.name \ngit config --global user.email"
   },
   {
     "objectID": "slides/Github.html#connect-github-to-r-create-pat",
     "href": "slides/Github.html#connect-github-to-r-create-pat",
-    "title": "Short Course on R Tools",
+    "title": "Collaborate via Github",
     "section": "Connect GitHub to R (Create PAT)",
-    "text": "Connect GitHub to R (Create PAT)\n\nIn R:\n\nusethis::create_github_token()\n\n\nGitHub will open — generate a Personal Access Token (PAT)\nCopy the token (only shown once!)\nBack in R:\n\n\n\ngitcreds::gitcreds_set()\nPaste your token when prompted.\n\n\n\n✅ You’ve now authenticated GitHub from R!"
+    "text": "Connect GitHub to R (Create PAT)\n\nIn R:\n\nusethis::create_github_token()\n\n\nGitHub will open — generate a Personal Access Token (PAT)\nCopy the token (only shown once!)\nBack in R:\n\n\n\ngitcreds::gitcreds_set()\nPaste your token when prompted.\n\n\n\nYou’ve now authenticated GitHub from R!"
   },
   {
     "objectID": "slides/Github.html#check-setup",
     "href": "slides/Github.html#check-setup",
-    "title": "Short Course on R Tools",
+    "title": "Collaborate via Github",
     "section": "Check Setup",
-    "text": "Check Setup\nUse this helpful diagnostic tool:\nusethis::git_sitrep()\n\n💡 This tells you:\n\n\nWhether Git is installed\nWhether GitHub is connected\nIf PAT is stored"
+    "text": "Check Setup\nUse this helpful diagnostic tool:\nusethis::git_sitrep()\n\nThis tells you:\n\n\nWhether Git is installed\nWhether GitHub is connected\nIf PAT is stored"
   },
   {
     "objectID": "slides/Github.html#creating-a-new-git-enabled-project",
     "href": "slides/Github.html#creating-a-new-git-enabled-project",
-    "title": "Short Course on R Tools",
-    "section": "📁 Creating a New Git-Enabled Project",
-    "text": "📁 Creating a New Git-Enabled Project\nIn RStudio:\n\n\nFile → New Project\nChoose: New Directory → R Package (or New Project)\nCheck the box: ✅ “Create a git repository”\nFinish project setup\n\n\n\n\n📁 A .git folder is created — this is a Git repo!"
+    "title": "Collaborate via Github",
+    "section": "Creating a New Git-Enabled Project",
+    "text": "Creating a New Git-Enabled Project\nIn RStudio:\n\n\nFile → New Project\nChoose: New Directory → R Package (or New Project)\nCheck the box: “Create a git repository”\nFinish project setup\n\n\n\n\nA .git folder is created — this is a Git repo!"
   },
   {
     "objectID": "slides/Github.html#connect-to-github",
     "href": "slides/Github.html#connect-to-github",
-    "title": "Short Course on R Tools",
+    "title": "Collaborate via Github",
     "section": "Connect to GitHub",
-    "text": "Connect to GitHub\nRun this to create and link a GitHub repo:\nusethis::use_github()\nThis will:\n\n\nPush your project to GitHub\nOpen the new repo in your browser\n\n💡 You can now push/pull changes from RStudio Git tab"
+    "text": "Connect to GitHub\nRun this to create and link a GitHub repo:\nusethis::use_github()\nThis will:\n\n\nPush your project to GitHub\nOpen the new repo in your browser\n\nYou can now push/pull changes from RStudio Git tab"
   },
   {
     "objectID": "slides/Github.html#good-commit-messages",
     "href": "slides/Github.html#good-commit-messages",
-    "title": "Short Course on R Tools",
+    "title": "Collaborate via Github",
     "section": "Good Commit Messages",
     "text": "Good Commit Messages\n\n\n“Add function documentation to knn_pred()”\n\n\nspecific\n\nexplains what changed\n\nuseful for future you and collaborators\n\n\n\nCommon Mistakes:\n\n\nCommitting everything without checking\nVague messages like “fix” or “updates”\nForgetting to pull before starting work"
   },
   {
     "objectID": "slides/Github.html#working-with-branches",
     "href": "slides/Github.html#working-with-branches",
-    "title": "Short Course on R Tools",
+    "title": "Collaborate via Github",
     "section": "Working with Branches",
     "text": "Working with Branches\n\nGit branch: a separate “copy” of your project’s code where you can safely make changes without affecting the main version.\nBranches let you:\n\nWork on features without breaking main code\nTry experiments safely\nCollaborate in parallel"
   },
   {
     "objectID": "slides/Github.html#branch-workflow",
     "href": "slides/Github.html#branch-workflow",
-    "title": "Short Course on R Tools",
+    "title": "Collaborate via Github",
     "section": "Branch Workflow",
     "text": "Branch Workflow\n\n\nCreate a branch (e.g. add-visual)\n\nEdit code on branch\n\nCommit changes\n\nPush branch to GitHub\n\nOpen Pull Request (PR)\n\nMerge into main"
   },
   {
     "objectID": "slides/Github.html#summary-of-branching",
     "href": "slides/Github.html#summary-of-branching",
-    "title": "Short Course on R Tools",
+    "title": "Collaborate via Github",
     "section": "Summary of Branching",
     "text": "Summary of Branching\n\n\nmain → stable version of your project\nbranch → experimental workspace\nmerge → combine changes into main\n\n\n\nBranching is helpful because:\n\n\nPrevents breaking working code\nMakes collaboration easier\nKeeps project history clean\nEnables review before merging"
   },
   {
     "objectID": "slides/Github.html#github-summary",
     "href": "slides/Github.html#github-summary",
-    "title": "Short Course on R Tools",
+    "title": "Collaborate via Github",
     "section": "Github Summary",
     "text": "Github Summary\n\nDaily workflow:\nPull → Edit → Stage → Commit → Push\n \n \nFor new features:\nBranch → Edit → Commit → Push\n→ Open Pull Request → Merge"
   },

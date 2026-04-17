@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.9">
 
   <meta name="author" content="Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic">
-  <title>STAR-DS – Short Course on R Tools</title>
+  <title>STAR-DS –  Collaborate via Github</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -388,11 +388,11 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="STAR-DS - Short Course on R Tools">
-<meta property="og:description" content="Collaborate via GitHub">
+<meta property="og:title" content="STAR-DS - Collaborate via Github">
+<meta property="og:description" content="Statisticians Advancing in R for Data Science">
 <meta property="og:site_name" content="STAR-DS">
-<meta name="twitter:title" content="STAR-DS - Short Course on R Tools">
-<meta name="twitter:description" content="Collaborate via GitHub">
+<meta name="twitter:title" content="STAR-DS - Collaborate via Github">
+<meta name="twitter:description" content="Statisticians Advancing in R for Data Science">
 <meta name="twitter:image" content="http://tinyurl.com/STAR-DS/slides/images/twitter-card.png">
 <meta name="twitter:creator" content="@mmadoliat">
 <meta name="twitter:card" content="summary_large_image">
@@ -402,8 +402,8 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="mu-bg.png" data-background-size="stretch" data-slide-number="none" class="quarto-title-block center">
-  <h1 class="title">Short Course on R Tools</h1>
-  <p class="subtitle">Collaborate via GitHub</p>
+  <h1 class="title"><br><span style="color:#FDB913">Collaborate via Github</span></h1>
+  <p class="subtitle">Statisticians Advancing in R<br> for Data Science</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -418,7 +418,7 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 
 </section>
 <section id="why-version-control" class="title-slide slide level1 center">
-<h1>🔁 Why Version Control?</h1>
+<h1>Why Version Control?</h1>
 <div>
 <ul>
 <li class="fragment">Track and restore changes in code over time</li>
@@ -490,7 +490,7 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 <p>Run this in your Terminal (or Command Prompt):</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="fu">git</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
-<p>✅ You should see something like:</p>
+<p>You should see something like:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>git version 2.43.0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
@@ -501,11 +501,11 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </section>
 <section id="configuring-git-identity" class="slide level2">
 <h2>Configuring Git Identity</h2>
-<p>🔧 Set your global Git identity:</p>
+<p>Set your global Git identity:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span>
 <span id="cb4-2"><a></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"you@example.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
-<p>✅ To check the name or email currently set in Git, use these commands:</p>
+<p>To check the name or email currently set in Git, use these commands:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a></a><span class="fu">git</span> config <span class="at">--global</span> user.name </span>
 <span id="cb5-2"><a></a><span class="fu">git</span> config <span class="at">--global</span> user.email </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -529,7 +529,7 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </div>
 <div class="fragment">
 <blockquote>
-<p>✅ You’ve now authenticated GitHub from R!</p>
+<p>You’ve now authenticated GitHub from R!</p>
 </blockquote>
 </div>
 </section>
@@ -538,7 +538,7 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 <p>Use this helpful diagnostic tool:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>usethis<span class="sc">::</span><span class="fu">git_sitrep</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
-<p>💡 This tells you:</p>
+<p>This tells you:</p>
 <div>
 <ul>
 <li class="fragment">Whether Git is installed</li>
@@ -549,19 +549,19 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </div>
 </section>
 <section id="creating-a-new-git-enabled-project" class="slide level2 scrollable">
-<h2>📁 Creating a New Git-Enabled Project</h2>
+<h2>Creating a New Git-Enabled Project</h2>
 <p>In RStudio:</p>
 <div>
 <ol type="1">
 <li class="fragment"><strong>File → New Project</strong></li>
 <li class="fragment">Choose: <strong>New Directory</strong> → <strong>R Package</strong> (or <strong>New Project</strong>)</li>
-<li class="fragment">Check the box: ✅ “Create a git repository”</li>
+<li class="fragment">Check the box: “Create a git repository”</li>
 <li class="fragment">Finish project setup</li>
 </ol>
 </div>
 <div class="fragment">
 <blockquote>
-<p>📁 A <code>.git</code> folder is created — this is a Git repo!</p>
+<p>A <code>.git</code> folder is created — this is a Git repo!</p>
 </blockquote>
 </div>
 </section>
@@ -575,7 +575,7 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 <li class="fragment">Push your project to GitHub</li>
 <li class="fragment">Open the new repo in your browser</li>
 </ul>
-<p>💡 You can now push/pull changes from RStudio Git tab</p>
+<p>You can now push/pull changes from RStudio Git tab</p>
 </div>
 </section></section>
 <section>
