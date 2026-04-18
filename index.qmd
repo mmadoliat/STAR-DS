@@ -20,25 +20,20 @@ d <- read_sheet("https://docs.google.com/spreadsheets/d/1oUI7v_Ij8L_cCbcG4QqlE2a
 ```{r}
 #| echo: false
 
-d[d$date < max(today()+321, as.Date("2025-02-04")),] |>
+d[d$time < max(today()+321, as.Date("2025-02-04")),] |>
   #filter(!is.na(session)) |>
-  select(-dow, -session) |>
-  mutate(date = as.Date(date)) |>
-  relocate(due, .after = code) |>
+  select(-week, -dow, -session) |>
+  mutate(time = format(time, "%H:%M")) |>
+  relocate(homework, .after = code) |>
   gt() |>
-  fmt_date(date, date_style = 31) |>
-  sub_missing(columns = c(week, topic, materials, code, due), missing_text = "") |>
-  cols_align(
-    align = "center", 
-    columns = c(week)
-  ) |>
+  sub_missing(columns = c(topic, materials, code, homework), missing_text = "") |>
   cols_align(
     align = "right", 
-    columns = c(date)
+    columns = c(time)
   ) |>
   cols_align(
     align = "left", 
-    columns = c(topic, materials, code, due)
+    columns = c(topic, materials, code, homework)
   ) |>
   tab_style(
     style = cell_borders(
@@ -47,19 +42,18 @@ d[d$date < max(today()+321, as.Date("2025-02-04")),] |>
       style = "solid"
     ),
     locations = cells_body(
-      columns = c(date, topic, materials, code)
+      columns = c(time, topic, materials, code)
     )
   ) |>
   fmt_markdown(
-    columns = c(topic, materials, code, due)
+    columns = c(topic, materials, code, homework)
   ) |>
   cols_width(
-    week ~ px(45),
-    date ~ px(100), 
+    time ~ px(100), 
     topic ~ px(300),
     materials ~ px(150),
     code ~ px(40),
-    due ~ px(300)
+    homework ~ px(300)
   ) |>
   cols_label_with(fn = function(x) {
       janitor::make_clean_names(x, case = "title") |>
