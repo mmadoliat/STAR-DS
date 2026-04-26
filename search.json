@@ -1294,18 +1294,18 @@
     "href": "hands-on/HO2.html#setup",
     "title": "Hands-on: k-NN Regression in Shiny",
     "section": "Setup",
-    "text": "Setup\nDownload the Shiny app:\ncurl -O https://raw.githubusercontent.com/mmadoliat/WSoRT/refs/heads/main/R/app.R",
+    "text": "Setup\nDownload the Shiny app:\n\ninstall.packages(\"devtools\")\ndevtools::install_github(\"mmadoliat/KNNreg\", force = TRUE)",
     "crumbs": [
       "Hands-on / HW",
       "Shiny"
     ]
   },
   {
-    "objectID": "hands-on/HO2.html#launch-the-app",
-    "href": "hands-on/HO2.html#launch-the-app",
+    "objectID": "hands-on/HO2.html#open-the-app",
+    "href": "hands-on/HO2.html#open-the-app",
     "title": "Hands-on: k-NN Regression in Shiny",
-    "section": "Launch the App",
-    "text": "Launch the App\n# Run the Shiny application\nshiny::runApp('app.R')",
+    "section": "Open the App",
+    "text": "Open the App\n\n# Run the Shiny application\nlibrary(KNNreg)\nfile.edit(system.file(\"examples/KNNreg-App.R\", package = \"KNNreg\"))",
     "crumbs": [
       "Hands-on / HW",
       "Shiny"
