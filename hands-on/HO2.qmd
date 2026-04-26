@@ -21,7 +21,7 @@ In this 30 min session you will:
 
 Download the Shiny app:
 
-``` r
+```{r, eval = FALSE}
 install.packages("devtools")
 devtools::install_github("mmadoliat/KNNreg", force = TRUE)
 ```
@@ -30,7 +30,7 @@ devtools::install_github("mmadoliat/KNNreg", force = TRUE)
 
 ## Open the App
 
-``` r
+```{r, eval = FALSE}
 # Run the Shiny application
 library(KNNreg)
 file.edit(system.file("examples/KNNreg-App.R", package = "KNNreg"))
