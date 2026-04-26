@@ -21,17 +21,19 @@ In this 30 min session you will:
 
 Download the Shiny app:
 
-``` {.bash}
-curl -O https://raw.githubusercontent.com/mmadoliat/WSoRT/refs/heads/main/R/app.R
+``` r
+install.packages("devtools")
+devtools::install_github("mmadoliat/KNNreg", force = TRUE)
 ```
 
 ------------------------------------------------------------------------
 
-## Launch the App
+## Open the App
 
-``` {.r}
+``` r
 # Run the Shiny application
-shiny::runApp('app.R')
+library(KNNreg)
+file.edit(system.file("examples/KNNreg-App.R", package = "KNNreg"))
 ```
 
 ------------------------------------------------------------------------
