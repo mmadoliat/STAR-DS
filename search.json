@@ -853,7 +853,7 @@
     "href": "slides/Package.html#r-packages-the-fundamental-unit",
     "title": "Develop your own professional R package",
     "section": "R Packages: The Fundamental Unit",
-    "text": "R Packages: The Fundamental Unit\nIn R, the fundamental unit of shareable code is the package.\nA package bundles together:\n\n\nCode\n\nData\n\nDocumentation\n\nTests\n\n\n\n\n➡️ All in one place, easy to share with others."
+    "text": "R Packages: The Fundamental Unit\nIn R, the fundamental unit of shareable code is the package.\nA package bundles together:\n\n\nCode\n\nData\n\nDocumentation\n\nTests\n\n\n\n\nAll in one place, easy to share with others."
   },
   {
     "objectID": "slides/Package.html#you-already-use-packages",
@@ -867,7 +867,7 @@
     "href": "slides/Package.html#goal-of-this-talk",
     "title": "Develop your own professional R package",
     "section": "Goal of This Talk",
-    "text": "Goal of This Talk\nThis workshop is about moving from using packages to developing your own.\n\nWhy?\n\n\nTo share your code with others\n\nTo make your code easy to install, use, and learn\n\no save yourself time with conventions and structure"
+    "text": "Goal of This Talk\nThis workshop is about moving from using packages to developing your own.\n\nWhy?\n\n\nTo share your code with others\n\nTo make your code easy to install, use, and learn\n\nTo save yourself time with conventions and structure"
   },
   {
     "objectID": "slides/Package.html#key-packages",
@@ -887,8 +887,8 @@
     "objectID": "slides/Package.html#directory-layout-1",
     "href": "slides/Package.html#directory-layout-1",
     "title": "Develop your own professional R package",
-    "section": "🧩 Directory layout",
-    "text": "🧩 Directory layout\nmypkg/\n├── DESCRIPTION         # Package metadata\n├── NAMESPACE           # Exported functions & imports\n├── R/                  # Your R functions\n├── src/                # C/C++ code (Rcpp, compiled extensions)\n├── man/                # Auto-generated documentation\n├── tests/              # Unit tests with testthat\n├── vignettes/          # Long-form documentation (Rmd)\n├── data/               # Data sets (.rda files)\n└── inst/               # Installed files (e.g., app/, extdata/)"
+    "section": "Directory layout",
+    "text": "Directory layout\nmypkg/\n├── DESCRIPTION         # Package metadata\n├── NAMESPACE           # Exported functions & imports\n├── R/                  # Your R functions\n├── src/                # C/C++ code (Rcpp, compiled extensions)\n├── man/                # Auto-generated documentation\n├── tests/              # Unit tests with testthat\n├── vignettes/          # Long-form documentation (Rmd)\n├── data/               # Data sets (.rda files)\n└── inst/               # Installed files (e.g., app/, extdata/)"
   },
   {
     "objectID": "slides/Package.html#package-states-in-r",
@@ -901,8 +901,8 @@
     "objectID": "slides/Package.html#transitioning-between-states",
     "href": "slides/Package.html#transitioning-between-states",
     "title": "Develop your own professional R package",
-    "section": "🔁 Transitioning Between States",
-    "text": "🔁 Transitioning Between States"
+    "section": "Transitioning Between States",
+    "text": "Transitioning Between States"
   },
   {
     "objectID": "slides/Package.html#creating-your-package",
@@ -930,14 +930,14 @@
     "href": "slides/Package.html#sample-description-file",
     "title": "Develop your own professional R package",
     "section": "Sample DESCRIPTION File",
-    "text": "Sample DESCRIPTION File\nPackage: KNNreg\nType: Package\nTitle: k-Nearest Neighbors Regression with Shiny App\nVersion: 0.0.1\nDate: 2026-03-19\nAuthors@R: c(person(\"Daniel\", \"Cirkovic\", role = c(\"aut\")), person(\"Jaihee\", \"Choi\", role = c(\"aut\")), person(\"Mehdi\", \"Maadooliat\", role = c(\"aut\", \"cre\"), email = \"mehdi.maadooliat@marquette.edu\"))\nDescription: kNN regression functions and an interactive Shiny app.\nLicense: GPL (&gt;= 2)\nImports: Rcpp (&gt;= 1.1.1), shiny, ggplot2\nLinkingTo: Rcpp\nEncoding: UTF-8\nRoxygenNote: 7.3.3\n\n\nOne paragraph, plain text\n\nMultiple sentences OK\n\nShould describe what the package does"
+    "text": "Sample DESCRIPTION File\nPackage: mypkg\nTitle: What the Package Does (One Line, Title Case)\nVersion: 0.0.0.9000\nAuthors@R: \n    person(\"First\", \"Last\", , \"first.last@example.com\", role = c(\"aut\", \"cre\"))\nDescription: What the package does (one paragraph).\nLicense: `use_mit_license()`, `use_gpl3_license()` or friends to pick a\n    license\nEncoding: UTF-8\nRoxygen: list(markdown = TRUE)\nRoxygenNote: 7.3.3\n\nImports:\n    ggplot2,\n    dplyr\n\nSuggests:\n    testthat,\n    knitr"
   },
   {
     "objectID": "slides/Package.html#imports-vs.-suggests",
     "href": "slides/Package.html#imports-vs.-suggests",
     "title": "Develop your own professional R package",
     "section": "Imports vs. Suggests",
-    "text": "Imports vs. Suggests\nImports\n\n\nPackages required at runtime\nAutomatically installed with your package\nNeeded for core functionality\n\n\n\nSuggests\n\n\nOptional or development-time dependencies\nUsed in examples, tests, or vignettes\nNot required to run the core package\n\n\n\n\nUse usethis::use_package(\"pkg\", type = \"Imports\") to manage these easily."
+    "text": "Imports vs. Suggests\nPackages listed in DESCRIPTION are not all treated the same.\nR distinguishes between required and optional dependencies.\nImports (Required)\n\n\nNeeded for your package to work\nInstalled automatically when your package is installed\nAvailable at runtime\n\n\n\nSuggests (Optional)\n\n\nUsed for examples, tests, or vignettes\nNot required for core functionality\nInstalled only if explicitly requested\n\n\n\n\nRule of thumb: If your main functions break without it → use Imports. Otherwise → use Suggests."
   },
   {
     "objectID": "slides/Package.html#namespace-file",
@@ -951,7 +951,7 @@
     "href": "slides/Package.html#example-namespace-file",
     "title": "Develop your own professional R package",
     "section": "Example: NAMESPACE File",
-    "text": "Example: NAMESPACE File\n# Generated by roxygen2: do not edit by hand\n\nexport(knn_pred)\nexport(run_knn_app)\nimport(ggplot2)\nimportFrom(Rcpp,evalCpp)\nimportFrom(shiny,runApp)\nuseDynLib(KNNreg, .registration = TRUE)\n\n\nexport() — makes a function available to users\nimport() — brings in all exported objects from a package\nimportFrom() — imports specific functions\nuseDynLib() — links compiled code (C/C++/Fortran) to your package. Required when your package uses compiled routines (e.g., via Rcpp)"
+    "text": "Example: NAMESPACE File\n# Generated by roxygen2: do not edit by hand\n\nexport(my_function)\nimport(ggplot2)\nimportFrom(Rcpp,evalCpp)\nimportFrom(shiny,runApp)\nuseDynLib(my_function, .registration = TRUE)\n\n\nexport() — makes a function available to users\nimport() — brings in all exported objects from a package\nimportFrom() — imports specific functions\nuseDynLib() — links compiled code (C/C++/Fortran) to your package. Required when your package uses compiled routines (e.g., via Rcpp)"
   },
   {
     "objectID": "slides/Package.html#how-to-generate-namespace",
@@ -986,7 +986,21 @@
     "href": "slides/Package.html#src-folder-and-rcpp-integration",
     "title": "Develop your own professional R package",
     "section": "src/ Folder and Rcpp Integration",
-    "text": "src/ Folder and Rcpp Integration\nThe src/ folder is used for compiled C/C++ code (Rcpp).\n\n\nContains .cpp files\nRequires Rcpp in DESCRIPTION\n\n\nKNNreg/\n├── src/\n│   └── knn_pred.cpp\n├── R/\n│   ├── knn_helpers.R\n│   └── knn_pred.R"
+    "text": "src/ Folder and Rcpp Integration\nThe src/ folder is used for compiled C/C++ code (Rcpp).\n\n\nContains .cpp files\nRequires Rcpp in DESCRIPTION\n\n\nmypkg/\n├── src/\n│   └── my_function.cpp\n├── R/\n│   ├── my_function.R\n│   └── helpers.R"
+  },
+  {
+    "objectID": "slides/Package.html#inst-folder-and-shiny-app-integration",
+    "href": "slides/Package.html#inst-folder-and-shiny-app-integration",
+    "title": "Develop your own professional R package",
+    "section": "inst/ Folder and Shiny App Integration",
+    "text": "inst/ Folder and Shiny App Integration\nThe inst/ folder is for extra files your package needs, but that are not R code, such as a Shiny app.\n\nA common pattern is to bundle a Shiny app inside your package so users can launch it with a single function.\n\n\nUseful when your package includes a method users may want to explore interactively\nKeeps analysis code and interface together\nMakes your package easier to demonstrate and teach"
+  },
+  {
+    "objectID": "slides/Package.html#where-does-the-shiny-app-go",
+    "href": "slides/Package.html#where-does-the-shiny-app-go",
+    "title": "Develop your own professional R package",
+    "section": "Where Does the Shiny App Go?",
+    "text": "Where Does the Shiny App Go?\nmypkg/\n├── R/\n│   ├── my_function.R\n│   ├── helpers.R\n│   └── launchApp.R\n├── inst/\n│   └── app/\n│       ├── ui.R\n│       └── server.R\n\n\nui.R defines the layout and user inputs\nserver.R defines the reactive logic\nlaunchApp.R provides a simple launcher function\n\n\n\nFiles inside inst/ are copied into the installed package and can be accessed at runtime."
   },
   {
     "objectID": "slides/Package.html#create-your-package",
@@ -996,46 +1010,74 @@
     "text": "1. Create Your Package\nUse usethis to create a new package directory:\nusethis::create_package(\"KNNreg\")\nThis creates:\n\n\nR/, DESCRIPTION, NAMESPACE\n.Rproj, .gitignore, .Rbuildignore\nOpens new RStudio project for your package"
   },
   {
+    "objectID": "slides/Package.html#edit-package-metadata-description",
+    "href": "slides/Package.html#edit-package-metadata-description",
+    "title": "Develop your own professional R package",
+    "section": "2. Edit Package Metadata (DESCRIPTION)",
+    "text": "2. Edit Package Metadata (DESCRIPTION)\nAfter creating your package, the first thing to do is update the DESCRIPTION file.\nThis file defines the identity and structure of your package.\n\n\n\nSet the package name, title, and description\n\nAdd author and maintainer information\n\nSpecify dependencies (Imports, Suggests)\n\nDefine license and encoding"
+  },
+  {
+    "objectID": "slides/Package.html#sample-description-file-1",
+    "href": "slides/Package.html#sample-description-file-1",
+    "title": "Develop your own professional R package",
+    "section": "Sample DESCRIPTION File",
+    "text": "Sample DESCRIPTION File\nPackage: KNNreg\nType: Package\nTitle: k-Nearest Neighbors Regression with Shiny App\nVersion: 0.0.1\nDate: 2026-03-19\nAuthors@R: c(person(\"Daniel\", \"Cirkovic\", role = c(\"aut\")), person(\"Jaihee\", \"Choi\", role = c(\"aut\")), person(\"Mehdi\", \"Maadooliat\", role = c(\"aut\", \"cre\"), email = \"mehdi.maadooliat@marquette.edu\"))\nDescription: kNN regression functions and an interactive Shiny app.\nLicense: GPL (&gt;= 2)\nImports: Rcpp (&gt;= 1.1.1), shiny, ggplot2\nLinkingTo: Rcpp\nEncoding: UTF-8\nRoxygenNote: 7.3.3"
+  },
+  {
     "objectID": "slides/Package.html#add-a-dataset",
     "href": "slides/Package.html#add-a-dataset",
     "title": "Develop your own professional R package",
-    "section": "2. Add a Dataset",
-    "text": "2. Add a Dataset\nLet’s include a built-in dataset (mtcars) for simplicity:\nusethis::use_data(mtcars, overwrite = TRUE)\n\nThis creates a data/mtcars.rda file — accessible via\nminipkg::mtcars"
+    "section": "3. Add a Dataset",
+    "text": "3. Add a Dataset\nLet’s include a built-in dataset (mtcars) for simplicity:\nusethis::use_data(mtcars, overwrite = TRUE)\n\nThis creates a data/mtcars.rda file — accessible via\nKNNreg::mtcars"
   },
   {
     "objectID": "slides/Package.html#write-your-functions",
     "href": "slides/Package.html#write-your-functions",
     "title": "Develop your own professional R package",
-    "section": "3. Write Your Functions",
-    "text": "3. Write Your Functions\n\n\nCreate function files in the R/ folder.\nKeep important functions in separate files.\nPlace helper functions together in a single file.\nThis structure keeps your project organized and maintainable.\n\n\n\nCreate a new file: R/knn_pred.R\nknn_pred &lt;- function(train_x, train_y, test_x, k) {\n  # Coerce types\n  train_x &lt;- as.matrix(train_x)\n  test_x  &lt;- as.matrix(test_x)\n  train_y &lt;- as.numeric(train_y)\n\n  # Scale train and test appropriately\n  train_x &lt;- scale(train_x)\n  # Extract the mean and sd used\n  train_mean &lt;- attr(train_x, \"scaled:center\")\n  train_sd &lt;- attr(train_x, \"scaled:scale\")\n  # Apply the same transformation to test data\n  test_x &lt;- scale(test_x, center = train_mean, scale = train_sd)\n\n  n &lt;- nrow(train_x)\n  p &lt;- ncol(train_x)\n  m &lt;- nrow(test_x)\n\n  # Store predictions\n  preds &lt;- numeric(m)\n  # Store ids of k nearest neighbors\n  ids &lt;- numeric(m * k)\n\n  for (j in seq_len(m)) {\n\n    # Squared Euclidean distances using matrix ops (fast):\n    # t(train_x) is p x n; subtract p-vector test_x[j,]; colSums -&gt; length n\n    dists &lt;- colSums((t(train_x) - test_x[j, ])^2)\n\n    # Indices of k smallest distances (full sort, simple & reliable)\n    idx_k &lt;- order(dists)[seq_len(k)]\n\n    # Mean of neighbor labels\n    preds[j] &lt;- mean(train_y[idx_k])\n\n    # Store ids of nearest neighbors\n    # ids of vars\n    ids[((j-1) * k + 1):(j * k)] &lt;- idx_k\n  }\n\n  out = list(\"preds\" = preds, \"ids\" = ids)\n\n  out\n}"
+    "section": "4. Write Your Functions",
+    "text": "4. Write Your Functions\n\n\nCreate function files in the R/ folder.\nKeep important functions in separate files.\nPlace helper functions together in a single file.\nThis structure keeps your project organized and maintainable.\n\n\n\nCreate a new file: R/knn_pred.R\nknn_pred &lt;- function(train_x, train_y, test_x, k) {\n  # Coerce types\n  train_x &lt;- as.matrix(train_x)\n  test_x  &lt;- as.matrix(test_x)\n  train_y &lt;- as.numeric(train_y)\n\n  # Scale train and test appropriately\n  train_x &lt;- scale(train_x)\n  # Extract the mean and sd used\n  train_mean &lt;- attr(train_x, \"scaled:center\")\n  train_sd &lt;- attr(train_x, \"scaled:scale\")\n  # Apply the same transformation to test data\n  test_x &lt;- scale(test_x, center = train_mean, scale = train_sd)\n\n  n &lt;- nrow(train_x)\n  p &lt;- ncol(train_x)\n  m &lt;- nrow(test_x)\n\n  # Store predictions\n  preds &lt;- numeric(m)\n  # Store ids of k nearest neighbors\n  ids &lt;- numeric(m * k)\n\n  for (j in seq_len(m)) {\n\n    # Squared Euclidean distances using matrix ops (fast):\n    # t(train_x) is p x n; subtract p-vector test_x[j,]; colSums -&gt; length n\n    dists &lt;- colSums((t(train_x) - test_x[j, ])^2)\n\n    # Indices of k smallest distances (full sort, simple & reliable)\n    idx_k &lt;- order(dists)[seq_len(k)]\n\n    # Mean of neighbor labels\n    preds[j] &lt;- mean(train_y[idx_k])\n\n    # Store ids of nearest neighbors\n    # ids of vars\n    ids[((j-1) * k + 1):(j * k)] &lt;- idx_k\n  }\n\n  out = list(\"preds\" = preds, \"ids\" = ids)\n\n  out\n}"
   },
   {
-    "objectID": "slides/Package.html#add-compiled-code",
-    "href": "slides/Package.html#add-compiled-code",
+    "objectID": "slides/Package.html#add-supporting-files---src",
+    "href": "slides/Package.html#add-supporting-files---src",
     "title": "Develop your own professional R package",
-    "section": "4. Add Compiled Code",
-    "text": "4. Add Compiled Code\n\n\nAdd .cpp files in the src/ folder\n\nCompiled code is linked to R through Rcpp\n\nCalled from standard R functions in the R/ folder\n\n\n\nCreate a new file: src/knn_pred.cpp\n// [[Rcpp::depends(Rcpp)]]\n#include &lt;Rcpp.h&gt;\nusing namespace Rcpp;\n\n// [[Rcpp::export]]\nList knn_pred_cpp(NumericMatrix train_x,\n                           NumericVector train_y,\n                           NumericMatrix test_x,\n                           int k) {\n  int n = train_x.nrow(), \n    p = train_x.ncol(), \n    m = test_x.nrow();\n  NumericVector preds(m);\n  int id_length = m * k;\n  IntegerVector ids(id_length);\n\n  \n  for (int j = 0; j &lt; m; ++j) {\n    // compute and store (distance,index)\n    std::vector&lt;std::pair&lt;double,int&gt;&gt; dists(n);\n    for (int i = 0; i &lt; n; ++i) {\n      double sumsq = 0;\n      for (int d = 0; d &lt; p; ++d) {\n        double diff = train_x(i,d) - test_x(j,d);\n        sumsq += diff * diff;\n      }\n      dists[i] = std::make_pair(sumsq, i);\n    }\n    // partial sort to get k nearest\n    std::nth_element(dists.begin(), dists.begin() + k, dists.end(),\n                     [](auto &a, auto &b){ return a.first &lt; b.first; });\n    double s = 0;\n    for (int r = 0; r &lt; k; ++r) {\n      s += train_y[dists[r].second];\n      ids[j * k  + r] = std::get&lt;1&gt;(dists[r]);\n    }\n    preds[j] = s / k;\n  }\n  \n  List ret;\n  ret[\"preds\"] = preds;\n  ret[\"ids\"] = ids + 1;\n  \n  return ret;\n}"
+    "section": "5. Add Supporting Files - src/",
+    "text": "5. Add Supporting Files - src/\n\n\nAdd .cpp files in the src/ folder\n\nCompiled code is linked to R through Rcpp\n\nCalled from standard R functions in the R/ folder\n\n\n\nCreate a new file: src/knn_pred.cpp\n// [[Rcpp::depends(Rcpp)]]\n#include &lt;Rcpp.h&gt;\nusing namespace Rcpp;\n\n// [[Rcpp::export]]\nList knn_pred_cpp(NumericMatrix train_x,\n                           NumericVector train_y,\n                           NumericMatrix test_x,\n                           int k) {\n  int n = train_x.nrow(), \n    p = train_x.ncol(), \n    m = test_x.nrow();\n  NumericVector preds(m);\n  int id_length = m * k;\n  IntegerVector ids(id_length);\n\n  \n  for (int j = 0; j &lt; m; ++j) {\n    // compute and store (distance,index)\n    std::vector&lt;std::pair&lt;double,int&gt;&gt; dists(n);\n    for (int i = 0; i &lt; n; ++i) {\n      double sumsq = 0;\n      for (int d = 0; d &lt; p; ++d) {\n        double diff = train_x(i,d) - test_x(j,d);\n        sumsq += diff * diff;\n      }\n      dists[i] = std::make_pair(sumsq, i);\n    }\n    // partial sort to get k nearest\n    std::nth_element(dists.begin(), dists.begin() + k, dists.end(),\n                     [](auto &a, auto &b){ return a.first &lt; b.first; });\n    double s = 0;\n    for (int r = 0; r &lt; k; ++r) {\n      s += train_y[dists[r].second];\n      ids[j * k  + r] = std::get&lt;1&gt;(dists[r]);\n    }\n    preds[j] = s / k;\n  }\n  \n  List ret;\n  ret[\"preds\"] = preds;\n  ret[\"ids\"] = ids + 1;\n  \n  return ret;\n}"
+  },
+  {
+    "objectID": "slides/Package.html#add-supporting-files---inst",
+    "href": "slides/Package.html#add-supporting-files---inst",
+    "title": "Develop your own professional R package",
+    "section": "5. Add Supporting Files - inst/",
+    "text": "5. Add Supporting Files - inst/\n\n\nCreate a new folder knn_app in the inst/ folder\n\nAdd Shiny app files in the inst/knn_app/ folder\n\nThe app UI and server logic live inside the package\n\nCalled from a launcher function in the R/ folder\n\n\n\n\nCreate a new file: inst/knn_app/server.R\nlibrary(shiny)\nlibrary(ggplot2)\n\nserver.KNNreg &lt;- function(input, output, session) {\n\n  # Functions for splitting and plotting\n  make_split &lt;- function(data, prop = 0.7) {\n    n &lt;- nrow(data)\n    train_idx &lt;- sample(n, size = floor(prop * n))\n    list(train = data[train_idx, ], test = data[-train_idx, ])\n  }\n\n  segment_df &lt;- function(train_x, test_x, ids, k){\n    train_x &lt;- as.matrix(train_x)\n    test_x  &lt;- as.matrix(test_x)\n    n &lt;- nrow(train_x); p &lt;- ncol(train_x); m &lt;- nrow(test_x)\n    test_x_out = test_x[rep(1:m, each = k), ]\n    train_x_out = train_x[ids, ]\n    out = as.data.frame(cbind(test_x_out, train_x_out))\n    colnames(out) &lt;- c(paste0(\"test_\", colnames(train_x)), \n                       paste0(\"train_\", colnames(train_x)))\n    out\n  }\n\n  # Reactive train/test split\n  split &lt;- eventReactive(input$resample, {\n    make_split(mtcars, prop = 0.92)\n  }, ignoreNULL = FALSE)\n  \n  # Compute fitted (train) and predicted (test)\n  fitted_vals &lt;- reactive({\n    d_train &lt;- split()$train\n    knn_pred(d_train[, c(\"wt\", \"qsec\")], d_train[, c(\"mpg\")], \n             d_train[, c(\"wt\", \"qsec\")], input$k, input$backend)\n  })\n  predicted &lt;- reactive({\n    d_train &lt;- split()$train\n    d_test &lt;- split()$test\n    knn_pred(d_train[, c(\"wt\", \"qsec\")], d_train[, c(\"mpg\")], \n             d_test[, c(\"wt\", \"qsec\")], input$k, input$backend)\n  })\n  \n  mse &lt;- function(obs, pred) mean((obs - pred)^2)\n  r2  &lt;- function(obs, pred) 1 - (sum((obs - pred)^2) / sum((obs - mean(obs))^2))\n\n  # Training performance\n  output$trainPerf &lt;- renderPrint({\n    obs &lt;- split()$train$mpg\n    cat(\"Training set:\\n\")\n    cat(\"  MSE =\", round(mse(obs, fitted_vals()$preds), 3),\n        \"  R² =\", round(r2(obs, fitted_vals()$preds), 3), \"\\n\")\n  })\n\n  # Test performance\n  output$testPerf &lt;- renderPrint({\n    obs &lt;- split()$test$mpg\n    cat(\"Test set:\\n\")\n    cat(\"  MSE =\", round(mse(obs, predicted()$preds), 3),\n        \"  R² =\", round(r2(obs, predicted()$preds), 3), \"\\n\")\n  })\n\n  # Plot showing k nearest neighbors\n  output$predPlot &lt;- renderPlot({\n    d_train &lt;- split()$train\n    d_test &lt;- split()$test\n    d_test$id = 1:nrow(d_test)\n    \n    nn &lt;- segment_df(d_train[, c(\"wt\", \"qsec\")], \n                     d_test[, c(\"wt\", \"qsec\")], \n                     predicted()$ids, input$k)\n    \n    d_test$pred &lt;- predicted()$preds\n    \n    ggplot() +\n      geom_segment(aes(x = test_wt, xend = train_wt, \n                       y = test_qsec, yend = train_qsec), \n                   color = \"grey50\", linetype = \"dotted\",\n                   data = nn) +\n      geom_point(aes(x = wt, y = qsec, color = mpg), \n                 size = 2, data = d_train) +\n      geom_text(aes(x = wt, y = qsec, color = pred, label = id), \n                size = 5, fontface = \"bold\", data = d_test) +\n      scale_color_gradient(low = \"#6A00A8FF\", high = \"#FCA636FF\") +\n      theme_classic() +\n      labs(x = \"wt\", y = \"qsec\")\n  })\n\n  # Table of test predictions\n  output$predTable &lt;- renderTable({\n    d_test &lt;- split()$test\n    data.frame(\n      id = 1:nrow(d_test),\n      car = rownames(d_test),\n      actual = round(d_test$mpg,2),\n      predicted = round(predicted()$preds,2)\n    )\n  }, rownames = FALSE)\n}"
   },
   {
     "objectID": "slides/Package.html#document-your-functions",
     "href": "slides/Package.html#document-your-functions",
     "title": "Develop your own professional R package",
-    "section": "5. Document Your Functions",
-    "text": "5. Document Your Functions\nRun the following command to generate docs:\ndevtools::document()\nThis will:\n\n\nAdd export(knn_pred) to your NAMESPACE\nCreate man/knn_pred.Rd"
+    "section": "6. Document Your Functions",
+    "text": "6. Document Your Functions\nRun the following command to generate docs:\ndevtools::document()\nThis will:\n\n\nAdd export(knn_pred) to your NAMESPACE\nCreate man/knn_pred.Rd"
+  },
+  {
+    "objectID": "slides/Package.html#example-namespace-file-1",
+    "href": "slides/Package.html#example-namespace-file-1",
+    "title": "Develop your own professional R package",
+    "section": "Example: NAMESPACE File",
+    "text": "Example: NAMESPACE File\n# Generated by roxygen2: do not edit by hand\n\nexport(knn_pred)\nexport(run_knn_app)\nimport(ggplot2)\nimportFrom(Rcpp,evalCpp)\nimportFrom(shiny,runApp)\nuseDynLib(KNNreg, .registration = TRUE)"
   },
   {
     "objectID": "slides/Package.html#load-and-test-the-package",
     "href": "slides/Package.html#load-and-test-the-package",
     "title": "Develop your own professional R package",
-    "section": "6. Load and Test the Package",
-    "text": "6. Load and Test the Package\nIn the console:\ndevtools::load_all()\n\nCheck to make sure there are no issues with your package compiling:\ndevtools::check()\n\n\nThe output will look like:"
+    "section": "7. Load and Test the Package",
+    "text": "7. Load and Test the Package\nIn the console:\ndevtools::load_all()\n\nCheck to make sure there are no issues with your package compiling:\ndevtools::check()\n\n\nThe output will look like:"
   },
   {
     "objectID": "slides/Package.html#build-and-install-the-package",
     "href": "slides/Package.html#build-and-install-the-package",
     "title": "Develop your own professional R package",
-    "section": "7. Build and Install the Package",
-    "text": "7. Build and Install the Package\nBuild the package locally:\ndevtools::build()\n\nInstall it:\ndevtools::install()\n\n\nNow you can use it like any other package:\nlibrary(KNNreg)\n\n# Simulate training and test data\ntrain_x &lt;- matrix(rnorm(50), nrow = 10)\ntrain_y &lt;- rnorm(10)\ntest_x &lt;- matrix(rnorm(20), nrow = 4)\n\n# Set number of nearest neighbors\nk &lt;- 3\n\n# Run the kNN algorithm\nknn_pred(train_x, train_y, test_x, k, method = \"cpp\") # test C++ backend"
+    "section": "8. Build and Install the Package",
+    "text": "8. Build and Install the Package\nBuild the package locally:\ndevtools::build()\n\nInstall it:\ndevtools::install()\n\n\nNow you can use it like any other package:\nlibrary(KNNreg)\n\n# Simulate training and test data\ntrain_x &lt;- matrix(rnorm(50), nrow = 10)\ntrain_y &lt;- rnorm(10)\ntest_x &lt;- matrix(rnorm(20), nrow = 4)\n\n# Set number of nearest neighbors\nk &lt;- 3\n\n# Run the kNN algorithm\nknn_pred(train_x, train_y, test_x, k, method = \"cpp\") # test C++ backend"
   },
   {
     "objectID": "slides/Package.html#helpknn_pred",
