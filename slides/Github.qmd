@@ -224,6 +224,7 @@ This tells you:
 
 # Common Git Workflow
 
+:::: {style="font-size: 85%;"}
 ::: incremental
 1.  Edit your files\
 2.  Stage changes\
@@ -231,6 +232,7 @@ This tells you:
 4.  Push to GitHub\
 5.  Repeat
 :::
+::::
 
 . . .
 
@@ -242,6 +244,7 @@ git push
 
 . . .
 
+:::: {style="font-size: 85%;"}
 ::: incremental
 What each step means:
 
@@ -251,6 +254,7 @@ What each step means:
 :::
 
 . . .
+::::
 
 ## Good Commit Messages
 
