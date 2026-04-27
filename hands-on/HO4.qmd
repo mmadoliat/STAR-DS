@@ -83,23 +83,6 @@ preds <- predict(model, newdata = test_df, method = "R")
 cbind(Observed = test_df$mpg, Predicted = round(preds, 2))
 ```
 
-## Use Python to split mtcars into train/test
-
-``` r
-split_data <- py_train_test_split(mtcars[, c("mpg", "disp", "hp", "wt")], test_size = 0.3)
-
-train_df <- split_data$train
-test_df  <- split_data$test
-
-# Fit the S3 k-NN model on train set
-model <- knn_s3(mpg ~ disp + hp + wt, train_df, k = 5)
-summary(model)
-
-# Predict on test set
-preds <- predict(model, newdata = test_df, method = "R")
-cbind(Observed = test_df$mpg, Predicted = round(preds, 2))
-```
-
 ------------------------------------------------------------------------
 
 ## Tasks

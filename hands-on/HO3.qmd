@@ -22,14 +22,16 @@ In this 30 min session you will:
 Download the C++ and helper scripts into your working directory:
 
 ``` {.bash}
-curl -O https://raw.githubusercontent.com/mmadoliat/WSoRT/refs/heads/main/src/knn_pred.cpp
-curl -O https://raw.githubusercontent.com/mmadoliat/WSoRT/refs/heads/main/runthis.R
+curl -O https://raw.githubusercontent.com/mmadoliat/KNNreg/refs/heads/main/R/knn_pred.R
+curl -O https://raw.githubusercontent.com/mmadoliat/KNNreg/refs/heads/main/src/knn_pred.cpp
+curl -O https://raw.githubusercontent.com/mmadoliat/KNNreg/refs/heads/main/inst/examples/KNNreg-Rcpp.R
 ```
 
 Open the files in your editor to review the code:
 
+-   **knn_pred.R** contains the `knn_pred()` function (R).
 -   **knn_pred.cpp** contains the `knn_pred_cpp()` function (Rcpp).
--   **runthis.R** sources both R and C++ implementations and runs `microbenchmark()`.
+-   **KNNreg-Rcpp.R** sources both R and C++ implementations and runs `microbenchmark()`.
 
 ------------------------------------------------------------------------
 
@@ -52,18 +54,33 @@ ls("package:base") # confirm knn_pred_cpp is loaded
 
 ## 2. Inspect the runner script
 
-Open **runthis.R**, which contains:
+Open **KNNreg-Rcpp.R**, which contains:
 
 ``` {.r}
-source("R/knn_s3_formula.R")              # loads knn_s3 and predict()
-Rcpp::sourceCpp("src/knn_pred.cpp")       # loads Rcpp function
+library(microbenchmark)
 
-# Simulate data and benchmark
-data <- simulate_knn_data(n = 1000, p = 5, m = 200, k = 10)
-mb <- microbenchmark::microbenchmark(
-  Rcpp = knn_pred_cpp(data$train_x, data$train_y, data$test_x, data$k),
-  R    = knn_pred_R(data$train_x, data$train_y, data$test_x, data$k),
-  times = 20
+# compile Rcpp code once at startup
+Rcpp::sourceCpp("knn_pred.cpp")
+
+# load R functions
+source("knn_pred.R")
+
+set.seed(42)
+n <- 1000; p <- 5; m <- 200; k <- 10
+Xtrain <- matrix(rnorm(n*p), n, p)
+Ytrain <- rnorm(n)
+Xtest  <- matrix(rnorm(m*p), m, p)
+
+# warm up & check correctness
+pred_R <- knn_pred(Xtrain, Ytrain, Xtest, k, method="R")
+pred_C <- knn_pred(Xtrain, Ytrain, Xtest, k, method="cpp")
+stopifnot(max(abs(pred_R$preds - pred_C$preds)) < 1e-12)
+
+# benchmark
+mb <- microbenchmark(
+  pure_R = knn_pred(Xtrain, Ytrain, Xtest, k, method="R"),
+  Rcpp   = knn_pred(Xtrain, Ytrain, Xtest, k, method="cpp"),
+  times  = 20
 )
 print(mb)
 ```
@@ -71,14 +88,14 @@ print(mb)
 Try running this script:
 
 ``` {.r}
-source("runthis.R")
+source("KNNreg-Rcpp.R")
 ```
 
 ------------------------------------------------------------------------
 
 ## 3. Vary parameters
 
-Modify **runthis.R** or re-run interactively to examine different settings:
+Modify **KNNreg-Rcpp.R** or re-run interactively to examine different settings:
 
 -   Increase **n** (training size) from 1000 to 5000 or 10000.
 -   Increase **p** (dimensions) from 5 to 20 or 50.
@@ -98,6 +115,6 @@ Focus on how the Rcpp implementation stays much faster as complexity grows.
 
 ## Next steps
 
--   Try integrating this into your `knn_s3` class and Shiny app.
+-   Try integrating this into a Shiny app.
 -   Explore parallel Rcpp implementations (OpenMP).
 -   Consider other statistical routines with nested loops.

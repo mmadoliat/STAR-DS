@@ -54,7 +54,7 @@ format:
 
 🧩 **Install the `reticulate` package in R**
 
-``` r
+```{.r}
 install.packages("reticulate")
 ```
 
@@ -113,7 +113,7 @@ Variables become **directly available in the R global environment**
 
 Consider `script.py` file, includes following Python script:
 
-``` python
+```{.python}
 y = 2
 def square(x):
     return x **2
@@ -195,7 +195,7 @@ py$square(4)
 
 **🔍 Example:**<br/> Let two following objects have been defined in R global environment:
 
-``` r
+```{.r}
 library(reticulate)
 x <- c(10, 20, 30)
 f <- function(x) x^2
@@ -239,7 +239,7 @@ print(f(5))
 
 A **closure** in R is simply a user-defined function created with the function() keyword. It's the most common type of function in R.
 
-✅ A **closure** fnction Works directly. In R:
+✅ A **closure** function Works directly. In R:
 
 ``` {.r code-line-numbers="1|2-3"}
 py$m <- mean
@@ -290,7 +290,7 @@ py$e <- e
 
 In Python:
 
-``` python
+```{.python}
 print(e(1))  
 2.718281828459045
 ```
@@ -307,7 +307,7 @@ x = np.arange(10)
 -   **Chunk engines**: `{python}`, `{python3}`
 -   **Return to R**:
 
-``` r
+```{.r}
 r_vec <- py$x
 ```
 

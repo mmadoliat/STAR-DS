@@ -11,7 +11,6 @@ format:
     scrollable: true
 ---
 
-
 ## Outline {auto-animate="true"}
 
 ::: {.fragment .fade-up}
@@ -23,7 +22,6 @@ format:
 -   Using Rcpp in Packages
 -   Advanced Topics & Resources
 :::
-
 
 # Motivation & Introduction
 
@@ -38,7 +36,6 @@ format:
     -   Low overhead function calls
     -   Access to STL (data structures & algorithms)
     -   Cleaner, maintainable code
-
 
 ## Basic Usage: `evalCpp()`
 
@@ -55,7 +52,6 @@ evalCpp("2 + 2")  # simple test
 evalCpp("std::numeric_limits<double>::max()")
 ># [1] 1.79769e+308
 ```
-
 
 # Simple Example
 
@@ -81,7 +77,6 @@ bool isOdd_cpp(int num = 10) {
 }
 ```
 
-
 ## Simple Example - Using `cppFunction()`
 
 -   Rcpp Version of ‘is this number odd or even’
@@ -102,7 +97,6 @@ c(isOdd_cpp(42L), isOdd_cpp(43L))
 -   Good for small functions
 :::
 
-
 # Second Example: VAR(1)
 
 Let’s consider a simple possible $VAR(1)$ system of $k$ variables.
@@ -114,7 +108,6 @@ X_t = X_{t-1} B + E_t
 $$
 
 where $X_t$ is a row vector of length $2$, $B$ is a $2×2$ matrix, and $E_t$ is a row of the error matrix of $2$ columns.
-
 
 ## Second Example: VAR(1)
 
@@ -150,7 +143,6 @@ arma::mat cppSim(arma::mat B, arma::mat E) {
 ```
 :::
 
-
 ## Second Example: VAR(1)
 
 ::: shrink-code
@@ -175,7 +167,6 @@ rbenchmark::benchmark(cppSim(a, e), rSim(a, e), order="relative")[, 1:4]
 ```
 :::
 
-
 # Growth of Rcpp
 
 ::: {style="margin-top: 50px;"}
@@ -187,7 +178,7 @@ rbenchmark::benchmark(cppSim(a, e), rSim(a, e), order="relative")[, 1:4]
     -   C & C++ provide numerous libraries + APIs
     -   Easy to provide access to as Rcpp eases data transfer
 -   Rcpp is currently used by
-    -   3053 CRAN packages
+    -   3127 CRAN packages
     -   250+ BioConductor packages
     -   an unknown (but “large”) number of GitHub projects
 :::
@@ -196,7 +187,6 @@ rbenchmark::benchmark(cppSim(a, e), rSim(a, e), order="relative")[, 1:4]
 :::
 
 <img src="images/rcpp/rcpp-growth.png" width="500" style="opacity: 0.25;" align="center"/>
-
 
 ## Pagerank
 
@@ -220,7 +210,6 @@ round(100 * pr[1:5], 3)
 
 ![](images/rcpp/pagerank.png){fig-align="center" fig-alt="Screenshot of Pagerank" width="55%"}
 
-
 ## Percentage of Compiled Packages
 
 ``` {.r code-line-numbers="1-2|4-6|8-10|12-13"}
@@ -236,9 +225,8 @@ data.frame(tot = nTot, totRcpp = nRcpp, totCompiled = nCompiled,
            RcppPctOfCompiled = propRcpp)
 
 >#   tot   totRcpp   totCompiled   RcppPctOfCompiled
-># 1 22501    3053        4981          61.29291
+># 1 23730    3127        5114          61.14587
 ```
-
 
 # Rcpp in Rstudio - Using `sourceCpp()`
 
@@ -265,7 +253,6 @@ data.frame(tot = nTot, totRcpp = nRcpp, totCompiled = nCompiled,
     ># 84
     ```
 
-
 ## Using `sourceCpp()`
 
 ::: incremental
@@ -285,7 +272,6 @@ data.frame(tot = nTot, totRcpp = nRcpp, totCompiled = nCompiled,
 :::
 
 <img src="images/rcpp/rcpp-rstudio.png" width="500" style="opacity: 0.25;" align="center"/>
-
 
 # Another Example: Focus on Speed
 
@@ -311,13 +297,12 @@ sapply(0:10, f)  # Using it on first 11 arguments
 ># [1] 0 1 1 2 3 5 8 13 21 34 55
 ```
 
-
 ## Another Example: Timing R Implementation
 
 -   The R implementation:
 
 ::: shrink-code
-``` r
+``` {.r}
 f <- function(n) {
   if (n < 2) return(n)
   return(f(n - 1) + f(n - 2))
@@ -339,7 +324,6 @@ benchmark(f(15), f(20), f(25))[, 1:4]
 ># 3 f(25)       100          7.92    132.0
 ```
 
-
 ## Another Example: C++ Implementation
 
 ``` {.cpp code-line-numbers="1-4|6-10|12-14"}
@@ -359,13 +343,12 @@ sapply(0:10, g)  # Using it on first 11 arguments
 ># [1] 0 1 1 2 3 5 8 13 21 34 55
 ```
 
-
 ## Another Example: Comparing Timing
 
 -   Rcpp implementation:
 
 ::: shrink-code
-``` r
+``` {.r}
 Rcpp::cppFunction('
   int g(int n) {
     if (n < 2) return(n);
@@ -391,6 +374,82 @@ benchmark(f(25), g(25))[, 1:4]
 
 -   A nice gain of a few orders of magnitude.
 
+## Another Example: sourceCpp("fib-helper.cpp")
+
+``` {.cpp code-line-numbers="1-13|14-19|20-31|32-39"}
+#include <Rcpp.h>
+using namespace Rcpp;
+
+// This is a simple example of exporting a C++ function to R. You can
+// source this function into an R session using the Rcpp::sourceCpp 
+// function (or via the Source button on the editor toolbar). Learn
+// more about Rcpp at:
+//
+//   http://www.rcpp.org/
+//   http://adv-r.had.co.nz/Rcpp.html
+//   http://gallery.rcpp.org/
+//
+
+// [[Rcpp::export]]
+int rec_fib_cpp(int n) {
+  if (n < 2) return(n);
+  return(rec_fib_cpp(n - 1) + rec_fib_cpp(n - 2)); 
+}
+
+// [[Rcpp::export]]
+long long fib_cpp(int n) {
+  if (n <= 1) return n;
+  long long a = 0, b = 1, temp;
+  for (int i = 2; i <= n; ++i) {
+    temp = b;
+    b = a + b;
+    a = temp;
+  }
+  return b;
+}
+
+// You can include R code blocks in C++ files processed with sourceCpp
+// (useful for testing and development). The R code will be automatically 
+// run after the compilation.
+//
+
+/*** R
+all.equal(fib_cpp(15), fib_r(15), rec_fib_cpp(15), rec_fib_r(15))
+*/
+```
+
+. . .
+
+``` {.r}
+sourceCpp("./inst/examples/fib-helper.cpp")
+> all.equal(fib_cpp(15), fib_r(15), rec_fib_cpp(15), rec_fib_r(15))
+># [1] TRUE
+```
+
+## Another Example: Wrap-up
+
+``` {.r code-line-numbers="1-8|9-15|16-20"}
+library(rbenchmark)
+benchmark(fib_cpp(25), fib_r(25), rec_fib_cpp(25), rec_fib_r(25))[, 1:4]
+>#              test replications elapsed relative
+># 1     fib_cpp(25)          100    0.00       NA
+># 2       fib_r(25)          100    0.00       NA
+># 3 rec_fib_cpp(25)          100    0.03       NA
+># 4   rec_fib_r(25)          100    7.98       NA
+ 
+library(microbenchmark)
+microbenchmark(R = fib_r(47), Rcpp = fib_cpp(47), times = 100L)
+># Unit: nanoseconds
+>#  expr  min   lq mean median   uq   max neval
+>#     R 2600 2700 3049   2700 2800 18500   100
+>#  Rcpp  600  600  783    700  700  6500   100
+ 
+microbenchmark(R = fib_r(92), Rcpp = fib_cpp(92), times = 100L)
+># Unit: nanoseconds
+>#  expr  min   lq mean median   uq   max neval
+>#     R 3700 3800 4154   4000 4000 19900   100
+>#  Rcpp  500  600  765    700  750  8000   100
+```
 
 # Data Types & Conversions
 
@@ -404,7 +463,6 @@ benchmark(f(25), g(25))[, 1:4]
 
     -   `.size()`, `.begin()`, `.end()`
     -   Constructors: `NumericVector out(n)`
-
 
 ## Types
 
@@ -424,7 +482,6 @@ logabs(seq(-5, 5, by = 2))
 . . .
 
 -   Vectorized C++! Here `log(abs())` runs directly on vectors as R would.
-
 
 ## STL Type Mapping
 
@@ -449,7 +506,7 @@ std::vector<double> logabs2(std::vector<double> x) {
 
 . . .
 
-``` r
+``` {.r}
 library(Rcpp)
 sourceCpp("code/logabs2.cpp")
 logabs2(seq(-5, 5, by = 2))
@@ -464,7 +521,6 @@ logabs2(seq(-5, 5, by = 2))
 
 -   [KNN Regression and Rcpp](https://github.com/mmadoliat/STAR-DS-tools/blob/main/runKNNcpp.R){target="_blank"}
 
-
 # Using Rcpp in Packages
 
 -   Add to package:
@@ -477,7 +533,6 @@ logabs2(seq(-5, 5, by = 2))
 -   Run `Rcpp::compileAttributes()` to generate bindings
 
 -   [Thirteen Simple Steps Vignette](https://cran.r-project.org/web/packages/Rcpp/vignettes/Rcpp-libraries.pdf) by Dirk Eddelbuettel
-
 
 # Summary & Q&A {auto-animate="true"}
 
