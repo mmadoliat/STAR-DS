@@ -519,7 +519,7 @@ logabs2(seq(-5, 5, by = 2))
 
 . . .
 
--   [KNN Regression and Rcpp](hands-on/HO3.html){target="_blank"}
+-   [KNN Regression and Rcpp](/hands-on/HO3.html){target="_blank"}
 
 # Using Rcpp in Packages
 
