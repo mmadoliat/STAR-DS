@@ -1492,51 +1492,29 @@
     "href": "hands-on/HW1.html",
     "title": "Homework Assignment",
     "section": "",
-    "text": "Please complete the following tasks within one week and submit your work as a GitHub repository.\n\n\n\n\nDifferent Distances: Update your knn_s3 implementation to support a dist = c(\"sse\", \"sad\") argument for L1 and L2 distances.\nDocumentation: Add roxygen2 comments for the new argument and regenerate the help files using devtools::document().\n\n\n\n\n\n\nDynamic Predictors: In the k-NN app, add a multi-select input that allows users to choose predictor variables at runtime.\nDownload Button: Implement functionality to download the test-set predictions as a CSV file.\n\n\n\n\n\n\nBenchmark Script: Create benchmark_knn_dims.R to compare runtimes for pure R vs Rcpp implementations across combinations of sample size \\(n \\in \\{500, 1000, 2000\\}\\) and feature count \\(p \\in \\{3, 5, 10\\}\\).\nSummary Report: Produce a one-page PDF summarizing your benchmarks, key code changes, and performance recommendations.\n\n\n\n\n\nYour GitHub repository should be organized as follows:\nknn_workshop_hw/\n├── R/           # R scripts and tests\n├── app/         # Shiny app files\n├── src/         # C++ source for Rcpp\n├── benchmark_knn_dims.R\n├── report.pdf   # summary of benchmarks and findings\n└── README.md    # overview and instructions\nThe README must include: - Setup instructions for all components - A sample run demonstrating each part of the assignment\n\nGood luck, and feel free to reach out with any questions!",
+    "text": "For additional practice with Shiny and Rcpp, consider completing these exercises.\n\n\n\n\nDynamic Predictors: In the k-NN app, add two multi-select inputs that allow users to choose the two predictor variables at runtime.\nDownload Button: Implement functionality to download the test-set predictions as a CSV file.\n\n\n\n\n\n\nBenchmark Script: Compare runtimes for pure R vs Rcpp implementations across combinations of sample size \\(n \\in \\{500, 1000, 2000\\}\\) and feature count \\(p \\in \\{3, 5, 10\\}\\).\n\nGood luck, and feel free to reach out with any questions!",
     "crumbs": [
       "Hands-on / HW",
       "First HW"
     ]
   },
   {
-    "objectID": "hands-on/HW1.html#extend-the-k-nn-s3-class-30-pts",
-    "href": "hands-on/HW1.html#extend-the-k-nn-s3-class-30-pts",
+    "objectID": "hands-on/HW1.html#shiny-app-enhancement",
+    "href": "hands-on/HW1.html#shiny-app-enhancement",
     "title": "Homework Assignment",
     "section": "",
-    "text": "Different Distances: Update your knn_s3 implementation to support a dist = c(\"sse\", \"sad\") argument for L1 and L2 distances.\nDocumentation: Add roxygen2 comments for the new argument and regenerate the help files using devtools::document().",
+    "text": "Dynamic Predictors: In the k-NN app, add two multi-select inputs that allow users to choose the two predictor variables at runtime.\nDownload Button: Implement functionality to download the test-set predictions as a CSV file.",
     "crumbs": [
       "Hands-on / HW",
       "First HW"
     ]
   },
   {
-    "objectID": "hands-on/HW1.html#shiny-app-enhancement-30-pts",
-    "href": "hands-on/HW1.html#shiny-app-enhancement-30-pts",
+    "objectID": "hands-on/HW1.html#rcpp-performance-study",
+    "href": "hands-on/HW1.html#rcpp-performance-study",
     "title": "Homework Assignment",
     "section": "",
-    "text": "Dynamic Predictors: In the k-NN app, add a multi-select input that allows users to choose predictor variables at runtime.\nDownload Button: Implement functionality to download the test-set predictions as a CSV file.",
-    "crumbs": [
-      "Hands-on / HW",
-      "First HW"
-    ]
-  },
-  {
-    "objectID": "hands-on/HW1.html#rcpp-performance-study-30-pts",
-    "href": "hands-on/HW1.html#rcpp-performance-study-30-pts",
-    "title": "Homework Assignment",
-    "section": "",
-    "text": "Benchmark Script: Create benchmark_knn_dims.R to compare runtimes for pure R vs Rcpp implementations across combinations of sample size \\(n \\in \\{500, 1000, 2000\\}\\) and feature count \\(p \\in \\{3, 5, 10\\}\\).\nSummary Report: Produce a one-page PDF summarizing your benchmarks, key code changes, and performance recommendations.",
-    "crumbs": [
-      "Hands-on / HW",
-      "First HW"
-    ]
-  },
-  {
-    "objectID": "hands-on/HW1.html#deliverables",
-    "href": "hands-on/HW1.html#deliverables",
-    "title": "Homework Assignment",
-    "section": "",
-    "text": "Your GitHub repository should be organized as follows:\nknn_workshop_hw/\n├── R/           # R scripts and tests\n├── app/         # Shiny app files\n├── src/         # C++ source for Rcpp\n├── benchmark_knn_dims.R\n├── report.pdf   # summary of benchmarks and findings\n└── README.md    # overview and instructions\nThe README must include: - Setup instructions for all components - A sample run demonstrating each part of the assignment\n\nGood luck, and feel free to reach out with any questions!",
+    "text": "Benchmark Script: Compare runtimes for pure R vs Rcpp implementations across combinations of sample size \\(n \\in \\{500, 1000, 2000\\}\\) and feature count \\(p \\in \\{3, 5, 10\\}\\).\n\nGood luck, and feel free to reach out with any questions!",
     "crumbs": [
       "Hands-on / HW",
       "First HW"

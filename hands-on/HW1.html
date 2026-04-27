@@ -302,10 +302,8 @@ window.Quarto = {
   <ul>
   <li><a href="#homework-assignment" id="toc-homework-assignment" class="nav-link active" data-scroll-target="#homework-assignment">Homework Assignment</a>
   <ul class="collapse">
-  <li><a href="#extend-the-k-nn-s3-class-30-pts" id="toc-extend-the-k-nn-s3-class-30-pts" class="nav-link" data-scroll-target="#extend-the-k-nn-s3-class-30-pts">1. Extend the k-NN S3 Class (30 pts)</a></li>
-  <li><a href="#shiny-app-enhancement-30-pts" id="toc-shiny-app-enhancement-30-pts" class="nav-link" data-scroll-target="#shiny-app-enhancement-30-pts">2. Shiny App Enhancement (30 pts)</a></li>
-  <li><a href="#rcpp-performance-study-30-pts" id="toc-rcpp-performance-study-30-pts" class="nav-link" data-scroll-target="#rcpp-performance-study-30-pts">3. Rcpp Performance Study (30 pts)</a></li>
-  <li><a href="#deliverables" id="toc-deliverables" class="nav-link" data-scroll-target="#deliverables">Deliverables</a></li>
+  <li><a href="#shiny-app-enhancement" id="toc-shiny-app-enhancement" class="nav-link" data-scroll-target="#shiny-app-enhancement">1. Shiny App Enhancement</a></li>
+  <li><a href="#rcpp-performance-study" id="toc-rcpp-performance-study" class="nav-link" data-scroll-target="#rcpp-performance-study">2. Rcpp Performance Study</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="http://github.com/mmadoliat/STAR-DS/edit/main/hands-on/HW1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="http://github.com/mmadoliat/STAR-DS/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -318,44 +316,21 @@ window.Quarto = {
 
 <section id="homework-assignment" class="level1">
 <h1>Homework Assignment</h1>
-<p>Please complete the following tasks within <strong>one week</strong> and submit your work as a <strong>GitHub repository</strong>.</p>
+<p>For additional practice with Shiny and Rcpp, consider completing these exercises.</p>
 <hr>
-<section id="extend-the-k-nn-s3-class-30-pts" class="level2">
-<h2 class="anchored" data-anchor-id="extend-the-k-nn-s3-class-30-pts">1. Extend the k-NN S3 Class (30 pts)</h2>
+<section id="shiny-app-enhancement" class="level2">
+<h2 class="anchored" data-anchor-id="shiny-app-enhancement">1. Shiny App Enhancement</h2>
 <ul>
-<li><strong>Different Distances</strong>: Update your <code>knn_s3</code> implementation to support a <code>dist = c("sse", "sad")</code> argument for L1 and L2 distances.</li>
-<li><strong>Documentation</strong>: Add <strong>roxygen2</strong> comments for the new argument and regenerate the help files using <code>devtools::document()</code>.</li>
-</ul>
-<hr>
-</section>
-<section id="shiny-app-enhancement-30-pts" class="level2">
-<h2 class="anchored" data-anchor-id="shiny-app-enhancement-30-pts">2. Shiny App Enhancement (30 pts)</h2>
-<ul>
-<li><strong>Dynamic Predictors</strong>: In the k-NN app, add a multi-select input that allows users to choose predictor variables at runtime.</li>
+<li><strong>Dynamic Predictors</strong>: In the k-NN app, add two multi-select inputs that allow users to choose the two predictor variables at runtime.</li>
 <li><strong>Download Button</strong>: Implement functionality to download the test-set predictions as a CSV file.</li>
 </ul>
 <hr>
 </section>
-<section id="rcpp-performance-study-30-pts" class="level2">
-<h2 class="anchored" data-anchor-id="rcpp-performance-study-30-pts">3. Rcpp Performance Study (30 pts)</h2>
+<section id="rcpp-performance-study" class="level2">
+<h2 class="anchored" data-anchor-id="rcpp-performance-study">2. Rcpp Performance Study</h2>
 <ul>
-<li><strong>Benchmark Script</strong>: Create <code>benchmark_knn_dims.R</code> to compare runtimes for pure R vs Rcpp implementations across combinations of sample size <span class="math inline">\(n \in \{500, 1000, 2000\}\)</span> and feature count <span class="math inline">\(p \in \{3, 5, 10\}\)</span>.</li>
-<li><strong>Summary Report</strong>: Produce a one-page PDF summarizing your benchmarks, key code changes, and performance recommendations.</li>
+<li><strong>Benchmark Script</strong>: Compare runtimes for pure R vs Rcpp implementations across combinations of sample size <span class="math inline">\(n \in \{500, 1000, 2000\}\)</span> and feature count <span class="math inline">\(p \in \{3, 5, 10\}\)</span>.</li>
 </ul>
-<hr>
-</section>
-<section id="deliverables" class="level2">
-<h2 class="anchored" data-anchor-id="deliverables">Deliverables</h2>
-<p>Your GitHub repository should be organized as follows:</p>
-<pre><code>knn_workshop_hw/
-├── R/           # R scripts and tests
-├── app/         # Shiny app files
-├── src/         # C++ source for Rcpp
-├── benchmark_knn_dims.R
-├── report.pdf   # summary of benchmarks and findings
-└── README.md    # overview and instructions</code></pre>
-<p>The <strong>README</strong> must include: - Setup instructions for all components - A sample run demonstrating each part of the assignment</p>
-<hr>
 <p><strong>Good luck, and feel free to reach out with any questions!</strong></p>
 
 
