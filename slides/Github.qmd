@@ -110,6 +110,57 @@ git config --global user.name
 git config --global user.email 
 ```
 
+## Creating a New Git-Enabled Project
+
+In RStudio:
+
+::: incremental
+1.  **File → New Project**
+2.  Choose: **New Directory** → **R Package** (or **New Project**)
+3.  Check the box: "Create a git repository"
+4.  Finish project setup
+:::
+
+. . .
+
+> A `.git` folder is created — this is a Git repo!
+
+## Make First Commit
+
+::: incremental
+Your project becomes a **real Git repository** only after the first commit.
+
+Before the first commit:
+
+-   Git is initialized, but no project history exists
+-   The branch (`main`) is not fully established
+-   Tools like `usethis::git_sitrep()` may fail
+-   GitHub has nothing to receive yet
+:::
+
+. . .
+
+In Terminal:
+
+``` bash
+git branch -M main
+git add .
+git commit -m "Initial commit"
+```
+
+## After the First Commit
+
+::: incremental
+-   Git creates the first snapshot of your project
+-   The `main` branch becomes fully defined
+-   Your project now has version history
+-   GitHub can track and store it
+:::
+
+::: {.fragment .fade-up}
+> The first commit turns an empty Git repo into a real version-controlled project.
+:::
+
 ## Connect GitHub to R (Create PAT)
 
 1.  In R:
@@ -136,6 +187,23 @@ Paste your token when prompted.
 
 > You’ve now authenticated GitHub from R!
 
+## Connect to GitHub
+
+Run this in R to create and link a GitHub repo:
+
+``` r
+usethis::use_github()
+```
+
+This will:
+
+::: incremental
+-   Push your project to GitHub
+-   Open the new repo in your browser
+
+You can now push/pull changes from RStudio Git tab
+:::
+
 ## Check Setup
 
 Use this helpful diagnostic tool:
@@ -154,55 +222,32 @@ This tells you:
 -   If PAT is stored
 :::
 
-## Creating a New Git-Enabled Project
-
-In RStudio:
-
-::: incremental
-1.  **File → New Project**
-2.  Choose: **New Directory** → **R Package** (or **New Project**)
-3.  Check the box: "Create a git repository"
-4.  Finish project setup
-:::
-
-. . .
-
-> A `.git` folder is created — this is a Git repo!
-
-## Connect to GitHub
-
-Run this to create and link a GitHub repo:
-
-``` r
-usethis::use_github()
-```
-
-This will:
-
-::: incremental
--   Push your project to GitHub
--   Open the new repo in your browser
-
-You can now push/pull changes from RStudio Git tab
-:::
-
 # Common Git Workflow
 
 ::: incremental
-1.  Edit `R/stats_module.R`\
-2.  Pull → Stage → Commit → Push\
-3.  Repeat
+1.  Edit your files\
+2.  Stage changes\
+3.  Commit with a message\
+4.  Push to GitHub\
+5.  Repeat
 :::
 
 . . .
 
-What each step means:
+``` bash
+git add .
+git commit -m "Describe your changes"
+git push
+```
+
+. . .
 
 ::: incremental
--   Pull: get latest changes from GitHub
--   Stage: select changes to include
--   Commit: save a snapshot with a message
--   Commit: save a snapshot with a message
+What each step means:
+
+-   **Stage**: select changes to include
+-   **Commit**: save a snapshot locally with a message
+-   **Push**: upload committed changes to GitHub
 :::
 
 . . .
@@ -210,7 +255,7 @@ What each step means:
 ## Good Commit Messages
 
 ::: incremental
-> "Add function documentation to knn_pred()"
+> "Edit inputs and outputs in function documentation to complete help page for knn_pred()"
 
 -   specific\
 -   explains what changed\
@@ -231,10 +276,49 @@ Common Mistakes:
 
 . . .
 
+## From Version Control to Collaboration
+
+::: incremental
+So far, Git has helped us:
+
+-   track changes
+-   save project history
+-   connect our work to GitHub
+:::
+
+. . .
+
+But Git is not just for saving files, but also built for **collaboration**.
+
+. . .
+
+## Working From an Existing GitHub Repo
+
+When you contribute to an existing project, you first need a **local copy** of the repository.
+
+ 
+
+. . .
+
+### Clone the repository
+
+``` bash
+git clone https://github.com/username/repo-name.git
+```
+
+::: incremental
+This creates a local version of the project, including:
+
+-   all files
+-   commit history
+-   existing branches
+-   Git tracking (.git folder)
+:::
+
 ## Working with Branches
 
 ::: incremental
-Git branch: a separate “copy” of your project’s code where you can safely make changes without affecting the main version.
+**Git branch:** a separate “copy” of your project’s code where you can safely make changes without affecting the main version.
 
 Branches let you:
 
@@ -248,13 +332,26 @@ Branches let you:
 ## Branch Workflow
 
 ::: incremental
-1.  Create a branch (e.g. `add-visual`)\
-2.  Edit code on branch\
-3.  Commit changes\
+1.  Create a new branch\
+2.  Switch to the branch and edit code\
+3.  Stage and commit changes\
 4.  Push branch to GitHub\
-5.  Open Pull Request (PR)\
-6.  Merge into main
+5.  Open a Pull Request (PR)\
+6.  Review and merge into `main`
 :::
+
+. . .
+
+``` bash
+git checkout -b new-feature
+# make changes
+git add .
+git commit -m "Add new feature"
+git checkout main
+git merge new-feature
+```
+
+. . .
 
 ## Summary of Branching
 
@@ -270,12 +367,9 @@ Branching is helpful because:
 
 ::: incremental
 -   Prevents breaking working code
--   Makes collaboration easier
 -   Keeps project history clean
 -   Enables review before merging
 :::
-
-. . .
 
 ## Github Summary
 
