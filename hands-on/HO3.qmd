@@ -88,7 +88,7 @@ print(mb)
 Try running this script:
 
 ``` {.r}
-source("KNNreg-Rcpp.R")
+source("inst/examples/KNNreg-Rcpp.R")
 ```
 
 ------------------------------------------------------------------------
