@@ -510,44 +510,6 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 <span id="cb5-2"><a></a><span class="fu">git</span> config <span class="at">--global</span> user.email </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="connect-github-to-r-create-pat" class="slide level2 scrollable">
-<h2>Connect GitHub to R (Create PAT)</h2>
-<ol type="1">
-<li>In R:</li>
-</ol>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div>
-<ol start="2" type="1">
-<li class="fragment">GitHub will open — generate a Personal Access Token (PAT)</li>
-<li class="fragment">Copy the token (only shown once!)</li>
-<li class="fragment">Back in R:</li>
-</ol>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Paste your token when prompted.</p>
-</div>
-<div class="fragment">
-<blockquote>
-<p>You’ve now authenticated GitHub from R!</p>
-</blockquote>
-</div>
-</section>
-<section id="check-setup" class="slide level2">
-<h2>Check Setup</h2>
-<p>Use this helpful diagnostic tool:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>usethis<span class="sc">::</span><span class="fu">git_sitrep</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p>This tells you:</p>
-<div>
-<ul>
-<li class="fragment">Whether Git is installed</li>
-<li class="fragment">Whether GitHub is connected</li>
-<li class="fragment">If PAT is stored</li>
-</ul>
-</div>
-</div>
-</section>
 <section id="creating-a-new-git-enabled-project" class="slide level2 scrollable">
 <h2>Creating a New Git-Enabled Project</h2>
 <p>In RStudio:</p>
@@ -565,9 +527,67 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </blockquote>
 </div>
 </section>
+<section id="make-first-commit" class="slide level2">
+<h2>Make First Commit</h2>
+<div>
+<p>Your project becomes a <strong>real Git repository</strong> only after the first commit.</p>
+<p>Before the first commit:</p>
+<ul>
+<li class="fragment">Git is initialized, but no project history exists</li>
+<li class="fragment">The branch (<code>main</code>) is not fully established</li>
+<li class="fragment">Tools like <code>usethis::git_sitrep()</code> may fail</li>
+<li class="fragment">GitHub has nothing to receive yet</li>
+</ul>
+</div>
+<div class="fragment">
+<p>In Terminal:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a></a><span class="fu">git</span> branch <span class="at">-M</span> main</span>
+<span id="cb6-2"><a></a><span class="fu">git</span> add .</span>
+<span id="cb6-3"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Initial commit"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="after-the-first-commit" class="slide level2">
+<h2>After the First Commit</h2>
+<div>
+<ul>
+<li class="fragment">Git creates the first snapshot of your project</li>
+<li class="fragment">The <code>main</code> branch becomes fully defined</li>
+<li class="fragment">Your project now has version history</li>
+<li class="fragment">GitHub can track and store it</li>
+</ul>
+</div>
+<div class="fragment fade-up">
+<blockquote>
+<p>The first commit turns an empty Git repo into a real version-controlled project.</p>
+</blockquote>
+</div>
+</section>
+<section id="connect-github-to-r-create-pat" class="slide level2 scrollable">
+<h2>Connect GitHub to R (Create PAT)</h2>
+<ol type="1">
+<li>In R:</li>
+</ol>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div>
+<ol start="2" type="1">
+<li class="fragment">GitHub will open — generate a Personal Access Token (PAT)</li>
+<li class="fragment">Copy the token (only shown once!)</li>
+<li class="fragment">Back in R:</li>
+</ol>
+</div>
+<div class="fragment">
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Paste your token when prompted.</p>
+</div>
+<div class="fragment">
+<blockquote>
+<p>You’ve now authenticated GitHub from R!</p>
+</blockquote>
+</div>
+</section>
 <section id="connect-to-github" class="slide level2">
 <h2>Connect to GitHub</h2>
-<p>Run this to create and link a GitHub repo:</p>
+<p>Run this in R to create and link a GitHub repo:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>usethis<span class="sc">::</span><span class="fu">use_github</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This will:</p>
 <div>
@@ -577,27 +597,50 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </ul>
 <p>You can now push/pull changes from RStudio Git tab</p>
 </div>
+</section>
+<section id="check-setup" class="slide level2">
+<h2>Check Setup</h2>
+<p>Use this helpful diagnostic tool:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>usethis<span class="sc">::</span><span class="fu">git_sitrep</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<p>This tells you:</p>
+<div>
+<ul>
+<li class="fragment">Whether Git is installed</li>
+<li class="fragment">Whether GitHub is connected</li>
+<li class="fragment">If PAT is stored</li>
+</ul>
+</div>
+</div>
 </section></section>
 <section>
 <section id="common-git-workflow" class="title-slide slide level1 center scrollable">
 <h1>Common Git Workflow</h1>
 <div>
 <ol type="1">
-<li class="fragment">Edit <code>R/stats_module.R</code><br>
+<li class="fragment">Edit your files<br>
 </li>
-<li class="fragment">Pull → Stage → Commit → Push<br>
+<li class="fragment">Stage changes<br>
+</li>
+<li class="fragment">Commit with a message<br>
+</li>
+<li class="fragment">Push to GitHub<br>
 </li>
 <li class="fragment">Repeat</li>
 </ol>
 </div>
 <div class="fragment">
-<p>What each step means:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a></a><span class="fu">git</span> add .</span>
+<span id="cb11-2"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Describe your changes"</span></span>
+<span id="cb11-3"><a></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
 <div>
+<p>What each step means:</p>
 <ul>
-<li class="fragment">Pull: get latest changes from GitHub</li>
-<li class="fragment">Stage: select changes to include</li>
-<li class="fragment">Commit: save a snapshot with a message</li>
-<li class="fragment">Commit: save a snapshot with a message</li>
+<li class="fragment"><strong>Stage</strong>: select changes to include</li>
+<li class="fragment"><strong>Commit</strong>: save a snapshot locally with a message</li>
+<li class="fragment"><strong>Push</strong>: upload committed changes to GitHub</li>
 </ul>
 </div>
 </div>
@@ -606,7 +649,7 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 <h2>Good Commit Messages</h2>
 <div>
 <blockquote>
-<p>“Add function documentation to knn_pred()”</p>
+<p>“Edit inputs and outputs in function documentation to complete help page for knn_pred()”</p>
 </blockquote>
 <ul>
 <li class="fragment">specific<br>
@@ -627,10 +670,42 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 </div>
 </div>
 </section>
+<section id="from-version-control-to-collaboration" class="slide level2">
+<h2>From Version Control to Collaboration</h2>
+<div>
+<p>So far, Git has helped us:</p>
+<ul>
+<li class="fragment">track changes</li>
+<li class="fragment">save project history</li>
+<li class="fragment">connect our work to GitHub</li>
+</ul>
+</div>
+<div class="fragment">
+<p>But Git is not just for saving files, but also built for <strong>collaboration</strong>.</p>
+</div>
+</section>
+<section id="working-from-an-existing-github-repo" class="slide level2">
+<h2>Working From an Existing GitHub Repo</h2>
+<p>When you contribute to an existing project, you first need a <strong>local copy</strong> of the repository.</p>
+<p>&nbsp;</p>
+<div class="fragment">
+<h3 id="clone-the-repository">Clone the repository</h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a></a><span class="fu">git</span> clone https://github.com/username/repo-name.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div>
+<p>This creates a local version of the project, including:</p>
+<ul>
+<li class="fragment">all files</li>
+<li class="fragment">commit history</li>
+<li class="fragment">existing branches</li>
+<li class="fragment">Git tracking (.git folder)</li>
+</ul>
+</div>
+</div>
+</section>
 <section id="working-with-branches" class="slide level2">
 <h2>Working with Branches</h2>
 <div>
-<p>Git branch: a separate “copy” of your project’s code where you can safely make changes without affecting the main version.</p>
+<p><strong>Git branch:</strong> a separate “copy” of your project’s code where you can safely make changes without affecting the main version.</p>
 <p>Branches let you:</p>
 <ul>
 <li class="fragment"><p>Work on features without breaking main code</p></li>
@@ -643,18 +718,26 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 <h2>Branch Workflow</h2>
 <div>
 <ol type="1">
-<li class="fragment">Create a branch (e.g.&nbsp;<code>add-visual</code>)<br>
+<li class="fragment">Create a new branch<br>
 </li>
-<li class="fragment">Edit code on branch<br>
+<li class="fragment">Switch to the branch and edit code<br>
 </li>
-<li class="fragment">Commit changes<br>
+<li class="fragment">Stage and commit changes<br>
 </li>
 <li class="fragment">Push branch to GitHub<br>
 </li>
-<li class="fragment">Open Pull Request (PR)<br>
+<li class="fragment">Open a Pull Request (PR)<br>
 </li>
-<li class="fragment">Merge into main</li>
+<li class="fragment">Review and merge into <code>main</code></li>
 </ol>
+</div>
+<div class="fragment">
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a></a><span class="fu">git</span> checkout <span class="at">-b</span> new-feature</span>
+<span id="cb13-2"><a></a><span class="co"># make changes</span></span>
+<span id="cb13-3"><a></a><span class="fu">git</span> add .</span>
+<span id="cb13-4"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add new feature"</span></span>
+<span id="cb13-5"><a></a><span class="fu">git</span> checkout main</span>
+<span id="cb13-6"><a></a><span class="fu">git</span> merge new-feature</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="summary-of-branching" class="slide level2">
@@ -671,7 +754,6 @@ Mehdi Maadooliat, Jaihee Choi and Daniel Cirkovic
 <div>
 <ul>
 <li class="fragment">Prevents breaking working code</li>
-<li class="fragment">Makes collaboration easier</li>
 <li class="fragment">Keeps project history clean</li>
 <li class="fragment">Enables review before merging</li>
 </ul>

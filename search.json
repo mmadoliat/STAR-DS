@@ -1637,11 +1637,39 @@
     "text": "Configuring Git Identity\nSet your global Git identity:\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"you@example.com\"\n\nTo check the name or email currently set in Git, use these commands:\ngit config --global user.name \ngit config --global user.email"
   },
   {
+    "objectID": "slides/Github.html#creating-a-new-git-enabled-project",
+    "href": "slides/Github.html#creating-a-new-git-enabled-project",
+    "title": "Collaborate via Github",
+    "section": "Creating a New Git-Enabled Project",
+    "text": "Creating a New Git-Enabled Project\nIn RStudio:\n\n\nFile → New Project\nChoose: New Directory → R Package (or New Project)\nCheck the box: “Create a git repository”\nFinish project setup\n\n\n\n\nA .git folder is created — this is a Git repo!"
+  },
+  {
+    "objectID": "slides/Github.html#make-first-commit",
+    "href": "slides/Github.html#make-first-commit",
+    "title": "Collaborate via Github",
+    "section": "Make First Commit",
+    "text": "Make First Commit\n\nYour project becomes a real Git repository only after the first commit.\nBefore the first commit:\n\nGit is initialized, but no project history exists\nThe branch (main) is not fully established\nTools like usethis::git_sitrep() may fail\nGitHub has nothing to receive yet\n\n\n\nIn Terminal:\ngit branch -M main\ngit add .\ngit commit -m \"Initial commit\""
+  },
+  {
+    "objectID": "slides/Github.html#after-the-first-commit",
+    "href": "slides/Github.html#after-the-first-commit",
+    "title": "Collaborate via Github",
+    "section": "After the First Commit",
+    "text": "After the First Commit\n\n\nGit creates the first snapshot of your project\nThe main branch becomes fully defined\nYour project now has version history\nGitHub can track and store it\n\n\n\n\nThe first commit turns an empty Git repo into a real version-controlled project."
+  },
+  {
     "objectID": "slides/Github.html#connect-github-to-r-create-pat",
     "href": "slides/Github.html#connect-github-to-r-create-pat",
     "title": "Collaborate via Github",
     "section": "Connect GitHub to R (Create PAT)",
     "text": "Connect GitHub to R (Create PAT)\n\nIn R:\n\nusethis::create_github_token()\n\n\nGitHub will open — generate a Personal Access Token (PAT)\nCopy the token (only shown once!)\nBack in R:\n\n\n\ngitcreds::gitcreds_set()\nPaste your token when prompted.\n\n\n\nYou’ve now authenticated GitHub from R!"
+  },
+  {
+    "objectID": "slides/Github.html#connect-to-github",
+    "href": "slides/Github.html#connect-to-github",
+    "title": "Collaborate via Github",
+    "section": "Connect to GitHub",
+    "text": "Connect to GitHub\nRun this in R to create and link a GitHub repo:\nusethis::use_github()\nThis will:\n\n\nPush your project to GitHub\nOpen the new repo in your browser\n\nYou can now push/pull changes from RStudio Git tab"
   },
   {
     "objectID": "slides/Github.html#check-setup",
@@ -1651,25 +1679,25 @@
     "text": "Check Setup\nUse this helpful diagnostic tool:\nusethis::git_sitrep()\n\nThis tells you:\n\n\nWhether Git is installed\nWhether GitHub is connected\nIf PAT is stored"
   },
   {
-    "objectID": "slides/Github.html#creating-a-new-git-enabled-project",
-    "href": "slides/Github.html#creating-a-new-git-enabled-project",
-    "title": "Collaborate via Github",
-    "section": "Creating a New Git-Enabled Project",
-    "text": "Creating a New Git-Enabled Project\nIn RStudio:\n\n\nFile → New Project\nChoose: New Directory → R Package (or New Project)\nCheck the box: “Create a git repository”\nFinish project setup\n\n\n\n\nA .git folder is created — this is a Git repo!"
-  },
-  {
-    "objectID": "slides/Github.html#connect-to-github",
-    "href": "slides/Github.html#connect-to-github",
-    "title": "Collaborate via Github",
-    "section": "Connect to GitHub",
-    "text": "Connect to GitHub\nRun this to create and link a GitHub repo:\nusethis::use_github()\nThis will:\n\n\nPush your project to GitHub\nOpen the new repo in your browser\n\nYou can now push/pull changes from RStudio Git tab"
-  },
-  {
     "objectID": "slides/Github.html#good-commit-messages",
     "href": "slides/Github.html#good-commit-messages",
     "title": "Collaborate via Github",
     "section": "Good Commit Messages",
-    "text": "Good Commit Messages\n\n\n“Add function documentation to knn_pred()”\n\n\nspecific\n\nexplains what changed\n\nuseful for future you and collaborators\n\n\n\nCommon Mistakes:\n\n\nCommitting everything without checking\nVague messages like “fix” or “updates”\nForgetting to pull before starting work"
+    "text": "Good Commit Messages\n\n\n“Edit inputs and outputs in function documentation to complete help page for knn_pred()”\n\n\nspecific\n\nexplains what changed\n\nuseful for future you and collaborators\n\n\n\nCommon Mistakes:\n\n\nCommitting everything without checking\nVague messages like “fix” or “updates”\nForgetting to pull before starting work"
+  },
+  {
+    "objectID": "slides/Github.html#from-version-control-to-collaboration",
+    "href": "slides/Github.html#from-version-control-to-collaboration",
+    "title": "Collaborate via Github",
+    "section": "From Version Control to Collaboration",
+    "text": "From Version Control to Collaboration\n\nSo far, Git has helped us:\n\ntrack changes\nsave project history\nconnect our work to GitHub\n\n\n\nBut Git is not just for saving files, but also built for collaboration."
+  },
+  {
+    "objectID": "slides/Github.html#working-from-an-existing-github-repo",
+    "href": "slides/Github.html#working-from-an-existing-github-repo",
+    "title": "Collaborate via Github",
+    "section": "Working From an Existing GitHub Repo",
+    "text": "Working From an Existing GitHub Repo\nWhen you contribute to an existing project, you first need a local copy of the repository.\n \n\nClone the repository\ngit clone https://github.com/username/repo-name.git\n\nThis creates a local version of the project, including:\n\nall files\ncommit history\nexisting branches\nGit tracking (.git folder)"
   },
   {
     "objectID": "slides/Github.html#working-with-branches",
@@ -1683,14 +1711,14 @@
     "href": "slides/Github.html#branch-workflow",
     "title": "Collaborate via Github",
     "section": "Branch Workflow",
-    "text": "Branch Workflow\n\n\nCreate a branch (e.g. add-visual)\n\nEdit code on branch\n\nCommit changes\n\nPush branch to GitHub\n\nOpen Pull Request (PR)\n\nMerge into main"
+    "text": "Branch Workflow\n\n\nCreate a new branch\n\nSwitch to the branch and edit code\n\nStage and commit changes\n\nPush branch to GitHub\n\nOpen a Pull Request (PR)\n\nReview and merge into main\n\n\n\ngit checkout -b new-feature\n# make changes\ngit add .\ngit commit -m \"Add new feature\"\ngit checkout main\ngit merge new-feature"
   },
   {
     "objectID": "slides/Github.html#summary-of-branching",
     "href": "slides/Github.html#summary-of-branching",
     "title": "Collaborate via Github",
     "section": "Summary of Branching",
-    "text": "Summary of Branching\n\n\nmain → stable version of your project\nbranch → experimental workspace\nmerge → combine changes into main\n\n\n\nBranching is helpful because:\n\n\nPrevents breaking working code\nMakes collaboration easier\nKeeps project history clean\nEnables review before merging"
+    "text": "Summary of Branching\n\n\nmain → stable version of your project\nbranch → experimental workspace\nmerge → combine changes into main\n\n\n\nBranching is helpful because:\n\n\nPrevents breaking working code\nKeeps project history clean\nEnables review before merging"
   },
   {
     "objectID": "slides/Github.html#github-summary",
