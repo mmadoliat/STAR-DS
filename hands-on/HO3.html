@@ -213,13 +213,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/Topic5.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/Topic5.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R package</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/Topic6.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/Topic6.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GitHub / CRAN submission</span></a>
   </div>
 </li>
@@ -351,12 +351,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="setup" class="level2">
 <h2 class="anchored" data-anchor-id="setup">Setup</h2>
 <p>Download the C++ and helper scripts into your working directory:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">curl</span> <span class="at">-O</span> https://raw.githubusercontent.com/mmadoliat/WSoRT/refs/heads/main/src/knn_pred.cpp</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="ex">curl</span> <span class="at">-O</span> https://raw.githubusercontent.com/mmadoliat/WSoRT/refs/heads/main/runthis.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">curl</span> <span class="at">-O</span> https://raw.githubusercontent.com/mmadoliat/KNNreg/refs/heads/main/R/knn_pred.R</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="ex">curl</span> <span class="at">-O</span> https://raw.githubusercontent.com/mmadoliat/KNNreg/refs/heads/main/src/knn_pred.cpp</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="ex">curl</span> <span class="at">-O</span> https://raw.githubusercontent.com/mmadoliat/KNNreg/refs/heads/main/inst/examples/KNNreg-Rcpp.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Open the files in your editor to review the code:</p>
 <ul>
+<li><strong>knn_pred.R</strong> contains the <code>knn_pred()</code> function (R).</li>
 <li><strong>knn_pred.cpp</strong> contains the <code>knn_pred_cpp()</code> function (Rcpp).</li>
-<li><strong>runthis.R</strong> sources both R and C++ implementations and runs <code>microbenchmark()</code>.</li>
+<li><strong>KNNreg-Rcpp.R</strong> sources both R and C++ implementations and runs <code>microbenchmark()</code>.</li>
 </ul>
 <hr>
 </section>
@@ -371,25 +373,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="inspect-the-runner-script" class="level2">
 <h2 class="anchored" data-anchor-id="inspect-the-runner-script">2. Inspect the runner script</h2>
-<p>Open <strong>runthis.R</strong>, which contains:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">source</span>(<span class="st">"R/knn_s3_formula.R"</span>)              <span class="co"># loads knn_s3 and predict()</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>Rcpp<span class="sc">::</span><span class="fu">sourceCpp</span>(<span class="st">"src/knn_pred.cpp"</span>)       <span class="co"># loads Rcpp function</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="co"># Simulate data and benchmark</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a>data <span class="ot">&lt;-</span> <span class="fu">simulate_knn_data</span>(<span class="at">n =</span> <span class="dv">1000</span>, <span class="at">p =</span> <span class="dv">5</span>, <span class="at">m =</span> <span class="dv">200</span>, <span class="at">k =</span> <span class="dv">10</span>)</span>
-<span id="cb4-6"><a href="#cb4-6"></a>mb <span class="ot">&lt;-</span> microbenchmark<span class="sc">::</span><span class="fu">microbenchmark</span>(</span>
-<span id="cb4-7"><a href="#cb4-7"></a>  <span class="at">Rcpp =</span> <span class="fu">knn_pred_cpp</span>(data<span class="sc">$</span>train_x, data<span class="sc">$</span>train_y, data<span class="sc">$</span>test_x, data<span class="sc">$</span>k),</span>
-<span id="cb4-8"><a href="#cb4-8"></a>  <span class="at">R    =</span> <span class="fu">knn_pred_R</span>(data<span class="sc">$</span>train_x, data<span class="sc">$</span>train_y, data<span class="sc">$</span>test_x, data<span class="sc">$</span>k),</span>
-<span id="cb4-9"><a href="#cb4-9"></a>  <span class="at">times =</span> <span class="dv">20</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a>)</span>
-<span id="cb4-11"><a href="#cb4-11"></a><span class="fu">print</span>(mb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Open <strong>KNNreg-Rcpp.R</strong>, which contains:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">library</span>(microbenchmark)</span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="co"># compile Rcpp code once at startup</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>Rcpp<span class="sc">::</span><span class="fu">sourceCpp</span>(<span class="st">"knn_pred.cpp"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5"></a></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="co"># load R functions</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="fu">source</span>(<span class="st">"knn_pred.R"</span>)</span>
+<span id="cb4-8"><a href="#cb4-8"></a></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb4-10"><a href="#cb4-10"></a>n <span class="ot">&lt;-</span> <span class="dv">1000</span>; p <span class="ot">&lt;-</span> <span class="dv">5</span>; m <span class="ot">&lt;-</span> <span class="dv">200</span>; k <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a>Xtrain <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(n<span class="sc">*</span>p), n, p)</span>
+<span id="cb4-12"><a href="#cb4-12"></a>Ytrain <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n)</span>
+<span id="cb4-13"><a href="#cb4-13"></a>Xtest  <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(m<span class="sc">*</span>p), m, p)</span>
+<span id="cb4-14"><a href="#cb4-14"></a></span>
+<span id="cb4-15"><a href="#cb4-15"></a><span class="co"># warm up &amp; check correctness</span></span>
+<span id="cb4-16"><a href="#cb4-16"></a>pred_R <span class="ot">&lt;-</span> <span class="fu">knn_pred</span>(Xtrain, Ytrain, Xtest, k, <span class="at">method=</span><span class="st">"R"</span>)</span>
+<span id="cb4-17"><a href="#cb4-17"></a>pred_C <span class="ot">&lt;-</span> <span class="fu">knn_pred</span>(Xtrain, Ytrain, Xtest, k, <span class="at">method=</span><span class="st">"cpp"</span>)</span>
+<span id="cb4-18"><a href="#cb4-18"></a><span class="fu">stopifnot</span>(<span class="fu">max</span>(<span class="fu">abs</span>(pred_R<span class="sc">$</span>preds <span class="sc">-</span> pred_C<span class="sc">$</span>preds)) <span class="sc">&lt;</span> <span class="fl">1e-12</span>)</span>
+<span id="cb4-19"><a href="#cb4-19"></a></span>
+<span id="cb4-20"><a href="#cb4-20"></a><span class="co"># benchmark</span></span>
+<span id="cb4-21"><a href="#cb4-21"></a>mb <span class="ot">&lt;-</span> <span class="fu">microbenchmark</span>(</span>
+<span id="cb4-22"><a href="#cb4-22"></a>  <span class="at">pure_R =</span> <span class="fu">knn_pred</span>(Xtrain, Ytrain, Xtest, k, <span class="at">method=</span><span class="st">"R"</span>),</span>
+<span id="cb4-23"><a href="#cb4-23"></a>  <span class="at">Rcpp   =</span> <span class="fu">knn_pred</span>(Xtrain, Ytrain, Xtest, k, <span class="at">method=</span><span class="st">"cpp"</span>),</span>
+<span id="cb4-24"><a href="#cb4-24"></a>  <span class="at">times  =</span> <span class="dv">20</span></span>
+<span id="cb4-25"><a href="#cb4-25"></a>)</span>
+<span id="cb4-26"><a href="#cb4-26"></a><span class="fu">print</span>(mb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Try running this script:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">source</span>(<span class="st">"runthis.R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">source</span>(<span class="st">"KNNreg-Rcpp.R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <hr>
 </section>
 <section id="vary-parameters" class="level2">
 <h2 class="anchored" data-anchor-id="vary-parameters">3. Vary parameters</h2>
-<p>Modify <strong>runthis.R</strong> or re-run interactively to examine different settings:</p>
+<p>Modify <strong>KNNreg-Rcpp.R</strong> or re-run interactively to examine different settings:</p>
 <ul>
 <li>Increase <strong>n</strong> (training size) from 1000 to 5000 or 10000.</li>
 <li>Increase <strong>p</strong> (dimensions) from 5 to 20 or 50.</li>
@@ -410,7 +427,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="next-steps" class="level2">
 <h2 class="anchored" data-anchor-id="next-steps">Next steps</h2>
 <ul>
-<li>Try integrating this into your <code>knn_s3</code> class and Shiny app.</li>
+<li>Try integrating this into a Shiny app.</li>
 <li>Explore parallel Rcpp implementations (OpenMP).</li>
 <li>Consider other statistical routines with nested loops.</li>
 </ul>
