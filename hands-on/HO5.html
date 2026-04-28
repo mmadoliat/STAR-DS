@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STAR-DS – Hands-on: Build Your k-NN R Package</title>
+<title>STAR-DS – Hands-on: Document an R Package with Roxygen2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -105,10 +105,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<meta property="og:title" content="STAR-DS - Hands-on: Build Your k-NN R Package">
+<meta property="og:title" content="STAR-DS - Hands-on: Document an R Package with Roxygen2">
 <meta property="og:description" content="Homepage for ‘STatisticians Advancing in R for Data Science (STAR-DS)’, SDSS 2026.">
 <meta property="og:site_name" content="STAR-DS">
-<meta name="twitter:title" content="STAR-DS - Hands-on: Build Your k-NN R Package">
+<meta name="twitter:title" content="STAR-DS - Hands-on: Document an R Package with Roxygen2">
 <meta name="twitter:description" content="Homepage for ‘STatisticians Advancing in R for Data Science (STAR-DS)’, SDSS 2026.">
 <meta name="twitter:image" content="http://tinyurl.com/STAR-DS/hands-on/images/twitter-card.png">
 <meta name="twitter:creator" content="@mmadoliat">
@@ -306,14 +306,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
-  <li><a href="#document-your-package" id="toc-document-your-package" class="nav-link" data-scroll-target="#document-your-package">1. Document your package</a></li>
-  <li><a href="#install-and-load-your-package" id="toc-install-and-load-your-package" class="nav-link" data-scroll-target="#install-and-load-your-package">2. Install and load your package</a></li>
-  <li><a href="#traintest-split" id="toc-traintest-split" class="nav-link" data-scroll-target="#traintest-split">3. Train/test split</a></li>
-  <li><a href="#fit-models-using-package-functions" id="toc-fit-models-using-package-functions" class="nav-link" data-scroll-target="#fit-models-using-package-functions">4. Fit models using package functions</a></li>
-  <li><a href="#evaluate-performance" id="toc-evaluate-performance" class="nav-link" data-scroll-target="#evaluate-performance">5. Evaluate performance</a></li>
-  <li><a href="#visualize-predictions" id="toc-visualize-predictions" class="nav-link" data-scroll-target="#visualize-predictions">6. Visualize predictions</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
+  <li><a href="#clone-the-repository" id="toc-clone-the-repository" class="nav-link" data-scroll-target="#clone-the-repository">1.1 Clone the repository</a></li>
+  <li><a href="#open-the-project-in-rstudio." id="toc-open-the-project-in-rstudio." class="nav-link" data-scroll-target="#open-the-project-in-rstudio.">1.2 Open the project in RStudio.</a></li>
+  <li><a href="#create-a-branch-for-your-work" id="toc-create-a-branch-for-your-work" class="nav-link" data-scroll-target="#create-a-branch-for-your-work">2.1 Create a branch for your work</a></li>
+  <li><a href="#explore-the-package" id="toc-explore-the-package" class="nav-link" data-scroll-target="#explore-the-package">3. Explore the package</a></li>
+  <li><a href="#add-roxygen2-documentation" id="toc-add-roxygen2-documentation" class="nav-link" data-scroll-target="#add-roxygen2-documentation">4. Add Roxygen2 documentation</a></li>
+  <li><a href="#generate-documentation" id="toc-generate-documentation" class="nav-link" data-scroll-target="#generate-documentation">5.1 Generate Documentation</a></li>
+  <li><a href="#update-description" id="toc-update-description" class="nav-link" data-scroll-target="#update-description">5.2 Update <code>DESCRIPTION</code></a></li>
+  <li><a href="#install-and-load-your-package" id="toc-install-and-load-your-package" class="nav-link" data-scroll-target="#install-and-load-your-package">5. Install and load your package</a></li>
+  <li><a href="#test-your-functions" id="toc-test-your-functions" class="nav-link" data-scroll-target="#test-your-functions">6.1 Test your functions</a></li>
+  <li><a href="#test-the-help-system" id="toc-test-the-help-system" class="nav-link" data-scroll-target="#test-the-help-system">6.2 Test the help system</a></li>
+  <li><a href="#update-your-changes-back-to-github" id="toc-update-your-changes-back-to-github" class="nav-link" data-scroll-target="#update-your-changes-back-to-github">7.1 Update your changes back to Github</a></li>
+  <li><a href="#optional-create-a-pull-request" id="toc-optional-create-a-pull-request" class="nav-link" data-scroll-target="#optional-create-a-pull-request">7.2 Optional: Create a Pull Request</a></li>
   <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next steps</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="http://github.com/mmadoliat/STAR-DS/edit/main/hands-on/HO5.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="http://github.com/mmadoliat/STAR-DS/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="HO5.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -323,7 +327,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../hands-on/HO2.html">Hands-on / HW</a></li><li class="breadcrumb-item"><a href="../hands-on/HO5.html">R Package</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Hands-on: Build Your k-NN R Package</h1>
+<h1 class="title">Hands-on: Document an R Package with Roxygen2</h1>
 </div>
 
 
@@ -342,129 +346,203 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>In this 45 min session you will:</p>
+<p>In this 30 min session you will:</p>
 <ol type="1">
-<li>Create a new R package to wrap your custom k-NN code.</li>
-<li>Organize R scripts and C++ code in the package structure.</li>
-<li>Document functions using <strong>Roxygen2</strong>.</li>
-<li>Install and test your package.</li>
-<li>Run predictions and visualize results from the package.</li>
+<li>Clone a simple R package from GitHub.</li>
+<li>Create a new Git branch for documentation work.</li>
+<li>Explore package structure.</li>
+<li>Add <strong>Roxygen2</strong> documentation.</li>
+<li>Generate documentation files ( <strong>NAMESPACE</strong>, <strong>man/</strong>).</li>
+<li>Install and test the package.</li>
+<li>Push changes to GitHub and (optionally) open a pull request.</li>
 </ol>
 <hr>
 </section>
-<section id="setup" class="level2">
-<h2 class="anchored" data-anchor-id="setup">Setup</h2>
-<ol type="1">
-<li>Create a new R package project in RStudio:</li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Replace "knnPackage" with your chosen package name</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>usethis<span class="sc">::</span><span class="fu">create_package</span>(<span class="st">"knnPackage"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="2" type="1">
-<li>Copy the prepared files into your package:</li>
-</ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a>knnPackage/</span>
-<span id="cb2-2"><a href="#cb2-2"></a>├── R/           # R scripts with roxygen2 (knn_s3.R, knn_s3_formula.R)</span>
-<span id="cb2-3"><a href="#cb2-3"></a>├── src/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="clone-the-repository" class="level2">
+<h2 class="anchored" data-anchor-id="clone-the-repository">1.1 Clone the repository</h2>
+<p>In Terminal, run:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">git</span> clone https://github.com/jaiheechoi/DemoPackage.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="open-the-project-in-rstudio." class="level2">
+<h2 class="anchored" data-anchor-id="open-the-project-in-rstudio.">1.2 Open the project in RStudio.</h2>
+<p>You should see a package with this structure:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a>DemoPackage/</span>
+<span id="cb2-2"><a href="#cb2-2"></a>├── DESCRIPTION</span>
+<span id="cb2-3"><a href="#cb2-3"></a>├── NAMESPACE</span>
+<span id="cb2-4"><a href="#cb2-4"></a>├── R/</span>
+<span id="cb2-5"><a href="#cb2-5"></a>│   ├── euclidean_distance.R</span>
+<span id="cb2-6"><a href="#cb2-6"></a>│   └──plot_xy.R</span>
+<span id="cb2-7"><a href="#cb2-7"></a>├── man/</span>
+<span id="cb2-8"><a href="#cb2-8"></a>└── DemoPackage.Rproj</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The package functions are already written and working. <strong>Your job is to add documentation.</strong></p>
+</section>
+<section id="create-a-branch-for-your-work" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-branch-for-your-work">2.1 Create a branch for your work</h2>
+<p>In Terminal, use:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> <span class="op">&lt;</span>your-branch-name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Confirm you are on the correct branch:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">git</span> branch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You should see * &lt;your-branch-name&gt;.</p>
+</section>
+<section id="explore-the-package" class="level2">
+<h2 class="anchored" data-anchor-id="explore-the-package">3. Explore the package</h2>
+<p>Open the files in <strong>R/</strong> and inspect the functions:</p>
 <ul>
-<li><code>R/knn_s3.R</code>: S3 class for k-NN</li>
-<li><code>R/knn_s3_formula.R</code>: Formula interface and predict methods</li>
-<li><code>src/knn_pred.cpp</code>: Rcpp implementation for fast predictions</li>
+<li><strong>euclidean_distance()</strong></li>
+<li><strong>plot_xy()</strong></li>
 </ul>
-<p>All three files already contain Roxygen2 comments, so your functions will be automatically exported.</p>
-<hr>
-</section>
-<section id="document-your-package" class="level2">
-<h2 class="anchored" data-anchor-id="document-your-package">1. Document your package</h2>
-<p>Generate documentation for all exported functions:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>devtools<span class="sc">::</span><span class="fu">document</span>(<span class="st">"knnPackage"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Check that <code>.Rd</code> files are created in <code>man/</code>.</p>
-<hr>
-</section>
-<section id="install-and-load-your-package" class="level2">
-<h2 class="anchored" data-anchor-id="install-and-load-your-package">2. Install and load your package</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Install locally</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>devtools<span class="sc">::</span><span class="fu">install</span>(<span class="st">"knnPackage"</span>)</span>
-<span id="cb4-3"><a href="#cb4-3"></a></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="co"># Load package</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="fu">library</span>(knnPackage)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<hr>
-</section>
-<section id="traintest-split" class="level2">
-<h2 class="anchored" data-anchor-id="traintest-split">3. Train/test split</h2>
-<p>Use mtcars to test your package:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
-<span id="cb5-2"><a href="#cb5-2"></a>n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(mtcars)</span>
-<span id="cb5-3"><a href="#cb5-3"></a>train_idx <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">seq_len</span>(n), <span class="at">size =</span> <span class="fu">round</span>(<span class="fl">0.7</span> <span class="sc">*</span> n))</span>
-<span id="cb5-4"><a href="#cb5-4"></a>train <span class="ot">&lt;-</span> mtcars[train_idx, ]</span>
-<span id="cb5-5"><a href="#cb5-5"></a>test  <span class="ot">&lt;-</span> mtcars[<span class="sc">-</span>train_idx, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<hr>
-</section>
-<section id="fit-models-using-package-functions" class="level2">
-<h2 class="anchored" data-anchor-id="fit-models-using-package-functions">4. Fit models using package functions</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># Fit k-NN models with k=5 and k=10</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a>mod5  <span class="ot">&lt;-</span> <span class="fu">knn_s3</span>(mpg <span class="sc">~</span> disp <span class="sc">+</span> hp <span class="sc">+</span> wt, train, <span class="at">k =</span> <span class="dv">5</span>)</span>
-<span id="cb6-3"><a href="#cb6-3"></a>mod10 <span class="ot">&lt;-</span> <span class="fu">knn_s3</span>(mpg <span class="sc">~</span> disp <span class="sc">+</span> hp <span class="sc">+</span> wt, train, <span class="at">k =</span> <span class="dv">10</span>)</span>
-<span id="cb6-4"><a href="#cb6-4"></a></span>
-<span id="cb6-5"><a href="#cb6-5"></a><span class="co"># Predict using Rcpp</span></span>
-<span id="cb6-6"><a href="#cb6-6"></a>pred5  <span class="ot">&lt;-</span> <span class="fu">predict</span>(mod5, <span class="at">newdata =</span> test, <span class="at">method =</span> <span class="st">"cpp"</span>)</span>
-<span id="cb6-7"><a href="#cb6-7"></a>pred10 <span class="ot">&lt;-</span> <span class="fu">predict</span>(mod10, <span class="at">newdata =</span> test, <span class="at">method =</span> <span class="st">"cpp"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<hr>
-</section>
-<section id="evaluate-performance" class="level2">
-<h2 class="anchored" data-anchor-id="evaluate-performance">5. Evaluate performance</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>rmse <span class="ot">&lt;-</span> <span class="cf">function</span>(y, yhat) <span class="fu">sqrt</span>(<span class="fu">mean</span>((y <span class="sc">-</span> yhat)<span class="sc">^</span><span class="dv">2</span>))</span>
-<span id="cb7-2"><a href="#cb7-2"></a>mae  <span class="ot">&lt;-</span> <span class="cf">function</span>(y, yhat) <span class="fu">mean</span>(<span class="fu">abs</span>(y <span class="sc">-</span> yhat))</span>
-<span id="cb7-3"><a href="#cb7-3"></a></span>
-<span id="cb7-4"><a href="#cb7-4"></a>perf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb7-5"><a href="#cb7-5"></a>  <span class="at">Model =</span> <span class="fu">c</span>(<span class="st">"k=5"</span>, <span class="st">"k=10"</span>),</span>
-<span id="cb7-6"><a href="#cb7-6"></a>  <span class="at">RMSE  =</span> <span class="fu">c</span>(<span class="fu">rmse</span>(test<span class="sc">$</span>mpg, pred5), <span class="fu">rmse</span>(test<span class="sc">$</span>mpg, pred10)),</span>
-<span id="cb7-7"><a href="#cb7-7"></a>  <span class="at">MAE   =</span> <span class="fu">c</span>(<span class="fu">mae</span>(test<span class="sc">$</span>mpg, pred5), <span class="fu">mae</span>(test<span class="sc">$</span>mpg, pred10))</span>
-<span id="cb7-8"><a href="#cb7-8"></a>)</span>
-<span id="cb7-9"><a href="#cb7-9"></a><span class="fu">print</span>(perf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<hr>
-</section>
-<section id="visualize-predictions" class="level2">
-<h2 class="anchored" data-anchor-id="visualize-predictions">6. Visualize predictions</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb8-3"><a href="#cb8-3"></a></span>
-<span id="cb8-4"><a href="#cb8-4"></a>test<span class="sc">$</span>pred5 <span class="ot">&lt;-</span> pred5</span>
-<span id="cb8-5"><a href="#cb8-5"></a>test<span class="sc">$</span>pred10 <span class="ot">&lt;-</span> pred10</span>
-<span id="cb8-6"><a href="#cb8-6"></a></span>
-<span id="cb8-7"><a href="#cb8-7"></a>test_long <span class="ot">&lt;-</span> test <span class="sc">%&gt;%</span></span>
-<span id="cb8-8"><a href="#cb8-8"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(pred5, pred10), </span>
-<span id="cb8-9"><a href="#cb8-9"></a>               <span class="at">names_to =</span> <span class="st">"Model"</span>, <span class="at">values_to =</span> <span class="st">"Prediction"</span>)</span>
-<span id="cb8-10"><a href="#cb8-10"></a></span>
-<span id="cb8-11"><a href="#cb8-11"></a><span class="fu">ggplot</span>(test_long, <span class="fu">aes</span>(<span class="at">x =</span> mpg, <span class="at">y =</span> Prediction, <span class="at">color =</span> Model)) <span class="sc">+</span></span>
-<span id="cb8-12"><a href="#cb8-12"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
-<span id="cb8-13"><a href="#cb8-13"></a>  <span class="fu">geom_abline</span>(<span class="at">slope =</span> <span class="dv">1</span>, <span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
-<span id="cb8-14"><a href="#cb8-14"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Predicted vs Actual MPG (from Package)"</span>,</span>
-<span id="cb8-15"><a href="#cb8-15"></a>       <span class="at">x =</span> <span class="st">"Actual MPG"</span>, <span class="at">y =</span> <span class="st">"Predicted MPG"</span>) <span class="sc">+</span></span>
-<span id="cb8-16"><a href="#cb8-16"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"pred5"</span> <span class="ot">=</span> <span class="st">"blue"</span>, <span class="st">"pred10"</span> <span class="ot">=</span> <span class="st">"red"</span>),</span>
-<span id="cb8-17"><a href="#cb8-17"></a>                     <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"k = 5"</span>, <span class="st">"k = 10"</span>)) <span class="sc">+</span></span>
-<span id="cb8-18"><a href="#cb8-18"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<hr>
-</section>
-<section id="discussion" class="level2">
-<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+<p>Each function works, but the documentation is missing or incomplete.</p>
+<p>Take a few minutes to read through each function and identify:</p>
 <ul>
-<li>Verify that the package functions work as expected.</li>
-<li>Inspect the help pages generated from Roxygen2.</li>
-<li>Discuss the benefits of wrapping your code into a package:
+<li>What the function does</li>
+<li>What inputs it takes</li>
+<li>What it returns</li>
+</ul>
+<hr>
+</section>
+<section id="add-roxygen2-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="add-roxygen2-documentation">4. Add Roxygen2 documentation</h2>
+<p>Add a Roxygen2 block above the functions:</p>
 <ul>
-<li>Reusability</li>
-<li>Documentation</li>
-<li>Easy sharing</li>
+<li><p>euclidean_distance()</p></li>
+<li><p>plot_xy()</p></li>
+</ul>
+<p>As you write your Roxygen block, pay attention to:</p>
+<ol type="a">
+<li><strong><span class="citation" data-cites="param">@param</span></strong> (function inputs)</li>
+</ol>
+<ul>
+<li>Each input to your function must be described using <strong><span class="citation" data-cites="param">@param</span></strong></li>
+<li>You should explain:
+<ul>
+<li>what the argument is</li>
+<li>its type (numeric vector, matrix, etc.)</li>
+<li>any important constraints (e.g., “same length as y”)</li>
 </ul></li>
 </ul>
+<ol start="2" type="a">
+<li><strong><span class="citation" data-cites="return">@return</span></strong> (output)</li>
+</ol>
+<ul>
+<li>This describes what the function gives back after it runs.</li>
+<li>It is just as important as <strong><span class="citation" data-cites="param">@param</span></strong>, because users need to know what to expect.</li>
+</ul>
+<p>As you write it, be explicit about:</p>
+<ul>
+<li>the type of output (numeric, vector, matrix, list, data frame, etc.)</li>
+<li>the structure (single value vs multiple values)</li>
+<li>what the values represent</li>
+</ul>
+<p>Example:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co">#' k-Nearest Neighbors Prediction</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="co">#'</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="co">#' Computes predictions for a set of test observations using the k-nearest neighbors (kNN) algorithm.</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co">#' The function supports both an R implementation and a C++ backend (`knn_pred_cpp`) for faster computation.</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="co">#'</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="co">#' @param train_x A numeric matrix or data frame of training predictors (features), with rows as observations and columns as variables.</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="co">#' @param train_y A numeric vector of training responses (target values).</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="co">#' @param test_x A numeric matrix or data frame of test predictors to make predictions for.</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="co">#' @param k An integer specifying the number of nearest neighbors to use.</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="co">#' @param method A character string specifying the implementation method. `"cpp"` (default) uses the C++ backend (`knn_pred_cpp`), otherwise the pure R implementation is used.</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="co">#'</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a><span class="co">#' @return A list with two components:</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a><span class="co">#' \describe{</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a><span class="co">#'   \item{preds}{A numeric vector of predicted values for each test observation.}</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a><span class="co">#'   \item{ids}{A numeric vector containing the indices of the k nearest neighbors for each test observation.}</span></span>
+<span id="cb5-16"><a href="#cb5-16"></a><span class="co">#' }</span></span>
+<span id="cb5-17"><a href="#cb5-17"></a><span class="co">#'</span></span>
+<span id="cb5-18"><a href="#cb5-18"></a><span class="co">#' @examples</span></span>
+<span id="cb5-19"><a href="#cb5-19"></a><span class="co">#' # Example with random data</span></span>
+<span id="cb5-20"><a href="#cb5-20"></a><span class="co">#' set.seed(123)</span></span>
+<span id="cb5-21"><a href="#cb5-21"></a><span class="co">#' train_x &lt;- matrix(rnorm(50), nrow = 10)</span></span>
+<span id="cb5-22"><a href="#cb5-22"></a><span class="co">#' train_y &lt;- rnorm(10)</span></span>
+<span id="cb5-23"><a href="#cb5-23"></a><span class="co">#' test_x &lt;- matrix(rnorm(20), nrow = 4)</span></span>
+<span id="cb5-24"><a href="#cb5-24"></a><span class="co">#' k &lt;- 3</span></span>
+<span id="cb5-25"><a href="#cb5-25"></a><span class="co">#' result &lt;- knn_pred(train_x, train_y, test_x, k)</span></span>
+<span id="cb5-26"><a href="#cb5-26"></a><span class="co">#' result$preds</span></span>
+<span id="cb5-27"><a href="#cb5-27"></a><span class="co">#' result$ids</span></span>
+<span id="cb5-28"><a href="#cb5-28"></a><span class="co">#'</span></span>
+<span id="cb5-29"><a href="#cb5-29"></a><span class="co">#' @export</span></span>
+<span id="cb5-30"><a href="#cb5-30"></a>knn_pred <span class="ot">&lt;-</span> <span class="cf">function</span>(train_x, train_y, test_x, k) {</span>
+<span id="cb5-31"><a href="#cb5-31"></a>  ...</span>
+<span id="cb5-32"><a href="#cb5-32"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="generate-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="generate-documentation">5.1 Generate Documentation</h2>
+<p>In R, run:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>devtools<span class="sc">::</span><span class="fu">document</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will:</p>
+<ul>
+<li>update the <strong>NAMESPACE</strong></li>
+<li>generate <strong>.Rd</strong> help files in <strong>man/</strong></li>
+</ul>
+<p>Check that new documentation files appear in <strong>man/</strong>.</p>
 <hr>
+</section>
+<section id="update-description" class="level2">
+<h2 class="anchored" data-anchor-id="update-description">5.2 Update <code>DESCRIPTION</code></h2>
+<p>Open the <strong>DESCRIPTION</strong> file and make sure the package metadata is filled in correctly.</p>
+<p>At minimum, check:</p>
+<ul>
+<li>package name</li>
+<li>title</li>
+<li>description</li>
+<li>author</li>
+<li><strong>Imports</strong></li>
+</ul>
+<p>Because <strong>plot_xy()</strong> uses <strong>ggplot2</strong>, make sure <strong>ggplot2</strong> appears in <strong>Imports</strong>:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href="#cb7-1"></a>Imports: ggplot2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Save the file after making changes.</p>
+</section>
+<section id="install-and-load-your-package" class="level2">
+<h2 class="anchored" data-anchor-id="install-and-load-your-package">5. Install and load your package</h2>
+<p>In R, run:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>devtools<span class="sc">::</span><span class="fu">install</span>()</span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">library</span>(DemoPackage)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="test-your-functions" class="level2">
+<h2 class="anchored" data-anchor-id="test-your-functions">6.1 Test your functions</h2>
+<p>Try each documented function:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">euclidean_distance</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">6</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">plot_xy</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, (<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)<span class="sc">^</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="test-the-help-system" class="level2">
+<h2 class="anchored" data-anchor-id="test-the-help-system">6.2 Test the help system</h2>
+<p>Now test whether your documentation works:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>?euclidean_distance</span>
+<span id="cb11-2"><a href="#cb11-2"></a>?plot_xy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The Help pane should open and display:</p>
+<ul>
+<li>Title of the function</li>
+<li>Short description of what the function does</li>
+<li>Arguments (<span class="citation" data-cites="param">@param</span> entries)</li>
+<li>Return value (<span class="citation" data-cites="return">@return</span>)</li>
+<li>Examples (if provided)</li>
+</ul>
+<p>If the documentation was written correctly using Roxygen2, all of this information should appear automatically.</p>
+</section>
+<section id="update-your-changes-back-to-github" class="level2">
+<h2 class="anchored" data-anchor-id="update-your-changes-back-to-github">7.1 Update your changes back to Github</h2>
+<p>Commit your changes. In Terminal, run:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">git</span> add .</span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add roxygen documentation"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Push your branch to GitHub</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">git</span> push origin <span class="op">&lt;</span>your-branch-name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="optional-create-a-pull-request" class="level2">
+<h2 class="anchored" data-anchor-id="optional-create-a-pull-request">7.2 Optional: Create a Pull Request</h2>
+<p>Go to GitHub and:</p>
+<ul>
+<li><p>Open your repository</p></li>
+<li><p>Click “Compare &amp; pull request”</p></li>
+<li><p>Merge &lt;your-branch-name&gt; into main</p></li>
+</ul>
+<p>Important: In this workshop, you will not actually merge into <strong>main</strong> unless you are the repo owner or have write permissions. The goal is to practice the pull request workflow, not necessarily complete the merge.</p>
 </section>
 <section id="next-steps" class="level2">
 <h2 class="anchored" data-anchor-id="next-steps">Next steps</h2>
 <ul>
-<li>Add more utility functions (e.g., cross-validation) to your package.</li>
-<li>Include unit tests with testthat for your main functions.</li>
-<li>Share your package via GitHub for collaborative development.</li>
+<li>Add one new function and document it yourself.</li>
 </ul>
 
 
