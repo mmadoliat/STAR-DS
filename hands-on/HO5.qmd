@@ -1,5 +1,5 @@
 ---
-title: "Hands-on: Build Your k-NN R Package"
+title: "Hands-on: Document an R Package with Roxygen2"
 code-line-numbers: true
 format: 
   html: default
@@ -8,147 +8,245 @@ format:
 
 ## Overview
 
-In this 45 min session you will:
+In this 30 min session you will:
 
-1.  Create a new R package to wrap your custom k-NN code.
-2.  Organize R scripts and C++ code in the package structure.
-3.  Document functions using **Roxygen2**.
-4.  Install and test your package.
-5.  Run predictions and visualize results from the package.
-
+1.  Clone a simple R package from GitHub.
+2.  Create a new Git branch for documentation work.
+3.  Explore package structure.
+4.  Add **Roxygen2** documentation.
+5.  Generate documentation files ( **NAMESPACE**, **man/**).
+6.  Install and test the package.
+7.  Push changes to GitHub and (optionally) open a pull request.
 
 ------------------------------------------------------------------------
 
-## Setup
+## 1.1 Clone the repository
 
-1.  Create a new R package project in RStudio:
+In Terminal, run:
 
-``` {.r}
-# Replace "knnPackage" with your chosen package name
-usethis::create_package("knnPackage")
+``` bash
+git clone https://github.com/jaiheechoi/DemoPackage.git
 ```
 
-2. Copy the prepared files into your package:
+## 1.2 Open the project in RStudio.
 
-```text
-knnPackage/
-├── R/           # R scripts with roxygen2 (knn_s3.R, knn_s3_formula.R)
-├── src/
-```
-- `R/knn_s3.R`: S3 class for k-NN
-- `R/knn_s3_formula.R`: Formula interface and predict methods
-- `src/knn_pred.cpp`: Rcpp implementation for fast predictions
+You should see a package with this structure:
 
-All three files already contain Roxygen2 comments, so your functions will be automatically exported.
-
-------------------------------------------------------------------------
-
-## 1. Document your package
-
-Generate documentation for all exported functions:
-
-```r
-devtools::document("knnPackage")
+``` text
+DemoPackage/
+├── DESCRIPTION
+├── NAMESPACE
+├── R/
+│   ├── euclidean_distance.R
+│   └──plot_xy.R
+├── man/
+└── DemoPackage.Rproj
 ```
 
-Check that `.Rd` files are created in `man/`.
+The package functions are already written and working. **Your job is to add documentation.**
 
-------------------------------------------------------------------------
+## 2.1 Create a branch for your work
 
-## 2. Install and load your package
+In Terminal, use:
 
-```r
-# Install locally
-devtools::install("knnPackage")
-
-# Load package
-library(knnPackage)
+``` bash
+git checkout -b <your-branch-name>
 ```
 
-------------------------------------------------------------------------
+Confirm you are on the correct branch:
 
-## 3. Train/test split
-
-Use mtcars to test your package:
-
-```r
-set.seed(42)
-n <- nrow(mtcars)
-train_idx <- sample(seq_len(n), size = round(0.7 * n))
-train <- mtcars[train_idx, ]
-test  <- mtcars[-train_idx, ]
+``` bash
+git branch
 ```
 
+You should see \* \<your-branch-name\>.
+
+## 3. Explore the package
+
+Open the files in **R/** and inspect the functions:
+
+-   **euclidean_distance()**
+-   **plot_xy()**
+
+Each function works, but the documentation is missing or incomplete.
+
+Take a few minutes to read through each function and identify:
+
+-   What the function does
+-   What inputs it takes
+-   What it returns
+
 ------------------------------------------------------------------------
 
-## 4. Fit models using package functions
+## 4. Add Roxygen2 documentation
 
-```r
-# Fit k-NN models with k=5 and k=10
-mod5  <- knn_s3(mpg ~ disp + hp + wt, train, k = 5)
-mod10 <- knn_s3(mpg ~ disp + hp + wt, train, k = 10)
+Add a Roxygen2 block above the functions:
 
-# Predict using Rcpp
-pred5  <- predict(mod5, newdata = test, method = "cpp")
-pred10 <- predict(mod10, newdata = test, method = "cpp")
+-   euclidean_distance()
+
+-   plot_xy()
+
+As you write your Roxygen block, pay attention to:
+
+a. **@param** (function inputs)
+- Each input to your function must be described using **@param**
+- You should explain:
+  - what the argument is
+  - its type (numeric vector, matrix, etc.)
+  - any important constraints (e.g., “same length as y”)
+  
+b. **@return** (output)
+
+- This describes what the function gives back after it runs.
+- It is just as important as **@param**, because users need to know what to expect.
+
+As you write it, be explicit about:
+
+- the type of output (numeric, vector, matrix, list, data frame, etc.)
+- the structure (single value vs multiple values)
+- what the values represent
+
+Example:
+
+``` r
+#' k-Nearest Neighbors Prediction
+#'
+#' Computes predictions for a set of test observations using the k-nearest neighbors (kNN) algorithm.
+#' The function supports both an R implementation and a C++ backend (`knn_pred_cpp`) for faster computation.
+#'
+#' @param train_x A numeric matrix or data frame of training predictors (features), with rows as observations and columns as variables.
+#' @param train_y A numeric vector of training responses (target values).
+#' @param test_x A numeric matrix or data frame of test predictors to make predictions for.
+#' @param k An integer specifying the number of nearest neighbors to use.
+#' @param method A character string specifying the implementation method. `"cpp"` (default) uses the C++ backend (`knn_pred_cpp`), otherwise the pure R implementation is used.
+#'
+#' @return A list with two components:
+#' \describe{
+#'   \item{preds}{A numeric vector of predicted values for each test observation.}
+#'   \item{ids}{A numeric vector containing the indices of the k nearest neighbors for each test observation.}
+#' }
+#'
+#' @examples
+#' # Example with random data
+#' set.seed(123)
+#' train_x <- matrix(rnorm(50), nrow = 10)
+#' train_y <- rnorm(10)
+#' test_x <- matrix(rnorm(20), nrow = 4)
+#' k <- 3
+#' result <- knn_pred(train_x, train_y, test_x, k)
+#' result$preds
+#' result$ids
+#'
+#' @export
+knn_pred <- function(train_x, train_y, test_x, k) {
+  ...
+}
 ```
 
-------------------------------------------------------------------------
+## 5.1 Generate Documentation
 
-## 5. Evaluate performance
+In R, run:
 
-```r
-rmse <- function(y, yhat) sqrt(mean((y - yhat)^2))
-mae  <- function(y, yhat) mean(abs(y - yhat))
-
-perf <- data.frame(
-  Model = c("k=5", "k=10"),
-  RMSE  = c(rmse(test$mpg, pred5), rmse(test$mpg, pred10)),
-  MAE   = c(mae(test$mpg, pred5), mae(test$mpg, pred10))
-)
-print(perf)
+``` r
+devtools::document()
 ```
 
+This will:
+
+-   update the **NAMESPACE**
+-   generate **.Rd** help files in **man/**
+
+Check that new documentation files appear in **man/**.
+
 ------------------------------------------------------------------------
 
-## 6. Visualize predictions
+## 5.2 Update `DESCRIPTION`
 
-```r
-library(tidyr)
-library(ggplot2)
+Open the **DESCRIPTION** file and make sure the package metadata is filled in correctly.
 
-test$pred5 <- pred5
-test$pred10 <- pred10
+At minimum, check:
 
-test_long <- test %>%
-  pivot_longer(cols = c(pred5, pred10), 
-               names_to = "Model", values_to = "Prediction")
+-   package name
+-   title
+-   description
+-   author
+-   **Imports**
 
-ggplot(test_long, aes(x = mpg, y = Prediction, color = Model)) +
-  geom_point(size = 3, alpha = 0.6) +
-  geom_abline(slope = 1, intercept = 0, linetype = "dashed") +
-  labs(title = "Predicted vs Actual MPG (from Package)",
-       x = "Actual MPG", y = "Predicted MPG") +
-  scale_color_manual(values = c("pred5" = "blue", "pred10" = "red"),
-                     labels = c("k = 5", "k = 10")) +
-  theme_minimal()
+Because **plot_xy()** uses **ggplot2**, make sure **ggplot2** appears in **Imports**:
+
+``` text
+Imports: ggplot2
 ```
 
-------------------------------------------------------------------------
+Save the file after making changes.
 
-## Discussion
+## 5. Install and load your package
 
-- Verify that the package functions work as expected.
-- Inspect the help pages generated from Roxygen2.
-- Discuss the benefits of wrapping your code into a package:
-  - Reusability
-  - Documentation
-  - Easy sharing
+In R, run:
 
-------------------------------------------------------------------------
+``` r
+devtools::install()
+library(DemoPackage)
+```
+
+## 6.1 Test your functions
+
+Try each documented function:
+
+``` r
+euclidean_distance(c(1, 2), c(4, 6))
+```
+
+``` r
+plot_xy(1:10, (1:10)^2)
+```
+
+## 6.2 Test the help system
+
+Now test whether your documentation works:
+
+``` r
+?euclidean_distance
+?plot_xy
+```
+
+The Help pane should open and display:
+
+-   Title of the function
+-   Short description of what the function does
+-   Arguments (@param entries)
+-   Return value (@return)
+-   Examples (if provided)
+
+If the documentation was written correctly using Roxygen2, all of this information should appear automatically.
+
+## 7.1 Update your changes back to Github
+
+Commit your changes. In Terminal, run:
+
+``` bash
+git add .
+git commit -m "Add roxygen documentation"
+```
+
+Push your branch to GitHub
+
+``` bash
+git push origin <your-branch-name>
+```
+
+## 7.2 Optional: Create a Pull Request
+
+Go to GitHub and:
+
+-   Open your repository
+
+-   Click “Compare & pull request”
+
+-   Merge \<your-branch-name\> into main
+
+Important: In this workshop, you will not actually merge into **main** unless you are the repo owner or have write permissions. The goal is to practice the pull request workflow, not necessarily complete the merge.
 
 ## Next steps
 
-- Add more utility functions (e.g., cross-validation) to your package.
-- Include unit tests with testthat for your main functions.
-- Share your package via GitHub for collaborative development.
+-   Add one new function and document it yourself.
