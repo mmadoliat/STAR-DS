@@ -2582,7 +2582,7 @@
     "href": "hands-on/HO4.html#import-python-packages",
     "title": "Hands-on: k-NN Regression with Python-powered Train/Test Split",
     "section": "Import Python packages",
-    "text": "Import Python packages\nlibrary(reticulate)\nsklearn_model_selection &lt;- import(\"sklearn.model_selection\", convert = TRUE)",
+    "text": "Import Python packages\nlibrary(reticulate)\npy_install(\"scikit-learn\")\nsklearn_model_selection &lt;- import(\"sklearn.model_selection\", convert = TRUE)",
     "crumbs": [
       "Hands-on / HW",
       "Python in R"

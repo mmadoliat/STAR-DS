@@ -357,7 +357,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="import-python-packages" class="level2">
 <h2 class="anchored" data-anchor-id="import-python-packages">Import Python packages</h2>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>sklearn_model_selection <span class="ot">&lt;-</span> <span class="fu">import</span>(<span class="st">"sklearn.model_selection"</span>, <span class="at">convert =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">py_install</span>(<span class="st">"scikit-learn"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>sklearn_model_selection <span class="ot">&lt;-</span> <span class="fu">import</span>(<span class="st">"sklearn.model_selection"</span>, <span class="at">convert =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="custom-helper-split-data-in-python-return-as-list-of-r-data.frames" class="level2">
 <h2 class="anchored" data-anchor-id="custom-helper-split-data-in-python-return-as-list-of-r-data.frames">Custom helper: Split data in Python, return as list of R <code>data.frames</code></h2>
