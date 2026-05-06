@@ -52,9 +52,9 @@ website:
           - href: slides/Reticulate.qmd
             text: Python in R
           - href: slides/Package.qmd
-            text: R package
+            text: R package / CRAN
           - href: slides/Github.qmd
-            text: GitHub / CRAN submission
+            text: GitHub
       - section: "Hands-on / HW"
         contents:
           - href: hands-on/HO2.qmd
